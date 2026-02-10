@@ -23,7 +23,7 @@ const posts = (await getCollection('blog', ({ data }) => {
                     <img 
                         src={post.data.heroImage || "/images/hard-rock-stadium.png"} 
                         alt={post.data.title} 
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-miami-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
                         <span class="text-white font-bold text-sm italic">Lire l'article →</span>
