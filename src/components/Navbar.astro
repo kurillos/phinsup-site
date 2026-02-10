@@ -1,42 +1,37 @@
-<nav class="bg-miami-aqua text-white shadow-xl border-b-4 border-miami-orange">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex justify-between items-center h-20">
-      
-      <a href="/" class="flex items-center space-x-3 group">
-        <div class="bg-white p-1 rounded-full transition-transform group-hover:rotate-12">
-           <img src="/logo-phins.png" alt="Logo PhinsUp" class="w-12 h-12 object-contain" />
-        </div>
-        <span class="text-3xl font-bold tracking-tighter italic font-[Oswald]">
-          PHINSUP<span class="text-miami-orange">.FR</span>
-        </span>
-      </a>
-
-      <div class="hidden md:flex items-center space-x-8 font-[Oswald] tracking-wide">
-        <a href="/" class="hover:text-miami-orange transition-colors uppercase">Accueil</a>
-        <a href="/blog" class="hover:text-miami-orange transition-colors uppercase">Actualités</a>
-        <a href="/analyses" class="hover:text-miami-orange transition-colors uppercase border-b-2 border-transparent hover:border-miami-orange">Analyses</a>
-        
-        <a href="/#newsletter" class="bg-miami-orange text-white px-5 py-2 rounded-sm font-bold hover:bg-white hover:text-miami-aqua transition-all uppercase shadow-md">
-          Newsletter
+<nav class="bg-miami-blue py-4 px-6 sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2">
+            <span class="text-white font-[Oswald] italic font-black text-2xl tracking-tighter uppercase">PhinsUp<span class="text-miami-orange">.fr</span></span>
         </a>
-      </div>
 
-      <div class="md:hidden">
-        <button class="p-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
+        <div class="hidden md:flex space-x-8 items-center text-white font-bold uppercase italic text-sm">
+            <a href="/actualites" class="hover:text-miami-aqua transition">Actualités</a>
+            <a href="/analyses" class="hover:text-miami-aqua transition">Analyses</a>
+            <a href="/contact" class="hover:text-miami-aqua transition">Contact</a>
+            <a href="/#newsletter" class="bg-miami-orange px-4 py-2 rounded font-black hover:bg-white hover:text-miami-orange transition">Newsletter</a>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="burger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
         </button>
-      </div>
     </div>
-  </div>
+
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 pt-4 pb-2 border-t border-white/10 mt-4 text-center text-white font-bold uppercase italic">
+        <a href="/actualites" class="hover:text-miami-aqua">Actualités</a>
+        <a href="/analyses" class="hover:text-miami-aqua">Analyses</a>
+        <a href="/contact" class="hover:text-miami-aqua">Contact</a>
+        <a href="/#newsletter" class="text-miami-orange">Newsletter</a>
+    </div>
 </nav>
 
 <script>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
+    // Logique d'ouverture du menu mobile
+    const btn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
 
-  btn?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
-  });
+    btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+    });
 </script>
