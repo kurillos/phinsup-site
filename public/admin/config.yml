@@ -22,4 +22,6 @@ collections:
           widget: "select", 
           options: ["Actu", "Analyse", "Draft", "Histoire", "Breaking News"] 
         }
+      - { label: "Mots-clés SEO", name: "tags", widget: "list", default: ["Miami Dolphins", "NFL France"] }
+      - { label: "Cacher l'article ?", name: "draft", widget: "boolean", default: false }
       - { label: "Corps de l'article", name: "body", widget: "markdown" }

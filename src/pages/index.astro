@@ -11,12 +11,6 @@ const posts = (await getCollection('blog', ({ data }) => {
 <BaseLayout title="Accueil">
     <section>
         <div class="flex items-center justify-between mb-8 border-l-8 border-miami-orange pl-4">
-            <button 
-  onclick="netlifyIdentity.open()" 
-  class="bg-red-600 text-white p-4 font-bold rounded-lg m-10"
->
-  FORCER LA CONNEXION (DÉPANNAGE)
-</button>
             <h2 class="text-3xl font-bold text-miami-blue font-[Oswald] uppercase italic italic">L'actualité des Phins</h2>
             <a href="/blog" class="text-miami-aqua font-bold hover:underline italic">Voir tout →</a>
         </div>
