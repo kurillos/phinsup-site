@@ -65,7 +65,6 @@ const posts = (await getCollection('blog', ({ data }) => {
                                 {post.data.description}
                             </p>
 
-                            {/* TAGS : Sortis de la balise <p> pour ne pas casser la page */}
                             {post.data.tags && (
                                 <div class="flex flex-wrap gap-2 mt-3">
                                     {post.data.tags.slice(0, 3).map(tag => (
