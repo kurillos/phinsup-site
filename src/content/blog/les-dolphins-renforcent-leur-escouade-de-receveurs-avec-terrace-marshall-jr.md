@@ -7,6 +7,10 @@ description: Le front office de Miami continue de préparer la saison 2026. Les
 pubDate: 2026-02-04T16:00:00.000+01:00
 heroImage: https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSfJNTJln0Y_NP75XRF4GNX74uC1jAApWnzbYWjamq1jEFaarB5U7ohi52-Y159t1Dc7a6o5kYYA8D1DLxkwfaaLNoNoGVuFN2lSe9M6b3HPApA0peaiI-q64vGBcQSrJPdJ6bXn2Wh9W7M&s=19
 category: Actu
+tags:
+  - Terrace Marshall Jr Miami Dolphins Transfert NFL NFL France Dolphins News
+    LSU Tigers Reserve/Future Contract
+draft: false
 ---
 Alors que l'intersaison bat son plein, les Miami Dolphins ont annoncé la signature de Terrace Marshall Jr. à un contrat "Reserve/Future". Ce type de contrat permet aux équipes de sécuriser des joueurs pour la saison à venir avant l'ouverture officielle du marché de la "Free Agency".
 
