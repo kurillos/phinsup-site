@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contactez la Rédaction | PhinsUp.fr">
+  <section class="max-w-4xl mx-auto py-10 px-4 text-center">
+    <div class="mb-12">
+      <h1 class="text-5xl font-bold font-[Oswald] italic uppercase text-miami-blue mb-4">
+        Rejoignez le <span class="text-miami-aqua">Huddle</span>
+      </h1>
+      <p class="text-xl text-gray-600 italic">Une question ? Une proposition de partenariat ? Envie d'écrire pour nous ?</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-miami-aqua">
+        <h2 class="text-2xl font-bold font-[Oswald] uppercase italic mb-4">Par Email</h2>
+        <p class="text-gray-600 mb-6">Pour toute demande officielle ou envoi de communiqué :</p>
+        <a href="mailto:phinsup.staff@gmail.com" class="text-xl font-bold text-miami-aqua hover:text-miami-orange transition">
+          phinsup.staff@gmail.com
+        </a>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-miami-orange">
+        <h2 class="text-2xl font-bold font-[Oswald] uppercase italic mb-4">Réseaux Sociaux</h2>
+        <p class="text-gray-600 mb-6">Suivez-nous et réagissez en direct aux news de Miami :</p>
+        <div class="flex justify-center space-x-4">
+            <span class="font-bold text-miami-blue">@PhinsUpFR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-miami-blue text-white p-10 rounded-3xl italic">
+      <p class="text-2xl font-[Oswald]">"No name defense, but a big name community."</p>
+    </div>
+  </section>
+</BaseLayout>

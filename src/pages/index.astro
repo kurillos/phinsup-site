@@ -1,17 +1,77 @@
 ---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 
+// Récupère les articles et les trie par date (du plus récent au plus ancien)
+const posts = (await getCollection('blog', ({ data }) => {
+    return data.isDraft !== true;
+})).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Accueil">
+    <section>
+        <div class="flex items-center justify-between mb-8 border-l-8 border-miami-orange pl-4">
+            <h2 class="text-3xl font-bold text-miami-blue font-[Oswald] uppercase italic italic">L'actualité des Phins</h2>
+            <a href="/blog" class="text-miami-aqua font-bold hover:underline italic">Voir tout →</a>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (
+                <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group relative flex flex-col">
+                    <a href={`/blog/${post.slug}/`}>
+                        <div class="h-48 overflow-hidden relative">
+                            <img 
+                                src={post.data.heroImage || "/images/hard-rock-stadium.png"} 
+                                alt={post.data.title} 
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <span class="text-white text-xs font-bold italic">Lire l'article →</span>
+                            </div>
+                        </div>
+
+                        <div class="p-5 flex-grow flex flex-col">
+                            <div class="flex items-center justify-between mb-3">
+                                {post.data.category === 'Breaking News' ? (
+                                    /* BADGE FLASHY POUR LES ALERTES */
+                                    <span class="relative flex h-6 w-max">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-md bg-red-400 opacity-75"></span>
+                                        <span class="relative inline-flex rounded-md bg-red-600 px-2 py-1 text-[10px] font-black uppercase tracking-widest text-white border border-red-700">
+                                            🚨 {post.data.category}
+                                        </span>
+                                    </span>
+                                ) : post.data.category === 'Analyse' ? (
+                                    /* BADGE ORANGE POUR LES ANALYSES */
+                                    <span class="bg-miami-orange/10 text-miami-orange text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md border border-miami-orange/30">
+                                        📊 {post.data.category}
+                                    </span>
+                                ) : (
+                                    /* BADGE AQUA PAR DÉFAUT */
+                                    <span class="bg-miami-aqua/10 text-miami-aqua text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md border border-miami-aqua/20">
+                                        🏈 {post.data.category}
+                                    </span>
+                                )}
+                                
+                                <span class="text-gray-400 text-[10px] font-bold">
+                                    {post.data.pubDate.toLocaleDateString('fr-FR')}
+                                </span>
+                            </div>
+
+                            <h3 class="text-xl font-bold mt-2 group-hover:text-miami-aqua transition-colors line-clamp-2 font-[Oswald] uppercase italic">
+                                {post.data.title}
+                            </h3>
+                            
+                            <p class="text-gray-600 mt-3 text-sm line-clamp-3 leading-relaxed">
+                                {post.data.description}
+                            </p>
+
+                            <div class="mt-4 pt-4 border-t border-gray-50 flex items-center text-miami-orange font-bold text-[10px] uppercase italic">
+                                <span>Par PhinsUp Staff</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            ))}
+        </div>
+    </section>
+</BaseLayout>

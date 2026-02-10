@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  /* Configuration des couleurs version v4 */
+  --color-miami-aqua: #008e97;
+  --color-miami-orange: #fc4c02;
+  --color-miami-blue: #005778;
+  --font-oswald: "Oswald", sans-serif;
+}
+
+/* Applique Oswald à tous les titres par défaut */
+h1, h2, h3 {
+  font-family: var(--font-oswald);
+  text-transform: uppercase; /* Le style NFL par excellence */
+}

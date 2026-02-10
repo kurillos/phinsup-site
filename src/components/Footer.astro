@@ -1,0 +1,66 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer id="newsletter" class="bg-miami-aqua text-white mt-20 border-t-4 border-miami-orange shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      <div class="space-y-4">
+        <div class="flex items-center space-x-3">
+           <div class="bg-white p-1.5 rounded-full shadow-sm">
+             <img src="/logo-phins.png" alt="Logo" class="w-8 h-8 object-contain" />
+           </div>
+           <span class="text-2xl font-bold font-[Oswald] italic tracking-tighter uppercase">
+             PHINSUP<span class="text-miami-orange">.FR</span>
+           </span>
+        </div>
+        <p class="text-white/80 text-sm leading-relaxed max-w-xs">
+          Le premier média indépendant 100% Miami Dolphins en France. Analyses tactiques et passion Aqua & Orange.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-white font-black uppercase tracking-widest text-xs mb-6 border-b border-miami-orange pb-2 inline-block">
+          Navigation
+        </h3>
+        <ul class="space-y-3 text-sm font-medium">
+          <li><a href="/" class="hover:text-miami-orange transition-colors">ACCUEIL</a></li>
+          <li><a href="/blog" class="hover:text-miami-orange transition-colors">ACTUALITÉS</a></li>
+          <li><a href="/analyses" class="hover:text-miami-orange transition-colors">ANALYSES</a></li>
+          <li><a href="/#newsletter" class="hover:text-miami-orange transition-colors">NEWSLETTER</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-black uppercase tracking-widest text-xs mb-6 border-b border-miami-orange pb-2 inline-block">
+          Fins Up !
+        </h3>
+        <p class="text-white/80 text-sm mb-6 italic">Rejoignez la communauté des fans français, recevez le débrief après chaque match.</p>
+        <div>
+        <p class="text-white/80 text-sm mb-4 italic"></p>
+  
+       <div class="flex flex-col space-y-4">
+          <p class="text-white/80 text-sm italic">Recevez le débrief après chaque match.</p>
+          <a 
+            href="https://preview.mailerlite.io/forms/2103731/179020212289406531/share" 
+            target="_blank" 
+            class="bg-miami-orange hover:bg-white hover:text-miami-orange text-white text-center font-bold py-3 rounded-lg transition-all duration-300 uppercase text-xs tracking-widest shadow-lg"
+          >
+            Rejoindre la liste d'envoi
+          </a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest font-bold text-white/60">
+      <p>&copy; {currentYear} PHINSUP.FR - MIAMI DOLPHINS FRANCE</p>
+      <div class="space-x-6">
+        <a href="mentions-legales" class="hover:text-white transition">Mentions Légales</a>
+        <a href="contact" class="hover:text-white transition">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
