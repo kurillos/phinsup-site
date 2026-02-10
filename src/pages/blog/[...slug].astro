@@ -16,29 +16,39 @@ const { Content } = await entry.render();
 ---
 
 <BaseLayout title={entry.data.title}>
-  <article class="max-w-3xl mx-auto py-10">
-    {entry.data.heroImage && (
+  <article class="max-w-4xl mx-auto py-10 px-4"> {entry.data.heroImage && (
       <img 
         src={entry.data.heroImage} 
         alt={entry.data.title} 
-        class="w-full h-64 max-h-100 md:h-96 object-contain rounded-xl mb-8 shadow-lg border-b-8 border-miami-orange"
+        class="w-full h-auto max-h-[500px] object-contain bg-gray-50 rounded-xl mb-8 shadow-lg border-b-8 border-miami-orange"
       />
     )}
 
     <header class="mb-8">
-      <span class="text-miami-orange font-bold uppercase tracking-widest text-sm italic">{entry.data.category}</span>
-      <h1 class="text-5xl font-bold text-miami-aqua mt-2 font-[Oswald] italic uppercase">{entry.data.title}</h1>
-      <p class="text-gray-400 mt-4 border-l-2 border-miami-aqua pl-4 italic">
-        Publié le {entry.data.pubDate.toLocaleDateString('fr-FR')}
+      <div class="flex items-center gap-3 mb-2">
+        <span class="bg-miami-orange text-white px-3 py-1 rounded text-xs font-bold uppercase italic">
+          {entry.data.category}
+        </span>
+        {entry.data.tags && entry.data.tags.map(tag => (
+          <span class="text-gray-400 text-xs italic">#{tag}</span>
+        ))}
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl font-extrabold text-miami-aqua mt-2 font-[Oswald] italic uppercase leading-tight">
+        {entry.data.title}
+      </h1>
+      
+      <p class="text-gray-400 mt-6 border-l-4 border-miami-aqua pl-4 italic">
+        Publié le {entry.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
       </p>
     </header>
 
-    <div class="prose prose-lg max-w-none prose-headings:text-miami-blue prose-p:text-gray-800 prose-strong:text-miami-orange">
+    <div class="prose prose-invert lg:prose-xl max-w-none prose-headings:text-miami-blue prose-p:text-gray-700 prose-strong:text-miami-orange prose-img:rounded-xl">
       <Content />
     </div>
 
-    <footer class="mt-12 pt-6 border-t border-gray-100">
-      <a href="/blog" class="text-miami-aqua hover:text-miami-orange font-bold transition-colors">
+    <footer class="mt-12 pt-8 border-t border-gray-200">
+      <a href="/blog" class="inline-flex items-center gap-2 text-miami-aqua hover:text-miami-orange font-bold transition-all hover:-translate-x-1">
         ← Retour aux articles
       </a>
     </footer>
