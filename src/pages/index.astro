@@ -17,14 +17,15 @@ const posts = (await getCollection('blog', ({ data }) => {
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
-                <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group relative flex flex-col">
-                    <a href={`/blog/${post.slug}/`}>
+                <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group relative flex flex-col h-full">
                         <div class="h-48 overflow-hidden relative">
-                            <img 
-                                src={post.data.heroImage || "/images/hard-rock-stadium.png"} 
-                                alt={post.data.title} 
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
-                            />
+                            <div class="h-64 overflow-hidden relative bg-miami-blue/5"> 
+                                <img 
+                                    src={post.data.heroImage || "/images/hard-rock-stadium.png"} 
+                                    alt={post.data.title} 
+                                    class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" 
+                                />
+                            </div>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <span class="text-white text-xs font-bold italic">Lire l'article →</span>
                             </div>
@@ -62,11 +63,17 @@ const posts = (await getCollection('blog', ({ data }) => {
                             </h3>
                             
                             <p class="text-gray-600 mt-3 text-sm line-clamp-3 leading-relaxed">
-                                {post.data.description}
+                                {post.data.tags && (
+                                    <div class="flex gap-2 mt-auto pt-3">
+                                    {   post.data.tags.slice(0, 2).map(tag => (
+                                        <span class="text-[9px] text-gray-400 italic">#{tag}</span>
+                                        ))}
+                                    </div>
+                                    )}
                             </p>
 
                             <div class="mt-4 pt-4 border-t border-gray-50 flex items-center text-miami-orange font-bold text-[10px] uppercase italic">
-                                <span>Par PhinsUp Staff</span>
+                                <span>Par Cyril pour PhinsUp Staff</span>
                             </div>
                         </div>
                     </a>
