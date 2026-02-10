@@ -10,7 +10,7 @@ description: >-
 
   Entre continuité offensive et "rising stars" défensives, découvrez les premières annonces fortes.
 pubDate: 2026-02-04T13:00:00.000+01:00
-heroImage: https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fx.com%2FNFLFrance%2Fstatus%2F2013377253606826206&opi=89978449
+heroImage: /images/jeff-hafley
 category: Breaking News
 tags:
   - Miami Dolphins
