@@ -1,15 +1,15 @@
 backend:
   name: git-gateway
-  branch: main # Vérifie que ta branche GitHub s'appelle bien main
+  branch: main
 
-media_folder: "public/images" # Où seront stockées les photos de tes articles
+media_folder: "public/images"
 public_folder: "/images"
 
 collections:
   - name: "blog"
     label: "Articles de Blog"
     folder: "src/content/blog"
-    create: true # Autorise la création de nouveaux fichiers
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "Titre", name: "title", widget: "string" }
@@ -20,7 +20,7 @@ collections:
           label: "Catégorie", 
           name: "category", 
           widget: "select", 
-          options: ["Actu", "Analyse", "Draft", "Histoire", "Breaking News"] 
+          options: ["Actu", "Analyse", "Histoire", "Breaking News"] 
         }
       - { label: "Mots-clés SEO", name: "tags", widget: "list", default: ["Miami Dolphins", "NFL France"] }
       - { label: "Cacher l'article ?", name: "draft", widget: "boolean", default: false }
