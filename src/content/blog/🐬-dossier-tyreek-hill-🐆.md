@@ -19,13 +19,13 @@ L'avenir de Tyreek Hill à Miami s'assombrit. Entre un Salary Cap dans le rouge 
 
 
 
-\### UN CASSE-TÊTE FINANCIER À 24 MILLIONS
+### UN CASSE-TÊTE FINANCIER À 24 MILLIONS
 
 Le constat est simple : les Dolphins doivent libérer de l'espace sous le plafond salarial avant le 11 mars. Le contrat de Tyreek Hill est la cible prioritaire. En se séparant de "Cheetah", Miami pourrait récupérer \*\*24 millions de dollars\*\* de marge de manœuvre. 
 
 
 
-\### LE DÉFI DU SALARY CAP 2026
+### LE DÉFI DU SALARY CAP 2026
 
 Pour cette saison 2026, la NFL a fixé le plafond salarial à environ \*\*301.85 millions de dollars par équipe\*\*. Actuellement, les Dolphins dépassent cette limite de près de \*\*51 millions\*\*.
 
