@@ -1,0 +1,50 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const players = [
+  { name: "Tua Tagovailoa", pos: "QB", age: 27, exp: "6", college: "Alabama" },
+  { name: "Tyreek Hill", pos: "WR", age: 31, exp: "10", college: "West Alabama" },
+  { name: "Jaylen Waddle", pos: "WR", age: 27, exp: "5", college: "Alabama" },
+  { name: "Zack Kuntz", pos: "TE", age: 26, exp: "3", college: "Old Dominion" },
+  { name: "Miles Battle", pos: "CB", age: 25, exp: "R", college: "Utah" },
+  // Ajoute tes joueurs ici au fur et à mesure
+];
+
+const categories = ["QB", "RB", "WR", "TE", "OL", "DL", "LB", "CB", "S", "ST"];
+---
+
+<BaseLayout title="Roster 2026">
+  <section class="max-w-6xl mx-auto py-12 px-4">
+    <div class="mb-12 border-l-8 border-miami-orange pl-6">
+      <h1 class="text-5xl font-black text-miami-blue font-[Oswald] uppercase italic">Effectif 2026</h1>
+      <p class="text-gray-500 italic mt-2">Le groupe sous les ordres de Jeff Hafley.</p>
+    </div>
+
+    <div class="overflow-x-auto bg-white rounded-2xl shadow-xl border border-gray-100">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-miami-blue text-white uppercase font-[Oswald] italic tracking-wider">
+            <th class="p-4 border-b border-miami-aqua/20">Nom</th>
+            <th class="p-4 border-b border-miami-aqua/20 text-center">Pos</th>
+            <th class="p-4 border-b border-miami-aqua/20 text-center">Exp</th>
+            <th class="p-4 border-b border-miami-aqua/20">Université</th>
+          </tr>
+        </thead>
+        <tbody>
+          {players.map((player) => (
+            <tr class="border-b border-gray-50 hover:bg-miami-aqua/5 transition-colors group">
+              <td class="p-4 font-bold text-gray-800 group-hover:text-miami-blue">{player.name}</td>
+              <td class="p-4 text-center">
+                <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-black tracking-tighter">
+                  {player.pos}
+                </span>
+              </td>
+              <td class="p-4 text-center text-gray-500 text-sm">{player.exp}</td>
+              <td class="p-4 text-gray-500 italic text-sm">{player.college}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</BaseLayout>
