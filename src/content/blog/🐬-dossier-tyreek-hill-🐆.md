@@ -32,7 +32,7 @@ Dans une ligue où chaque dollar compte pour reconstruire une défense, ce monta
 
 
 
-\### LE POIDS DES ANNÉES ET DES BLESSURES
+### LE POIDS DES ANNÉES ET DES BLESSURES
 
 À 31 ans, Tyreek Hill reste l'un des joueurs les plus rapides de la NFL, mais sa saison 2025 a laissé des traces. Sa grave blessure au genou survenue en septembre dernier interroge sur sa capacité à retrouver son accélération légendaire. 
 
@@ -42,13 +42,13 @@ Prendre le risque de payer un salaire de "Top Receiver" pour un joueur dont le p
 
 
 
-\> ### "Le Saviez-vous ?" sur le Dead Money :
+> ### "Le Saviez-vous ?" sur le Dead Money :
 
 > \>LE CHIFFRE QUI PIQUE : Si Miami coupe Tyreek Hill avant le 1er juin, ils devront tout de même compter 28,2 millions de dollars de "Dead Money" (argent déjà payé mais non encore comptabilisé) sur leur budget. C'est le prix de la liberté pour Sullivan.
 
 
 
-\### VERS UN NOUVEAU CYCLE ?
+### VERS UN NOUVEAU CYCLE ?
 
 Le départ potentiel de Hill marquerait officiellement le début de l'ère Hafley. En s'appuyant sur \*\*Jaylen Waddle\*\* comme n°1 et en utilisant les économies pour renforcer la ligne offensive et le secondaire (comme avec la signature de \*\*Miles Battle\*\*), les Dolphins choisissent la pérennité plutôt que le "All-in".
 
