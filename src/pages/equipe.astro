@@ -1,0 +1,68 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const staff = [
+    {
+    name: "Jon-Eric Sullivan",
+    role: "General Manager",
+    provenance: "Green Bay Packers",
+    specialite: "Construction du Roster & Scouting",
+    image: "/images/jon-eric-sullivan.webp"
+    },
+    {
+        name: "Jeff Hafley",
+        role:"Head Coach",
+        provenance: "Green Bay Packers / Boston College",
+        specialite: "Defense & Tactique",
+        image: "/images/jeff-hafley.webp"
+    },
+    {
+        name: "Bobby Slowik",
+        role: "Offensive Coordinator",
+        provenance: "Houston Texans",
+        specialite: "West Coast Offense",
+        image: '/images/bobby-slowik.jpeg'
+    },
+    {
+        name: "Sean Duggan",
+        role: "Defensive Coordinator",
+        provenance: "Boston College / Green Bay Packers",
+        specialite: "Linebackers & Schémas Hybrides",
+        image: '/images/sean-duggan.jpeg'
+    },
+    {
+        name: "Chris Tabor",
+        role: "Special teams Coordinator",
+        provenance: "Carolina Panthers",
+        specialite: "Unités Spéciales & Disciplines",
+        image: "/images/chris-tabor.jpeg"
+    }
+];
+---
+
+<BaseLayout title="Le Staff 2026">
+  <section class="max-w-6xl mx-auto py-12 px-4">
+    <div class="text-center mb-16">
+      <h1 class="text-6xl font-black text-miami-blue font-[Oswald] uppercase italic mb-4">Le Staff Technique</h1>
+      <p class="text-xl text-gray-600 italic border-b-4 border-miami-orange w-fit mx-auto pb-2">L'alignement, la robustesse et la vision de Jeff Hafley.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {staff.map((coach) => (
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border-b-8 border-miami-aqua hover:translate-y-[-10px] transition-transform duration-300">
+          <div class="h-64 bg-gray-200">
+             <img src={coach.image} alt={coach.name} class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold font-[Oswald] uppercase text-miami-blue">{coach.name}</h3>
+            <p class="text-miami-orange font-black text-sm uppercase mb-4 italic">{coach.role}</p>
+            <div class="text-xs text-left space-y-2 border-t pt-4">
+               <p><span class="font-bold text-gray-400 uppercase">Provenance:</span> <br/>{coach.provenance}</p>
+               <p><span class="font-bold text-gray-400 uppercase">Spécialité:</span> <br/>{coach.specialite}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
