@@ -9,6 +9,10 @@ category: Analyse
 tags:
   - Miami Dolphins
   - NFL France
+  - TyreekHill
+  - Cheetah
+  - NFL
+  - ""
 draft: false
 ---
 L'avenir de Tyreek Hill à Miami s'assombrit. Entre un Salary Cap dans le rouge et une condition physique incertaine, la franchise est face à un dilemme historique.
