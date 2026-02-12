@@ -1,10 +1,13 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
+// import tailwind from '@astrojs/tailwind'; // COMMENTE CETTE LIGNE
 
 export default defineConfig({
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
+    // tailwind(), // COMMENTE CETTE LIGNE AUSSI
   ],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
