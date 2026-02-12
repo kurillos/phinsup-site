@@ -1,24 +1,189 @@
 [
   {
     "week": "Week 1",
-    "date": "08 Septembre",
-    "opponent": "Jaguars",
-    "logo": "/images/jaguars.png",
+    "opponent": "Jacksonville Jaguars",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/JAX",
     "scorePhins": 20,
     "scoreOpp": 17,
-    "location": "Hard Rock Stadium",
-    "status": "W",
-    "scorers": ["T. Hill", "J. Waddle", "J. Cook (FG)"],
-    "slug": "victoire-face-aux-jaguars"
+    "result": "W",
+    "date": "08/09/2024",
+    "scorers": ["T. Hill", "D. Achane", "J. Sanders (2 FG)"],
+    "slug": "resume-week-1-jaguars"
   },
   {
     "week": "Week 2",
-    "date": "12 Septembre",
-    "opponent": "Bills",
-    "logo": "/images/jaguars.png",
+    "opponent": "Buffalo Bills",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/BUF",
     "scorePhins": 10,
     "scoreOpp": 31,
-    "location": "Hard Rock Stadium",
-    "status": "L"
+    "result": "L",
+    "date": "13/09/2024",
+    "scorers": ["D. Achane", "J. Sanders (FG)"],
+    "slug": "resume-week-2-bills"
+  },
+  {
+    "week": "Week 3",
+    "opponent": "Seattle Seahawks",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/SEA",
+    "scorePhins": 3,
+    "scoreOpp": 24,
+    "result": "L",
+    "date": "22/09/2024",
+    "scorers": ["J. Sanders (FG)"],
+    "slug": "resume-week-3-seahawks"
+  },
+  {
+    "week": "Week 4",
+    "opponent": "Tennessee Titans",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/TEN",
+    "scorePhins": 12,
+    "scoreOpp": 31,
+    "result": "L",
+    "date": "01/10/2024",
+    "scorers": ["T. Huntley", "J. Sanders (2 FG)"],
+    "slug": "resume-week-4-titans"
+  },
+  {
+    "week": "Week 5",
+    "opponent": "New England Patriots",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NE",
+    "scorePhins": 15,
+    "scoreOpp": 10,
+    "result": "W",
+    "date": "06/10/2024",
+    "scorers": ["A. Ingold", "J. Sanders (3 FG)"],
+    "slug": "resume-week-5-patriots"
+  },
+  {
+    "week": "Week 7",
+    "opponent": "Indianapolis Colts",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/IND",
+    "scorePhins": 10,
+    "scoreOpp": 16,
+    "result": "L",
+    "date": "20/10/2024",
+    "scorers": ["J. Smith", "J. Sanders (FG)"],
+    "slug": "resume-week-7-colts"
+  },
+  {
+    "week": "Week 8",
+    "opponent": "Arizona Cardinals",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/ARI",
+    "scorePhins": 27,
+    "scoreOpp": 28,
+    "result": "L",
+    "date": "27/10/2024",
+    "scorers": ["D. Achane (2)", "R. Mostert"],
+    "slug": "resume-week-8-cardinals"
+  },
+  {
+    "week": "Week 9",
+    "opponent": "Buffalo Bills",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/BUF",
+    "scorePhins": 27,
+    "scoreOpp": 30,
+    "result": "L",
+    "date": "03/11/2024",
+    "scorers": ["D. Achane", "J. Smith", "J. Waddle"],
+    "slug": "resume-week-9-bills"
+  },
+  {
+    "week": "Week 10",
+    "opponent": "Los Angeles Rams",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/LA",
+    "scorePhins": 23,
+    "scoreOpp": 15,
+    "result": "W",
+    "date": "12/11/2024",
+    "scorers": ["T. Hill", "M. Washington", "J. Sanders (3 FG)"],
+    "slug": "resume-week-10-rams"
+  },
+  {
+    "week": "Week 11",
+    "opponent": "Las Vegas Raiders",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/LV",
+    "scorePhins": 34,
+    "scoreOpp": 19,
+    "result": "W",
+    "date": "17/11/2024",
+    "scorers": ["J. Smith (2)", "T. Hill", "D. Achane"],
+    "slug": "resume-week-11-raiders"
+  },
+  {
+    "week": "Week 12",
+    "opponent": "New England Patriots",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NE",
+    "scorePhins": 34,
+    "scoreOpp": 15,
+    "result": "W",
+    "date": "24/11/2024",
+    "scorers": ["T. Hill", "J. Smith", "J. Waddle", "D. Achane"],
+    "slug": "resume-week-12-patriots"
+  },
+  {
+    "week": "Week 13",
+    "opponent": "Green Bay Packers",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/GB",
+    "scorePhins": 17,
+    "scoreOpp": 30,
+    "result": "L",
+    "date": "29/11/2024",
+    "scorers": ["T. Hill", "D. Achane"],
+    "slug": "resume-week-13-packers"
+  },
+  {
+    "week": "Week 14",
+    "opponent": "New York Jets",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NYJ",
+    "scorePhins": 32,
+    "scoreOpp": 26,
+    "result": "W",
+    "date": "08/12/2024",
+    "scorers": ["D. Achane", "J. Sanders (6 FG)"],
+    "slug": "resume-week-14-jets"
+  },
+  {
+    "week": "Week 15",
+    "opponent": "Houston Texans",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/HOU",
+    "scorePhins": 27,
+    "scoreOpp": 35,
+    "result": "L",
+    "date": "15/12/2024",
+    "scorers": ["T. Hill", "D. Achane", "J. Smith"],
+    "slug": "resume-week-15-texans"
+  },
+  {
+    "week": "Week 16",
+    "opponent": "San Francisco 49ers",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/SF",
+    "scorePhins": 28,
+    "scoreOpp": 34,
+    "result": "L",
+    "date": "22/12/2024",
+    "scorers": ["J. Waddle", "D. Achane (2)", "T. Hill"],
+    "slug": "resume-week-16-49ers"
+  },
+  {
+    "week": "Week 17",
+    "opponent": "Cleveland Browns",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/CLE",
+    "scorePhins": 31,
+    "scoreOpp": 23,
+    "result": "W",
+    "date": "30/12/2024",
+    "scorers": ["D. Achane", "T. Hill", "R. Mostert"],
+    "slug": "resume-week-17-browns"
+  },
+  {
+    "week": "Week 18",
+    "opponent": "New York Jets",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NYJ",
+    "scorePhins": 3,
+    "scoreOpp": 14,
+    "result": "L",
+    "date": "05/01/2025",
+    "scorers": ["J. Sanders (FG)"],
+    "slug": "resume-week-18-jets"
   }
 ]
