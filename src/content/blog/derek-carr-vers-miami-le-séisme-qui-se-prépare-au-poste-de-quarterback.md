@@ -1,5 +1,6 @@
 ---
-title: Derek Carr vers Miami ? Le séisme qui se prépare au poste de Quarterback
+title: "MAJ : Le départ de Tua se précise, Ian Rapoport confirme les intentions
+  de Miami"
 description: "Et si le successeur de Tua Tagovailoa s'appelait Derek Carr ?
   Alors que les Dolphins s'apprêtent à tourner une page historique, une rumeur
   folle agite la Floride : la sortie de retraite du quadruple Pro Bowler pour
@@ -23,6 +24,9 @@ tags:
   - tagovailoa
 draft: false
 ---
+> ### 🚨 MISE À JOUR (12 Février - 15h00) : 
+> **Selon Ian Rapoport (NFL Network), les Dolphins ont officiellement commencé à explorer les options de trade pour Tua Tagovailoa. Le club souhaite régler la situation avant le 11 mars, date du début de la nouvelle année légale NFL. Cette annonce confirme que la piste d'un vétéran comme Derek Carr n'est plus une simple spéculation, mais une nécessité absolue pour le GM Jon-Eric Sullivan.**
+
 Et si le successeur de **Tua Tagovailoa** s'appelait **Derek Carr** ? Alors que les *Dolphins* s'apprêtent à tourner une page historique, une rumeur folle agite la Floride : l'arrivée du vétéran pour guider l'attaque de **Jeff Hafley** en 2026. Décryptage d'un mouvement qui changerait tout.
 
 ### La fin de l'ère Tua Tagovailoa ?
