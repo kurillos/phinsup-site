@@ -1,7 +1,27 @@
 <section class="mt-10 p-4 bg-gray-50 rounded-xl border border-gray-100">
     <h3 class="text-miami-blue font-[Oswald] uppercase italic font-bold mb-4">Dernières Alertes @MiamiDolphins</h3>
-    <a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/MiamiDolphins?ref_src=twsrc%5Etfw">
-        Chargement du flux...
-    </a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    <div id="twitter-container" class="min-h-[600px]">
+        <a 
+            class="twitter-timeline" 
+            data-height="600" 
+            data-theme="light" 
+            data-chrome="nofooter noborders"
+            href="https://twitter.com/MiamiDolphins?ref_src=twsrc%5Etfw"
+        >
+            Chargement du flux...
+        </a>
+    </div>
+
+    <script is:inline>
+        function loadTwitter() {
+            const script = document.createElement('script');
+            script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+            script.setAttribute('async', 'true');
+            script.setAttribute('charset', 'utf-8');
+            document.head.appendChild(script);
+        }
+        // On attend que la page soit prête
+        window.addEventListener('load', loadTwitter);
+    </script>
 </section>
