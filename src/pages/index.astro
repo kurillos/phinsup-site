@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import TwitterFeed from '@/components/TwitterFeed.astro';
 
 // Récupère les articles et les trie par date (du plus récent au plus ancien)
 const posts = (await getCollection('blog', ({ data }) => {
@@ -9,17 +10,19 @@ const posts = (await getCollection('blog', ({ data }) => {
 ---
 
 <BaseLayout title="Accueil">
-    <section>
-        <div class="flex items-center justify-between mb-8 border-l-8 border-miami-orange pl-4">
-            <h2 class="text-3xl font-bold text-miami-blue font-[Oswald] uppercase italic">L'actualité des Phins</h2>
-            <a href="/blog" class="text-miami-aqua font-bold hover:underline italic">Voir tout →</a>
-        </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2">
+            <section>
+                <div class="flex items-center justify-between mb-8 border-l-8 border-miami-orange pl-4">
+                    <h2 class="text-3xl font-bold text-miami-blue font-[Oswald] uppercase italic">L'actualité des Phins</h2>
+                    <a href="/blog" class="text-miami-aqua font-bold hover:underline italic">Voir tout →</a>
+                </div>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
-                <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group relative flex flex-col h-full">
-                    {/* Le lien entoure TOUTE la carte proprement */}
-                    <a href={`/blog/${post.slug}/`} class="flex flex-col h-full">
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {posts.map((post) => (
+                        <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group relative flex flex-col h-full">
+                        {/* Le lien entoure TOUTE la carte proprement */}
+                        <a href={`/blog/${post.slug}/`} class="flex flex-col h-full">
                         
                         {/* UN SEUL CADRE IMAGE : h-64 pour voir Zack Kuntz et Hafley en entier */}
                         <div class="h-64 overflow-hidden relative bg-miami-blue/5 border-b border-gray-100"> 
@@ -82,4 +85,11 @@ const posts = (await getCollection('blog', ({ data }) => {
             ))}
         </div>
     </section>
+    </div>
+    <aside class="w-full">
+        <div class="sticky top-24">
+            <TwitterFeed />
+        </div>
+    </aside>
+</div>
 </BaseLayout>
