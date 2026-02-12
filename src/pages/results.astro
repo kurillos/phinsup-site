@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 
-// Simulation des données
+// Simulation des données avec les marqueurs (scorers)
 const season2025 = [
   {
     week: "Week 1",
@@ -11,7 +11,8 @@ const season2025 = [
     scoreOpp: 17,
     result: "W",
     date: "08/09/2024",
-    slug: "victoire-face-aux-jaguars" // Ajout du slug ici
+    scorers: ["T. Hill", "J. Waddle", "J. Sanders (2 FG)"],
+    slug: "victoire-face-aux-jaguars"
   },
   {
     week: "Week 2",
@@ -20,7 +21,9 @@ const season2025 = [
     scorePhins: 10,
     scoreOpp: 31,
     result: "L",
-    date: "13/09/2024"
+    date: "13/09/2024",
+    scorers: ["D. Achane"],
+    slug: "defaite-amere-contre-buffalo"
   },
 ];
 ---
@@ -62,20 +65,20 @@ const season2025 = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {season2025.map((game) => (
-          <div class="bg-white border-2 border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+          <div class="bg-white border-2 border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col">
             <div class={`text-center py-1 text-xs font-bold uppercase tracking-widest ${game.result === 'W' ? 'bg-[#008e97] text-white' : 'bg-[#f58220] text-white'}`}>
               {game.week} • {game.result === 'W' ? 'Victoire' : 'Défaite'}
             </div>
 
-            <div class="p-6 flex flex-col items-center">
+            <div class="p-6 flex flex-col items-center flex-grow">
               <div class="flex items-center justify-between w-full">
                 <div class="flex flex-col items-center flex-1">
                   <img src="https://static.www.nfl.com/t_q-best/league/api/clubs/logos/MIA" alt="Miami Dolphins" class="w-14 h-14 object-contain" />
-                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400 tracking-tighter">Dolphins</span>
+                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400 tracking-tighter italic">Dolphins</span>
                 </div>
 
                 <div class="flex flex-col items-center px-4">
-                  <span class="text-2xl font-black text-slate-800 tracking-tighter">
+                  <span class={`text-2xl font-black tracking-tighter ${game.result === 'W' ? 'text-[#008e97]' : 'text-slate-800'}`}>
                     {game.scorePhins} - {game.scoreOpp}
                   </span>
                   <span class="text-[9px] text-gray-400 mt-1 uppercase font-semibold">{game.date}</span>
@@ -83,11 +86,21 @@ const season2025 = [
 
                 <div class="flex flex-col items-center flex-1">
                   <img src={game.logo} alt={game.opponent} class="w-14 h-14 object-contain" />
-                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400 tracking-tighter text-center">{game.opponent.split(' ').pop()}</span>
+                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400 tracking-tighter text-center italic">{game.opponent.split(' ').pop()}</span>
                 </div>
               </div>
 
-              <div class="mt-6 w-full border-t border-gray-50 pt-4 text-center">
+              {game.scorers && (
+                <div class="mt-4 flex flex-wrap justify-center gap-x-2 gap-y-1">
+                  {game.scorers.map((player) => (
+                    <span class="text-[9px] font-bold text-gray-500 bg-gray-50 border border-gray-100 px-2 py-0.5 rounded shadow-sm">
+                      🏈 {player}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              <div class="mt-auto w-full border-t border-gray-50 pt-4 text-center">
                 {game.slug ? (
                   <a href={`/blog/${game.slug}`} class="text-[11px] font-bold uppercase tracking-widest text-[#008e97] hover:text-[#f58220] transition-colors inline-flex items-center gap-1">
                     Lire le résumé <span>→</span>
@@ -107,7 +120,7 @@ const season2025 = [
         <h2 class="text-2xl font-bold border-2 border-gray-300 text-gray-500 px-4 py-1 skew-x-[-12deg]">2024 - 2025</h2>
         <div class="h-[2px] flex-grow bg-gray-200"></div>
       </div>
-      <p class="text-sm italic text-gray-500">Archives en cours de chargement...</p>
+      <p class="text-sm italic text-gray-500 text-center">Archives bientôt disponibles...</p>
     </section>
 
   </main>
