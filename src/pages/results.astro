@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+
+// Simulation des données
+const season2025 = [
+  {
+    week: "Week 1",
+    opponent: "Jacksonville Jaguars",
+    logo: "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/JAX",
+    scorePhins: 20,
+    scoreOpp: 17,
+    result: "W",
+    date: "08/09/2024",
+    slug: "victoire-face-aux-jaguars" // Ajout du slug ici
+  },
+  {
+    week: "Week 2",
+    opponent: "Buffalo Bills",
+    logo: "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/BUF",
+    scorePhins: 10,
+    scoreOpp: 31,
+    result: "L",
+    date: "13/09/2024"
+  },
+];
+---
+
+<Layout title="Résultats - PhinsUp France">
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    
+    <header class="mb-12 border-b-4 border-[#f58220] pb-4">
+      <h1 class="text-4xl font-black text-[#008e97] italic uppercase">Résultats de la Saison</h1>
+      <p class="text-gray-600 mt-2">Suivez le parcours des Miami Dolphins, match après match.</p>
+    </header>
+
+    <section class="mb-20">
+      <div class="flex items-center gap-4 mb-8">
+        <h2 class="text-2xl font-bold bg-[#008e97] text-white px-4 py-1 skew-x-[-12deg]">2025 - 2026</h2>
+        <div class="h-[2px] flex-grow bg-gray-200"></div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div class="bg-white border-b-4 border-[#008e97] p-4 rounded-lg shadow-sm text-center">
+          <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Victoires</span>
+          <span class="text-3xl font-black text-slate-800">{season2025.filter(g => g.result === 'W').length}</span>
+        </div>
+        <div class="bg-white border-b-4 border-[#f58220] p-4 rounded-lg shadow-sm text-center">
+          <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Défaites</span>
+          <span class="text-3xl font-black text-slate-800">{season2025.filter(g => g.result === 'L').length}</span>
+        </div>
+        <div class="bg-white border-b-4 border-gray-300 p-4 rounded-lg shadow-sm text-center">
+          <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Classement</span>
+          <span class="text-3xl font-black text-slate-800 italic">2nd</span>
+          <span class="block text-[10px] text-gray-400 font-bold uppercase">AFC East</span>
+        </div>
+        <div class="bg-gradient-to-br from-[#008e97] to-[#005f66] p-4 rounded-lg shadow-sm text-center text-white">
+          <span class="block text-white/70 text-[10px] uppercase font-bold tracking-widest">Playoffs</span>
+          <span class="text-xl font-black italic uppercase leading-none">Qualified</span>
+          <span class="block text-[10px] text-white/50 font-bold uppercase mt-1">Wild Card</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {season2025.map((game) => (
+          <div class="bg-white border-2 border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+            <div class={`text-center py-1 text-xs font-bold uppercase tracking-widest ${game.result === 'W' ? 'bg-[#008e97] text-white' : 'bg-[#f58220] text-white'}`}>
+              {game.week} • {game.result === 'W' ? 'Victoire' : 'Défaite'}
+            </div>
+
+            <div class="p-6 flex flex-col items-center">
+              <div class="flex items-center justify-between w-full">
+                <div class="flex flex-col items-center flex-1">
+                  <img src="https://static.www.nfl.com/t_q-best/league/api/clubs/logos/MIA" alt="Miami Dolphins" class="w-14 h-14 object-contain" />
+                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400 tracking-tighter">Dolphins</span>
+                </div>
+
+                <div class="flex flex-col items-center px-4">
+                  <span class="text-2xl font-black text-slate-800 tracking-tighter">
+                    {game.scorePhins} - {game.scoreOpp}
+                  </span>
+                  <span class="text-[9px] text-gray-400 mt-1 uppercase font-semibold">{game.date}</span>
+                </div>
+
+                <div class="flex flex-col items-center flex-1">
+                  <img src={game.logo} alt={game.opponent} class="w-14 h-14 object-contain" />
+                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400 tracking-tighter text-center">{game.opponent.split(' ').pop()}</span>
+                </div>
+              </div>
+
+              <div class="mt-6 w-full border-t border-gray-50 pt-4 text-center">
+                {game.slug ? (
+                  <a href={`/blog/${game.slug}`} class="text-[11px] font-bold uppercase tracking-widest text-[#008e97] hover:text-[#f58220] transition-colors inline-flex items-center gap-1">
+                    Lire le résumé <span>→</span>
+                  </a>
+                ) : (
+                  <span class="text-[10px] text-gray-300 italic">Analyse à venir</span>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+       <div class="flex items-center gap-4 mb-8">
+        <h2 class="text-2xl font-bold border-2 border-gray-300 text-gray-500 px-4 py-1 skew-x-[-12deg]">2024 - 2025</h2>
+        <div class="h-[2px] flex-grow bg-gray-200"></div>
+      </div>
+      <p class="text-sm italic text-gray-500">Archives en cours de chargement...</p>
+    </section>
+
+  </main>
+</Layout>

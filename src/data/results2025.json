@@ -1,0 +1,23 @@
+[
+  {
+    "week": "Week 1",
+    "date": "08 Septembre",
+    "opponent": "Jaguars",
+    "logo": "/images/jaguars.png",
+    "scorePhins": 20,
+    "scoreOpp": 17,
+    "location": "Hard Rock Stadium",
+    "status": "W",
+    "slug": "victoire-face-aux-jaguars"
+  },
+  {
+    "week": "Week 2",
+    "date": "12 Septembre",
+    "opponent": "Bills",
+    "logo": "/images/jaguars.png",
+    "scorePhins": 10,
+    "scoreOpp": 31,
+    "location": "Hard Rock Stadium",
+    "status": "L"
+  }
+]
