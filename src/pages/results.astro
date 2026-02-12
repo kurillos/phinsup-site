@@ -36,6 +36,18 @@ const season2025 = [
       <p class="text-gray-600 mt-2">Suivez le parcours des Miami Dolphins, match après match.</p>
     </header>
 
+    <div class="flex flex-wrap items-center gap-3 mb-10">
+        <span class="bg-[#f58220] text-white text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-tighter">
+            Saison 2025-2026 Terminée
+        </span>
+        <span class="bg-slate-800 text-white text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-tighter">
+            Bilan Final : 11W - 6L
+        </span>
+        <span class="border-2 border-[#008e97] text-[#008e97] text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-tighter">
+            Playoffs : Wild Card
+        </span>
+    </div>
+
     <section class="mb-20">
       <div class="flex items-center gap-4 mb-8">
         <h2 class="text-2xl font-bold bg-[#008e97] text-white px-4 py-1 skew-x-[-12deg]">2025 - 2026</h2>
@@ -102,11 +114,16 @@ const season2025 = [
 
               <div class="mt-auto w-full border-t border-gray-50 pt-4 text-center">
                 {game.slug ? (
-                  <a href={`/blog/${game.slug}`} class="text-[11px] font-bold uppercase tracking-widest text-[#008e97] hover:text-[#f58220] transition-colors inline-flex items-center gap-1">
-                    Lire le résumé <span>→</span>
-                  </a>
+                <a href={`/blog/${game.slug}`} class="group inline-flex items-center gap-2">
+                    <span class="bg-[#008e97]/10 text-[#008e97] group-hover:bg-[#008e97] group-hover:text-white transition-all text-[9px] font-bold uppercase px-2 py-1 rounded border border-[#008e97]/20">
+                        Lire l'Analyse
+                    </span>
+                    <span class="text-[#008e97] group-hover:translate-x-1 transition-transform">→</span>
+                </a>
                 ) : (
-                  <span class="text-[10px] text-gray-300 italic">Analyse à venir</span>
+                    <span class="text-[9px] font-bold uppercase text-gray-300 tracking-widest">
+                        Bientôt disponible
+                    </span>
                 )}
               </div>
             </div>
