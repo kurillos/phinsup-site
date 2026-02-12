@@ -5,7 +5,7 @@ description: Le front office de Miami continue de préparer la saison 2026. Les
   Jr. via un contrat "Reserve/Future". Un pari à petit risque sur un ancien
   second tour de draft au potentiel physique intéressant.
 pubDate: 2026-02-04T16:00:00.000+01:00
-heroImage: /images/terrace-marhsall-jr
+heroImage: /images/terrace-marshall-jr.webp
 category: Actu
 tags:
   - Terrace Marshall Jr Miami Dolphins Transfert NFL NFL France Dolphins News
