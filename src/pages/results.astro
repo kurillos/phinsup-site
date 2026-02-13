@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import season2025 from '../data/results2025.json';
+
+// Tu pourras importer tes futures saisons ici
+// import season2024 from '../data/results2024.json';
 ---
 
 <Layout title="Résultats - PhinsUp France">
@@ -11,24 +14,20 @@ import season2025 from '../data/results2025.json';
       <p class="text-gray-600 mt-2">Suivez le parcours des Miami Dolphins, match après match.</p>
     </header>
 
-    <div class="flex flex-wrap items-center gap-3 mb-10">
-        <span class="bg-[#f58220] text-white text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-tighter">
-            Saison 2025-2026 Terminée
-        </span>
-        <span class="bg-slate-800 text-white text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-tighter">
-            Bilan Final : 11W - 6L
-        </span>
-        <span class="border-2 border-[#008e97] text-[#008e97] text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-tighter">
-            Playoffs : Wild Card
-        </span>
-    </div>
+    {/* Section Saison 2025-2026 (Dépliée par défaut) */}
+    <details open class="group mb-12">
+      <summary class="list-none cursor-pointer">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 class="text-2xl font-bold bg-[#008e97] text-white px-4 py-1 skew-x-[-12deg] flex items-center gap-2">
+            2025 - 2026 
+            <span class="text-sm font-normal opacity-80 group-open:rotate-180 transition-transform">▼</span>
+          </h2>
+          <div class="h-[2px] flex-grow bg-[#008e97]/20"></div>
+          <span class="bg-[#f58220] text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">Saison Terminée</span>
+        </div>
+      </summary>
 
-    <section class="mb-20">
-      <div class="flex items-center gap-4 mb-8">
-        <h2 class="text-2xl font-bold bg-[#008e97] text-white px-4 py-1 skew-x-[-12deg]">2025 - 2026</h2>
-        <div class="h-[2px] flex-grow bg-gray-200"></div>
-      </div>
-
+      {/* Stats de la saison */}
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         <div class="bg-white border-b-4 border-[#008e97] p-4 rounded-lg shadow-sm text-center">
           <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Victoires</span>
@@ -40,80 +39,86 @@ import season2025 from '../data/results2025.json';
         </div>
         <div class="bg-white border-b-4 border-gray-300 p-4 rounded-lg shadow-sm text-center">
           <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Classement</span>
-          <span class="text-3xl font-black text-slate-800 italic">2nd</span>
-          <span class="block text-[10px] text-gray-400 font-bold uppercase">AFC East</span>
+          <span class="text-3xl font-black text-slate-800 italic text-[#008e97]">2nd</span>
         </div>
-        <div class="bg-gradient-to-br from-[#008e97] to-[#005f66] p-4 rounded-lg shadow-sm text-center text-white">
-          <span class="block text-white/70 text-[10px] uppercase font-bold tracking-widest">Playoffs</span>
+        <div class="bg-slate-800 p-4 rounded-lg shadow-sm text-center text-white">
+          <span class="block text-white/50 text-[10px] uppercase font-bold tracking-widest">Playoffs</span>
           <span class="text-xl font-black italic uppercase leading-none">Qualified</span>
-          <span class="block text-[10px] text-white/50 font-bold uppercase mt-1">Wild Card</span>
         </div>
       </div>
 
+      {/* Grille des matchs */}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {season2025.map((game) => (
-          <div class="bg-white border-2 border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col">
+          <div class="bg-white border-2 border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden">
             <div class={`text-center py-1 text-xs font-bold uppercase tracking-widest ${game.result === 'W' ? 'bg-[#008e97] text-white' : 'bg-[#f58220] text-white'}`}>
               {game.week} • {game.result === 'W' ? 'Victoire' : 'Défaite'}
             </div>
 
             <div class="p-6 flex flex-col items-center flex-grow">
+              
+              {/* NOUVEAU : Affichage du Stade et de la Ville */}
+              <div class="flex items-center gap-1 mb-4 text-gray-400">
+                <span class="text-[9px] font-bold uppercase tracking-tight italic">
+                  📍 {game.stadium} • {game.location}
+                </span>
+              </div>
+
               <div class="flex items-center justify-between w-full">
                 <div class="flex flex-col items-center flex-1">
-                  <img src="https://static.www.nfl.com/t_q-best/league/api/clubs/logos/MIA" alt="Miami Dolphins" class="w-14 h-14 object-contain" />
-                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400 tracking-tighter italic">Dolphins</span>
+                  <img src="https://static.www.nfl.com/t_q-best/league/api/clubs/logos/MIA" class="w-12 h-12" alt="Dolphins" />
+                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400">Dolphins</span>
                 </div>
 
                 <div class="flex flex-col items-center px-4">
-                  <span class={`text-2xl font-black tracking-tighter ${game.result === 'W' ? 'text-[#008e97]' : 'text-slate-800'}`}>
+                  <span class={`text-2xl font-black ${game.result === 'W' ? 'text-[#008e97]' : 'text-slate-800'}`}>
                     {game.scorePhins} - {game.scoreOpp}
                   </span>
-                  <span class="text-[9px] text-gray-400 mt-1 uppercase font-semibold">{game.date}</span>
+                  <span class="text-[9px] text-gray-400 uppercase">{game.date}</span>
                 </div>
 
                 <div class="flex flex-col items-center flex-1">
-                  <img src={game.logo} alt={game.opponent} class="w-14 h-14 object-contain" />
-                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400 tracking-tighter text-center italic">{game.opponent.split(' ').pop()}</span>
+                  <img src={game.logo} class="w-12 h-12" alt={game.opponent} />
+                  <span class="text-[10px] font-bold mt-2 uppercase text-gray-400 text-center">{game.opponent.split(' ').pop()}</span>
                 </div>
               </div>
 
+              {/* Buteurs */}
               {game.scorers && (
-                <div class="mt-4 flex flex-wrap justify-center gap-x-2 gap-y-1">
+                <div class="mt-4 flex flex-wrap justify-center gap-1">
                   {game.scorers.map((player) => (
-                    <span class="text-[9px] font-bold text-gray-500 bg-gray-50 border border-gray-100 px-2 py-0.5 rounded shadow-sm">
-                      🏈 {player}
-                    </span>
+                    <span class="text-[8px] font-bold text-gray-500 bg-gray-50 border px-2 py-0.5 rounded">🏈 {player}</span>
                   ))}
                 </div>
               )}
 
+              {/* Lien Analyse */}
               <div class="mt-auto w-full border-t border-gray-50 pt-4 text-center">
                 {game.slug ? (
-                <a href={`/blog/${game.slug}`} class="group inline-flex items-center gap-2">
-                    <span class="bg-[#008e97]/10 text-[#008e97] group-hover:bg-[#008e97] group-hover:text-white transition-all text-[9px] font-bold uppercase px-2 py-1 rounded border border-[#008e97]/20">
-                        Lire l'Analyse
-                    </span>
-                    <span class="text-[#008e97] group-hover:translate-x-1 transition-transform">→</span>
-                </a>
+                  <a href={`/blog/${game.slug}`} class="text-[9px] font-bold uppercase text-[#008e97] hover:underline">Lire l'Analyse →</a>
                 ) : (
-                    <span class="text-[9px] font-bold uppercase text-gray-300 tracking-widest">
-                        Bientôt disponible
-                    </span>
+                  <span class="text-[9px] font-bold uppercase text-gray-300">Analyse bientôt</span>
                 )}
               </div>
             </div>
           </div>
         ))}
       </div>
-    </section>
+    </details>
 
-    <section class="opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-       <div class="flex items-center gap-4 mb-8">
-        <h2 class="text-2xl font-bold border-2 border-gray-300 text-gray-500 px-4 py-1 skew-x-[-12deg]">2024 - 2025</h2>
-        <div class="h-[2px] flex-grow bg-gray-200"></div>
+    {/* Section Archives 2024-2025 (Repliée par défaut) */}
+    <details class="group">
+      <summary class="list-none cursor-pointer">
+        <div class="flex items-center gap-4 mb-8 opacity-60">
+          <h2 class="text-2xl font-bold border-2 border-gray-300 text-gray-500 px-4 py-1 skew-x-[-12deg]">2024 - 2025</h2>
+          <div class="h-[2px] flex-grow bg-gray-200"></div>
+          <span class="text-sm font-bold text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+        </div>
+      </summary>
+      <div class="bg-gray-50 rounded-xl p-10 text-center border-2 border-dashed border-gray-200">
+        <p class="text-gray-500 italic">Les archives de la saison 2024 arrivent bientôt sur PhinsUp France.</p>
       </div>
-      <p class="text-sm italic text-gray-500 text-center">Archives bientôt disponibles...</p>
-    </section>
+    </details>
 
   </main>
 </Layout>

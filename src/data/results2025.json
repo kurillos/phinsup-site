@@ -13,6 +13,8 @@
   {
     "week": "Week 2",
     "opponent": "Buffalo Bills",
+    "stadium": "Hard Rock Stadium",
+    "location": "Miami Gardens, FL",
     "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/BUF",
     "scorePhins": 10,
     "scoreOpp": 31,
