@@ -6,6 +6,7 @@ import season2025 from '../data/results2025.json';
 const regSeason = season2025.filter(g => g.type === 'reg');
 const wins = regSeason.filter(g => g.result === 'W').length;
 const losses = regSeason.filter(g => g.result === 'L').length;
+const ties = regSeason.filter(g => g.result === 'T').length;
 ---
 
 <Layout title="Résultats - PhinsUp France">
@@ -27,7 +28,9 @@ const losses = regSeason.filter(g => g.result === 'L').length;
           <div class="h-[2px] flex-grow bg-gradient-to-r from-[#008e97]/30 to-transparent"></div>
           <div class="flex gap-2">
             <span class="bg-[#f58220] text-white text-[9px] font-black uppercase px-3 py-1 rounded-full shadow-sm">Terminée</span>
-            <span class="bg-slate-800 text-white text-[9px] font-black uppercase px-3 py-1 rounded-full shadow-sm">Bilan : {wins}W - {losses}L</span>
+            <span class="bg-slate-800 text-white text-[9px] font-black uppercase px-3 py-1 rounded-full shadow-sm">
+              Bilan : {wins}W - {losses}L {ties > 0 ? `- ${ties}T` : ''}
+            </span>
           </div>
         </div>
       </summary>
@@ -44,11 +47,11 @@ const losses = regSeason.filter(g => g.result === 'L').length;
         </div>
         <div class="bg-white border-b-4 border-slate-200 p-5 rounded-xl shadow-sm text-center">
           <span class="block text-gray-400 text-[10px] uppercase font-black tracking-widest mb-1">Division</span>
-          <span class="text-4xl font-black text-[#008e97] italic">2nd</span>
+          <span class="text-4xl font-black text-[#008e97] italic">3ème</span>
         </div>
         <div class="bg-slate-900 p-5 rounded-xl shadow-md text-center text-white border-t-4 border-[#008e97]">
           <span class="block text-white/40 text-[10px] uppercase font-black tracking-widest mb-1">Playoffs</span>
-          <span class="text-2xl font-black italic uppercase leading-none block">Wild Card</span>
+          <span class="text-2xl font-black italic uppercase leading-none block">Non Qualifié</span>
         </div>
       </div>
 
@@ -58,18 +61,18 @@ const losses = regSeason.filter(g => g.result === 'L').length;
         <div class="h-[1px] flex-grow bg-gray-100"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 opacity-75">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
         {season2025.filter(g => g.type === 'pre').map((game) => (
           <div class="bg-white border border-gray-100 rounded-xl shadow-sm flex flex-col overflow-hidden">
-             <div class="text-center py-1 text-[10px] font-bold uppercase tracking-widest bg-gray-100 text-gray-500">
-              {game.week} • {game.result === 'W' ? 'Victoire' : 'Défaite'}
+             <div class={`text-center py-1 text-[10px] font-bold uppercase tracking-widest ${game.result === 'W' ? 'bg-[#008e97] text-white' : game.result === 'L' ? 'bg-[#f58220] text-white' : 'bg-slate-500 text-white'}`}>
+              {game.week} • {game.result === 'W' ? 'Victoire' : game.result === 'L' ? 'Défaite' : 'Match Nul'}
             </div>
             <div class="p-5 flex flex-col items-center">
                <span class="text-[9px] font-bold uppercase text-gray-400 mb-3 tracking-tighter italic">📍 {game.stadium}</span>
                <div class="flex items-center justify-between w-full mb-2">
-                  <img src="https://static.www.nfl.com/t_q-best/league/api/clubs/logos/MIA" class="w-10 h-10 grayscale" />
-                  <span class="text-xl font-black text-gray-400">{game.scorePhins} - {game.scoreOpp}</span>
-                  <img src={game.logo} class="w-10 h-10 grayscale" />
+                  <img src="https://static.www.nfl.com/t_q-best/league/api/clubs/logos/MIA" class="w-10 h-10" />
+                  <span class="text-xl font-black text-slate-800">{game.scorePhins} - {game.scoreOpp}</span>
+                  <img src={game.logo} class="w-10 h-10" />
                </div>
             </div>
           </div>
@@ -85,8 +88,11 @@ const losses = regSeason.filter(g => g.result === 'L').length;
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {regSeason.map((game) => (
           <div class="bg-white border-2 border-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden group">
-            <div class={`text-center py-2 text-xs font-black uppercase tracking-widest shadow-inner ${game.result === 'W' ? 'bg-[#008e97] text-white' : 'bg-[#f58220] text-white'}`}>
-              {game.week} • {game.result === 'W' ? 'Victoire' : 'Défaite'}
+            <div class={`text-center py-2 text-xs font-black uppercase tracking-widest shadow-inner 
+              ${game.result === 'W' ? 'bg-[#008e97] text-white' : 
+                game.result === 'L' ? 'bg-[#f58220] text-white' : 
+                'bg-slate-500 text-white'}`}>
+              {game.week} • {game.result === 'W' ? 'Victoire' : game.result === 'L' ? 'Défaite' : 'Match Nul'}
             </div>
 
             <div class="p-6 flex flex-col items-center flex-grow">
@@ -102,11 +108,11 @@ const losses = regSeason.filter(g => g.result === 'L').length;
                   <span class="text-[10px] font-black mt-2 uppercase text-slate-800 italic">Dolphins</span>
                 </div>
 
-                <div class="flex flex-col items-center px-4">
-                  <span class={`text-3xl font-black tracking-tighter ${game.result === 'W' ? 'text-[#008e97]' : 'text-slate-800'}`}>
+                <div class="flex flex-col items-center px-4 text-center">
+                  <span class={`text-3xl font-black tracking-tighter ${game.result === 'W' ? 'text-[#008e97]' : game.result === 'L' ? 'text-[#f58220]' : 'text-slate-500'}`}>
                     {game.scorePhins}-{game.scoreOpp}
                   </span>
-                  <span class="text-[10px] text-gray-400 font-bold mt-1 bg-gray-100 px-2 rounded">{game.date}</span>
+                  <span class="text-[10px] text-gray-400 font-bold mt-1 bg-gray-100 px-2 rounded whitespace-nowrap">{game.date}</span>
                 </div>
 
                 <div class="flex flex-col items-center flex-1 text-center">

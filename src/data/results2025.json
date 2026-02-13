@@ -1,4 +1,19 @@
 [
+ {
+    "week": "Week 1",
+    "type": "pre",
+    "opponent": "Chicago Bears",
+    "stadium": "Soldier Field",
+    "location": "Chicago, IL",
+    "logo": "/images/logos/CHI.svg",
+    "scorePhins": 24,
+    "scoreOpp": 24,
+    "result": "T",
+    "date": "08/10/2025",
+    "slug": "resume-week-1-jaguars"
+  },
+
+
   {
     "week": "Week 1",
     "type": "pre",
