@@ -1,7 +1,9 @@
 [
   {
     "week": "Week 1",
+    "type": "pre",
     "opponent": "Jacksonville Jaguars",
+    "stadium": "Hard Rock Stadium",
     "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/JAX",
     "scorePhins": 20,
     "scoreOpp": 17,
@@ -12,6 +14,7 @@
   },
   {
     "week": "Week 2",
+    "type": "pre",
     "opponent": "Buffalo Bills",
     "stadium": "Hard Rock Stadium",
     "location": "Miami Gardens, FL",
