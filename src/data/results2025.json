@@ -5,7 +5,7 @@
     "opponent": "Chicago Bears",
     "stadium": "Soldier Field",
     "location": "Chicago, IL",
-    "logo": "/images/logos/CHI.svg",
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/CHI",
     "scorePhins": 24,
     "scoreOpp": 24,
     "result": "T",
