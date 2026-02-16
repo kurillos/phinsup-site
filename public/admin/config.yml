@@ -25,3 +25,10 @@ collections:
       - { label: "Mots-clés SEO", name: "tags", widget: "list", default: ["Miami Dolphins", "NFL France"] }
       - { label: "Cacher l'article ?", name: "draft", widget: "boolean", default: false }
       - { label: "Corps de l'article", name: "body", widget: "markdown" }
+      - {
+          label: "Auteur",
+          name: "author",
+          widget: "select",
+          options: ["Cyril", "Lucas Roc", "FCFRMD", "Redaction PhinsUp"],
+          default: "Rédaction PhinsUp"
+      }
