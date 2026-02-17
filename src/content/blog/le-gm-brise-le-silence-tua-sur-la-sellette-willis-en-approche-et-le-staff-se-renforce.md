@@ -8,7 +8,7 @@ description: "Cela fait quelques jours que Sullivan expose sa stratégie et pren
   allons infuser de la compétition dans cette salle des Quarterbacks.' Cela
   promet une saison sous le signe du renouveau pour Miami !"
 pubDate: 2026-02-13T14:00:00.000+01:00
-heroImage: /images/kevin-patullo.png
+heroImage: /images/kevin-patullo-1-.png
 category: Breaking News
 tags:
   - Miami Dolphins
