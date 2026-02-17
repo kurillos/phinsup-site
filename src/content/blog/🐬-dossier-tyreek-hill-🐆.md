@@ -4,7 +4,7 @@ description: "\"Analyse du contrat de Tyreek Hill : entre Salary Cap, baisse de
   régime et nouveau staff de Jeff Hafley, les Dolphins doivent-ils s'en séparer
   avant mars 2026 ?\""
 pubDate: 2026-02-12T13:05:00.000+01:00
-heroImage: /images/tyreek-hill.webp
+heroImage: /images/analyse-contrat-hill.png
 category: Analyse
 tags:
   - Miami Dolphins
@@ -14,6 +14,7 @@ tags:
   - NFL
   - ""
 draft: false
+author: Cyril
 ---
 L'avenir de Tyreek Hill à Miami s'assombrit. Entre un Salary Cap dans le rouge et une condition physique incertaine, la franchise est face à un dilemme historique.
 
