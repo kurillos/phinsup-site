@@ -5,7 +5,7 @@ description: Ce lundi 16 février 2026 restera comme le jour où le paysage de
   NFL, Jon-Eric Sullivan a confirmé la libération du "Cheetah" Tyreek Hill, de
   James Daniels et de Nick Westbrook-Ikhine. C’est la fin d’une époque.
 pubDate: 2026-02-17T08:20:00.000+01:00
-heroImage: /images/seisme.png
+heroImage: /images/miami-depart.png
 category: Actu
 tags:
   - Miami Dolphins
