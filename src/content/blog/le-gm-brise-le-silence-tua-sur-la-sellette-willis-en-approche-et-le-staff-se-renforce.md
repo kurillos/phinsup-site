@@ -8,7 +8,7 @@ description: "Cela fait quelques jours que Sullivan expose sa stratégie et pren
   allons infuser de la compétition dans cette salle des Quarterbacks.' Cela
   promet une saison sous le signe du renouveau pour Miami !"
 pubDate: 2026-02-13T14:00:00.000+01:00
-heroImage: /images/kev-patullo.png
+heroImage: /images/kevin-patullo.png
 category: Breaking News
 tags:
   - Miami Dolphins
@@ -24,6 +24,7 @@ tags:
   - Bobby Slowik
   - Future Contract NFL
 draft: false
+author: Cyril
 ---
 Pour la première fois, la direction ne garantit pas que Tua sera titulaire. Le QB star de la franchise est sur la sellette. Pour l’instant, aucune décision n’est entérinée, mais aucune n’est exclue non plus. Les rumeurs de transfert sont fondées, même si les comptes montrent qu'il sera "plus cher à virer qu’à garder" avec un dead cap abyssal de 99M$.
 
