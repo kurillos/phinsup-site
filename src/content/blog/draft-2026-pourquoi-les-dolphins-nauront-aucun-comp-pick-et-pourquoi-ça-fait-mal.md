@@ -6,7 +6,7 @@ description: "On espérait un choix supplémentaire pour compenser le départ de
   signatures de vétérans et calculs d'apothicaire, décryptage d'un échec
   administratif qui pèse lourd sur l'avenir de la franchise."
 pubDate: 2026-02-12T15:17:00.000+01:00
-heroImage: /images/draft-miami.png
+heroImage: /images/draft-low-stock.png
 category: Breaking News
 tags:
   - Miami Dolphins
@@ -22,6 +22,7 @@ tags:
   - Miami
   - HardRockStadium
 draft: false
+author: Redaction PhinsUp
 ---
 ### Le mirage Jevon Holland
 Le départ de notre Safety All-Pro, **Jevon Holland**, vers les Giants (contrat de 3 ans, 45 millions $) devait logiquement nous rapporter un choix compensatoire au 4ème tour de la Draft 2026. C'est le principe de la NFL : *si vous perdez un talent majeur, la ligue vous dédommage*.

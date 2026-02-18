@@ -4,7 +4,7 @@ description: 'Veto des Lions pour Gradkowski, faux bond de Nathaniel Hackett et
   "vibe" Bruce Springsteen : découvrez les coulisses du nouveau staff de Jeff
   Hafley à Miami.'
 pubDate: 2026-02-13T08:59:00.000+01:00
-heroImage: /images/aquavslion.png
+heroImage: /images/veto-blocked.png
 category: Breaking News
 tags:
   - Miami Dolphins
@@ -20,6 +20,7 @@ tags:
   - jeff
   - halfley
 draft: false
+author: Redaction PhinsUp
 ---
 ### Le "No-Go" de Détroit : Bruce Gradkowski reste chez Lions
 

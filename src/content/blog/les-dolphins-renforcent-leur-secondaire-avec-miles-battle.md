@@ -13,6 +13,7 @@ tags:
   - Miles Battle
   - Actu
 draft: false
+author: Cyril
 ---
 Le mouvement perpétuel continue dans le roster des Miami Dolphins. La franchise a officialisé ce mercredi la signature du cornerback **Miles Battle**.
 

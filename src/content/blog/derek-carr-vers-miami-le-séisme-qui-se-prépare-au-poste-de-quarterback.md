@@ -7,7 +7,7 @@ description: "Et si le successeur de Tua Tagovailoa s'appelait Derek Carr ?
   guider l'attaque de Jeff Hafley en 2026. Décryptage d'un mouvement qui
   changerait tout."
 pubDate: 2026-02-12T14:36:00.000+01:00
-heroImage: /images/carr-vs-tua.png
+heroImage: /images/tua-ou-carr-.png
 category: Breaking News
 tags:
   - Miami Dolphins
@@ -23,6 +23,7 @@ tags:
   - tuatagovailoa
   - tagovailoa
 draft: false
+author: Cyril
 ---
 > ### 🚨 MISE À JOUR (12 Février - 15h00) : 
 > **Selon Ian Rapoport (NFL Network), les Dolphins ont officiellement commencé à explorer les options de trade pour Tua Tagovailoa. Le club souhaite régler la situation avant le 11 mars, date du début de la nouvelle année légale NFL. Cette annonce confirme que la piste d'un vétéran comme Derek Carr n'est plus une simple spéculation, mais une nécessité absolue pour le GM Jon-Eric Sullivan.**
