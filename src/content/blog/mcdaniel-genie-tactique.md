@@ -1,9 +1,12 @@
 ---
 title: "Fin de l'ère McDaniel : Pourquoi le génie tactique a fini par échouer ?"
-description: "Suite à la défaite humiliante contre les Patriots, Mike McDaniel est démis de ses fonctions. Retour sur un échec que personne n'avait vu venir."
+description: Suite à la défaite humiliante contre les Patriots, Mike McDaniel
+  est démis de ses fonctions. Retour sur un échec que personne n'avait vu venir.
 pubDate: 2026-02-11
-heroImage: "/images/mike-mcdaniel.webp"
-category: "Breaking News"
+heroImage: /images/mike-mcdaniel-failed.png
+category: Breaking News
+draft: false
+author: Cyril
 ---
 
 # Le clap de fin.
