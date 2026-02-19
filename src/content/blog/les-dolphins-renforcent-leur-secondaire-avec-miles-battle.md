@@ -5,7 +5,7 @@ description: Nouvelle signature pour l'escouade défensive de Miami. Les Dolphin
   Patriots, ce jeune talent de 25 ans vient apporter de la profondeur au groupe
   de Jeff Hafley.
 pubDate: 2026-02-12T08:30:00.000+01:00
-heroImage: /images/miles-battle.png
+heroImage: /images/miles.png
 category: Actu
 tags:
   - Miami Dolphins
