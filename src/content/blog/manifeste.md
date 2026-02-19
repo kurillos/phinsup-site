@@ -1,8 +1,8 @@
 ---
-title: "Manifeste : Pourquoi THE FINSIDE.FR ?"
+title: "Manifeste : Pourquoi THE PHINSIDE.FR ?"
 description: La passion ne se résume pas à un score. Découvrez notre mission.
 pubDate: 2026-02-10
-heroImage: /images/hard-rock-stadium.png
+heroImage: /images/the-phinside.png
 category: Histoire
 draft: false
 author: Redaction Phin Side
@@ -14,9 +14,9 @@ author: Redaction Phin Side
 
 Depuis trop longtemps, suivre les Miami Dolphins en France se limitait à des brèves de trois lignes ou à des résumés nocturnes traduits à la hâte. Avec l’arrivée de la National Football League au Stade de France en 2026, il était temps que la franchise la plus iconique de Floride ait sa propre voix dans l'Hexagone.
 
-**The FINSIDE** est né d’une conviction simple : être fan des Miami Dolphins, c'est vivre un mélange unique de tradition légendaire et d'innovation tactique.
+**The PHINSIDE** est né d’une conviction simple : être fan des Miami Dolphins, c'est vivre un mélange unique de tradition légendaire et d'innovation tactique.
 
-Plus qu’un média, **The FINSIDE** est l’extension du fan-club français des Miami Dolphins. Une plateforme pensée par et pour ses membres, afin que chacun dispose enfin de son média communautaire de référence — un espace unique qui centralise l’actualité, l’analyse, les événements, les échanges et toute la passion Aqua & Orange.
+Plus qu’un média, **The PHINSIDE** est l’extension du fan-club français des Miami Dolphins. Une plateforme pensée par et pour ses membres, afin que chacun dispose enfin de son média communautaire de référence — un espace unique qui centralise l’actualité, l’analyse, les événements, les échanges et toute la passion Aqua & Orange.
 
 Ce que vous trouverez ici :
 
