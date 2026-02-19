@@ -5,7 +5,7 @@ description: Miami continue de renforcer son effectif pour le futur. Les
   contrat "Reserve/Future". Avec ses 2m03, l'ancien des Jets apporte un profil
   physique hors norme à l'escouade offensive.
 pubDate: 2026-02-06T13:00:00.000+01:00
-heroImage: /images/zack-kuntz.jpg
+heroImage: /images/zack-kuntz.png
 category: Actu
 tags:
   - Miami Dolphins
@@ -16,6 +16,7 @@ tags:
   - New York Jets
   - Hard Rock Stadium
 draft: false
+author: Cyril
 ---
 Le chantier de l'intersaison se poursuit du côté de Hard Rock Stadium. Après avoir sécurisé plusieurs joueurs ces derniers jours, les Miami Dolphins ont annoncé ce vendredi la signature de **Zack Kuntz**.
 
