@@ -10,12 +10,13 @@ description: >-
 
   Entre continuité offensive et "rising stars" défensives, découvrez les premières annonces fortes.
 pubDate: 2026-02-04T13:00:00.000+01:00
-heroImage: /images/jeff-hafley-promo.webp
+heroImage: /images/coachs-2-.png
 category: Breaking News
 tags:
   - Miami Dolphins
   - NFL France
 draft: false
+author: Cyril
 ---
 Ce mercredi 4 février 2026, le complexe d'entraînement de Baptist Health a vibré au rythme des premières déclarations officielles des nouveaux coordinateurs des Miami Dolphins. Introduits par un **Jeff Hafley** enthousiaste, les trois hommes ont posé les bases de leur vision pour la franchise.
 
