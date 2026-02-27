@@ -75,7 +75,7 @@ const categories = [
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-4xl mx-auto justify-center">
         {leaders.map(member => (
-          <div class="flip-card-container h-[480px] w-full max-w-[360px] mx-auto">
+          <div class="flip-card-container h-120 w-full max-w-90 mx-auto">
             <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer shadow-2xl rounded-2xl">
               <div class="absolute inset-0 backface-hidden rounded-2xl bg-white border-b-8 border-gray-900 overflow-hidden">
                 <div class="h-[75%] bg-gray-100 flex items-center justify-center overflow-hidden">
@@ -125,7 +125,7 @@ const categories = [
           <div id={cat.id} class="content hidden mt-10 transition-all duration-500">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {cat.staff.map((member) => (
-                <div class="flip-card-container h-[420px]">
+                <div class="flip-card-container h-105">
                   <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer">
                     <div class={`absolute inset-0 backface-hidden rounded-xl bg-white border-b-4 ${cat.color} overflow-hidden shadow-lg`}>
                       <div class="h-2/3 bg-gray-50 flex items-center justify-center overflow-hidden">
@@ -169,26 +169,45 @@ const categories = [
 </style>
 
 <script>
+  // 1. Gestion des Flip Cards (Recto/Verso)
+  // On utilise l'opérateur "!" pour garantir à VS Code que les éléments existent
   document.querySelectorAll('.flip-card-inner').forEach(card => {
     card.addEventListener('click', (e) => {
-      e.stopPropagation(); 
-      card.classList.toggle('is-flipped');
+      // On s'assure que card est bien un HTMLElement pour accéder à classList
+      const target = e.currentTarget as HTMLElement;
+      if (target) {
+        target.classList.toggle('is-flipped');
+      }
     });
   });
 
-  document.querySelectorAll('.toggle-btn').forEach(btn => {
+  // 2. Gestion de l'Accordéon (Déplier les sections)
+  const buttons = document.querySelectorAll('.toggle-btn');
+  
+  buttons.forEach(btn => {
     btn.addEventListener('click', () => {
+      // On récupère l'ID de la cible (ex: "offense")
       const targetId = btn.getAttribute('data-target');
-      const content = document.getElementById(targetId);
-      const icon = btn.querySelector('.icon');
       
-      content.classList.toggle('hidden');
-      icon.classList.toggle('rotate-180');
-      
-      if (!content.classList.contains('hidden')) {
-        setTimeout(() => {
-          content.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+      // On vérifie que targetId n'est pas null avant de chercher l'élément
+      if (targetId) {
+        const content = document.getElementById(targetId);
+        const icon = btn.querySelector('.icon');
+
+        if (content && icon) {
+          // Toggle de la visibilité
+          content.classList.toggle('hidden');
+          
+          // Rotation de l'icône
+          icon.classList.toggle('rotate-180');
+          
+          // Scroll fluide si la section s'ouvre
+          if (!content.classList.contains('hidden')) {
+            setTimeout(() => {
+              content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+          }
+        }
       }
     });
   });

@@ -52,15 +52,15 @@ const photos = [
             alt={photo.caption} 
             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 pointer-events-none"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+          <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
             <span class="text-white font-[Oswald] italic uppercase tracking-wider">{photo.caption}</span>
           </div>
         </div>
       ))}
     </div>
 
-    <div id="carousel-modal" class="fixed inset-0 z-[100] bg-black/95 hidden flex justify-center items-center backdrop-blur-md">
-    <button id="close-modal" class="absolute top-6 right-6 text-white text-5xl font-light hover:text-miami-orange z-[110] transition-colors">&times;</button>
+    <div id="carousel-modal" class="fixed inset-0 z-100 bg-black/95 flex justify-center items-center backdrop-blur-md">
+    <button id="close-modal" class="absolute top-6 right-6 text-white text-5xl font-light hover:text-miami-orange z-110 transition-colors">&times;</button>
     
     <button id="prev-photo" class="nav-btn left-4 md:left-10">‹</button>
     <button id="next-photo" class="nav-btn right-4 md:right-10">›</button>
@@ -69,7 +69,7 @@ const photos = [
         <div class="relative max-w-5xl max-h-[80vh] flex items-center justify-center">
             <img id="modal-img" src="" class="max-w-full max-h-[80vh] object-contain rounded shadow-2xl border border-white/10" />
         </div>
-        <p id="modal-caption" class="text-white font-[Oswald] italic uppercase mt-6 text-lg md:text-2xl text-center tracking-[0.2em] text-miami-aqua px-4"></p>
+        <p id="modal-caption" class="font-[Oswald] italic uppercase mt-6 text-lg md:text-2xl text-center tracking-[0.2em] text-miami-aqua px-4"></p>
     </div>
 </div>
 
@@ -103,66 +103,83 @@ const photos = [
 </style>
 
 <script>
-  // On récupère les data de manière plus robuste
+  // 1. On cible les éléments avec l'assertion "!" car on sait qu'ils sont dans le HTML
+  const modal = document.getElementById('carousel-modal')!;
+  const modalImg = document.getElementById('modal-img') as HTMLImageElement;
+  const modalCaption = document.getElementById('modal-caption')!;
+  const nextBtn = document.getElementById('next-photo')!;
+  const prevBtn = document.getElementById('prev-photo')!;
+  const closeBtn = document.getElementById('close-modal')!;
+
+  // 2. Récupération robuste des données des photos
   const photoElements = document.querySelectorAll('.gallery-item img');
-  const photos = Array.from(photoElements).map(img => ({
-    src: img.getAttribute('src'),
-    caption: img.getAttribute('alt')
-  }));
+  const photos = Array.from(photoElements).map(img => {
+    const htmlImg = img as HTMLImageElement;
+    return {
+      src: htmlImg.src || '',
+      caption: htmlImg.alt || ''
+    };
+  });
 
   let currentIndex = 0;
-  const modal = document.getElementById('carousel-modal');
-  const modalImg = document.getElementById('modal-img') as HTMLImageElement;
-  const modalCaption = document.getElementById('modal-caption');
 
-  function updateModal(index) {
+  // 3. Mise à jour du modal avec typage de l'index
+  function updateModal(index: number) {
     if (!photos[index]) return;
     currentIndex = index;
     modalImg.src = photos[index].src;
     modalCaption.textContent = photos[index].caption;
   }
 
-  // Ouverture
+  // 4. Ouverture
   document.querySelectorAll('.gallery-item').forEach((item, index) => {
     item.addEventListener('click', () => {
       updateModal(index);
       modal.classList.remove('hidden');
+      modal.classList.add('flex'); // Pour s'assurer que le centrage CSS fonctionne
       document.body.style.overflow = 'hidden';
     });
   });
 
-  // Navigation
-  document.getElementById('next-photo').addEventListener('click', (e) => {
+  // 5. Fonctions de fermeture
+  const closeModal = () => {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+  };
+
+  closeBtn.addEventListener('click', closeModal);
+  
+  // Fermer au clic sur le fond (uniquement si on clique sur le modal lui-même)
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // 6. Navigation
+  nextBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     currentIndex = (currentIndex + 1) % photos.length;
     updateModal(currentIndex);
   });
 
-  document.getElementById('prev-photo').addEventListener('click', (e) => {
+  prevBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     currentIndex = (currentIndex - 1 + photos.length) % photos.length;
     updateModal(currentIndex);
   });
 
-  // Fermeture
-  const closeModal = () => {
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-  };
-
-  document.getElementById('close-modal').addEventListener('click', closeModal);
-  
-  // Fermer en cliquant sur le fond noir (mais pas sur l'image)
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-
-  // Clavier
+  // 7. Contrôles au clavier
   window.addEventListener('keydown', (e) => {
     if (modal.classList.contains('hidden')) return;
+
     if (e.key === 'Escape') closeModal();
-    if (e.key === 'ArrowRight') currentIndex = (currentIndex + 1) % photos.length;
-    if (e.key === 'ArrowLeft') currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-    updateModal(currentIndex);
+    if (e.key === 'ArrowRight') {
+      currentIndex = (currentIndex + 1) % photos.length;
+      updateModal(currentIndex);
+    }
+    if (e.key === 'ArrowLeft') {
+      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+      updateModal(currentIndex);
+    }
   });
 </script>

@@ -34,12 +34,12 @@ const lastEpisode = episodes[0];
                                     alt={post.data.title} 
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                                <div class="absolute inset-0 bg-linear-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
                                     <span class="text-white font-bold text-sm italic">Lire l'article →</span>
                                 </div>
                             </div>
 
-                            <div class="p-6 flex-grow flex flex-col">
+                            <div class="p-6 grow flex flex-col">
                                 <div class="flex items-center justify-between mb-3">
                                     <span class="bg-miami-aqua/10 text-miami-aqua text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md border border-miami-aqua/20">
                                         {post.data.category}
@@ -82,11 +82,10 @@ const lastEpisode = episodes[0];
                         </h3>
 
                         <iframe 
-                            style="border-radius:12px" 
+                            style="border-radius:12px; border: none;" 
                             src={`https://open.spotify.com/embed/episode/${lastEpisode.spotifyId}?utm_source=generator&theme=0`} 
                             width="100%" 
                             height="152" 
-                            frameBorder="0" 
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                             loading="lazy">
                         </iframe>
@@ -101,7 +100,7 @@ const lastEpisode = episodes[0];
                     <h3 class="font-[Oswald] font-bold italic uppercase text-gray-900 mb-4 border-b-2 border-miami-aqua pb-2">
                         Flux Twitter
                     </h3>
-                    <div class="max-h-[600px] overflow-y-auto rounded-lg">
+                    <div class="max-h-600 overflow-y-auto rounded-lg">
                         <a class="twitter-timeline" data-height="600" href="https://twitter.com/MiamiDolphins">Tweets by MiamiDolphins</a> 
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
