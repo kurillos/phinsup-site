@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Liste des photos du fan club
+const photos = [
+  { src: "/images/communaute/photo1.webp", alt: "Rassemblement Paris", caption: "Match Day à Paris" },
+  { src: "/images/communaute/photo2.webp", alt: "Fans Dolphins", caption: "L'ambiance au Hard Rock Stadium" },
+  { src: "/images/communaute/photo3.webp", alt: "Tailgate", caption: "Tailgate party avant le match" },
+  { src: "/images/communaute/photo4.webp", alt: "Dolfans France", caption: "La communauté s'agrandit !" },
+  { src: "/images/communaute/photo5.webp", alt: "Stade", caption: "Vue du ciel sur le stade" },
+  // Ajoute tes photos ici...
+];
+---
+
+<Layout title="Galerie Fan Club - The Phin Side">
+  <main class="max-w-7xl mx-auto py-12 px-6">
+    
+    <div class="mb-12 text-center">
+      <h1 class="text-5xl font-[Oswald] font-black italic uppercase text-gray-900 tracking-tighter">
+        La Galerie du <span class="text-miami-aqua">Fan Club</span>
+      </h1>
+      <p class="text-gray-500 font-bold uppercase tracking-widest mt-4">
+        Nos moments forts, de Paris à Miami 🐬
+      </p>
+    </div>
+
+    <div class="masonry-grid gap-4">
+      {photos.map(photo => (
+        <div class="masonry-item group mb-4 relative overflow-hidden rounded-xl bg-gray-100 shadow-md">
+          <img 
+            src={photo.src} 
+            alt={photo.alt} 
+            class="w-full h-auto block transform group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <p class="text-white font-[Oswald] italic uppercase text-sm tracking-wide">
+              {photo.caption}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </main>
+</Layout>
+
+<style>
+  /* Le coeur du Masonry en CSS */
+  .masonry-grid {
+    column-count: 1; /* 1 colonne par défaut (mobile) */
+  }
+
+  @media (min-width: 640px) {
+    .masonry-grid {
+      column-count: 2; /* 2 colonnes (tablette) */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 3; /* 3 colonnes (ordinateur) */
+    }
+  }
+
+  /* Évite que les images soient coupées entre deux colonnes */
+  .masonry-item {
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+  }
+</style>
