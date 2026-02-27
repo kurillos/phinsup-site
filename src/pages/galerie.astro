@@ -2,62 +2,131 @@
 import Layout from '../layouts/BaseLayout.astro';
 
 const photos = [
-  { src: "/images/communaute/1.webp", size: "tall", caption: "Match Day" },
-  { src: "/images/communaute/2.webp", size: "wide", caption: "Tailgate" },
-  { src: "/images/communaute/3.webp", size: "square", caption: "Fans" },
-  { src: "/images/communaute/4.webp", size: "tall", caption: "Stadium" },
-  // Ajoute "tall", "wide" ou "square" selon le format de ta photo
+  { src: "/images/communaute/1.webp", size: "tall", caption: "Rassemblement au bar officiel - Paris" },
+  { src: "/images/communaute/2.webp", size: "wide", caption: "Le drapeau Phins Up au Hard Rock Stadium" },
+  { src: "/images/communaute/3.webp", size: "square", caption: "La team au grand complet" },
+  { src: "/images/communaute/4.webp", size: "tall", caption: "Tailgate mémorable sous le soleil" },
 ];
 ---
 
-<Layout title="Galerie - The Phin Side">
+<Layout title="Galerie & Fan Club - The Phin Side">
   <main class="max-w-7xl mx-auto py-12 px-6">
     
+    <section class="mb-20 bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row border-b-8 border-miami-aqua">
+        <div class="p-8 md:p-12 md:w-2/3">
+            <h1 class="text-5xl font-[Oswald] font-black italic uppercase text-white mb-6">
+                Le Fan Club <span class="text-miami-aqua text-3xl block">Dolfans France</span>
+            </h1>
+            <p class="text-gray-300 leading-relaxed mb-6 italic">
+                Bienvenue dans le repaire des passionnés des Miami Dolphins en France. Plus qu'un groupe de fans, nous sommes une famille qui se réunit pour chaque TD, chaque interception et chaque moment de stress. Rejoignez-nous pour vivre l'expérience NFL ensemble, que ce soit à Paris ou lors de nos voyages à Miami.
+            </p>
+            <div class="flex gap-4">
+                <span class="bg-miami-orange text-white px-4 py-2 rounded-full font-bold text-xs uppercase italic shadow-lg">Est. 2020</span>
+                <span class="bg-white/10 text-white px-4 py-2 rounded-full font-bold text-xs uppercase italic border border-white/20">Paris & Province</span>
+            </div>
+        </div>
+        <div class="md:w-1/3 bg-miami-aqua flex items-center justify-center p-8">
+            <img src="/logo-fan-club.png" alt="Logo Fan Club" class="w-48 h-auto drop-shadow-2xl animate-pulse" />
+        </div>
+    </section>
+
     <div class="grid-masonry">
-      {photos.map(photo => (
-        <div class={`gallery-item ${photo.size} group relative overflow-hidden rounded-2xl shadow-lg`}>
+      {photos.map((photo, index) => (
+        <div 
+            class={`gallery-item ${photo.size} group relative overflow-hidden rounded-2xl shadow-lg cursor-zoom-in`}
+            data-index={index}
+        >
           <img 
             src={photo.src} 
             alt={photo.caption} 
-            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 pointer-events-none"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
-            <span class="text-white font-[Oswald] italic uppercase">{photo.caption}</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+            <span class="text-white font-[Oswald] italic uppercase tracking-wider">{photo.caption}</span>
           </div>
         </div>
       ))}
+    </div>
+
+    <div id="carousel-modal" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col justify-center items-center p-4 md:p-10 backdrop-blur-sm">
+        <button id="close-modal" class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-miami-orange transition">&times;</button>
+        
+        <button id="prev-photo" class="absolute left-4 md:left-10 text-white text-5xl hover:text-miami-aqua transition">‹</button>
+        <button id="next-photo" class="absolute right-4 md:right-10 text-white text-5xl hover:text-miami-aqua transition">›</button>
+
+        <div class="max-w-5xl w-full h-[70vh] flex flex-col items-center">
+            <img id="modal-img" src="" class="max-w-full max-h-full object-contain rounded shadow-2xl" />
+            <p id="modal-caption" class="text-white font-[Oswald] italic uppercase mt-6 text-xl text-center tracking-widest text-miami-aqua"></p>
+        </div>
     </div>
 
   </main>
 </Layout>
 
 <style>
-  /* Le système de grille intelligente */
   .grid-masonry {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 200px; /* Hauteur de base d'une unité */
-    grid-auto-flow: dense; /* C'est ICI que la magie opère pour combler les blancs */
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 220px;
+    grid-auto-flow: dense;
+    gap: 20px;
   }
-
-  /* Gestion des formats pour combler les espaces */
-  .gallery-item.square {
-    grid-row: span 1;
-    grid-column: span 1;
-  }
-
-  .gallery-item.tall {
-    grid-row: span 2; /* Prend 2 unités de hauteur */
-  }
-
-  .gallery-item.wide {
-    grid-column: span 2; /* Prend 2 unités de largeur */
-  }
+  .gallery-item.square { grid-row: span 1; grid-column: span 1; }
+  .gallery-item.tall { grid-row: span 2; }
+  .gallery-item.wide { grid-column: span 2; }
 
   @media (max-width: 640px) {
-    .gallery-item.wide {
-      grid-column: span 1; /* On repasse en 1 col sur mobile */
-    }
+    .gallery-item.wide { grid-column: span 1; }
   }
 </style>
+
+<script>
+  const photos = [
+    { src: "/images/communaute/1.webp", caption: "Rassemblement au bar officiel - Paris" },
+    { src: "/images/communaute/2.webp", caption: "Le drapeau Phins Up au Hard Rock Stadium" },
+    { src: "/images/communaute/3.webp", caption: "La team au grand complet" },
+    { src: "/images/communaute/4.webp", caption: "Tailgate mémorable sous le soleil" },
+  ];
+
+  let currentIndex = 0;
+  const modal = document.getElementById('carousel-modal');
+  const modalImg = document.getElementById('modal-img') as HTMLImageElement;
+  const modalCaption = document.getElementById('modal-caption');
+
+  function updateModal(index) {
+    currentIndex = index;
+    modalImg.src = photos[index].src;
+    modalCaption.textContent = photos[index].caption;
+  }
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const index = parseInt(item.getAttribute('data-index'));
+      updateModal(index);
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Bloque le scroll
+    });
+  });
+
+  document.getElementById('close-modal').addEventListener('click', () => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  });
+
+  document.getElementById('next-photo').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % photos.length;
+    updateModal(currentIndex);
+  });
+
+  document.getElementById('prev-photo').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+    updateModal(currentIndex);
+  });
+
+  // Fermeture avec la touche Echap
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') modal.classList.add('hidden');
+    if (e.key === 'ArrowRight') document.getElementById('next-photo').click();
+    if (e.key === 'ArrowLeft') document.getElementById('prev-photo').click();
+  });
+</script>
