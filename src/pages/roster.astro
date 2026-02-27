@@ -1,65 +1,154 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 
-// Liste des joueurs
+// 1. Données de joueurs
 const players = [
   { 
+    id: "waddle",
     name: "Jaylen Waddle", 
     number: "17", 
     position: "WR", 
-    image: "/images/roster/waddle.png",
-    status: "Star"
+    image: "/images/roster/jaylen-waddle.png",
+    college: "Alabama",
+    stats: { rec: "85", yards: "1,150", td: "8" },
+    celebration: "The Waddle Walk 🐧",
+    bio: "Désormais le WR1 incontesté de l'attaque après le départ de Tyreek Hill."
   },
   { 
+    id: "tua",
     name: "Tua Tagovailoa", 
     number: "1", 
     position: "QB", 
     image: "/images/roster/tua.png",
-    status: "Captain"
+    college: "Alabama",
+    stats: { rec: "32", yards: "4,620", td: "28" }, // rec ici utilisé pour Compétions ou autre
+    celebration: "Shaka Sign 🤙",
+    bio: "Le chef d'orchestre de Miami. Précision chirurgicale et leadership."
   },
   { 
+    id: "holland",
     name: "Jevon Holland", 
     number: "8", 
     position: "S", 
     image: "/images/roster/holland.png",
-    status: "Defense"
-  },
-  // Ajoute tes autres photos ici...
+    college: "Oregon",
+    stats: { rec: "74", yards: "3 Int", td: "1" },
+    celebration: "Snowman ❄️",
+    bio: "Le général de la défense. Un instinct de jeu hors du commun."
+  }
 ];
 ---
 
 <Layout title="Roster - The Phin Side">
   <main class="max-w-7xl mx-auto py-12 px-6">
-    <h1 class="text-4xl font-[Oswald] font-black italic uppercase text-miami-aqua mb-8 border-l-8 border-miami-orange pl-4">
-      Effectif 2026
-    </h1>
+    
+    <div class="mb-12">
+      <h1 class="text-5xl font-[Oswald] font-black italic uppercase text-miami-aqua tracking-tighter">
+        Effectif <span class="text-miami-orange">2026</span>
+      </h1>
+      <p class="text-gray-500 font-bold uppercase tracking-widest mt-2">Cliquez sur une carte pour voir les détails</p>
+    </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
       {players.map((player) => (
-        <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden border-b-4 border-miami-aqua hover:border-miami-orange transition-all duration-300 transform hover:-translate-y-2">
-          
-          <div class="aspect-[3/4] overflow-hidden bg-gray-200">
-            <img 
-              src={player.image} 
-              alt={player.name} 
-              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
-            />
-            <div class="absolute top-4 left-4 bg-miami-aqua text-white font-[Oswald] font-bold text-xl px-3 py-1 rounded-md shadow-md">
-              #{player.number}
+        <div class="flip-card-container group h-[450px]">
+          <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer">
+            
+            <div class="absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 border-miami-aqua overflow-hidden">
+              <div class="relative h-3/4 bg-gray-200">
+                <img src={player.image} alt={player.name} class="w-full h-full object-cover" />
+                <div class="absolute top-4 left-4 bg-miami-aqua text-white font-[Oswald] font-bold text-3xl px-3 py-1 rounded shadow-lg">
+                  #{player.number}
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="font-[Oswald] font-bold text-2xl uppercase italic text-gray-900 leading-tight">
+                  {player.name}
+                </h3>
+                <p class="text-miami-aqua font-black tracking-widest text-sm uppercase">{player.position} | {player.college}</p>
+              </div>
             </div>
-          </div>
 
-          <div class="p-5">
-            <h3 class="font-[Oswald] font-bold text-2xl uppercase italic text-gray-900 group-hover:text-miami-aqua transition">
-              {player.name}
-            </h3>
-            <div class="flex justify-between items-center mt-2">
-              <span class="text-sm font-bold text-gray-500 uppercase tracking-widest">{player.position}</span>
-              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded uppercase font-black">{player.status}</span>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl shadow-2xl bg-miami-aqua text-white p-6 flex flex-col justify-between border-4 border-miami-orange">
+              <div>
+                <div class="flex justify-between items-start border-b border-white/20 pb-3 mb-4">
+                   <h3 class="font-[Oswald] text-3xl uppercase italic leading-none">{player.name}</h3>
+                   <span class="font-[Oswald] text-2xl text-miami-orange">#{player.number}</span>
+                </div>
+                
+                <p class="text-xs uppercase tracking-tighter mb-4 opacity-80 font-bold">Statistiques Saison 2025</p>
+                
+                <div class="grid grid-cols-3 gap-2 text-center mb-6">
+                  <div class="bg-white/10 p-2 rounded">
+                    <p class="text-[10px] uppercase opacity-70">Rec/Comp</p>
+                    <p class="text-xl font-black">{player.stats.rec}</p>
+                  </div>
+                  <div class="bg-white/10 p-2 rounded border-x border-white/10">
+                    <p class="text-[10px] uppercase opacity-70">Yards</p>
+                    <p class="text-xl font-black">{player.stats.yards}</p>
+                  </div>
+                  <div class="bg-white/10 p-2 rounded">
+                    <p class="text-[10px] uppercase opacity-70">TDs</p>
+                    <p class="text-xl font-black text-miami-orange">{player.stats.td}</p>
+                  </div>
+                </div>
+
+                <div class="space-y-3">
+                  <div>
+                    <p class="text-[10px] uppercase font-black text-miami-orange tracking-widest">Célébration</p>
+                    <p class="font-[Oswald] italic text-lg">{player.celebration}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-sm leading-snug border-t border-white/20 pt-4 italic opacity-90">
+                "{player.bio}"
+              </div>
             </div>
+
           </div>
         </div>
       ))}
     </div>
   </main>
 </Layout>
+
+<style>
+  /* Logique de Flip 3D */
+  .flip-card-container {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Classe ajoutée au clic via le script */
+  .flip-card-inner.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+</style>
+
+<script>
+  // Script pour gérer le clic sur les cartes
+  const cards = document.querySelectorAll('.flip-card-inner');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('is-flipped');
+    });
+  });
+</script>
