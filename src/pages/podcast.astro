@@ -1,40 +1,28 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
-
-const episodes = [
-  {
-    title: "Épisode 1 : Le renouveau Sullivan/Hafley",
-    date: "15 Février 2026",
-    duration: "45 min",
-    spotifyId: "VOTRE_ID_SPOTIFY", // Pour l'intégration directe
-    desc: "Analyse complète du nouveau staff et des attentes pour la saison 2026."
-  }
-];
+import podcastData from '../data/podcasts.json';
 ---
 
 <Layout title="Podcast - The Phin Side">
-  <main class="max-w-5xl mx-auto py-12 px-6">
-    <h1 class="text-4xl font-[Oswald] font-black italic uppercase text-miami-aqua border-b-4 border-miami-orange pb-4 mb-10">
-      Phin Side <span class="text-gray-900">Podcast</span>
-    </h1>
-
-    <div class="space-y-8">
-      {episodes.map(ep => (
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-l-8 border-miami-aqua flex flex-col md:flex-row">
-          <div class="bg-gray-900 text-white p-6 md:w-1/3 flex flex-col justify-center items-center text-center">
-             <span class="text-miami-orange text-sm font-bold uppercase">{ep.date}</span>
-             <h2 class="font-[Oswald] text-2xl uppercase italic mt-2">{ep.title}</h2>
-          </div>
-          <div class="p-6 md:w-2/3 flex flex-col justify-center">
-            <p class="text-gray-600 mb-4 italic">{ep.desc}</p>
-            <iframe 
-              style="border-radius:12px" 
-              src={`https://open.spotify.com/embed/episode/${ep.spotifyId}`} 
-              width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </div>
+  <main class="max-w-4xl mx-auto py-12 px-6">
+    {podcastData.map((ep) => (
+      <div class="mb-10 bg-gray-900 rounded-2xl overflow-hidden shadow-xl border-b-4 border-miami-aqua">
+        <div class="p-6">
+          <span class="text-miami-orange font-bold text-sm">{ep.date}</span>
+          <h2 class="text-white font-[Oswald] text-2xl uppercase italic mb-4">{ep.title}</h2>
+          <p class="text-gray-400 text-sm mb-6">{ep.description}</p>
+          
+          <iframe 
+            style="border-radius:12px" 
+            src={`https://open.spotify.com/embed/episode/${ep.spotifyId}?utm_source=generator&theme=0`} 
+            width="100%" 
+            height="152" 
+            frameBorder="0" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
   </main>
 </Layout>
