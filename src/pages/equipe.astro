@@ -78,8 +78,12 @@ const categories = [
           <div class="flip-card-container h-[480px] w-full max-w-[360px] mx-auto">
             <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer shadow-2xl rounded-2xl">
               <div class="absolute inset-0 backface-hidden rounded-2xl bg-white border-b-8 border-gray-900 overflow-hidden">
-                <div class="h-[75%] bg-gray-100">
-                  <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                <div class="h-[75%] bg-gray-100 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    class="w-full h-full object-contain sm:object-cover grayscale hover:grayscale-0 transition-all duration-500" 
+                  />
                   <div class="absolute top-4 left-4 bg-gray-900 text-white font-[Oswald] font-bold text-2xl px-4 py-1 rounded italic shadow-lg">
                     {member.initials}
                   </div>
@@ -124,8 +128,12 @@ const categories = [
                 <div class="flip-card-container h-[420px]">
                   <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer">
                     <div class={`absolute inset-0 backface-hidden rounded-xl bg-white border-b-4 ${cat.color} overflow-hidden shadow-lg`}>
-                      <div class="h-2/3 bg-gray-50">
-                        <img src={member.image} alt={member.name} class="w-full h-full object-cover" />
+                      <div class="h-2/3 bg-gray-50 flex items-center justify-center overflow-hidden">
+                        <img 
+                          src={member.image} 
+                          alt={member.name} 
+                          class="w-full h-full object-contain sm:object-cover" 
+                        />
                       </div>
                       <div class="p-4 text-center">
                         <h4 class="font-[Oswald] text-xl font-bold uppercase italic leading-tight text-gray-900">{member.name}</h4>
@@ -161,7 +169,6 @@ const categories = [
 </style>
 
 <script>
-  // Logique pour retourner les cartes
   document.querySelectorAll('.flip-card-inner').forEach(card => {
     card.addEventListener('click', (e) => {
       e.stopPropagation(); 
@@ -169,7 +176,6 @@ const categories = [
     });
   });
 
-  // Logique pour l'accordéon (déplier les sections)
   document.querySelectorAll('.toggle-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const targetId = btn.getAttribute('data-target');
@@ -179,7 +185,6 @@ const categories = [
       content.classList.toggle('hidden');
       icon.classList.toggle('rotate-180');
       
-      // Petit scroll fluide vers la section ouverte
       if (!content.classList.contains('hidden')) {
         setTimeout(() => {
           content.scrollIntoView({ behavior: 'smooth', block: 'start' });

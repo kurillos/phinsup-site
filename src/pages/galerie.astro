@@ -37,7 +37,7 @@ const photos = [
             </div>
         </div>
         <div class="md:w-1/3 bg-miami-aqua flex items-center justify-center p-8">
-            <img src="/images/fanclub/logofr.jpeg" alt="Logo Fan Club" class="w-48 h-auto drop-shadow-2xl animate-pulse" />
+            <img src="/logofr.png" alt="Logo Fan Club" class="w-48 h-auto drop-shadow-2xl animate-pulse" />
         </div>
     </section>
 
@@ -59,22 +59,22 @@ const photos = [
       ))}
     </div>
 
-    <div id="carousel-modal" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col justify-center items-center p-4 md:p-10 backdrop-blur-sm">
-        <button id="close-modal" class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-miami-orange transition">&times;</button>
-        
-        <button id="prev-photo" class="absolute left-4 md:left-10 text-white text-5xl hover:text-miami-aqua transition">‹</button>
-        <button id="next-photo" class="absolute right-4 md:right-10 text-white text-5xl hover:text-miami-aqua transition">›</button>
+    <div id="carousel-modal" class="fixed inset-0 z-[100] bg-black/95 hidden flex justify-center items-center backdrop-blur-md">
+    <button id="close-modal" class="absolute top-6 right-6 text-white text-5xl font-light hover:text-miami-orange z-[110] transition-colors">&times;</button>
+    
+    <button id="prev-photo" class="nav-btn left-4 md:left-10">‹</button>
+    <button id="next-photo" class="nav-btn right-4 md:right-10">›</button>
 
-        <div class="max-w-5xl w-full h-[70vh] flex flex-col items-center">
-            <img id="modal-img" src="" class="max-w-full max-h-full object-contain rounded shadow-2xl" />
-            <p id="modal-caption" class="text-white font-[Oswald] italic uppercase mt-6 text-xl text-center tracking-widest text-miami-aqua"></p>
+    <div class="flex flex-col items-center justify-center w-full h-full p-4">
+        <div class="relative max-w-5xl max-h-[80vh] flex items-center justify-center">
+            <img id="modal-img" src="" class="max-w-full max-h-[80vh] object-contain rounded shadow-2xl border border-white/10" />
         </div>
+        <p id="modal-caption" class="text-white font-[Oswald] italic uppercase mt-6 text-lg md:text-2xl text-center tracking-[0.2em] text-miami-aqua px-4"></p>
     </div>
-
-  </main>
-</Layout>
+</div>
 
 <style>
+  /* Masonry existant... */
   .grid-masonry {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -82,22 +82,33 @@ const photos = [
     grid-auto-flow: dense;
     gap: 20px;
   }
-  .gallery-item.square { grid-row: span 1; grid-column: span 1; }
-  .gallery-item.tall { grid-row: span 2; }
-  .gallery-item.wide { grid-column: span 2; }
 
-  @media (max-width: 640px) {
-    .gallery-item.wide { grid-column: span 1; }
+  /* Style des flèches pour un centrage vertical parfait */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* C'est ça qui centre verticalement */
+    color: white;
+    font-size: 5rem;
+    font-weight: 100;
+    z-index: 110;
+    transition: all 0.3s ease;
+    padding: 0 20px;
+    user-select: none;
   }
+  .nav-btn:hover { color: #008E97; scale: 1.2; } /* Miami Aqua */
+
+  /* Empêche le clic sur l'image de fermer le modal, mais permet au fond noir de le faire */
+  #modal-img { pointer-events: auto; }
 </style>
 
 <script>
-  const photos = [
-    { src: "/images/communaute/1.webp", caption: "Rassemblement au bar officiel - Paris" },
-    { src: "/images/communaute/2.webp", caption: "Le drapeau Phins Up au Hard Rock Stadium" },
-    { src: "/images/communaute/3.webp", caption: "La team au grand complet" },
-    { src: "/images/communaute/4.webp", caption: "Tailgate mémorable sous le soleil" },
-  ];
+  // On récupère les data de manière plus robuste
+  const photoElements = document.querySelectorAll('.gallery-item img');
+  const photos = Array.from(photoElements).map(img => ({
+    src: img.getAttribute('src'),
+    caption: img.getAttribute('alt')
+  }));
 
   let currentIndex = 0;
   const modal = document.getElementById('carousel-modal');
@@ -105,39 +116,53 @@ const photos = [
   const modalCaption = document.getElementById('modal-caption');
 
   function updateModal(index) {
+    if (!photos[index]) return;
     currentIndex = index;
     modalImg.src = photos[index].src;
     modalCaption.textContent = photos[index].caption;
   }
 
-  document.querySelectorAll('.gallery-item').forEach(item => {
+  // Ouverture
+  document.querySelectorAll('.gallery-item').forEach((item, index) => {
     item.addEventListener('click', () => {
-      const index = parseInt(item.getAttribute('data-index'));
       updateModal(index);
       modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // Bloque le scroll
+      document.body.style.overflow = 'hidden';
     });
   });
 
-  document.getElementById('close-modal').addEventListener('click', () => {
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-  });
-
-  document.getElementById('next-photo').addEventListener('click', () => {
+  // Navigation
+  document.getElementById('next-photo').addEventListener('click', (e) => {
+    e.stopPropagation();
     currentIndex = (currentIndex + 1) % photos.length;
     updateModal(currentIndex);
   });
 
-  document.getElementById('prev-photo').addEventListener('click', () => {
+  document.getElementById('prev-photo').addEventListener('click', (e) => {
+    e.stopPropagation();
     currentIndex = (currentIndex - 1 + photos.length) % photos.length;
     updateModal(currentIndex);
   });
 
-  // Fermeture avec la touche Echap
+  // Fermeture
+  const closeModal = () => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  };
+
+  document.getElementById('close-modal').addEventListener('click', closeModal);
+  
+  // Fermer en cliquant sur le fond noir (mais pas sur l'image)
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Clavier
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') modal.classList.add('hidden');
-    if (e.key === 'ArrowRight') document.getElementById('next-photo').click();
-    if (e.key === 'ArrowLeft') document.getElementById('prev-photo').click();
+    if (modal.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowRight') currentIndex = (currentIndex + 1) % photos.length;
+    if (e.key === 'ArrowLeft') currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+    updateModal(currentIndex);
   });
 </script>
