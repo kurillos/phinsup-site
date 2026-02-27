@@ -16,6 +16,12 @@ tags:
 draft: false
 author: Lucas Roc
 ---
+Il y a parfois des petits détails qui en disent long sur un changement d’époque.
+
+Ces dernières années, Chris Grier évitait soigneusement les médias pendant le NFL Scouting Combine. Il faisait partie des rares General Managers à ne pas se présenter face à la presse.
+
+Cette semaine, son successeur Jon-Eric Sullivan a fait tout l’inverse : conférence de presse, réponses directes, et plusieurs déclarations fortes. Le message est clair : une nouvelle ère commence à Miami.
+
 ### Un quarterback drafté en avril.
 
 Sullivan l’a annoncé sans détour : **les Dolphins sélectionneront un quarterback lors de la prochaine draft**.
