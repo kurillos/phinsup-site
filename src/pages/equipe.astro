@@ -1,23 +1,39 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 
-// Les Leaders (GM & HC)
+// 1. LA DIRECTION (Toujours visibles & centrés)
 const leaders = [
-  { name: "Jon-Eric Sullivan", role: "General Manager", initials: "GM", image: "/images/staff/sullivan.webp", specialty: "Roster Building", bio: "L'architecte du renouveau de Miami.", college: "Gardner-Webb" },
-  { name: "Jeff Hafley", role: "Head Coach", initials: "HC", image: "/images/staff/hafley.webp", specialty: "Defense-Minded Leadership", bio: "Le nouveau visage des Phins.", college: "Ohio State" }
+  { 
+    name: "Jon-Eric Sullivan", role: "General Manager", initials: "GM", 
+    image: "/images/staff/sullivan.webp", specialty: "Roster Building", 
+    bio: "L'architecte du renouveau de Miami. Expert en évaluation de talent.", college: "Gardner-Webb" 
+  },
+  { 
+    name: "Jeff Hafley", role: "Head Coach", initials: "HC", 
+    image: "/images/staff/hafley.webp", specialty: "Defense-Minded Leadership", 
+    bio: "Le nouveau visage des Phins. Apporte une culture de discipline et d'agressivité.", college: "Ohio State" 
+  }
 ];
 
-// Les catégories avec tous tes coachs (exemples pour la structure)
+// 2. LES CATÉGORIES DÉPLIABLES
 const categories = [
   {
     id: "offense",
     title: "Coachs Offensifs",
     color: "border-miami-aqua",
     staff: [
-      { name: "Bobby Slowik", role: "Offensive Coordinator", initials: "OC", image: "/images/staff/slowik.webp", specialty: "West Coast Scheme", bio: "Venu de Houston pour révolutionner notre attaque.", college: "Michigan Tech" },
-      { name: "Matt Applebaum", role: "Asst. Offensive Line", initials: "OL", image: "/images/staff/applebaum.webp", specialty: "Zone Blocking", bio: "Expert des tranchées et du bloc de zone.", college: "UConn" },
-      { name: "Ladell Betts", role: "Running Backs", initials: "RB", image: "/images/staff/betts.webp", specialty: "Wide Zone", bio: "Légende d'Iowa, maître du jeu au sol.", college: "Iowa" },
-      // Ajoute ici Conrad, Hamdan, Jeanpierre, etc...
+      { name: "Bobby Slowik", role: "OC", initials: "OC", image: "/images/staff/slowik.webp", specialty: "West Coast Offense", bio: "L'architecte du nouveau système offensif." },
+      { name: "Matt Applebaum", role: "Asst. OL", initials: "OL", image: "/images/staff/applebaum.webp", specialty: "Zone Blocking", bio: "Expert en technique de bloc latéral." },
+      { name: "Ladell Betts", role: "RB Coach", initials: "RB", image: "/images/staff/betts.webp", specialty: "Wide Zone / Dual-Threat", bio: "Maître du jeu de course hybride." },
+      { name: "C.J. Conrad", role: "Off. Assistant", initials: "AS", image: "/images/staff/conrad.webp", specialty: "Tight End Support", bio: "Soutien tactique pour les concepts de bloc." },
+      { name: "Bush Hamdan", role: "QB Coach", initials: "QB", image: "/images/staff/hamdan.webp", specialty: "Passing Mechanics", bio: "En charge du développement de Tua." },
+      { name: "Lemuel Jeanpierre", role: "Asst. TE", initials: "TE", image: "/images/staff/jeanpierre.webp", specialty: "Power Blocking", bio: "Spécialiste du physique dans les tranchées." },
+      { name: "Jonathan Krause", role: "Asst. WR", initials: "WR", image: "/images/staff/krause.webp", specialty: "Route Running", bio: "Expert en séparation et timing." },
+      { name: "Ron Middleton", role: "TE Coach", initials: "TE", image: "/images/staff/middleton.webp", specialty: "Blocking & Red Zone", bio: "Vétéran de l'enseignement des Tight Ends." },
+      { name: "Kevin Patullo", role: "Passing Game Coord.", initials: "PG", image: "/images/staff/patullo.webp", specialty: "Game Planning", bio: "L'expert des tracés aériens." },
+      { name: "Tyke Tolbert", role: "WR Coach", initials: "WR", image: "/images/staff/tolbert.webp", specialty: "Deep Threat Concepts", bio: "Coach de légende pour les receveurs." },
+      { name: "Leander Wallace", role: "Off. Assistant", initials: "AS", image: "/images/staff/wallace.webp", specialty: "Data Analysis", bio: "L'oeil statistique de l'attaque." },
+      { name: "Zach Yenser", role: "OL Coach", initials: "OL", image: "/images/staff/yenser.webp", specialty: "Trench Warfare", bio: "Le garant de la solidité de la ligne." }
     ]
   },
   {
@@ -25,9 +41,16 @@ const categories = [
     title: "Coachs Défensifs",
     color: "border-miami-orange",
     staff: [
-      { name: "Sean Duggan", role: "Defensive Coordinator", initials: "DC", image: "/images/staff/duggan.webp", specialty: "Aggressive Front", bio: "Spécialiste de la pression constante.", college: "Boston College" },
-      { name: "Jahmile Addae", role: "DBs / Cornerbacks", initials: "DB", image: "/images/staff/addae.webp", specialty: "Man Coverage", bio: "Expert de la couverture secondaire.", college: "West Virginia" },
-      // Ajoute ici Barry, Clark, Davis, etc...
+      { name: "Sean Duggan", role: "DC", initials: "DC", image: "/images/staff/duggan.webp", specialty: "Aggressive Front 7", bio: "Le cerveau de la nouvelle défense 2026." },
+      { name: "Jahmile Addae", role: "DB/CB Coach", initials: "DB", image: "/images/staff/addae.webp", specialty: "Man Coverage", bio: "Expert de la couverture secondaire." },
+      { name: "Joe Barry", role: "Sr. Asst / Run Game", initials: "DC", image: "/images/staff/barry.webp", specialty: "Defensive Strategy", bio: "L'expérience au service de la défense." },
+      { name: "Austin Clark", role: "DL Coach", initials: "DL", image: "/images/staff/clark.webp", specialty: "Pass Rush", bio: "Le coach qui fait trembler les QB adverses." },
+      { name: "Wendel Davis", role: "Asst. LB", initials: "LB", image: "/images/staff/davis.webp", specialty: "Tackle Technique", bio: "Précision et puissance au placage." },
+      { name: "Siriki Diabate", role: "Quality Control", initials: "QC", image: "/images/staff/diabate.webp", specialty: "Film Study", bio: "Analyse vidéo et détection de failles." },
+      { name: "Ryan Downard", role: "DB/Passing Game", initials: "PG", image: "/images/staff/downard.webp", specialty: "Coverage Shells", bio: "Spécialiste des systèmes de couverture." },
+      { name: "Chuka Ndulue", role: "Asst. DL", initials: "DL", image: "/images/staff/ndulue.webp", specialty: "Interior Pressure", bio: "Force brute à l'intérieur de la ligne." },
+      { name: "DeShawn Shead", role: "Asst. DB", initials: "DB", image: "/images/staff/shead.webp", specialty: "Slot Coverage", bio: "Ancien joueur, expert des Nickelbacks." },
+      { name: "Al Washington", role: "LB Coach", initials: "LB", image: "/images/staff/washington.webp", specialty: "Pursuit & Speed", bio: "Coach de la mobilité des Linebackers." }
     ]
   },
   {
@@ -35,8 +58,9 @@ const categories = [
     title: "Special Teams",
     color: "border-gray-400",
     staff: [
-      { name: "Chris Tabor", role: "Special Teams Coord.", initials: "ST", image: "/images/staff/tabor.webp", specialty: "Punt/Kick Return", bio: "Un des meilleurs coordinateurs ST de la ligue.", college: "Benedictine" },
-      // Ajoute ici Olivo et Eubanks...
+      { name: "Chris Tabor", role: "ST Coordinator", initials: "ST", image: "/images/staff/tabor.webp", specialty: "Kick Return / Coverage", bio: "L'un des meilleurs tacticiens ST de NFL." },
+      { name: "Brock Olivo", role: "Asst. ST", initials: "ST", image: "/images/staff/olivo.webp", specialty: "Unit Dynamics", bio: "L'énergie pure des unités spéciales." },
+      { name: "Darius Eubanks", role: "ST Assistant", initials: "ST", image: "/images/staff/eubanks.webp", specialty: "Analytics ST", bio: "Optimisation statistique des coups de pied." }
     ]
   }
 ];
@@ -45,29 +69,34 @@ const categories = [
 <Layout title="Staff Technique - The Phin Side">
   <main class="max-w-7xl mx-auto py-12 px-6">
     
-    <section class="mb-16">
-      <h2 class="text-4xl font-[Oswald] font-black italic uppercase mb-10 text-gray-900 border-l-8 border-miami-orange pl-4">La Direction</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-5xl">
+    <section class="mb-20">
+      <h2 class="text-4xl font-[Oswald] font-black italic uppercase mb-12 text-center text-gray-900 border-b-4 border-miami-orange pb-4 max-w-xs mx-auto">
+        La Direction
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-4xl mx-auto justify-center">
         {leaders.map(member => (
-          <div class="flip-card-container h-[450px]">
-            <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer">
-              <div class="absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 border-gray-900 overflow-hidden">
-                <div class="h-3/4 bg-gray-200">
-                  <img src={member.image} class="w-full h-full object-cover grayscale group-hover:grayscale-0" />
-                  <div class="absolute top-4 left-4 bg-gray-900 text-white font-[Oswald] font-bold text-2xl px-3 py-1 rounded italic">{member.initials}</div>
+          <div class="flip-card-container h-[480px] w-full max-w-[360px] mx-auto">
+            <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer shadow-2xl rounded-2xl">
+              <div class="absolute inset-0 backface-hidden rounded-2xl bg-white border-b-8 border-gray-900 overflow-hidden">
+                <div class="h-[75%] bg-gray-100">
+                  <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                  <div class="absolute top-4 left-4 bg-gray-900 text-white font-[Oswald] font-bold text-2xl px-4 py-1 rounded italic shadow-lg">
+                    {member.initials}
+                  </div>
                 </div>
-                <div class="p-5">
-                  <h3 class="font-[Oswald] font-bold text-2xl uppercase italic">{member.name}</h3>
-                  <p class="text-miami-orange font-black text-xs uppercase">{member.role}</p>
+                <div class="p-6 text-center">
+                  <h3 class="font-[Oswald] font-bold text-2xl uppercase italic leading-tight text-gray-900">{member.name}</h3>
+                  <p class="text-miami-orange font-black text-sm uppercase mt-1 tracking-widest">{member.role}</p>
                 </div>
               </div>
-              <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl shadow-2xl bg-gray-900 text-white p-6 flex flex-col justify-between border-4 border-miami-aqua text-center">
-                <h3 class="font-[Oswald] text-2xl uppercase italic text-miami-aqua">{member.name}</h3>
-                <div class="space-y-4">
-                  <p class="text-xs font-black uppercase text-miami-orange tracking-widest">Spécialité</p>
-                  <p class="font-bold">{member.specialty}</p>
+              <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl bg-gray-900 text-white p-8 flex flex-col justify-between border-4 border-miami-aqua text-center">
+                <div>
+                  <h3 class="font-[Oswald] text-3xl uppercase italic text-miami-aqua border-b border-white/20 pb-4 mb-6">{member.name}</h3>
+                  <p class="text-xs font-black uppercase text-miami-orange tracking-[0.2em] mb-2">Spécialité</p>
+                  <p class="text-lg font-bold leading-snug">{member.specialty}</p>
                 </div>
-                <p class="italic text-sm opacity-80">"{member.bio}"</p>
+                <p class="italic text-sm opacity-90 leading-relaxed border-t border-white/10 pt-4">"{member.bio}"</p>
+                <p class="text-[10px] font-bold text-miami-aqua uppercase tracking-widest mt-2">{member.college}</p>
               </div>
             </div>
           </div>
@@ -75,34 +104,42 @@ const categories = [
       </div>
     </section>
 
-    <div class="space-y-8">
+    <div class="space-y-10">
       {categories.map((cat) => (
         <div class="category-block">
           <button 
-            class="toggle-btn w-full flex justify-between items-center bg-gray-900 text-white p-8 rounded-2xl shadow-xl hover:bg-miami-aqua transition-all group"
+            class="toggle-btn w-full flex justify-between items-center bg-gray-900 text-white p-8 rounded-2xl shadow-xl hover:bg-miami-aqua transition-all duration-300 group"
             data-target={cat.id}
           >
-            <span class="text-3xl font-[Oswald] font-black italic uppercase tracking-tighter">{cat.title}</span>
-            <span class="icon text-3xl transform transition-transform duration-500">▼</span>
+            <div class="flex items-center space-x-4">
+               <span class={`w-3 h-10 ${cat.color} border-l-8`}></span>
+               <span class="text-3xl font-[Oswald] font-black italic uppercase tracking-tighter">{cat.title}</span>
+            </div>
+            <span class="icon text-3xl transform transition-transform duration-500 bg-white/10 p-2 rounded-full">▼</span>
           </button>
 
-          <div id={cat.id} class="content hidden mt-10">
+          <div id={cat.id} class="content hidden mt-10 transition-all duration-500">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {cat.staff.map((member) => (
                 <div class="flip-card-container h-[420px]">
                   <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer">
-                    <div class={`absolute inset-0 backface-hidden rounded-xl bg-white border-b-4 ${cat.color} overflow-hidden shadow-md`}>
-                      <img src={member.image} class="h-2/3 w-full object-cover" />
-                      <div class="p-4 text-center">
-                        <h4 class="font-[Oswald] text-xl font-bold uppercase italic leading-tight">{member.name}</h4>
-                        <p class="text-[10px] font-black text-gray-400 uppercase mt-1">{member.role}</p>
+                    <div class={`absolute inset-0 backface-hidden rounded-xl bg-white border-b-4 ${cat.color} overflow-hidden shadow-lg`}>
+                      <div class="h-2/3 bg-gray-50">
+                        <img src={member.image} alt={member.name} class="w-full h-full object-cover" />
                       </div>
-                      <div class="absolute top-2 right-2 bg-gray-900 text-white text-xs font-bold px-2 py-1 rounded">{member.initials}</div>
+                      <div class="p-4 text-center">
+                        <h4 class="font-[Oswald] text-xl font-bold uppercase italic leading-tight text-gray-900">{member.name}</h4>
+                        <p class="text-[10px] font-black text-gray-400 uppercase mt-1 tracking-widest">{member.role}</p>
+                      </div>
+                      <div class="absolute top-2 right-2 bg-gray-900 text-white text-[10px] font-black px-2 py-1 rounded">{member.initials}</div>
                     </div>
-                    <div class={`absolute inset-0 backface-hidden rotate-y-180 rounded-xl bg-gray-800 text-white p-6 flex flex-col justify-between border-2 ${cat.color} text-center`}>
-                      <p class="text-xs font-black text-miami-orange uppercase">Expertise</p>
-                      <p class="font-bold text-sm leading-tight">{member.specialty}</p>
-                      <p class="text-[10px] italic opacity-70">"{member.bio}"</p>
+                    <div class={`absolute inset-0 backface-hidden rotate-y-180 rounded-xl bg-gray-800 text-white p-6 flex flex-col justify-between border-2 ${cat.color} text-center shadow-2xl`}>
+                      <div class="border-b border-white/10 pb-2">
+                         <p class="text-[10px] font-black text-miami-orange uppercase tracking-widest mb-1">Expertise</p>
+                         <p class="font-bold text-sm leading-tight uppercase">{member.specialty}</p>
+                      </div>
+                      <p class="text-xs italic opacity-80 leading-snug">"{member.bio}"</p>
+                      <div class="bg-white/5 p-2 rounded text-[10px] font-bold uppercase text-miami-aqua">The Phin Side Analysis</div>
                     </div>
                   </div>
                 </div>
@@ -124,21 +161,30 @@ const categories = [
 </style>
 
 <script>
-  // Script Flip + Accordéon
+  // Logique pour retourner les cartes
   document.querySelectorAll('.flip-card-inner').forEach(card => {
     card.addEventListener('click', (e) => {
-      e.stopPropagation(); // Empêche de fermer la section en cliquant sur la carte
+      e.stopPropagation(); 
       card.classList.toggle('is-flipped');
     });
   });
 
+  // Logique pour l'accordéon (déplier les sections)
   document.querySelectorAll('.toggle-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const targetId = btn.getAttribute('data-target');
       const content = document.getElementById(targetId);
       const icon = btn.querySelector('.icon');
+      
       content.classList.toggle('hidden');
       icon.classList.toggle('rotate-180');
+      
+      // Petit scroll fluide vers la section ouverte
+      if (!content.classList.contains('hidden')) {
+        setTimeout(() => {
+          content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
     });
   });
 </script>
