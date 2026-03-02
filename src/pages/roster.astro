@@ -18,21 +18,35 @@ import players from '../data/roster.json';
         <button class="filter-btn" data-filter="special">Spécial</button>
       </div>
 
-      <div class="flex flex-wrap gap-2 mt-4 border-l-2 border-gray-200 pl-4">
-        <button class="sub-filter-btn" data-filter="passing">Passing</button>
-        <button class="sub-filter-btn" data-filter="rushing">Rushing</button>
-        <button class="sub-filter-btn" data-filter="receiving">Receiving</button>
-        <button class="sub-filter-btn" data-filter="line">Line</button>
-        <button class="sub-filter-btn" data-filter="secondary">Secondary</button>
+      <div class="sub-filters-wrapper mt-6 min-h-[50px]">
+        
+        <div id="sub-offense" class="sub-group hidden flex flex-wrap gap-2 border-l-2 border-miami-aqua pl-4">
+          <button class="sub-filter-btn" data-filter="passing">Passing</button>
+          <button class="sub-filter-btn" data-filter="rushing">Rushing</button>
+          <button class="sub-filter-btn" data-filter="receiving">Receiving</button>
+          <button class="sub-filter-btn" data-filter="line">Off. Line</button>
+        </div>
+
+        <div id="sub-defense" class="sub-group hidden flex flex-wrap gap-2 border-l-2 border-miami-orange pl-4">
+          <button class="sub-filter-btn" data-filter="tackles">Tackles</button>
+          <button class="sub-filter-btn" data-filter="interceptions">Interceptions</button>
+          <button class="sub-filter-btn" data-filter="line">Def. Line</button>
+          <button class="sub-filter-btn" data-filter="secondary">Secondary</button>
+        </div>
+
+        <div id="sub-special" class="sub-group hidden flex flex-wrap gap-2 border-l-2 border-gray-400 pl-4">
+          <button class="sub-filter-btn" data-filter="kicking">Kicking</button>
+          <button class="sub-filter-btn" data-filter="punting">Punting</button>
+          <button class="sub-filter-btn" data-filter="returns">Returns</button>
+        </div>
+
       </div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="roster-grid">
       {players.map((player) => {
-        // Logique de couleur dynamique
         const isOffense = player.unit === 'offense';
         const isDefense = player.unit === 'defense';
-        
         const themeColor = isOffense ? 'border-miami-aqua' : (isDefense ? 'border-miami-orange' : 'border-gray-400');
         const themeBg = isOffense ? 'bg-miami-aqua' : (isDefense ? 'bg-miami-orange' : 'bg-gray-400');
         const themeText = isOffense ? 'text-miami-aqua' : (isDefense ? 'text-miami-orange' : 'text-gray-400');
@@ -43,26 +57,16 @@ import players from '../data/roster.json';
               
               <div class={`absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 ${themeColor} overflow-hidden`}>
                 <div class="relative h-3/4 bg-gray-100 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src={player.image} 
-                    alt={player.name} 
-                    class="w-full h-full object-contain sm:object-cover grayscale hover:grayscale-0 transition-all duration-500" 
-                  />
-                  <div class={`absolute top-4 left-4 ${themeBg} text-white font-[Oswald] font-bold text-3xl px-3 py-1 rounded shadow-lg italic`}>
-                    #{player.number}
-                  </div>
+                  <img src={player.image} alt={player.name} class="w-full h-full object-contain sm:object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                  <div class={`absolute top-4 left-4 ${themeBg} text-white font-[Oswald] font-bold text-3xl px-3 py-1 rounded shadow-lg italic`}>#{player.number}</div>
                 </div>
                 <div class="p-5">
-                  <h3 class="font-[Oswald] font-bold text-2xl uppercase italic text-gray-900 leading-tight">
-                    {player.name}
-                  </h3>
-                  <p class={`${themeText} font-black tracking-widest text-xs uppercase mt-1`}>
-                    {player.position} | {player.college}
-                  </p>
+                  <h3 class="font-[Oswald] font-bold text-2xl uppercase italic text-gray-900 leading-tight">{player.name}</h3>
+                  <p class={`${themeText} font-black tracking-widest text-[10px] uppercase mt-1`}>{player.position} | {player.college}</p>
                 </div>
               </div>
 
-              <div class={`absolute inset-0 backface-hidden rotate-y-180 rounded-2xl shadow-2xl ${themeBg} text-white p-6 flex flex-col justify-between border-4 border-white/20`}>
+              <div class={`absolute inset-0 backface-hidden rotate-y-180 rounded-2xl shadow-2xl ${themeBg} text-white p-6 flex flex-col justify-between border-4 border-white/10`}>
                 <div>
                   <div class="flex justify-between items-start border-b border-white/20 pb-3 mb-4">
                     <h3 class="font-[Oswald] text-3xl uppercase italic leading-none">{player.name}</h3>
@@ -80,9 +84,7 @@ import players from '../data/roster.json';
                     </div>
                     <div class="bg-white/10 p-2 rounded">
                       <p class="text-[10px] uppercase opacity-70 font-bold">TDs</p>
-                      <p class={`text-xl font-black ${Number(player.stats.val3) >= 10 ? 'text-yellow-300 animate-pulse' : 'text-white'}`}>
-                        {player.stats.val3}
-                      </p>
+                      <p class={`text-xl font-black ${Number(player.stats.val3) >= 10 ? 'text-yellow-300 animate-pulse' : 'text-white'}`}>{player.stats.val3}</p>
                     </div>
                   </div>
 
@@ -91,10 +93,7 @@ import players from '../data/roster.json';
                     <p class="font-[Oswald] italic text-lg text-white">{player.celebration}</p>
                   </div>
                 </div>
-
-                <div class="text-sm leading-snug border-t border-white/20 pt-4 italic opacity-90">
-                  "{player.bio}"
-                </div>
+                <div class="text-sm leading-snug border-t border-white/20 pt-4 italic opacity-90">"{player.bio}"</div>
               </div>
 
             </div>
@@ -106,37 +105,39 @@ import players from '../data/roster.json';
 </Layout>
 
 <style>
-  .filter-btn, .sub-filter-btn {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    font-style: italic;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-
+  /* BOUTONS PRINCIPAUX */
   .filter-btn {
     padding: 0.5rem 1.5rem;
     border-radius: 9999px;
     border: 2px solid #008E97;
     color: #008E97;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
     background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-
   .filter-btn.active, .filter-btn:hover {
     background: #008E97;
     color: white;
   }
 
+  /* SOUS-BOUTONS */
   .sub-filter-btn {
     padding: 0.25rem 0.75rem;
     border-radius: 4px;
     border: 1px solid #e5e7eb;
     color: #6b7280;
     font-size: 0.75rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
     background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-
   .sub-filter-btn.active, .sub-filter-btn:hover {
     border-color: #F26722;
     color: #F26722;
@@ -145,36 +146,67 @@ import players from '../data/roster.json';
   .player-card.hidden-filter {
     display: none;
   }
+
+  .sub-group {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .hidden { display: none !important; }
 </style>
 
 <script>
   const initRoster = () => {
-    const cards = document.querySelectorAll('.flip-card-inner');
-    const allBtns = document.querySelectorAll('.filter-btn, .sub-filter-btn');
+    const mainBtns = document.querySelectorAll('.filter-btn');
+    const subBtns = document.querySelectorAll('.sub-filter-btn');
     const playerCards = document.querySelectorAll('.player-card');
+    const subGroups = document.querySelectorAll('.sub-group');
 
-    cards.forEach(card => {
-      card.onclick = () => card.classList.toggle('is-flipped');
-    });
+    function filterPlayers(filterValue) {
+      playerCards.forEach(card => {
+        const unit = card.getAttribute('data-unit');
+        const subUnit = card.getAttribute('data-subunit');
+        if (filterValue === 'all' || unit === filterValue || subUnit === filterValue) {
+          card.classList.remove('hidden-filter');
+        } else {
+          card.classList.add('hidden-filter');
+        }
+      });
+    }
 
-    allBtns.forEach(btn => {
+    mainBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        allBtns.forEach(b => b.classList.remove('active'));
+        const filter = btn.getAttribute('data-filter');
+        mainBtns.forEach(b => b.classList.remove('active'));
+        subBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        const filter = btn.getAttribute('data-filter');
+        // Gérer l'affichage des groupes de sous-filtres
+        subGroups.forEach(group => group.classList.add('hidden'));
+        if (filter !== 'all') {
+          const target = document.getElementById(`sub-${filter}`);
+          if (target) target.classList.remove('hidden');
+        }
 
-        playerCards.forEach(card => {
-          const unit = card.getAttribute('data-unit');
-          const subUnit = card.getAttribute('data-subunit');
-
-          if (filter === 'all' || unit === filter || subUnit === filter) {
-            card.classList.remove('hidden-filter');
-          } else {
-            card.classList.add('hidden-filter');
-          }
-        });
+        filterPlayers(filter);
       });
+    });
+
+    subBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        subBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterPlayers(btn.getAttribute('data-filter'));
+      });
+    });
+
+    // Flip Cards
+    document.querySelectorAll('.flip-card-inner').forEach(card => {
+      card.onclick = () => card.classList.toggle('is-flipped');
     });
   };
 
