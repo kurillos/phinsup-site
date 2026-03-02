@@ -51,39 +51,44 @@
     "celebration": "",
     "bio": "Le QB remplaçant"
   },
-  { 
-    "id": "waddle",
-    "name": "Jaylen Waddle", 
-    "number": "17", 
-    "unit": "offense",
-    "subUnit": "passing",
-    "position": "WR", 
-    "image": "/images/roster/waddle.jpeg",
-    "college": "Alabama",
-    "stats": { "label": "CMP%", "val1": "1", "val2": "8", "val3": "0" },
-    "celebration": "",
-    "bio": "Le QB remplaçant"
-  },
-{ 
+   { 
     "id": "achane",
     "name": "De'Von Achane", 
+    "number": "28", 
     "unit": "offense",
     "subUnit": "rushing",
     "position": "RB", 
-    "stats": { "label": "ATT", "val1": "238", "val2": "1,350", "val3": "8" },
-    "bio": "..."
+    "image": "/images/roster/achane.jpeg",
+    "college": "Texas A&M",
+    "stats": { "label": "ATT", "val1": "238", "val2": "1350", "val3": "8" },
+    "celebration": "",
+    "bio": "Le RB polyvalent, capable de faire des dégâts au sol."
   },
-
   { 
-    "id": "ramsey",
-    "name": "Jalen Ramsey", 
+    "id": "wright",
+    "name": "Jaylen Wright", 
     "number": "5", 
-    "unit": "defense",
-    "position": "CB", 
-    "image": "/images/roster/ramsey.png",
-    "college": "Florida State",
-    "stats": { "label": "PDEF", "val1": "5", "val2": "45 (Tot)", "val3": "3 (INT)" },
-    "celebration": "The Lockdown 🔒",
-    "bio": "Le meilleur cornerback de la ligue."
+    "unit": "offense",
+    "subUnit": "rushing",
+    "position": "RB", 
+    "image": "/images/roster/wright.jpeg",
+    "college": "Tennessee",
+    "stats": { "label": "ATT", "val1": "70", "val2": "288", "val3": "2" },
+    "celebration": "",
+    "bio": ""
+  },
+   { 
+    "id": "gordon",
+    "name": "Ollie Gordon II", 
+    "number": "31", 
+    "unit": "offense",
+    "subUnit": "rushing",
+    "position": "RB", 
+    "image": "/images/roster/gordon.jpeg",
+    "college": "Tennessee",
+    "stats": { "label": "ATT", "val1": "70", "val2": "199", "val3": "3" },
+    "celebration": "",
+    "bio": ""
   }
+
 ]
