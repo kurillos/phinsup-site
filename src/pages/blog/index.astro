@@ -1,24 +1,29 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+// On importe les données des podcasts
 import episodes from '../../data/podcasts.json';
 
-// Récupération sécurisée
+// 1. Récupération sécurisée des articles
 const rawPosts = await getCollection('blog');
 
-const posts = rawPosts
+// 2. Filtrage et Tri SÉCURISÉ (On blinde le tri pour éviter le crash sur data)
+const posts = rawPosts ? rawPosts
     .filter(post => post && post.data && post.data.isDraft !== true)
     .sort((a, b) => {
-        const dateA = a.data.pubDate ? new Date(a.data.pubDate).valueOf() : 0;
-        const dateB = b.data.pubDate ? new Date(b.data.pubDate).valueOf() : 0;
+        // Sécurité sur les dates pour le tri
+        const dateA = a.data?.pubDate ? new Date(a.data.pubDate).getTime() : 0;
+        const dateB = b.data?.pubDate ? new Date(b.data.pubDate).getTime() : 0;
         return dateB - dateA;
-    });
+    }) : [];
 
+// 3. Récupération sécurisée du dernier épisode
 const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
 ---
 
 <BaseLayout title="Accueil - The Phin Side">
     <main class="max-w-7xl mx-auto py-10 px-4">
+        
         <div class="flex items-center space-x-4 mb-10 border-l-8 border-miami-orange pl-6">
             <h1 class="text-4xl font-bold text-gray-900 font-[Oswald] italic uppercase tracking-tighter">
                 L'actualité des <span class="text-miami-aqua">Phins</span>
@@ -26,19 +31,17 @@ const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            
             <div class="lg:col-span-2">
                 <div class="grid gap-8 md:grid-cols-2">
-                    {posts.map((post) => {
-                        // On sécurise l'accès aux données
-                        // Si post.data.author n'existe pas, on utilise "The Phin Side Staff"
-                        const authorName = post.data?.author || "The Phin Side Staff";
-                        
-                        return (
+                    {posts && posts.length > 0 ? (
+                        posts.map((post) => (
                             <article class="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
+                                
                                 <div class="relative h-52 overflow-hidden bg-gray-200">
                                     <img 
-                                        src={post.data.heroImage || "/images/hard-rock-stadium.png"} 
-                                        alt={post.data.title} 
+                                        src={post.data?.heroImage || "/images/hard-rock-stadium.png"} 
+                                        alt={post.data?.title || "Image article"} 
                                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
@@ -49,35 +52,41 @@ const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
                                 <div class="p-6 grow flex flex-col">
                                     <div class="flex items-center justify-between mb-3">
                                         <span class="bg-miami-aqua/10 text-miami-aqua text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md border border-miami-aqua/20">
-                                            {post.data.category || "Actu"}
+                                            {post.data?.category || "Actu"}
                                         </span>
                                         <span class="text-gray-400 text-xs font-medium">
-                                            {post.data.pubDate?.toLocaleDateString('fr-FR')}
+                                            {/* TA CORRECTION : On force le new Date() pour éviter le crash SSR */}
+                                            {post.data?.pubDate 
+                                                ? new Date(post.data.pubDate).toLocaleDateString('fr-FR') 
+                                                : ''}
                                         </span>
                                     </div>
 
                                     <h2 class="text-2xl font-bold text-gray-900 group-hover:text-miami-aqua transition-colors duration-300 font-[Oswald] leading-tight mb-3">
                                         <a href={`/blog/${post.slug}/`}>
-                                            <span class="absolute inset-0"></span> {post.data.title}
+                                            <span class="absolute inset-0"></span> {post.data?.title || "Sans titre"}
                                         </a>
                                     </h2>
 
                                     <p class="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed">
-                                        {post.data.description}
+                                        {post.data?.description || ""}
                                     </p>
                                     
                                     <div class="mt-auto pt-4 border-t border-gray-50 flex items-center text-miami-orange font-bold text-xs uppercase tracking-tighter italic">
-                                        {/* Utilisation de la variable sécurisée authorName */}
-                                        <span>Par {authorName}</span>
+                                        <span>Par {post.data?.author || "The Phin Side Staff"}</span>
                                     </div>
                                 </div>
                             </article>
-                        );
-                    })}
+                        ))
+                    ) : (
+                        <p class="text-gray-500 italic col-span-2 text-center py-10">Aucun article disponible.</p>
+                    )}
                 </div>
             </div>
 
             <aside class="space-y-8">
+                
+                {/* PODCAST CARD */}
                 {lastEpisode && (
                     <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-xl border-b-8 border-miami-orange">
                         <div class="p-6">
@@ -85,9 +94,11 @@ const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
                                 <span class="bg-miami-orange text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">Dernier Épisode</span>
                                 <span class="text-gray-400 text-[10px] font-bold">{lastEpisode.date}</span>
                             </div>
+                            
                             <h3 class="text-white font-[Oswald] italic font-bold text-xl leading-tight mb-4">
                                 {lastEpisode.title}
                             </h3>
+
                             <iframe 
                                 style="border-radius:12px; border: none;" 
                                 src={`https://open.spotify.com/embed/episode/${lastEpisode.spotifyId}?utm_source=generator&theme=0`} 
@@ -96,6 +107,7 @@ const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                                 loading="lazy">
                             </iframe>
+                            
                             <a href="/podcast" class="block text-center mt-4 text-miami-aqua text-[10px] font-black uppercase hover:text-white transition-colors">
                                 Écouter tous les épisodes →
                             </a>
@@ -112,6 +124,7 @@ const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
+
             </aside>
         </div>
     </main>
