@@ -12,12 +12,30 @@ import players from '../data/roster.json';
         Effectif <span class="text-miami-orange">2026</span>
       </h1>
       
-      <div class="flex flex-wrap gap-4 mt-8">
-        <button class="filter-btn active" data-filter="all">Tous</button>
-        <button class="filter-btn" data-filter="offense">Offensif</button>
-        <button class="filter-btn" data-filter="defense">Défensif</button>
-        <button class="filter-btn" data-filter="special">Spécial</button>
-      </div>
+      <div class="mb-12">
+  <h1 class="text-5xl font-[Oswald] font-black italic uppercase text-miami-aqua tracking-tighter">
+    Effectif <span class="text-miami-orange">2026</span>
+  </h1>
+  
+  <div class="flex flex-wrap gap-3 mt-8">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="offense">Offensif</button>
+    <button class="filter-btn" data-filter="defense">Défensif</button>
+    <button class="filter-btn" data-filter="special">Spécial</button>
+  </div>
+
+  <div class="flex flex-wrap gap-2 mt-4 border-l-2 border-gray-200 pl-4">
+    <button class="sub-filter-btn" data-filter="passing">Passing</button>
+    <button class="sub-filter-btn" data-filter="rushing">Rushing</button>
+    <button class="sub-filter-btn" data-filter="receiving">Receiving</button>
+    <button class="sub-filter-btn" data-filter="line">Line</button>
+    <button class="sub-filter-btn" data-filter="secondary">Secondary</button>
+  </div>
+</div>
+
+<div class="player-card ..." data-unit={player.unit} data-subunit={player.subUnit}>
+   ...
+</div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="roster-grid">
@@ -99,64 +117,75 @@ import players from '../data/roster.json';
 </Layout>
 
 <style>
-  .filter-btn {
-    padding: 0.5rem 1.5rem; /* Equivalent de px-6 py-2 */
-    border-radius: 9999px;   /* Equivalent de rounded-full */
+  .filter-btn, .sub-filter-btn {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     font-style: italic;
     font-weight: 700;
-    letter-spacing: 0.05em;
     transition: all 0.3s ease;
-    border: 2px solid #008E97;
-    color: #008E97;
-    background: transparent;
     cursor: pointer;
   }
 
-  .filter-btn:hover, .filter-btn.active {
-    background-color: #008E97;
+  /* Style boutons principaux */
+  .filter-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    border: 2px solid #008E97;
+    color: #008E97;
+    background: transparent;
+  }
+
+  .filter-btn.active, .filter-btn:hover {
+    background: #008E97;
     color: white;
-    box-shadow: 0 10px 15px -3px rgba(0, 142, 151, 0.3);
   }
-  
-  .player-card {
-    transition: transform 0.4s ease, opacity 0.4s ease;
+
+  /* Style sous-boutons (plus petits) */
+  .sub-filter-btn {
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 0.75rem;
+    background: white;
   }
-  
+
+  .sub-filter-btn.active, .sub-filter-btn:hover {
+    border-color: #F26722;
+    color: #F26722;
+  }
+
   .player-card.hidden-filter {
     display: none;
-    opacity: 0;
-    transform: scale(0.9);
   }
 </style>
 
 <script>
-  // GESTION DU FLIP ET DES FILTRES
   const initRoster = () => {
     const cards = document.querySelectorAll('.flip-card-inner');
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    const allBtns = document.querySelectorAll('.filter-btn, .sub-filter-btn');
     const playerCards = document.querySelectorAll('.player-card');
 
-    // Clic pour retourner la carte
+    // 1. Flip
     cards.forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('is-flipped');
-      });
+      card.onclick = () => card.classList.toggle('is-flipped');
     });
 
-    // Filtrage
-    filterBtns.forEach(btn => {
+    // 2. Filtres
+    allBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Style bouton actif
-        filterBtns.forEach(b => b.classList.remove('active'));
+        // Gérer le style actif
+        allBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
         const filter = btn.getAttribute('data-filter');
 
         playerCards.forEach(card => {
           const unit = card.getAttribute('data-unit');
-          if (filter === 'all' || unit === filter) {
+          const subUnit = card.getAttribute('data-subunit');
+
+          // Si "Tous" ou si ça match l'unité OU la sous-unité
+          if (filter === 'all' || unit === filter || subUnit === filter) {
             card.classList.remove('hidden-filter');
           } else {
             card.classList.add('hidden-filter');

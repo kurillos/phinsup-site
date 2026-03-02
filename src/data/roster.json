@@ -4,6 +4,7 @@
     "name": "Tua Tagovailoa", 
     "number": "1", 
     "unit": "offense",
+    "subUnit": "passing",
     "position": "QB", 
     "image": "/images/roster/tua.png",
     "college": "Alabama",
@@ -16,6 +17,7 @@
     "name": "Quinn Ewers", 
     "number": "83", 
     "unit": "offense",
+    "subUnit": "passing",
     "position": "QB", 
     "image": "/images/roster/ewers.jpeg",
     "college": "Texas",
@@ -28,6 +30,7 @@
     "name": "Zach Wilson", 
     "number": "11", 
     "unit": "offense",
+    "subUnit": "passing",
     "position": "QB", 
     "image": "/images/roster/wilson.png",
     "college": "BYU",
@@ -40,6 +43,7 @@
     "name": "Jaylen Waddle", 
     "number": "17", 
     "unit": "offense",
+    "subUnit": "passing",
     "position": "WR", 
     "image": "/images/roster/waddle.jpeg",
     "college": "Alabama",
@@ -52,6 +56,7 @@
     "name": "Jaylen Waddle", 
     "number": "17", 
     "unit": "offense",
+    "subUnit": "passing",
     "position": "WR", 
     "image": "/images/roster/waddle.jpeg",
     "college": "Alabama",
@@ -59,7 +64,15 @@
     "celebration": "",
     "bio": "Le QB remplaçant"
   },
-
+{ 
+    "id": "achane",
+    "name": "De'Von Achane", 
+    "unit": "offense",
+    "subUnit": "rushing",
+    "position": "RB", 
+    "stats": { "label": "ATT", "val1": "238", "val2": "1,350", "val3": "8" },
+    "bio": "..."
+  }
 
   { 
     "id": "ramsey",
