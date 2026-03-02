@@ -1,24 +1,22 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-// On importe les données des podcasts
-import episodes from '../../data/podcasts.json';
+import episodesData from '../../data/podcasts.json';
 
-// 1. Récupération sécurisée des articles
-const rawPosts = await getCollection('blog');
+// 1. Sécurisation Podcast (on renomme pour éviter les conflits)
+const lastEpisode = (episodesData && Array.isArray(episodesData) && episodesData.length > 0) 
+    ? episodesData[0] 
+    : null;
 
-// 2. Filtrage et Tri SÉCURISÉ (On blinde le tri pour éviter le crash sur data)
-const posts = rawPosts ? rawPosts
-    .filter(post => post && post.data && post.data.isDraft !== true)
+// 2. Récupération articles avec filtrage immédiat des objets nuls
+const allPosts = await getCollection('blog');
+const posts = (allPosts || [])
+    .filter(p => p && p.data && p.data.isDraft !== true)
     .sort((a, b) => {
-        // Sécurité sur les dates pour le tri
-        const dateA = a.data?.pubDate ? new Date(a.data.pubDate).getTime() : 0;
-        const dateB = b.data?.pubDate ? new Date(b.data.pubDate).getTime() : 0;
-        return dateB - dateA;
-    }) : [];
-
-// 3. Récupération sécurisée du dernier épisode
-const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
+        const d1 = a.data.pubDate ? new Date(a.data.pubDate).getTime() : 0;
+        const d2 = b.data.pubDate ? new Date(b.data.pubDate).getTime() : 0;
+        return d2 - d1;
+    });
 ---
 
 <BaseLayout title="Accueil - The Phin Side">
@@ -34,97 +32,79 @@ const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
             
             <div class="lg:col-span-2">
                 <div class="grid gap-8 md:grid-cols-2">
-                    {posts && posts.length > 0 ? (
-                        posts.map((post) => (
+                    {posts.map((post) => {
+                        // On extrait proprement avec des fallbacks
+                        const data = post.data || {};
+                        const title = data.title || "Titre non disponible";
+                        const author = data.author || "The Phin Side Staff";
+                        const dateStr = data.pubDate ? new Date(data.pubDate).toLocaleDateString('fr-FR') : "";
+
+                        return (
                             <article class="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
-                                
                                 <div class="relative h-52 overflow-hidden bg-gray-200">
                                     <img 
-                                        src={post.data?.heroImage || "/images/hard-rock-stadium.png"} 
-                                        alt={post.data?.title || "Image article"} 
+                                        src={data.heroImage || "/images/hard-rock-stadium.png"} 
+                                        alt={title} 
                                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
-                                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
-                                        <span class="text-white font-bold text-sm italic">Lire l'article →</span>
-                                    </div>
                                 </div>
 
                                 <div class="p-6 grow flex flex-col">
                                     <div class="flex items-center justify-between mb-3">
-                                        <span class="bg-miami-aqua/10 text-miami-aqua text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md border border-miami-aqua/20">
-                                            {post.data?.category || "Actu"}
+                                        <span class="bg-miami-aqua/10 text-miami-aqua text-[10px] font-black uppercase px-2 py-1 rounded-md">
+                                            {data.category || "Actu"}
                                         </span>
-                                        <span class="text-gray-400 text-xs font-medium">
-                                            {/* TA CORRECTION : On force le new Date() pour éviter le crash SSR */}
-                                            {post.data?.pubDate 
-                                                ? new Date(post.data.pubDate).toLocaleDateString('fr-FR') 
-                                                : ''}
-                                        </span>
+                                        <span class="text-gray-400 text-xs font-medium">{dateStr}</span>
                                     </div>
 
-                                    <h2 class="text-2xl font-bold text-gray-900 group-hover:text-miami-aqua transition-colors duration-300 font-[Oswald] leading-tight mb-3">
-                                        <a href={`/blog/${post.slug}/`}>
-                                            <span class="absolute inset-0"></span> {post.data?.title || "Sans titre"}
-                                        </a>
+                                    <h2 class="text-2xl font-bold text-gray-900 font-[Oswald] leading-tight mb-3">
+                                        <a href={`/blog/${post.slug}/`}>{title}</a>
                                     </h2>
 
-                                    <p class="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed">
-                                        {post.data?.description || ""}
-                                    </p>
+                                    <p class="text-gray-600 text-sm line-clamp-3 mb-4">{data.description || ""}</p>
                                     
-                                    <div class="mt-auto pt-4 border-t border-gray-50 flex items-center text-miami-orange font-bold text-xs uppercase tracking-tighter italic">
-                                        <span>Par {post.data?.author || "The Phin Side Staff"}</span>
+                                    <div class="mt-auto pt-4 border-t border-gray-50 flex items-center text-miami-orange font-bold text-xs uppercase italic">
+                                        <span>Par {author}</span>
                                     </div>
                                 </div>
                             </article>
-                        ))
-                    ) : (
-                        <p class="text-gray-500 italic col-span-2 text-center py-10">Aucun article disponible.</p>
-                    )}
+                        );
+                    })}
                 </div>
             </div>
 
             <aside class="space-y-8">
-                
-                {/* PODCAST CARD */}
-                {lastEpisode && (
+                {/* BLINDAGE TOTAL DU PODCAST */}
+                {lastEpisode && lastEpisode.title ? (
                     <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-xl border-b-8 border-miami-orange">
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="bg-miami-orange text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">Dernier Épisode</span>
-                                <span class="text-gray-400 text-[10px] font-bold">{lastEpisode.date}</span>
+                                <span class="text-gray-400 text-[10px] font-bold">{lastEpisode.date || ""}</span>
                             </div>
                             
-                            <h3 class="text-white font-[Oswald] italic font-bold text-xl leading-tight mb-4">
+                            <h3 class="text-white font-[Oswald] italic font-bold text-xl mb-4">
                                 {lastEpisode.title}
                             </h3>
 
                             <iframe 
                                 style="border-radius:12px; border: none;" 
-                                src={`https://open.spotify.com/embed/episode/${lastEpisode.spotifyId}?utm_source=generator&theme=0`} 
+                                src={`https://open.spotify.com/embed/episode/${lastEpisode.spotifyId || ""}`} 
                                 width="100%" 
                                 height="152" 
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                                 loading="lazy">
                             </iframe>
-                            
-                            <a href="/podcast" class="block text-center mt-4 text-miami-aqua text-[10px] font-black uppercase hover:text-white transition-colors">
-                                Écouter tous les épisodes →
-                            </a>
                         </div>
                     </div>
-                )}
+                ) : null}
 
                 <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
-                    <h3 class="font-[Oswald] font-bold italic uppercase text-gray-900 mb-4 border-b-2 border-miami-aqua pb-2">
-                        Flux Twitter
-                    </h3>
-                    <div class="max-h-[600px] overflow-y-auto rounded-lg">
-                        <a class="twitter-timeline" data-height="600" href="https://twitter.com/MiamiDolphins">Tweets by MiamiDolphins</a> 
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <h3 class="font-[Oswald] font-bold italic uppercase text-gray-900 mb-4 border-b-2 border-miami-aqua pb-2">Flux Twitter</h3>
+                    <div class="max-h-[600px] overflow-y-auto">
+                        <a class="twitter-timeline" href="https://twitter.com/MiamiDolphins">Tweets by MiamiDolphins</a> 
                     </div>
                 </div>
-
             </aside>
         </div>
     </main>
