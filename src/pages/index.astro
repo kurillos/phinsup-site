@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import episodesData from '../../src/data/podcasts.json';
+import results from '../../src/data/results2025.json';
 
 // Récupération avec sécurité totale contre les objets undefined
 const rawPosts = await getCollection('blog') || [];
@@ -16,6 +17,7 @@ const posts = rawPosts
     });
 
 const lastEpisode = (Array.isArray(episodesData) && episodesData.length > 0) ? episodesData[0] : null;
+const lastGame = results && results.length > 0 ? results[0] : null;
 ---
 
 <BaseLayout title="Accueil">
