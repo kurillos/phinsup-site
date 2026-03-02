@@ -1,94 +1,93 @@
 [
-  { 
+  {
     "id": "tua",
-    "name": "Tua Tagovailoa", 
-    "number": "1", 
+    "name": "Tua Tagovailoa",
+    "number": "1",
     "unit": "offense",
     "subUnit": "passing",
-    "position": "QB", 
+    "position": "QB",
     "image": "/images/roster/tua.png",
     "college": "Alabama",
-    "stats": { "label": "CMP%", "val1": "260", "val2": "2,660", "val3": "20" },
+    "stats": { "label": "CMP%", "val1": "67.7", "val2": "2,660", "val3": "20" },
     "celebration": "Shaka Sign 🤙",
-    "bio": "Le chef d'orchestre de l'attaque."
+    "bio": "Le chef d'orchestre. Leader de la ligue en précision avec 67.7% de passes complétées."
   },
- { 
-    "id": "ewers",
-    "name": "Quinn Ewers", 
-    "number": "83", 
-    "unit": "offense",
-    "subUnit": "passing",
-    "position": "QB", 
-    "image": "/images/roster/ewers.jpeg",
-    "college": "Texas",
-    "stats": { "label": "CMP%", "val1": "55", "val2": "622", "val3": "3" },
-    "celebration": "",
-    "bio": "Le QB remplaçant, prêt à prendre le relais."
-  },
-{ 
-    "id": "wilson",
-    "name": "Zach Wilson", 
-    "number": "11", 
-    "unit": "offense",
-    "subUnit": "passing",
-    "position": "QB", 
-    "image": "/images/roster/wilson.png",
-    "college": "BYU",
-    "stats": { "label": "CMP%", "val1": "6", "val2": "32", "val3": "0" },
-    "celebration": "",
-    "bio": "Le QB remplaçant"
-  },
-  { 
-    "id": "waddle",
-    "name": "Jaylen Waddle", 
-    "number": "17", 
-    "unit": "offense",
-    "subUnit": "passing",
-    "position": "WR", 
-    "image": "/images/roster/waddle.jpeg",
-    "college": "Alabama",
-    "stats": { "label": "CMP%", "val1": "1", "val2": "8", "val3": "0" },
-    "celebration": "",
-    "bio": "Le QB remplaçant"
-  },
-   { 
+  {
     "id": "achane",
-    "name": "De'Von Achane", 
-    "number": "28", 
+    "name": "De'Von Achane",
+    "number": "28",
     "unit": "offense",
     "subUnit": "rushing",
-    "position": "RB", 
+    "position": "RB",
     "image": "/images/roster/achane.jpeg",
     "college": "Texas A&M",
-    "stats": { "label": "ATT", "val1": "238", "val2": "1350", "val3": "8" },
-    "celebration": "",
-    "bio": "Le RB polyvalent, capable de faire des dégâts au sol."
+    "stats": { "label": "ATT", "val1": "238", "val2": "1,350", "val3": "8" },
+    "celebration": "Track Star 🏃‍♂️",
+    "bio": "La foudre sur gazon. 1 350 yards au sol et une vitesse de pointe terrifiante."
   },
-  { 
-    "id": "wright",
-    "name": "Jaylen Wright", 
-    "number": "5", 
+  {
+    "id": "waddle",
+    "name": "Jaylen Waddle",
+    "number": "17",
     "unit": "offense",
-    "subUnit": "rushing",
-    "position": "RB", 
-    "image": "/images/roster/wright.jpeg",
-    "college": "Tennessee",
-    "stats": { "label": "ATT", "val1": "70", "val2": "288", "val3": "2" },
-    "celebration": "",
-    "bio": ""
+    "subUnit": "receiving",
+    "position": "WR",
+    "image": "/images/roster/jaylen-waddle.png",
+    "college": "Alabama",
+    "stats": { "label": "REC", "val1": "64", "val2": "910", "val3": "6" },
+    "celebration": "The Waddle Walk 🐧",
+    "bio": "Le pingouin le plus rapide du monde. Menace constante sur les passes profondes."
   },
-   { 
-    "id": "gordon",
-    "name": "Ollie Gordon II", 
-    "number": "31", 
+  {
+    "id": "hill",
+    "name": "Tyreek Hill",
+    "number": "10",
     "unit": "offense",
-    "subUnit": "rushing",
-    "position": "RB", 
-    "image": "/images/roster/gordon.jpeg",
-    "college": "Tennessee",
-    "stats": { "label": "ATT", "val1": "70", "val2": "199", "val3": "3" },
-    "celebration": "",
-    "bio": ""
+    "subUnit": "receiving",
+    "position": "WR",
+    "image": "/images/roster/tyreek-hill.png",
+    "college": "West Alabama",
+    "stats": { "label": "REC", "val1": "21", "val2": "265", "val3": "1" },
+    "celebration": "Peace Sign ✌️",
+    "bio": "Cheetah. Malgré une saison écourtée, il reste le facteur X capable de changer un match."
+  },
+  {
+    "id": "brooks",
+    "name": "Jordyn Brooks",
+    "number": "56",
+    "unit": "defense",
+    "subUnit": "tackles",
+    "position": "LB",
+    "image": "/images/roster/brooks.png",
+    "college": "Texas Tech",
+    "stats": { "label": "TOT", "val1": "183", "val2": "99 (Solo)", "val3": "3.5" },
+    "celebration": "The Enforcer 🦾",
+    "bio": "Machine à plaquages. Nouveau cœur de la défense des Dolphins avec 183 stops."
+  },
+  {
+    "id": "ramsey",
+    "name": "Jalen Ramsey",
+    "number": "5",
+    "unit": "defense",
+    "subUnit": "secondary",
+    "position": "CB",
+    "image": "/images/roster/ramsey.png",
+    "college": "Florida State",
+    "stats": { "label": "PDEF", "val1": "5", "val2": "45 (Tot)", "val3": "3 (INT)" },
+    "celebration": "Lockdown 🔒",
+    "bio": "Le shérif de la ligne secondaire. Interdit de vol dans sa zone."
+  },
+  {
+    "id": "sanders",
+    "name": "Jason Sanders",
+    "number": "7",
+    "unit": "special",
+    "subUnit": "kicking",
+    "position": "K",
+    "image": "/images/roster/sanders.png",
+    "college": "New Mexico",
+    "stats": { "label": "FG%", "val1": "85.2", "val2": "52 (Lng)", "val3": "34 (PAT)" },
+    "celebration": "Ice in Veins ❄️",
+    "bio": "Précision chirurgicale. Crucial dans les moments de haute pression."
   }
-
 ]
