@@ -13,7 +13,7 @@ const ties = regSeason.filter(g => g.result === 'T').length;
   <main class="max-w-6xl mx-auto px-4 py-10">
     
     <header class="mb-12 border-b-4 border-[#f58220] pb-4">
-      <h1 class="text-4xl font-black text-[#008e97] italic uppercase tracking-tighter">Résultats de la Saison</h1>
+      <h1 class="text-4xl font-black text-miami-aqua italic uppercase tracking-tighter">Résultats de la Saison</h1>
       <p class="text-gray-600 mt-2 font-medium">L'historique complet du parcours des Miami Dolphins.</p>
     </header>
 
@@ -21,11 +21,11 @@ const ties = regSeason.filter(g => g.result === 'T').length;
     <details open class="group mb-16">
       <summary class="list-none cursor-pointer">
         <div class="flex items-center gap-4 mb-8">
-          <h2 class="text-2xl font-bold bg-[#008e97] text-white px-5 py-1 skew-x-[-12deg] flex items-center gap-3 shadow-lg">
+          <h2 class="text-2xl font-bold bg-miami-aqua text-white px-5 py-1 skew-x-12 flex items-center gap-3 shadow-lg">
             2025 - 2026 
             <span class="text-sm font-normal opacity-70 group-open:rotate-180 transition-transform duration-300">▼</span>
           </h2>
-          <div class="h-[2px] flex-grow bg-gradient-to-r from-[#008e97]/30 to-transparent"></div>
+          <div class="h-0.5 grow bg-linear-to-r from-miami-aqua to-transparent"></div>
           <div class="flex gap-2">
             <span class="bg-[#f58220] text-white text-[9px] font-black uppercase px-3 py-1 rounded-full shadow-sm">Terminée</span>
             <span class="bg-slate-800 text-white text-[9px] font-black uppercase px-3 py-1 rounded-full shadow-sm">
@@ -37,7 +37,7 @@ const ties = regSeason.filter(g => g.result === 'T').length;
 
       {/* Cartes de Stats Globales */}
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-        <div class="bg-white border-b-4 border-[#008e97] p-5 rounded-xl shadow-sm text-center">
+        <div class="bg-white border-b-4 border-miami-aqua p-5 rounded-xl shadow-sm text-center">
           <span class="block text-gray-400 text-[10px] uppercase font-black tracking-widest mb-1">Victoires</span>
           <span class="text-4xl font-black text-slate-800">{wins}</span>
         </div>
@@ -47,9 +47,9 @@ const ties = regSeason.filter(g => g.result === 'T').length;
         </div>
         <div class="bg-white border-b-4 border-slate-200 p-5 rounded-xl shadow-sm text-center">
           <span class="block text-gray-400 text-[10px] uppercase font-black tracking-widest mb-1">Division</span>
-          <span class="text-4xl font-black text-[#008e97] italic">3ème</span>
+          <span class="text-4xl font-black text-miami-aqua italic">3ème</span>
         </div>
-        <div class="bg-slate-900 p-5 rounded-xl shadow-md text-center text-white border-t-4 border-[#008e97]">
+        <div class="bg-slate-900 p-5 rounded-xl shadow-md text-center text-white border-t-4 border-miami-aqua">
           <span class="block text-white/40 text-[10px] uppercase font-black tracking-widest mb-1">Playoffs</span>
           <span class="text-2xl font-black italic uppercase leading-none block">Non Qualifié</span>
         </div>
@@ -58,13 +58,13 @@ const ties = regSeason.filter(g => g.result === 'T').length;
       {/* --- SOUS-SECTION : PRÉ-SAISON --- */}
       <div class="flex items-center gap-4 mb-8 mt-4">
         <h3 class="text-sm font-black uppercase tracking-[0.2em] text-gray-400">Pre-Season</h3>
-        <div class="h-[1px] flex-grow bg-gray-100"></div>
+        <div class="h-0.5 grow bg-gray-100"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
         {season2025.filter(g => g.type === 'pre').map((game) => (
           <div class="bg-white border border-gray-100 rounded-xl shadow-sm flex flex-col overflow-hidden">
-             <div class={`text-center py-1 text-[10px] font-bold uppercase tracking-widest ${game.result === 'W' ? 'bg-[#008e97] text-white' : game.result === 'L' ? 'bg-[#f58220] text-white' : 'bg-slate-500 text-white'}`}>
+             <div class={`text-center py-1 text-[10px] font-bold uppercase tracking-widest ${game.result === 'W' ? 'bg-miami-aqua text-white' : game.result === 'L' ? 'bg-[#f58220] text-white' : 'bg-slate-500 text-white'}`}>
               {game.week} • {game.result === 'W' ? 'Victoire' : game.result === 'L' ? 'Défaite' : 'Match Nul'}
             </div>
             <div class="p-5 flex flex-col items-center">
@@ -81,24 +81,24 @@ const ties = regSeason.filter(g => g.result === 'T').length;
 
       {/* --- SOUS-SECTION : SAISON RÉGULIÈRE --- */}
       <div class="flex items-center gap-4 mb-8">
-        <h3 class="text-lg font-black uppercase tracking-widest text-[#008e97] italic">Saison Régulière</h3>
-        <div class="h-[2px] flex-grow bg-[#008e97]/10"></div>
+        <h3 class="text-lg font-black uppercase tracking-widest text-miami-aqua italic">Saison Régulière</h3>
+        <div class="h-0.5 grow bg-miami-aqua/10"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {regSeason.map((game) => (
           <div class="bg-white border-2 border-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden group">
             <div class={`text-center py-2 text-xs font-black uppercase tracking-widest shadow-inner 
-              ${game.result === 'W' ? 'bg-[#008e97] text-white' : 
-                game.result === 'L' ? 'bg-[#f58220] text-white' : 
+              ${game.result === 'W' ? 'bg-miami-aqua text-white' : 
+                game.result === 'L' ? 'bg-miami-orange text-white' : 
                 'bg-slate-500 text-white'}`}>
               {game.week} • {game.result === 'W' ? 'Victoire' : game.result === 'L' ? 'Défaite' : 'Match Nul'}
             </div>
 
-            <div class="p-6 flex flex-col items-center flex-grow">
+            <div class="p-6 flex flex-col items-center grow">
               <div class="flex items-center gap-1 mb-5 text-gray-400 bg-gray-50 px-3 py-1 rounded-full border border-gray-100">
                 <span class="text-[10px] font-bold uppercase tracking-tight">
-                  🏟️ {game.stadium} • <span class="text-[#008e97]">{game.location}</span>
+                  🏟️ {game.stadium} • <span class="text-miami-aqua">{game.location}</span>
                 </span>
               </div>
 
@@ -109,7 +109,7 @@ const ties = regSeason.filter(g => g.result === 'T').length;
                 </div>
 
                 <div class="flex flex-col items-center px-4 text-center">
-                  <span class={`text-3xl font-black tracking-tighter ${game.result === 'W' ? 'text-[#008e97]' : game.result === 'L' ? 'text-[#f58220]' : 'text-slate-500'}`}>
+                  <span class={`text-3xl font-black tracking-tighter ${game.result === 'W' ? 'text-miami-aqua' : game.result === 'L' ? 'text-miami-orange' : 'text-slate-500'}`}>
                     {game.scorePhins}-{game.scoreOpp}
                   </span>
                   <span class="text-[10px] text-gray-400 font-bold mt-1 bg-gray-100 px-2 rounded whitespace-nowrap">{game.date}</span>
@@ -131,7 +131,7 @@ const ties = regSeason.filter(g => g.result === 'T').length;
 
               <div class="mt-auto w-full pt-4 border-t border-gray-50">
                 {game.slug ? (
-                  <a href={`/blog/${game.slug}`} class="block text-center bg-slate-900 text-white text-[10px] font-black uppercase py-2 rounded-lg hover:bg-[#008e97] transition-colors tracking-widest">
+                  <a href={`/blog/${game.slug}`} class="block text-center bg-slate-900 text-white text-[10px] font-black uppercase py-2 rounded-lg hover:bg-miami-aqua transition-colors tracking-widest">
                     Analyse du Match
                   </a>
                 ) : (
@@ -150,8 +150,8 @@ const ties = regSeason.filter(g => g.result === 'T').length;
     <details class="group opacity-60 hover:opacity-100 transition-opacity">
       <summary class="list-none cursor-pointer">
         <div class="flex items-center gap-4 mb-8">
-          <h2 class="text-xl font-bold border-2 border-gray-300 text-gray-500 px-4 py-1 skew-x-[-12deg]">2024 - 2025</h2>
-          <div class="h-[1px] flex-grow bg-gray-300"></div>
+          <h2 class="text-xl font-bold border-2 border-gray-300 text-gray-500 px-4 py-1 skew-x-12">2024 - 2025</h2>
+          <div class="h-px grow bg-gray-300"></div>
           <span class="text-sm font-bold text-gray-400 group-open:rotate-180 transition-transform">▼</span>
         </div>
       </summary>

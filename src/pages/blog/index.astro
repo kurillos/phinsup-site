@@ -3,10 +3,10 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import episodes from '../../data/podcasts.json';
 
-// 1. Récupération brute
+// 1. Récupération sécurisée des articles
 const rawPosts = await getCollection('blog');
 
-// 2. Filtrage ultra-strict : on ne garde que ce qui a des DATA valides
+// 2. Filtrage et tri (on ignore tout ce qui n'a pas de data valide)
 const posts = rawPosts
     .filter(post => post && post.data && post.data.isDraft !== true)
     .sort((a, b) => {
@@ -15,7 +15,7 @@ const posts = rawPosts
         return dateB - dateA;
     });
 
-// 3. Sécurité Podcast
+// 3. Récupération sécurisée du dernier épisode
 const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
 ---
 
@@ -32,50 +32,65 @@ const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
             
             <div class="lg:col-span-2">
                 <div class="grid gap-8 md:grid-cols-2">
-                    {posts.map((post) => {
-                        // Sécurité : Si un post n'a pas de data, on ne l'affiche pas (évite le crash)
-                        if (!post || !post.data) return null;
+                    {posts && posts.length > 0 ? (
+                        posts.map((post) => {
+                            // EXTRACTION SÉCURISÉE DES DONNÉES
+                            const { 
+                                title = "Titre indisponible", 
+                                description = "", 
+                                heroImage = "/images/hard-rock-stadium.png", 
+                                category = "Actu", 
+                                author = "PhinsUp Staff",
+                                pubDate 
+                            } = post.data;
 
-                        return (
-                            <article class="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
-                                <div class="relative h-52 overflow-hidden bg-gray-200">
-                                    <img 
-                                        src={post.data.heroImage || "/images/hard-rock-stadium.png"} 
-                                        alt={post.data.title} 
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
-                                        <span class="text-white font-bold text-sm italic">Lire l'article →</span>
+                            const formattedDate = pubDate instanceof Date 
+                                ? pubDate.toLocaleDateString('fr-FR') 
+                                : "";
+
+                            return (
+                                <article class="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
+                                    <div class="relative h-52 overflow-hidden bg-gray-200">
+                                        <img 
+                                            src={heroImage} 
+                                            alt={title} 
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                                            <span class="text-white font-bold text-sm italic">Lire l'article →</span>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="p-6 grow flex flex-col">
-                                    <div class="flex items-center justify-between mb-3">
-                                        <span class="bg-miami-aqua/10 text-miami-aqua text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md border border-miami-aqua/20">
-                                            {post.data.category || "Actu"}
-                                        </span>
-                                        <span class="text-gray-400 text-xs font-medium">
-                                            {post.data.pubDate ? post.data.pubDate.toLocaleDateString('fr-FR') : ""}
-                                        </span>
+                                    <div class="p-6 grow flex flex-col">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <span class="bg-miami-aqua/10 text-miami-aqua text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md border border-miami-aqua/20">
+                                                {category}
+                                            </span>
+                                            <span class="text-gray-400 text-xs font-medium">
+                                                {formattedDate}
+                                            </span>
+                                        </div>
+
+                                        <h2 class="text-2xl font-bold text-gray-900 group-hover:text-miami-aqua transition-colors duration-300 font-[Oswald] leading-tight mb-3">
+                                            <a href={`/blog/${post.slug}/`}>
+                                                <span class="absolute inset-0"></span> {title}
+                                            </a>
+                                        </h2>
+
+                                        <p class="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed">
+                                            {description}
+                                        </p>
+                                        
+                                        <div class="mt-auto pt-4 border-t border-gray-50 flex items-center text-miami-orange font-bold text-xs uppercase tracking-tighter italic">
+                                            <span>Par {author}</span>
+                                        </div>
                                     </div>
-
-                                    <h2 class="text-2xl font-bold text-gray-900 group-hover:text-miami-aqua transition-colors duration-300 font-[Oswald] leading-tight mb-3">
-                                        <a href={`/blog/${post.slug}/`}>
-                                            <span class="absolute inset-0"></span> {post.data.title}
-                                        </a>
-                                    </h2>
-
-                                    <p class="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed">
-                                        {post.data.description}
-                                    </p>
-                                    
-                                    <div class="mt-auto pt-4 border-t border-gray-50 flex items-center text-miami-orange font-bold text-xs uppercase tracking-tighter italic">
-                                        <span>Par {post.data.author || "PhinsUp Staff"}</span>
-                                    </div>
-                                </div>
-                            </article>
-                        );
-                    })}
+                                </article>
+                            );
+                        })
+                    ) : (
+                        <p class="text-gray-500 italic">Aucun article publié pour le moment.</p>
+                    )}
                 </div>
             </div>
 
@@ -113,7 +128,7 @@ const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
                     <h3 class="font-[Oswald] font-bold italic uppercase text-gray-900 mb-4 border-b-2 border-miami-aqua pb-2">
                         Flux Twitter
                     </h3>
-                    <div class="max-h-[600px] overflow-y-auto rounded-lg">
+                    <div class="max-h-150 overflow-y-auto rounded-lg">
                         <a class="twitter-timeline" data-height="600" href="https://twitter.com/MiamiDolphins">Tweets by MiamiDolphins</a> 
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
