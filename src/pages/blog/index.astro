@@ -1,16 +1,22 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-// On importe les données des podcasts
 import episodes from '../../data/podcasts.json';
 
-// Récupère tous les articles qui ne sont pas des brouillons et trie par date
-const posts = (await getCollection('blog', ({ data }) => {
-    return data.isDraft !== true;
-})).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// 1. Récupération brute
+const rawPosts = await getCollection('blog');
 
-// On récupère le dernier épisode publié
-const lastEpisode = episodes[0];
+// 2. Filtrage ultra-strict : on ne garde que ce qui a des DATA valides
+const posts = rawPosts
+    .filter(post => post && post.data && post.data.isDraft !== true)
+    .sort((a, b) => {
+        const dateA = a.data.pubDate ? a.data.pubDate.valueOf() : 0;
+        const dateB = b.data.pubDate ? b.data.pubDate.valueOf() : 0;
+        return dateB - dateA;
+    });
+
+// 3. Sécurité Podcast
+const lastEpisode = (episodes && episodes.length > 0) ? episodes[0] : null;
 ---
 
 <BaseLayout title="Accueil - The Phin Side">
