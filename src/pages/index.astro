@@ -1,30 +1,21 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import TwitterFeed from '@/components/TwitterFeed.astro';
-import season2025 from '../data/results2025.json';
-// 1. Importation des podcasts
-import podcastsData from '../data/podcasts.json';
+import episodesData from '../../src/data/podcasts.json';
 
-const lastGame = season2025.filter(g => g.scorePhins !== null).pop();
+// Récupération avec sécurité totale contre les objets undefined
+const rawPosts = await getCollection('blog') || [];
 
-// 2. Récupération du dernier podcast automatiquement
-const latestPodcast = podcastsData
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())[0];
+const posts = rawPosts
+    .filter(p => p && typeof p === 'object' && 'data' in p) // Vérifie l'existence physique de 'data'
+    .filter(p => p.data && p.data.isDraft !== true)
+    .sort((a, b) => {
+        const d1 = a.data.pubDate ? new Date(a.data.pubDate).getTime() : 0;
+        const d2 = b.data.pubDate ? new Date(b.data.pubDate).getTime() : 0;
+        return d2 - d1;
+    });
 
-// Formatage de la date pour l'affichage (ex: "27 Février 2026")
-const formattedDate = new Date(latestPodcast.date).toLocaleDateString('fr-FR', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric'
-});
-
-const posts = (await getCollection('blog', ({ data }) => {
-    return data.isDraft !== true;
-})).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const { post } = Astro.props;
-const { title, author, pubDate } = post.data;
+const lastEpisode = (Array.isArray(episodesData) && episodesData.length > 0) ? episodesData[0] : null;
 ---
 
 <BaseLayout title="Accueil">
