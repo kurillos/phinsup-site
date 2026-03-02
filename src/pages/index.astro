@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import TwitterFeed from '@/components/TwitterFeed.astro'; // Ajout de l'import manquant
+import TwitterFeed from '@/components/TwitterFeed.astro';
 import episodesData from '../../src/data/podcasts.json';
 import results from '../../src/data/results2025.json';
 
@@ -17,8 +17,14 @@ const posts = rawPosts
         return d2 - d1;
     });
 
+// 2. Récupération du dernier match (Patriots)
 const lastGame = (Array.isArray(results) && results.length > 0) 
     ? results[results.length - 1] 
+    : null;
+
+// 3. Récupération du dernier podcast (LA VARIABLE MANQUANTE)
+const latestPodcast = (Array.isArray(episodesData) && episodesData.length > 0) 
+    ? episodesData[0] 
     : null;
 ---
 
