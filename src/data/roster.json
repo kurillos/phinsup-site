@@ -10,7 +10,7 @@
     "college": "Alabama",
     "stats": { "label": "CMP%", "val1": "67.7", "val2": "2,660", "val3": "20" },
     "celebration": "Shaka Sign 🤙",
-    "bio": "Le chef d'orchestre. Leader de la ligue en précision avec 67.7% de passes complétées."
+    "bio": "Le leader de l'attaque. Précision d'élite et vision de jeu chirurgicale."
   },
   {
     "id": "achane",
@@ -23,20 +23,7 @@
     "college": "Texas A&M",
     "stats": { "label": "ATT", "val1": "238", "val2": "1,350", "val3": "8" },
     "celebration": "Track Star 🏃‍♂️",
-    "bio": "La foudre sur gazon. 1 350 yards au sol et une vitesse de pointe terrifiante."
-  },
-  {
-    "id": "waddle",
-    "name": "Jaylen Waddle",
-    "number": "17",
-    "unit": "offense",
-    "subUnit": "receiving",
-    "position": "WR",
-    "image": "/images/roster/jaylen-waddle.png",
-    "college": "Alabama",
-    "stats": { "label": "REC", "val1": "64", "val2": "910", "val3": "6" },
-    "celebration": "The Waddle Walk 🐧",
-    "bio": "Le pingouin le plus rapide du monde. Menace constante sur les passes profondes."
+    "bio": "Menace double : dévastateur au sol (5.7 avg) et redoutable à la réception."
   },
   {
     "id": "hill",
@@ -49,7 +36,72 @@
     "college": "West Alabama",
     "stats": { "label": "REC", "val1": "21", "val2": "265", "val3": "1" },
     "celebration": "Peace Sign ✌️",
-    "bio": "Cheetah. Malgré une saison écourtée, il reste le facteur X capable de changer un match."
+    "bio": "Le joueur le plus rapide de la NFL. Toujours le facteur X de Miami."
+  },
+  {
+    "id": "waddle",
+    "name": "Jaylen Waddle",
+    "number": "17",
+    "unit": "offense",
+    "subUnit": "receiving",
+    "position": "WR",
+    "image": "/images/roster/jaylen-waddle.png",
+    "college": "Alabama",
+    "stats": { "label": "REC", "val1": "64", "val2": "910", "val3": "6" },
+    "celebration": "The Waddle Walk 🐧",
+    "bio": "Polyvalent et rapide. Devenu la cible n°1 de Tua cette saison."
+  },
+  {
+    "id": "malik-w",
+    "name": "Malik Washington",
+    "number": "83",
+    "unit": "offense",
+    "subUnit": "receiving",
+    "position": "WR",
+    "image": "/images/roster/malik-w.png",
+    "college": "Virginia",
+    "stats": { "label": "REC", "val1": "46", "val2": "317", "val3": "3" },
+    "celebration": "First Down Flex 💪",
+    "bio": "Rookie sensationnel dans le slot. Excellent après la réception."
+  },
+  {
+    "id": "armstead",
+    "name": "Terron Armstead",
+    "number": "72",
+    "unit": "offense",
+    "subUnit": "line",
+    "position": "LT",
+    "image": "/images/roster/armstead.png",
+    "college": "Arkansas-Pine Bluff",
+    "stats": { "label": "SACK Allowed", "val1": "1", "val2": "95%", "val3": "0" },
+    "celebration": "The Wall 🧱",
+    "bio": "Le protecteur aveugle de Tua. Pilier vétéran de la ligne offensive."
+  },
+  {
+    "id": "chubb",
+    "name": "Bradley Chubb",
+    "number": "4",
+    "unit": "defense",
+    "subUnit": "line",
+    "position": "LB/DE",
+    "image": "/images/roster/chubb.png",
+    "college": "NC State",
+    "stats": { "label": "SACK", "val1": "8.5", "val2": "47 (Tot)", "val3": "2 (FF)" },
+    "celebration": "The Predator 🐯",
+    "bio": "Leader du pass-rush. Une force brute pour terroriser les QB adverses."
+  },
+  {
+    "id": "sieler",
+    "name": "Zach Sieler",
+    "number": "92",
+    "unit": "defense",
+    "subUnit": "line",
+    "position": "DT",
+    "image": "/images/roster/sieler.png",
+    "college": "Ferris State",
+    "stats": { "label": "SACK", "val1": "5.5", "val2": "47 (Tot)", "val3": "0" },
+    "celebration": "Blue Collar Power 🛠️",
+    "bio": "Le moteur de la ligne défensive. Infatigable contre la course."
   },
   {
     "id": "brooks",
@@ -62,7 +114,7 @@
     "college": "Texas Tech",
     "stats": { "label": "TOT", "val1": "183", "val2": "99 (Solo)", "val3": "3.5" },
     "celebration": "The Enforcer 🦾",
-    "bio": "Machine à plaquages. Nouveau cœur de la défense des Dolphins avec 183 stops."
+    "bio": "Recordman de plaquages de l'équipe cette saison."
   },
   {
     "id": "ramsey",
@@ -73,9 +125,22 @@
     "position": "CB",
     "image": "/images/roster/ramsey.png",
     "college": "Florida State",
-    "stats": { "label": "PDEF", "val1": "5", "val2": "45 (Tot)", "val3": "3 (INT)" },
+    "stats": { "label": "PDEF", "val1": "5", "val2": "45 (Tot)", "val3": "3" },
     "celebration": "Lockdown 🔒",
-    "bio": "Le shérif de la ligne secondaire. Interdit de vol dans sa zone."
+    "bio": "Verrouille le meilleur receveur adverse chaque semaine."
+  },
+  {
+    "id": "holland",
+    "name": "Jevon Holland",
+    "number": "8",
+    "unit": "defense",
+    "subUnit": "secondary",
+    "position": "S",
+    "image": "/images/roster/holland.png",
+    "college": "Oregon",
+    "stats": { "label": "INT", "val1": "1", "val2": "82 (Tot)", "val3": "0" },
+    "celebration": "Snowman ❄️",
+    "bio": "Le général de la défense profonde. QI football exceptionnel."
   },
   {
     "id": "sanders",
@@ -86,8 +151,8 @@
     "position": "K",
     "image": "/images/roster/sanders.png",
     "college": "New Mexico",
-    "stats": { "label": "FG%", "val1": "85.2", "val2": "52 (Lng)", "val3": "34 (PAT)" },
+    "stats": { "label": "FG%", "val1": "85.2", "val2": "52 (Lng)", "val3": "34" },
     "celebration": "Ice in Veins ❄️",
-    "bio": "Précision chirurgicale. Crucial dans les moments de haute pression."
+    "bio": "Fiable et précis. Le pied droit le plus sûr de Floride."
   }
 ]
