@@ -1,154 +1,156 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
-
-// 1. Données de joueurs
-const players = [
-  { 
-    id: "waddle",
-    name: "Jaylen Waddle", 
-    number: "17", 
-    position: "WR", 
-    image: "/images/roster/jaylen-waddle.png",
-    college: "Alabama",
-    stats: { rec: "85", yards: "1,150", td: "8" },
-    celebration: "The Waddle Walk 🐧",
-    bio: "Désormais le WR1 incontesté de l'attaque après le départ de Tyreek Hill."
-  },
-  { 
-    id: "tua",
-    name: "Tua Tagovailoa", 
-    number: "1", 
-    position: "QB", 
-    image: "/images/roster/tua.png",
-    college: "Alabama",
-    stats: { rec: "32", yards: "4,620", td: "28" }, // rec ici utilisé pour Compétions ou autre
-    celebration: "Shaka Sign 🤙",
-    bio: "Le chef d'orchestre de Miami. Précision chirurgicale et leadership."
-  },
-  { 
-    id: "holland",
-    name: "Jevon Holland", 
-    number: "8", 
-    position: "S", 
-    image: "/images/roster/holland.png",
-    college: "Oregon",
-    stats: { rec: "74", yards: "3 Int", td: "1" },
-    celebration: "Snowman ❄️",
-    bio: "Le général de la défense. Un instinct de jeu hors du commun."
-  }
-];
+// Assure-toi que le fichier existe bien dans src/data/roster.json
+import players from '../data/roster.json';
 ---
 
-<Layout title="Roster - The Phin Side">
+<Layout title="Roster 2026 - The Phin Side">
   <main class="max-w-7xl mx-auto py-12 px-6">
     
     <div class="mb-12">
       <h1 class="text-5xl font-[Oswald] font-black italic uppercase text-miami-aqua tracking-tighter">
         Effectif <span class="text-miami-orange">2026</span>
       </h1>
-      <p class="text-gray-500 font-bold uppercase tracking-widest mt-2">Cliquez sur une carte pour voir les détails</p>
+      
+      <div class="flex flex-wrap gap-4 mt-8">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="offense">Offensif</button>
+        <button class="filter-btn" data-filter="defense">Défensif</button>
+        <button class="filter-btn" data-filter="special">Spécial</button>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-      {players.map((player) => (
-        <div class="flip-card-container group h-112.5">
-          <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer">
-            
-            <div class="absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 border-miami-aqua overflow-hidden">
-              <div class="relative h-3/4 bg-gray-200">
-                <img src={player.image} alt={player.name} class="w-full h-full object-cover" />
-                <div class="absolute top-4 left-4 bg-miami-aqua text-white font-[Oswald] font-bold text-3xl px-3 py-1 rounded shadow-lg">
-                  #{player.number}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="roster-grid">
+      {players.map((player) => {
+        // Logique de couleur dynamique par unité
+        const isOffense = player.unit === 'offense';
+        const isDefense = player.unit === 'defense';
+        
+        const themeColor = isOffense ? 'border-miami-aqua' : (isDefense ? 'border-miami-orange' : 'border-gray-400');
+        const themeBg = isOffense ? 'bg-miami-aqua' : (isDefense ? 'bg-miami-orange' : 'bg-gray-400');
+        const themeText = isOffense ? 'text-miami-aqua' : (isDefense ? 'text-miami-orange' : 'text-gray-400');
+
+        return (
+          <div class="player-card perspective-1000 h-[480px]" data-unit={player.unit}>
+            <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer">
+              
+              <div class={`absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 ${themeColor} overflow-hidden`}>
+                <div class="relative h-3/4 bg-gray-100 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={player.image} 
+                    alt={player.name} 
+                    class="w-full h-full object-contain sm:object-cover grayscale hover:grayscale-0 transition-all duration-500" 
+                  />
+                  <div class={`absolute top-4 left-4 ${themeBg} text-white font-[Oswald] font-bold text-3xl px-3 py-1 rounded shadow-lg italic`}>
+                    #{player.number}
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-[Oswald] font-bold text-2xl uppercase italic text-gray-900 leading-tight">
+                    {player.name}
+                  </h3>
+                  <p class={`${themeText} font-black tracking-widest text-xs uppercase mt-1`}>
+                    {player.position} | {player.college}
+                  </p>
                 </div>
               </div>
-              <div class="p-5">
-                <h3 class="font-[Oswald] font-bold text-2xl uppercase italic text-gray-900 leading-tight">
-                  {player.name}
-                </h3>
-                <p class="text-miami-aqua font-black tracking-widest text-sm uppercase">{player.position} | {player.college}</p>
+
+              <div class={`absolute inset-0 backface-hidden rotate-y-180 rounded-2xl shadow-2xl ${themeBg} text-white p-6 flex flex-col justify-between border-4 border-white/20`}>
+                <div>
+                  <div class="flex justify-between items-start border-b border-white/20 pb-3 mb-4">
+                    <h3 class="font-[Oswald] text-3xl uppercase italic leading-none">{player.name}</h3>
+                    <span class="font-[Oswald] text-2xl opacity-50">#{player.number}</span>
+                  </div>
+                  
+                  <div class="grid grid-cols-3 gap-2 text-center mb-6">
+                    <div class="bg-white/10 p-2 rounded">
+                      <p class="text-[10px] uppercase opacity-70 font-bold">{player.stats.label}</p>
+                      <p class="text-xl font-black">{player.stats.val1}</p>
+                    </div>
+                    <div class="bg-white/10 p-2 rounded border-x border-white/10">
+                      <p class="text-[10px] uppercase opacity-70 font-bold">Yards</p>
+                      <p class="text-xl font-black">{player.stats.val2}</p>
+                    </div>
+                    <div class="bg-white/10 p-2 rounded">
+                      <p class="text-[10px] uppercase opacity-70 font-bold">TDs</p>
+                      <p class={`text-xl font-black ${Number(player.stats.val3) >= 10 ? 'text-yellow-300 animate-pulse' : 'text-white'}`}>
+                        {player.stats.val3}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <p class="text-[10px] uppercase font-black text-white/60 tracking-widest">Célébration</p>
+                    <p class="font-[Oswald] italic text-lg text-white">{player.celebration}</p>
+                  </div>
+                </div>
+
+                <div class="text-sm leading-snug border-t border-white/20 pt-4 italic opacity-90">
+                  "{player.bio}"
+                </div>
               </div>
+
             </div>
-
-            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl shadow-2xl bg-miami-aqua text-white p-6 flex flex-col justify-between border-4 border-miami-orange">
-              <div>
-                <div class="flex justify-between items-start border-b border-white/20 pb-3 mb-4">
-                   <h3 class="font-[Oswald] text-3xl uppercase italic leading-none">{player.name}</h3>
-                   <span class="font-[Oswald] text-2xl text-miami-orange">#{player.number}</span>
-                </div>
-                
-                <p class="text-xs uppercase tracking-tighter mb-4 opacity-80 font-bold">Statistiques Saison 2025</p>
-                
-                <div class="grid grid-cols-3 gap-2 text-center mb-6">
-                  <div class="bg-white/10 p-2 rounded">
-                    <p class="text-[10px] uppercase opacity-70">Rec/Comp</p>
-                    <p class="text-xl font-black">{player.stats.rec}</p>
-                  </div>
-                  <div class="bg-white/10 p-2 rounded border-x border-white/10">
-                    <p class="text-[10px] uppercase opacity-70">Yards</p>
-                    <p class="text-xl font-black">{player.stats.yards}</p>
-                  </div>
-                  <div class="bg-white/10 p-2 rounded">
-                    <p class="text-[10px] uppercase opacity-70">TDs</p>
-                    <p class="text-xl font-black text-miami-orange">{player.stats.td}</p>
-                  </div>
-                </div>
-
-                <div class="space-y-3">
-                  <div>
-                    <p class="text-[10px] uppercase font-black text-miami-orange tracking-widest">Célébration</p>
-                    <p class="font-[Oswald] italic text-lg">{player.celebration}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="text-sm leading-snug border-t border-white/20 pt-4 italic opacity-90">
-                "{player.bio}"
-              </div>
-            </div>
-
           </div>
-        </div>
-      ))}
+        )
+      })}
     </div>
   </main>
 </Layout>
 
 <style>
-  /* Logique de Flip 3D */
-  .flip-card-container {
-    perspective: 1000px;
+  .filter-btn {
+    @apply px-6 py-2 rounded-full font-[Oswald] uppercase italic font-bold tracking-wider transition-all duration-300 border-2 border-miami-aqua text-miami-aqua;
   }
-
-  .flip-card-inner {
-    transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  .filter-btn:hover, .filter-btn.active {
+    @apply bg-miami-aqua text-white shadow-lg shadow-miami-aqua/30;
   }
-
-  /* Classe ajoutée au clic via le script */
-  .flip-card-inner.is-flipped {
-    transform: rotateY(180deg);
+  
+  .player-card {
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
-
-  .preserve-3d {
-    transform-style: preserve-3d;
-  }
-
-  .backface-hidden {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
-
-  .rotate-y-180 {
-    transform: rotateY(180deg);
+  .player-card.hidden-filter {
+    display: none;
+    opacity: 0;
+    transform: scale(0.9);
   }
 </style>
 
 <script>
-  // Script pour gérer le clic sur les cartes
-  const cards = document.querySelectorAll('.flip-card-inner');
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('is-flipped');
+  // GESTION DU FLIP ET DES FILTRES
+  const initRoster = () => {
+    const cards = document.querySelectorAll('.flip-card-inner');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const playerCards = document.querySelectorAll('.player-card');
+
+    // Clic pour retourner la carte
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('is-flipped');
+      });
     });
-  });
+
+    // Filtrage
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Style bouton actif
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        playerCards.forEach(card => {
+          const unit = card.getAttribute('data-unit');
+          if (filter === 'all' || unit === filter) {
+            card.classList.remove('hidden-filter');
+          } else {
+            card.classList.add('hidden-filter');
+          }
+        });
+      });
+    });
+  };
+
+  initRoster();
+  document.addEventListener('astro:after-swap', initRoster);
 </script>
