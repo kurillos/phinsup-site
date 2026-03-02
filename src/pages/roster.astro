@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
-// Assure-toi que le fichier existe bien dans src/data/roster.json
 import players from '../data/roster.json';
 ---
 
@@ -12,35 +11,25 @@ import players from '../data/roster.json';
         Effectif <span class="text-miami-orange">2026</span>
       </h1>
       
-      <div class="mb-12">
-  <h1 class="text-5xl font-[Oswald] font-black italic uppercase text-miami-aqua tracking-tighter">
-    Effectif <span class="text-miami-orange">2026</span>
-  </h1>
-  
-  <div class="flex flex-wrap gap-3 mt-8">
-    <button class="filter-btn active" data-filter="all">Tous</button>
-    <button class="filter-btn" data-filter="offense">Offensif</button>
-    <button class="filter-btn" data-filter="defense">Défensif</button>
-    <button class="filter-btn" data-filter="special">Spécial</button>
-  </div>
+      <div class="flex flex-wrap gap-3 mt-8">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="offense">Offensif</button>
+        <button class="filter-btn" data-filter="defense">Défensif</button>
+        <button class="filter-btn" data-filter="special">Spécial</button>
+      </div>
 
-  <div class="flex flex-wrap gap-2 mt-4 border-l-2 border-gray-200 pl-4">
-    <button class="sub-filter-btn" data-filter="passing">Passing</button>
-    <button class="sub-filter-btn" data-filter="rushing">Rushing</button>
-    <button class="sub-filter-btn" data-filter="receiving">Receiving</button>
-    <button class="sub-filter-btn" data-filter="line">Line</button>
-    <button class="sub-filter-btn" data-filter="secondary">Secondary</button>
-  </div>
-</div>
-
-<div class="player-card ..." data-unit={player.unit} data-subunit={player.subUnit}>
-   ...
-</div>
+      <div class="flex flex-wrap gap-2 mt-4 border-l-2 border-gray-200 pl-4">
+        <button class="sub-filter-btn" data-filter="passing">Passing</button>
+        <button class="sub-filter-btn" data-filter="rushing">Rushing</button>
+        <button class="sub-filter-btn" data-filter="receiving">Receiving</button>
+        <button class="sub-filter-btn" data-filter="line">Line</button>
+        <button class="sub-filter-btn" data-filter="secondary">Secondary</button>
+      </div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="roster-grid">
       {players.map((player) => {
-        // Logique de couleur dynamique par unité
+        // Logique de couleur dynamique
         const isOffense = player.unit === 'offense';
         const isDefense = player.unit === 'defense';
         
@@ -49,7 +38,7 @@ import players from '../data/roster.json';
         const themeText = isOffense ? 'text-miami-aqua' : (isDefense ? 'text-miami-orange' : 'text-gray-400');
 
         return (
-          <div class="player-card perspective-1000 h-[480px]" data-unit={player.unit}>
+          <div class="player-card perspective-1000 h-[480px]" data-unit={player.unit} data-subunit={player.subUnit}>
             <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer">
               
               <div class={`absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 ${themeColor} overflow-hidden`}>
@@ -126,7 +115,6 @@ import players from '../data/roster.json';
     cursor: pointer;
   }
 
-  /* Style boutons principaux */
   .filter-btn {
     padding: 0.5rem 1.5rem;
     border-radius: 9999px;
@@ -140,7 +128,6 @@ import players from '../data/roster.json';
     color: white;
   }
 
-  /* Style sous-boutons (plus petits) */
   .sub-filter-btn {
     padding: 0.25rem 0.75rem;
     border-radius: 4px;
@@ -166,15 +153,12 @@ import players from '../data/roster.json';
     const allBtns = document.querySelectorAll('.filter-btn, .sub-filter-btn');
     const playerCards = document.querySelectorAll('.player-card');
 
-    // 1. Flip
     cards.forEach(card => {
       card.onclick = () => card.classList.toggle('is-flipped');
     });
 
-    // 2. Filtres
     allBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Gérer le style actif
         allBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
@@ -184,7 +168,6 @@ import players from '../data/roster.json';
           const unit = card.getAttribute('data-unit');
           const subUnit = card.getAttribute('data-subunit');
 
-          // Si "Tous" ou si ça match l'unité OU la sous-unité
           if (filter === 'all' || unit === filter || subUnit === filter) {
             card.classList.remove('hidden-filter');
           } else {
