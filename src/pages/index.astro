@@ -1,14 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import TwitterFeed from '@/components/TwitterFeed.astro'; // Ajout de l'import manquant
 import episodesData from '../../src/data/podcasts.json';
 import results from '../../src/data/results2025.json';
 
-// Récupération avec sécurité totale contre les objets undefined
+// 1. Récupération des articles
 const rawPosts = await getCollection('blog') || [];
 
 const posts = rawPosts
-    .filter(p => p && typeof p === 'object' && 'data' in p) // Vérifie l'existence physique de 'data'
+    .filter(p => p && typeof p === 'object' && 'data' in p)
     .filter(p => p.data && p.data.isDraft !== true)
     .sort((a, b) => {
         const d1 = a.data.pubDate ? new Date(a.data.pubDate).getTime() : 0;
@@ -16,7 +17,8 @@ const posts = rawPosts
         return d2 - d1;
     });
 
-const lastEpisode = (Array.isArray(episodesData) && episodesData.length > 0) ? episodesData[0] : null;
+// 2. Variables pour les composants (Correction des noms pour correspondre au HTML)
+const latestPodcast = (Array.isArray(episodesData) && episodesData.length > 0) ? episodesData[0] : null;
 const lastGame = results && results.length > 0 ? results[0] : null;
 ---
 
@@ -89,7 +91,8 @@ const lastGame = results && results.length > 0 ? results[0] : null;
                                         {post.data.description}
                                     </p>
                                     <div class="mt-auto pt-4 border-t border-gray-50 flex items-center text-miami-orange font-bold text-[10px] uppercase italic">
-                                        <span>Par {author || "The French Fins Staff"}</span>
+                                        {/* CORRECTION : On utilise post.data.author */}
+                                        <span>Par {post.data.author || "The French Fins Staff"}</span>
                                     </div>
                                 </div>
                             </a>
@@ -105,6 +108,8 @@ const lastGame = results && results.length > 0 ? results[0] : null;
                     <TwitterFeed />
                 </div>
 
+                {/* PODCAST CARD */}
+                {latestPodcast && (
                 <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-xl border-t-4 border-miami-orange">
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-4">
@@ -117,7 +122,7 @@ const lastGame = results && results.length > 0 ? results[0] : null;
 
                         <div class="relative group cursor-pointer mb-4 overflow-hidden rounded-lg">
                             <img 
-                                src={latestPodcast.thumbnail} 
+                                src={latestPodcast.thumbnail || "/images/podcast-placeholder.png"} 
                                 alt="Podcast Thumbnail" 
                                 class="w-full h-40 object-cover opacity-50 group-hover:opacity-80 transition duration-300 group-hover:scale-105" 
                             />
@@ -144,6 +149,7 @@ const lastGame = results && results.length > 0 ? results[0] : null;
                         </a>
                     </div>
                 </div>
+                )}
             </div>
         </aside>
     </div>

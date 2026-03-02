@@ -18,23 +18,23 @@ import players from '../data/roster.json';
         <button class="filter-btn" data-filter="special">Spécial</button>
       </div>
 
-      <div class="sub-filters-wrapper mt-6 min-h-[50px]">
+      <div class="sub-filters-wrapper mt-6 min-h-12.5">
         
-        <div id="sub-offense" class="sub-group hidden flex flex-wrap gap-2 border-l-2 border-miami-aqua pl-4">
+        <div id="sub-offense" class="sub-group flex flex-wrap gap-2 border-l-2 border-miami-aqua pl-4">
           <button class="sub-filter-btn" data-filter="passing">Passing</button>
           <button class="sub-filter-btn" data-filter="rushing">Rushing</button>
           <button class="sub-filter-btn" data-filter="receiving">Receiving</button>
           <button class="sub-filter-btn" data-filter="line">Off. Line</button>
         </div>
 
-        <div id="sub-defense" class="sub-group hidden flex flex-wrap gap-2 border-l-2 border-miami-orange pl-4">
+        <div id="sub-defense" class="sub-group flex flex-wrap gap-2 border-l-2 border-miami-orange pl-4">
           <button class="sub-filter-btn" data-filter="tackles">Tackles</button>
           <button class="sub-filter-btn" data-filter="interceptions">Interceptions</button>
           <button class="sub-filter-btn" data-filter="line">Def. Line</button>
           <button class="sub-filter-btn" data-filter="secondary">Secondary</button>
         </div>
 
-        <div id="sub-special" class="sub-group hidden flex flex-wrap gap-2 border-l-2 border-gray-400 pl-4">
+        <div id="sub-special" class="sub-group flex flex-wrap gap-2 border-l-2 border-gray-400 pl-4">
           <button class="sub-filter-btn" data-filter="kicking">Kicking</button>
           <button class="sub-filter-btn" data-filter="punting">Punting</button>
           <button class="sub-filter-btn" data-filter="returns">Returns</button>
@@ -52,7 +52,7 @@ import players from '../data/roster.json';
         const themeText = isOffense ? 'text-miami-aqua' : (isDefense ? 'text-miami-orange' : 'text-gray-400');
 
         return (
-          <div class="player-card perspective-1000 h-[480px]" data-unit={player.unit} data-subunit={player.subUnit}>
+          <div class="player-card perspective-1000 h-120" data-unit={player.unit} data-subunit={player.subUnit}>
             <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer">
               
               <div class={`absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 ${themeColor} overflow-hidden`}>
@@ -161,15 +161,19 @@ import players from '../data/roster.json';
 
 <script>
   const initRoster = () => {
+    // On précise les types pour que TS soit content
     const mainBtns = document.querySelectorAll('.filter-btn');
     const subBtns = document.querySelectorAll('.sub-filter-btn');
     const playerCards = document.querySelectorAll('.player-card');
     const subGroups = document.querySelectorAll('.sub-group');
 
-    function filterPlayers(filterValue) {
+    function filterPlayers(filterValue: string | null) {
+      if (!filterValue) return; // Sécurité si le data-filter est vide
+
       playerCards.forEach(card => {
         const unit = card.getAttribute('data-unit');
         const subUnit = card.getAttribute('data-subunit');
+        
         if (filterValue === 'all' || unit === filterValue || subUnit === filterValue) {
           card.classList.remove('hidden-filter');
         } else {
@@ -181,13 +185,16 @@ import players from '../data/roster.json';
     mainBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const filter = btn.getAttribute('data-filter');
+        
         mainBtns.forEach(b => b.classList.remove('active'));
         subBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        // Gérer l'affichage des groupes de sous-filtres
+        // Masquer tous les sous-groupes
         subGroups.forEach(group => group.classList.add('hidden'));
-        if (filter !== 'all') {
+        
+        // Afficher le groupe concerné
+        if (filter && filter !== 'all') {
           const target = document.getElementById(`sub-${filter}`);
           if (target) target.classList.remove('hidden');
         }
@@ -204,12 +211,16 @@ import players from '../data/roster.json';
       });
     });
 
-    // Flip Cards
+    // Flip Cards : Correction de l'erreur "onclick"
     document.querySelectorAll('.flip-card-inner').forEach(card => {
-      card.onclick = () => card.classList.toggle('is-flipped');
+      // On utilise addEventListener plutôt que onclick pour éviter l'erreur de type
+      card.addEventListener('click', () => {
+        card.classList.toggle('is-flipped');
+      });
     });
   };
 
   initRoster();
+  // Important pour garder l'interactivité lors de la navigation Astro
   document.addEventListener('astro:after-swap', initRoster);
 </script>
