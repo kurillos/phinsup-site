@@ -17,10 +17,8 @@ const posts = rawPosts
         return d2 - d1;
     });
 
-// 2. Variables pour les composants (Correction des noms pour correspondre au HTML)
-const latestPodcast = (Array.isArray(episodesData) && episodesData.length > 0) ? episodesData[0] : null;
 const lastGame = (Array.isArray(results) && results.length > 0) 
-    ? [...results].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())[0] 
+    ? results[results.length - 1] 
     : null;
 ---
 
