@@ -100,15 +100,30 @@ import players from '../data/roster.json';
 
 <style>
   .filter-btn {
-    @apply px-6 py-2 rounded-full font-[Oswald] uppercase italic font-bold tracking-wider transition-all duration-300 border-2 border-miami-aqua text-miami-aqua;
+    padding: 0.5rem 1.5rem; /* Equivalent de px-6 py-2 */
+    border-radius: 9999px;   /* Equivalent de rounded-full */
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    border: 2px solid #008E97;
+    color: #008E97;
+    background: transparent;
+    cursor: pointer;
   }
+
   .filter-btn:hover, .filter-btn.active {
-    @apply bg-miami-aqua text-white shadow-lg shadow-miami-aqua/30;
+    background-color: #008E97;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 142, 151, 0.3);
   }
   
   .player-card {
     transition: transform 0.4s ease, opacity 0.4s ease;
   }
+  
   .player-card.hidden-filter {
     display: none;
     opacity: 0;

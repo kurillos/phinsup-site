@@ -3,33 +3,74 @@
     "id": "tua",
     "name": "Tua Tagovailoa", 
     "number": "1", 
+    "unit": "offense",
     "position": "QB", 
     "image": "/images/roster/tua.png",
     "college": "Alabama",
-    "stats": { "label": "CMP%", "val1": "67.7", "val2": "2,660", "val3": "20" },
+    "stats": { "label": "CMP%", "val1": "260", "val2": "2,660", "val3": "20" },
     "celebration": "Shaka Sign 🤙",
-    "bio": "Le leader de l'attaque, avec une précision d'élite (67.7%)."
+    "bio": "Le chef d'orchestre de l'attaque."
   },
-  { 
-    "id": "achane",
-    "name": "De'Von Achane", 
-    "number": "28", 
-    "position": "RB", 
-    "image": "/images/roster/achane.jpeg",
-    "college": "Texas A&M",
-    "stats": { "label": "ATT", "val1": "238", "val2": "1,350", "val3": "8" },
-    "celebration": "Track Star 🏃‍♂️",
-    "bio": "Une saison monstrueuse à 1 350 yards au sol (5.7 yards par course)."
+ { 
+    "id": "ewers",
+    "name": "Quinn Ewers", 
+    "number": "83", 
+    "unit": "offense",
+    "position": "QB", 
+    "image": "/images/roster/ewers.jpeg",
+    "college": "Texas",
+    "stats": { "label": "CMP%", "val1": "55", "val2": "622", "val3": "3" },
+    "celebration": "",
+    "bio": "Le QB remplaçant, prêt à prendre le relais."
+  },
+{ 
+    "id": "wilson",
+    "name": "Zach Wilson", 
+    "number": "11", 
+    "unit": "offense",
+    "position": "QB", 
+    "image": "/images/roster/wilson.png",
+    "college": "BYU",
+    "stats": { "label": "CMP%", "val1": "6", "val2": "32", "val3": "0" },
+    "celebration": "",
+    "bio": "Le QB remplaçant"
   },
   { 
     "id": "waddle",
     "name": "Jaylen Waddle", 
     "number": "17", 
+    "unit": "offense",
     "position": "WR", 
-    "image": "/images/roster/jaylen-waddle.png",
+    "image": "/images/roster/waddle.jpeg",
     "college": "Alabama",
-    "stats": { "label": "REC", "val1": "64", "val2": "910", "val3": "6" },
-    "celebration": "The Waddle Walk 🐧",
-    "bio": "Toujours une menace profonde avec 14.2 yards par réception."
+    "stats": { "label": "CMP%", "val1": "1", "val2": "8", "val3": "0" },
+    "celebration": "",
+    "bio": "Le QB remplaçant"
+  },
+  { 
+    "id": "waddle",
+    "name": "Jaylen Waddle", 
+    "number": "17", 
+    "unit": "offense",
+    "position": "WR", 
+    "image": "/images/roster/waddle.jpeg",
+    "college": "Alabama",
+    "stats": { "label": "CMP%", "val1": "1", "val2": "8", "val3": "0" },
+    "celebration": "",
+    "bio": "Le QB remplaçant"
+  },
+
+
+  { 
+    "id": "ramsey",
+    "name": "Jalen Ramsey", 
+    "number": "5", 
+    "unit": "defense",
+    "position": "CB", 
+    "image": "/images/roster/ramsey.png",
+    "college": "Florida State",
+    "stats": { "label": "PDEF", "val1": "5", "val2": "45 (Tot)", "val3": "3 (INT)" },
+    "celebration": "The Lockdown 🔒",
+    "bio": "Le meilleur cornerback de la ligue."
   }
 ]
