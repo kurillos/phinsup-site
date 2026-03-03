@@ -29,6 +29,6 @@ collections:
           label: "Auteur",
           name: "author",
           widget: "select",
-          options: ["Cyril", "Lucas Roc", "FCFRMD", "Redaction Phin Side"],
+          options: ["Cyril", "Lucas", "Erwan", "Hugo", "James", "Jessy", "Patrick", "Yohan", "Redaction Phin Side"],
           default: "Rédaction Phin Side"
       }
