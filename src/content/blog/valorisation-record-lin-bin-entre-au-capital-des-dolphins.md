@@ -1,5 +1,5 @@
 ---
-title: "Valorisation record : Lin Bin entre au capital des Dolphins"
+title: "Valorisation record : Lin Bin entre au capital des Dolphins."
 description: Le milliardaire chinois Lin Bin s’apprête à entrer au capital des
   Miami Dolphins. Le cofondateur et président du géant technologique Xiaomi va
   acquérir 1 % de la franchise pour une valorisation record de 12,5 milliards de
