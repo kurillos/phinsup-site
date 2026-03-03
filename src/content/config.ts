@@ -9,7 +9,17 @@ const blog = defineCollection({
 		heroImage: z.string().optional(),
 		// On utilise .catch() pour éviter que le build plante si une catégorie est mal écrite
 		category: z.string().catch('Actu'), 
-		author: z.string().optional().default('The French Fins Staff'),
+		author: z.enum([
+            "The French Fins Staff", 
+            "Cyril", 
+            "Lucas", 
+            "Patrick",
+			"Erwan",
+			"Hugo",
+			"James",
+			"Jessy",
+			"Yohan"
+        ]).catch('The French Fins Staff'),
 		// On rend les tags et isDraft totalement optionnels
 		tags: z.array(z.string()).optional().default(["Miami Dolphins"]),
 		isDraft: z.boolean().optional().default(false),
