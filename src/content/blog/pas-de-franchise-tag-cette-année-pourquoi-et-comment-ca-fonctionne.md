@@ -1,5 +1,5 @@
 ---
-title: "PAS DE FRANCHISE TAG CETTE ANNÉE : POURQUOI ET COMMENT ca  FONCTIONNE"
+title: "PAS DE FRANCHISE TAG CETTE ANNÉE : POURQUOI ET COMMENT ÇA  FONCTIONNE"
 description: >-
   Les miami Dolphins adeptes réguliers du "franchise tag" passe pour cette
   année. En effet le nouveau régime en place est en phase de décrassage salarial
