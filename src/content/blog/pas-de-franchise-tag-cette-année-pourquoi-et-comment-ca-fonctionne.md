@@ -12,7 +12,7 @@ description: >-
   non dépensée et l'utiliser l'année suivante.
 
   Mais à  propos, comment fonctionne le "franchise tag" ?
-pubDate: 2026-03-08T23:59:00.000+01:00
+pubDate: 2026-03-06T22:38:00.000+01:00
 heroImage: /images/jon-eric-sullivan.jpg
 category: Actu
 tags:
@@ -45,16 +45,14 @@ Le salaire correspond au plus élevé des deux montants suivants :
 
 Différence principale : Le contrat non exclusif utilise une moyenne mobile sur 5 ans (ce qui maintient le prix plus bas), tandis que le contrat exclusif utilise les taux du marché de l'année en cours (ce qui se traduit généralement par un salaire beaucoup plus élevé).
 
-Si une équipe utilise le tag pour le **même joueur** deux années de suite, le calcul est modifié afin de dissuader les équipes :
+Si une équipe utilise le tag pour le **même joueur** deux années de suite, le calcul est modifié afin de dissuader les équipes a l'utiliser:
 
 2e tag consécutif : Le joueur perçoit 120 % du salaire de l'année précédente.
 
 3e tag consécutif : Cette situation est extrêmement rare en raison du coût prohibitif. Le joueur perçoit le montant le plus élevé entre :
 
 * 144 % de son salaire de l'année précédente
-*  La moyenne des cinq salaires les plus élevés au poste le mieux rémunéré (généralement celui de quarterback), quel que soit le poste occupé par le joueur.
-
-
+* La moyenne des cinq salaires les plus élevés au poste le mieux rémunéré (généralement celui de quarterback), quel que soit le poste occupé par le joueur.
 
 À titre indicatif, voici les coûts estimés des tags non exclusifs pour 2026, basés sur le plafond salarial actuel de plus de 300 millions de dollars :
 
