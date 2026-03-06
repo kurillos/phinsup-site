@@ -7,6 +7,7 @@ category: Breaking News
 tags:
   - Miami Dolphins
   - NFL France
+  - Alec Ingold
 draft: false
 author: Jessy
 ---
@@ -14,4 +15,4 @@ Les Miami Dolphins vont libérer le fullback (FB) **Alec Ingold**, Pro Bowler 20
 
 Arrivé en 2022 à Miami, il aura disputé 66 Match avec Miami.
 
-Le fullback de 29ansva désormais devenir agent libre.
+Le fullback de 29ans va désormais devenir agent libre.
