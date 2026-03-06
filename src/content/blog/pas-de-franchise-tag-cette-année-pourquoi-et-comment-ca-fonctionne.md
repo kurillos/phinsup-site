@@ -1,17 +1,6 @@
 ---
 title: "PAS DE FRANCHISE TAG CETTE ANNÉE : POURQUOI ET COMMENT ÇA  FONCTIONNE"
-description: >-
-  Les miami Dolphins adeptes réguliers du "franchise tag" passe pour cette
-  année. En effet le nouveau régime en place est en phase de décrassage salarial
-  a décidé de ne pas utiliser cet outil parfois utile mais souvent onéreux.
-  L'ADN du front office de Miami reprends les pratiques exécutées à Green Bay
-  d'où vient le nouveau GM Jon Eric Sullivan et où la discipline financière fait
-  mot d'ordre. En évitant le franchise tag, Miami pourrait éviter d'alourdir
-  davantage sa masse salariale et s'assurer de pouvoir réaliser de bonnes
-  affaires lors de la deuxième vague d'agents libres ou peut garder tout somme
-  non dépensée et l'utiliser l'année suivante.
-
-  Mais à  propos, comment fonctionne le "franchise tag" ?
+description: " "
 pubDate: 2026-03-06T22:38:00.000+01:00
 heroImage: /images/jon-eric-sullivan.jpg
 category: Actu
@@ -21,6 +10,10 @@ tags:
 draft: false
 author: Erwan
 ---
+Les miami Dolphins adeptes réguliers du "franchise tag" passe leur chemin pour cette année. En effet le nouveau régime en place est en phase de décrassage salarial a décidé **de ne pas utiliser cet outil** parfois utile mais souvent onéreux. L'ADN du front office de Miami reprends les pratiques exécutées à Green Bay d'où vient le nouveau GM Jon Eric Sullivan et où la **discipline financière** fait mot d'ordre. En évitant le franchise tag, Miami pourrait éviter d'alourdir davantage sa masse salariale et s'assurer de pouvoir réaliser de bonnes affaires lors de la deuxième vague d'agents libres ou peut garder toute somme non dépensée et l'utiliser l'année suivante.
+
+Mais à  propos, comment fonctionne le "franchise tag" ?
+
 Le calcul du franchise tag en NFL est réputé pour sa complexité, mais il se résume essentiellement à deux options : le franchise tag **exclusif** et le franchise tag **non exclusif**. L’objectif est de rémunérer le joueur comme un joueur du top 5 à son poste, mais le calcul varie selon le niveau de contrôle souhaité par l’équipe.
 
 Voici comment les calculs sont effectués pour la saison 2026 :
