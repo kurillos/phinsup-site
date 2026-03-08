@@ -1,8 +1,8 @@
 ---
-title: "PAS DE FRANCHISE TAG CETTE ANNÉE : POURQUOI ET COMMENT ÇA  FONCTIONNE"
+title: "PAS DE FRANCHISE TAG CETTE ANNÉE : POURQUOI ET COMMENT ÇA  FONCTIONNE."
 description: " "
 pubDate: 2026-03-06T22:38:00.000+01:00
-heroImage: /images/jon-eric-sullivan.jpg
+heroImage: /images/no-franchise-tag.png
 category: Actu
 tags:
   - Miami Dolphins
