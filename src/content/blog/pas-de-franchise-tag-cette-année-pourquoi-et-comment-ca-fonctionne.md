@@ -10,7 +10,7 @@ tags:
 draft: false
 author: Erwan
 ---
-Les miami Dolphins adeptes réguliers du "franchise tag" passe leur chemin pour cette année. En effet le nouveau régime en place est en phase de décrassage salarial a décidé **de ne pas utiliser cet outil** parfois utile mais souvent onéreux. L'ADN du front office de Miami reprends les pratiques exécutées à Green Bay d'où vient le nouveau GM Jon Eric Sullivan et où la **discipline financière** fait mot d'ordre. En évitant le franchise tag, Miami pourrait éviter d'alourdir davantage sa masse salariale et s'assurer de pouvoir réaliser de bonnes affaires lors de la deuxième vague d'agents libres ou peut garder toute somme non dépensée et l'utiliser l'année suivante.
+Les Miami Dolphins adeptes réguliers du "franchise tag" passe leur chemin pour cette année. En effet le nouveau régime en place est en phase de décrassage salarial a décidé **de ne pas utiliser cet outil** parfois utile mais souvent onéreux. L'ADN du front office de Miami reprends les pratiques exécutées à Green Bay d'où vient le nouveau GM Jon Eric Sullivan et où la **discipline financière** fait mot d'ordre. En évitant le franchise tag, Miami pourrait éviter d'alourdir davantage sa masse salariale et s'assurer de pouvoir réaliser de bonnes affaires lors de la deuxième vague d'agents libres ou peut garder toute somme non dépensée et l'utiliser l'année suivante.
 
 Mais à  propos, comment fonctionne le "franchise tag" ?
 
