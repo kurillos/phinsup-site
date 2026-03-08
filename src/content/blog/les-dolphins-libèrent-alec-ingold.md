@@ -1,8 +1,8 @@
 ---
-title: Les Dolphins libèrent Alec Ingold
-description: Les Miami Dolphins vont libérer le fullback (FB) Alec Ingold
+title: Les Dolphins libèrent Alec Ingold.
+description: Les Miami Dolphins vont libérer le fullback (FB) Alec Ingold.
 pubDate: 2026-03-06T19:14:00.000+01:00
-heroImage: /images/licensed-image.jpeg
+heroImage: /images/alec-ingold-out.png
 category: Breaking News
 tags:
   - Miami Dolphins
