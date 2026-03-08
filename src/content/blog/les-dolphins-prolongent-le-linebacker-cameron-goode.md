@@ -1,12 +1,12 @@
 ---
-title: Les Dolphins prolongent le linebacker Cameron Goode
+title: Les Dolphins prolongent le linebacker Cameron Goode.
 description: Dans cette période charnière où le nouveau staff des Dolphins
   décident de faire table rase, où les contrats sont rompus et les joueurs
   coupés, les prolongements de contrats ont été rares ces derniers temps. Le
   linebacker Cameron Goode a eu la bonne étoile de son côté et a resigné dans
   l'effectif !
 pubDate: 2026-03-06T10:00:00.000+01:00
-heroImage: /images/téléchargement.jpg
+heroImage: /images/cameron-goode.png
 category: Actu
 tags:
   - Miami Dolphins
