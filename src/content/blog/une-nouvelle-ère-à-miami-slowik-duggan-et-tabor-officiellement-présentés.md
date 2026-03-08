@@ -1,5 +1,5 @@
 ---
-title: "Une nouvelle ère à Miami : Slowik, Duggan et Tabor officiellement présentés"
+title: "Une nouvelle ère à Miami : Slowik, Duggan et Tabor officiellement présentés."
 description: >-
   Le nouveau staff des Dolphins prend forme. Jeff Hafley a présenté ses trois
   lieutenants : 
