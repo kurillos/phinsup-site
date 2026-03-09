@@ -25,7 +25,7 @@ const categories = [
       { name: "Bobby Slowik", role: "OC", initials: "OC", image: "/images/coach/bobby-slowik.png", specialty: "West Coast Offense", bio: "L'architecte du nouveau système offensif." },
       { name: "Matt Applebaum", role: "Asst. OL", initials: "OL", image: "/images/coach/matt-applebaum.png", specialty: "Zone Blocking", bio: "Expert en technique de bloc latéral." },
       { name: "Ladell Betts", role: "RB Coach", initials: "RB", image: "/images/coach/laddel-bets.png", specialty: "Wide Zone / Dual-Threat", bio: "Maître du jeu de course hybride." },
-      { name: "C.J. Conrad", role: "Off. Assistant", initials: "AS", image: "/images/coach/conrad.png", specialty: "Tight End Support", bio: "Soutien tactique pour les concepts de bloc." },
+      { name: "C.J. Conrad", role: "Off. Assistant", initials: "AS", image: "/images/coach/CJ-CONRAD.png", specialty: "Tight End Support", bio: "Soutien tactique pour les concepts de bloc." },
       { name: "Bush Hamdan", role: "QB Coach", initials: "QB", image: "/images/coach/bush-hamdam.png", specialty: "Passing Mechanics", bio: "En charge du développement de Tua." },
       { name: "Lemuel Jeanpierre", role: "Asst. TE", initials: "TE", image: "/images/coach/lemuel-jeanpierre.png", specialty: "Power Blocking", bio: "Spécialiste du physique dans les tranchées." },
       { name: "Jonathan Krause", role: "Asst. WR", initials: "WR", image: "/images/coach/jonathan-krause.png", specialty: "Route Running", bio: "Expert en séparation et timing." },
@@ -41,16 +41,16 @@ const categories = [
     title: "Coachs Défensifs",
     color: "border-miami-orange",
     staff: [
-      { name: "Sean Duggan", role: "DC", initials: "DC", image: "/images/staff/duggan.webp", specialty: "Aggressive Front 7", bio: "Le cerveau de la nouvelle défense 2026." },
-      { name: "Jahmile Addae", role: "DB/CB Coach", initials: "DB", image: "/images/staff/addae.webp", specialty: "Man Coverage", bio: "Expert de la couverture secondaire." },
-      { name: "Joe Barry", role: "Sr. Asst / Run Game", initials: "DC", image: "/images/staff/barry.webp", specialty: "Defensive Strategy", bio: "L'expérience au service de la défense." },
-      { name: "Austin Clark", role: "DL Coach", initials: "DL", image: "/images/staff/clark.webp", specialty: "Pass Rush", bio: "Le coach qui fait trembler les QB adverses." },
-      { name: "Wendel Davis", role: "Asst. LB", initials: "LB", image: "/images/staff/davis.webp", specialty: "Tackle Technique", bio: "Précision et puissance au placage." },
-      { name: "Siriki Diabate", role: "Quality Control", initials: "QC", image: "/images/staff/diabate.webp", specialty: "Film Study", bio: "Analyse vidéo et détection de failles." },
-      { name: "Ryan Downard", role: "DB/Passing Game", initials: "PG", image: "/images/staff/downard.webp", specialty: "Coverage Shells", bio: "Spécialiste des systèmes de couverture." },
-      { name: "Chuka Ndulue", role: "Asst. DL", initials: "DL", image: "/images/staff/ndulue.webp", specialty: "Interior Pressure", bio: "Force brute à l'intérieur de la ligne." },
-      { name: "DeShawn Shead", role: "Asst. DB", initials: "DB", image: "/images/staff/shead.webp", specialty: "Slot Coverage", bio: "Ancien joueur, expert des Nickelbacks." },
-      { name: "Al Washington", role: "LB Coach", initials: "LB", image: "/images/staff/washington.webp", specialty: "Pursuit & Speed", bio: "Coach de la mobilité des Linebackers." }
+      { name: "Sean Duggan", role: "DC", initials: "DC", image: "/images/coach/sean-duggan.png", specialty: "Aggressive Front 7", bio: "Le cerveau de la nouvelle défense 2026." },
+      { name: "Jahmile Addae", role: "DB/CB Coach", initials: "DB", image: "/images/coach/jahmile-addae.png", specialty: "Man Coverage", bio: "Expert de la couverture secondaire." },
+      { name: "Joe Barry", role: "Sr. Asst / Run Game", initials: "DC", image: "/images/coach/joe-barry.png", specialty: "Defensive Strategy", bio: "L'expérience au service de la défense." },
+      { name: "Austin Clark", role: "DL Coach", initials: "DL", image: "/images/coach/austin-clark.png", specialty: "Pass Rush", bio: "Le coach qui fait trembler les QB adverses." },
+      { name: "Wendel Davis", role: "Asst. LB", initials: "LB", image: "/images/coach/wendel-davis.png", specialty: "Tackle Technique", bio: "Précision et puissance au placage." },
+      { name: "Siriki Diabate", role: "Quality Control", initials: "QC", image: "/images/coach/siriki-diabate.png", specialty: "Film Study", bio: "Analyse vidéo et détection de failles." },
+      { name: "Ryan Downard", role: "DB/Passing Game", initials: "PG", image: "/images/coach/ryan-downard.png", specialty: "Coverage Shells", bio: "Spécialiste des systèmes de couverture." },
+      { name: "Chuka Ndulue", role: "Asst. DL", initials: "DL", image: "/images/coach/chuka-ndulue.png", specialty: "Interior Pressure", bio: "Force brute à l'intérieur de la ligne." },
+      { name: "DeShawn Shead", role: "Asst. DB", initials: "DB", image: "/images/coach/deshawn-shead.png", specialty: "Slot Coverage", bio: "Ancien joueur, expert des Nickelbacks." },
+      { name: "Al Washington", role: "LB Coach", initials: "LB", image: "/images/coach/AL-WASHINGTON.png", specialty: "Pursuit & Speed", bio: "Coach de la mobilité des Linebackers." }
     ]
   },
   {
@@ -58,9 +58,9 @@ const categories = [
     title: "Special Teams",
     color: "border-gray-400",
     staff: [
-      { name: "Chris Tabor", role: "ST Coordinator", initials: "ST", image: "/images/staff/tabor.webp", specialty: "Kick Return / Coverage", bio: "L'un des meilleurs tacticiens ST de NFL." },
-      { name: "Brock Olivo", role: "Asst. ST", initials: "ST", image: "/images/staff/olivo.webp", specialty: "Unit Dynamics", bio: "L'énergie pure des unités spéciales." },
-      { name: "Darius Eubanks", role: "ST Assistant", initials: "ST", image: "/images/staff/eubanks.webp", specialty: "Analytics ST", bio: "Optimisation statistique des coups de pied." }
+      { name: "Chris Tabor", role: "ST Coordinator", initials: "ST", image: "/images/coach/chris-tabor.png", specialty: "Kick Return / Coverage", bio: "L'un des meilleurs tacticiens ST de NFL." },
+      { name: "Brock Olivo", role: "Asst. ST", initials: "ST", image: "/images/coach/brock-olivo.png", specialty: "Unit Dynamics", bio: "L'énergie pure des unités spéciales." },
+      { name: "Darius Eubanks", role: "ST Assistant", initials: "ST", image: "/images/coach/darius-eubanks.png", specialty: "Analytics ST", bio: "Optimisation statistique des coups de pied." }
     ]
   }
 ];
