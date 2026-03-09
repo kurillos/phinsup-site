@@ -15,7 +15,7 @@ author: Lucas
 ---
 C’est une décision qui marque un tournant majeur pour la franchise. Les Miami Dolphins ont officiellement décidé de se séparer de leur quarterback titulaire Tua Tagovailoa, mettant fin à une collaboration qui aura duré six saisons. L’information, révélée ce lundi matin par l’insider ESPN Adam Schefter, confirme ce que beaucoup pressentaient depuis plusieurs mois : l’ère Tagovailoa à Miami est terminée.
 
-## Une décision lourde financièrement
+### Une décision lourde financièrement
 
 Le départ de Tagovailoa n’est pas seulement sportif : il constitue également l’un des mouvements financiers les plus coûteux de l’histoire de la NFL.
 
@@ -27,7 +27,7 @@ Dans la mécanique du salary cap NFL, les bonus à la signature sont étalés su
 
 Malgré ce coût colossal, la franchise a choisi de tourner la page afin de repartir sur un nouveau projet sportif.
 
-## Un débat permanent dans la communauté des fans
+### Un débat permanent dans la communauté des fans
 
 Depuis plusieurs saisons, le cas Tagovailoa divisait profondément la fanbase des Dolphins.
 
@@ -41,7 +41,7 @@ La saison 2025 a particulièrement alimenté les critiques : après des performa
 
 Le débat n’a jamais vraiment quitté la communauté des fans de Miami, certains réclamant depuis longtemps un changement au poste de quarterback tandis que d’autres estimaient qu’il restait la meilleure option pour la franchise.
 
-## Une carrière marquante à Miami
+### Une carrière marquante à Miami
 
 Sélectionné en **5e position de la draft 2020**, Tagovailoa aura tout de même marqué l’histoire récente de la franchise.
 
@@ -55,7 +55,7 @@ En six saisons avec les Dolphins, il termine avec :
 
 Il aura également connu des sommets, notamment lorsqu’il a mené la ligue dans plusieurs catégories statistiques, dont **les yards à la passe lors de la saison 2023**.
 
-## Merci Tua
+### Merci Tua
 
 Au-delà des débats et des critiques, Tagovailoa restera un joueur qui aura profondément marqué une génération de fans des Dolphins.
 
