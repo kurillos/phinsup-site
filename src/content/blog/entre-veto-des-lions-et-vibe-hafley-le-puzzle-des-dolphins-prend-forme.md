@@ -1,5 +1,5 @@
 ---
-title: Entre veto des Lions et "Vibe" Hafley, le puzzle des Dolphins prend forme
+title: Entre veto des Lions et "Vibe" Hafley, le puzzle des Dolphins prend forme.
 description: 'Veto des Lions pour Gradkowski, faux bond de Nathaniel Hackett et
   "vibe" Bruce Springsteen : découvrez les coulisses du nouveau staff de Jeff
   Hafley à Miami.'

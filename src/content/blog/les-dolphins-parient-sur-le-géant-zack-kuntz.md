@@ -1,5 +1,5 @@
 ---
-title: Les Dolphins parient sur le géant Zack Kuntz
+title: Les Dolphins parient sur le géant Zack Kuntz.
 description: Miami continue de renforcer son effectif pour le futur. Les
   Dolphins viennent d'officialiser la signature du Tight End Zack Kuntz via un
   contrat "Reserve/Future". Avec ses 2m03, l'ancien des Jets apporte un profil

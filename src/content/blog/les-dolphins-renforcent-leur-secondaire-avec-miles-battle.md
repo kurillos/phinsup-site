@@ -1,5 +1,5 @@
 ---
-title: Les Dolphins renforcent leur secondaire avec Miles Battle
+title: Les Dolphins renforcent leur secondaire avec Miles Battle.
 description: Nouvelle signature pour l'escouade défensive de Miami. Les Dolphins
   ont annoncé l'arrivée du cornerback Miles Battle. Passé par les Chiefs et les
   Patriots, ce jeune talent de 25 ans vient apporter de la profondeur au groupe

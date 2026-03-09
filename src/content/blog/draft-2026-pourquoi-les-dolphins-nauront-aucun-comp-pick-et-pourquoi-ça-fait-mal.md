@@ -1,6 +1,6 @@
 ---
 title: "Draft 2026 : Pourquoi les Dolphins n'auront aucun \"Comp Pick\" (et
-  pourquoi ça fait mal)"
+  pourquoi ça fait mal)."
 description: "On espérait un choix supplémentaire pour compenser le départ de
   Jevon Holland, mais la sentence est tombée : Miami repartira bredouille. Entre
   signatures de vétérans et calculs d'apothicaire, décryptage d'un échec

@@ -1,6 +1,6 @@
 ---
 title: "MAJ : Le départ de Tua se précise, Ian Rapoport confirme les intentions
-  de Miami"
+  de Miami."
 description: "Et si le successeur de Tua Tagovailoa s'appelait Derek Carr ?
   Alors que les Dolphins s'apprêtent à tourner une page historique, une rumeur
   folle agite la Floride : la sortie de retraite du quadruple Pro Bowler pour
