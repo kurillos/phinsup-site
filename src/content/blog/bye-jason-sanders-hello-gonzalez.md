@@ -1,8 +1,8 @@
 ---
-title: BYE JASON SANDERS, HELLO GONZALEZ
-description: Le kicker historique Jason SANDERS est remplacé par Zane GONZALEZ
+title: BYE JASON SANDERS, HELLO GONZALEZ.
+description: Le kicker historique Jason SANDERS est remplacé par Zane GONZALEZ.
 pubDate: 2026-03-10T19:57:00.000+01:00
-heroImage: /images/jason-sanders.jpg.webp
+heroImage: /images/zane-gonzalez.png
 category: Breaking News
 tags:
   - Miami Dolphins
@@ -36,4 +36,4 @@ Depuis son arrivée dans la ligue, il a porté les couleurs de plusieurs franchi
 * Washington Commanders
 * Atlanta Falcons
 
-Merci a Jason SANDERS, et Welcome a Zane Gonzalez
+Merci a Jason SANDERS, et welcome Zane Gonzalez.
