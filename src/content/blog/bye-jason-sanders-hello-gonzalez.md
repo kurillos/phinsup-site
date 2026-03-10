@@ -23,7 +23,7 @@ Depuis son arrivée à Miami en 2018, il totalisait notamment :
 
 
 
-**Le parcours de Zane GONZALEZ**
+### Le parcours de Zane GONZALEZ
 
 Âgé de **30 ans**, Gonzalez a joué au niveau universitaire avec les Arizona State Sun Devils avant d’être sélectionné au **7e tour (224e choix)** de la NFL Draft 2017 par les Cleveland Browns.
 
