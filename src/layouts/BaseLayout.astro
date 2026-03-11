@@ -2,7 +2,12 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import '@/styles/global.css';
-const { title } = Astro.props;
+
+// On récupère les props envoyées par le slug
+const { title, description, image } = Astro.props;
+
+// image par défaut
+const defaultImage = "https://thefrenchfins.netlify.app/images/hard-rock-stadium.png";
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -10,31 +15,49 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="google-site-verification" content="google-site-verification=TuYlP1QL8Q5qvSMxLBJIHfGenQwwjXcF-vHDlb-4V6o" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <title>{title}</title>
+    
+    <title>{title} | The French Fins</title>
+    <meta name="description" content={description || "L'actualité des Miami Dolphins en français."} />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image || defaultImage} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={Astro.url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image || defaultImage} />
+
   </head>
   <body class="bg-gray-50 text-gray-900">
     <Navbar /> 
-    <main class="max-w-360 mx-auto py-10 px-4"> <slot />
+    <main class="max-w-360 mx-auto py-10 px-4"> 
+      <slot />
     </main>
     <Footer />
-<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-<script is:inline>
-  // @ts-ignore
-  const identity = window.netlifyIdentity;
+    <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-  if (identity) {
-    identity.on("init", user => {
-      if (!user) {
-        identity.on("login", () => {
-          document.location.href = "/admin/";
+    <script is:inline>
+      // @ts-ignore
+      const identity = window.netlifyIdentity;
+
+      if (identity) {
+        identity.on("init", user => {
+          if (!user) {
+            identity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script>
+    </script>
   </body>
 </html>
