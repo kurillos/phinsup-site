@@ -70,7 +70,7 @@ Enfin, Miami a choisi de conserver son kicker Riley Patterson.
 
 Le kicker de 26 ans sort d’une saison particulièrement efficace avec **plus de 90 % de réussite sur ses field goals**, ce qui lui a permis de convaincre la franchise de lui offrir un nouveau contrat.
 
-Sa prolongation permet aux Dolphins de *stabiliser une position clé* dans les équipes spéciales.
+Sa prolongation permet aux Dolphins de **stabiliser une position clé** dans les équipes spéciales.
 
 ### Une stratégie claire : profondeur et flexibilité
 
