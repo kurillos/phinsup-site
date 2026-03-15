@@ -1,5 +1,5 @@
 ---
-title: "[5 JANVIER 1991] Un retour épique en playoffs. "
+title: "[5 JANVIER 1991] UN RETOUR ÉQUIPE EN PLAYOFFS. "
 description: "Le 5 Janvier 1991 au Joe Robbie Stadium. "
 pubDate: 2026-03-15T20:29:00.000+01:00
 heroImage: /images/img_8737.png
