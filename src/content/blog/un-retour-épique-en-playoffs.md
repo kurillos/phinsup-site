@@ -2,7 +2,7 @@
 title: "[5 JANVIER 1991] Un retour épique en playoffs. "
 description: "Le 5 Janvier 1991 au Joe Robbie Stadium. "
 pubDate: 2026-03-15T20:29:00.000+01:00
-heroImage: /images/20230427_134849676_ios.png
+heroImage: /images/img_8737.png
 category: Histoire
 tags:
   - Miami Dolphins
