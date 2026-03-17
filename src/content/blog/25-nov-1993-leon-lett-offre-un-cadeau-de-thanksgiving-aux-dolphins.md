@@ -9,7 +9,7 @@ tags:
   - NFL France
   - Leon Lett
 draft: true
-author: Rédaction Phin Side
+author: Yohan
 ---
 Nous sommes le 25 Novembre 1993 - **Les Dolphins** ont une fiche de **8-2** avant de rencontrer les **Cowboys** de **Troy Aikman** et compagnie  (qui sont, quant à eux, à **7-3**) - 
 
