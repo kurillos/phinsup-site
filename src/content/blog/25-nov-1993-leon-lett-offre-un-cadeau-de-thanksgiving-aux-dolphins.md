@@ -1,7 +1,7 @@
 ---
-title: "[25 NOV 1993] - LEON LETT OFFRE UN CADEAU DE THANKSGIVING AUX DOLPHINS"
-description: Une bourde pour rentrer dans l'histoire !!
-pubDate: 2026-03-17T13:41:00.000+01:00
+title: "[25 NOV 1993] LEON LETT OFFRE UN CADEAU DE THANKSGIVING AUX DOLPHINS."
+description: Une bourde pour rentrer dans l'histoire.
+pubDate: 2026-03-17T11:09:00.000+01:00
 heroImage: /images/template-illustration-tff-1-_page-0001.jpg
 category: Histoire
 tags:
@@ -11,22 +11,20 @@ tags:
 draft: true
 author: Yohan
 ---
-Nous sommes le 25 Novembre 1993 - **Les Dolphins** ont une fiche de **8-2** avant de rencontrer les **Cowboys** de **Troy Aikman** et compagnie  (qui sont, quant à eux, à **7-3**) - 
+Nous sommes le 25 novembre 1993. Les Miami Dolphins affichent une fiche de \*\*8-2\*\* avant d’affronter les Dallas Cowboys de Troy Aikman (\*\*7-3\*\*).
 
-Le contexte pour les Dolphins est compliqué en ce milieu de saison, puisque Dan Marino s'est rompu le tendon d'Achille face aux Browns de Bernie Kosar (futur Dolphin) en week 5. Marino est donc remplacé par Scott Mitchell, qui à son tour se blesse en Week 11 face aux Eagles et est remplacé par le vétéran Steve De berg.
+Le contexte est compliqué pour Miami en ce milieu de saison : Dan Marino s’est rompu le tendon d’Achille face aux Cleveland Browns de Bernie Kosar (futur Dolphin) en week 5. Il est remplacé par Scott Mitchell, qui se blesse à son tour en week 11 contre les Philadelphia Eagles. Le vétéran Steve DeBerg prend alors le relais.
 
-En cette soirée de **Thanksgiving** (Historiquement, les Cowboys y participent tous les ans, tout comme les Lions) les **Miami Dolphins** affrontaient les **Dallas Cowboys** . 
+En cette soirée de \*\*Thanksgiving\*\*, où les Cowboys jouent traditionnellement, tout comme les Detroit Lions, Miami affronte Dallas sous des températures polaires, avec une neige continue s’abattant sur le Texas Stadium.
 
-Sous des températures polaires et la neige qui ne cesse de s'abattre sur le Texas Stadium, les **Cowboys** mènent dans les ultimes secondes **14-13**. Lorsque la rencontre allait se décider sur un field goal frappé par le kicker des Dolphins, **Pete Stoyanovich.**
+Dans les dernières secondes, les Cowboys mènent \*\*14-13\*\*. Le match se joue sur un field goal tenté par le kicker des Dolphins, Pete Stoyanovich. Il recule, le ballon est bien tenu par le holder Doug Pederson (oui, le futur coach des Jaguars). Stoyanovich frappe… mais le tir est \*\*contré\*\* par un défenseur des Cowboys. Tout semble alors offrir la victoire à Dallas.
 
-Stoyanovich recule, le ballon est bien tenu par le Holder **Doug Pederson** (Oui oui, le futur coach des **Jaguars**). Pete frappe le ballon, mais celui-ci **est contré** par un défenseur des Cowboys, ce qui semble donner la victoire à Dallas.
+Du moins, c’est ce que toute l’Amérique pensait.
 
-Du moins, c’est ce que l'Amérique, les yeux rivés sur son écran, croyait !!
+Au lieu de laisser le ballon au sol, ce qui aurait assuré la victoire, le lineman défensif Leon Lett se précipite vers lui… glisse, et touche le ballon qui lui échappe. Le cuir redevient alors \*\*vivant\*\*, et Miami le récupère.
 
-Au lieu de laisser le ballon au sol, ce qui aurait assuré la victoire des Cowboys, le lineman défensif **Leon Lett** s’est précipité vers le ballon… et a glissé, touchant le ballon qui lui échappé des mains.
+Cela offre une seconde tentative, cette fois depuis la ligne des \*\*1 yard\*\*. Une opportunité que les Dolphins ne gâchent pas : Pete Stoyanovich réussit son field goal, cette fois sans opposition, et offre une victoire totalement improbable \*\*16-14\*\*, après le buzzer.
 
-Le cuir est alors redevenu **vivant**, et Miami l’a récupéré. Cela leur a offert une seconde opportunité sur la ligne des 1 yard. Une chance qu’ils n’ont pas gaspillée : cette fois, **Stoyanovich ne se fait pas contrer** et réussit parfaitement son field goal et assure une victoire inespérée **16-14** pour les Dolphins, après le buzzer. 
+On ne peut qu’imaginer ce qu’a traversé Leon Lett après ce match. Joueur clé de la ligne défensive, il restera malgré tout champion cette saison-là : les Cowboys remporteront le Super Bowl XXVIII face aux Buffalo Bills (\*\*30-13\*\*), qui disputaient alors leur 4e Super Bowl consécutif… pour autant de défaites.
 
-On ne peut qu’imaginer ce que **Leon Lett** a dû traverser après ce match. Il était déjà un joueur important de la ligne défensive, et malgré cette énorme erreur sur cette action, les Cowboys ont tout de même remporté le **Super Bowl** cette saison là, face aux Bills **30-13 (les Bills jouaient leur 4ème Super Bowl d'affilée, pour autant de défaites)** 
-
-Quant aux Dolphins, ils perdront leurs **5 derniers matchs** de la saison, finiront à **9-7**, 2èmes de la division, et ne se qualifieront pas en play-offs (gros soupir)
+Quant aux Miami Dolphins, ils perdront leurs cinq derniers matchs, termineront à \*\*9-7\*\*, deuxièmes de leur division, et manqueront les playoffs. Grosse frustration.
