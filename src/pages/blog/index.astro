@@ -10,13 +10,14 @@ const lastEpisode = (episodesData && Array.isArray(episodesData) && episodesData
 
 // 2. Récupération articles avec filtrage immédiat des objets nuls
 const allPosts = await getCollection('blog');
-const posts = (allPosts || [])
-    .filter(p => p && p.data && p.data.isDraft !== true)
-    .sort((a, b) => {
-        const d1 = a.data.pubDate ? new Date(a.data.pubDate).getTime() : 0;
-        const d2 = b.data.pubDate ? new Date(b.data.pubDate).getTime() : 0;
-        return d2 - d1;
-    });
+const posts = allPosts
+  .filter(post => {
+    // On ne garde que les articles qui :
+    // 1. Ne sont pas des brouillons
+    // 2. ONT une date de publication passée ou égale à MAINTENANT
+    return !post.data.isDraft && post.data.pubDate <= new Date();
+  })
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
 <BaseLayout title="Accueil - The Phin Side">
