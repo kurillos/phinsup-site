@@ -14,7 +14,7 @@ tags:
 draft: false
 author: Erwan
 ---
-# **Retablir une situation financiere stable** 
+# **Retablir une situation financiere stable**
 
  C'est un vrai chantier et comme tous les chantiers il faut faire de la place et évacuer les encombrants. Bien sûr, nous parlons **des contrats** et non des joueurs eux-mêmes. Même si on aurait aimé que certains restent, leurs contrats de l’ère « Grier » leur fait prendre la porte pour **libérer un maximum de cap** 
 
@@ -28,14 +28,12 @@ Les départs notables directement lié à la situation financière :
 * **Alec Ingold FB** a signé avec les LA Chargers ou il rejoint Mike McDaniel (OC)
 * **Minkah Fitzpatrick S** échangé avec les New York J.e.t.s(sss) pour un 7ème tour 2026
 
- 
-
 # Les rescapés : 1 an pour tous
 
 Sully fait le ménage et ne resigne que peu de joueurs de l’éffectif 2025. Ils sont **en tout et pour tout 7**. Ici nous parlons de joueurs arrivés en fin de contrat à la fin de la saison. Les heureux élus sont : 
 
 * Greg Dulcich TE
-*  Riley Patterson K
+* Riley Patterson K
 * Willie Gay Jr. LB
 * Cameron Goode LB
 * A.J. Green III CB
@@ -43,8 +41,6 @@ Sully fait le ménage et ne resigne que peu de joueurs de l’éffectif 2025. Il
 * Mathew Butler DT
 
 Les quelques pièces de l'ancien régime qui ont survécus, ont **tous un contrat de 1 an pour le salaire minimum**, à la seule exception de Greg Dulcich (dont nous parlerons plus bas). 
-
- 
 
 # A la recherche du ticket gagnant
 
@@ -69,49 +65,34 @@ Ensuite on voit des qualités athlétiques dans les profiles sélectionnés :
 * **Jalen Tolbert (WR):** vertical leap over 36 inches and solid speed (4.49)
 * **Lonnie Johnson Jr. (S):** prototype du DB moderne 188cm 100kg avec des grands bras et un 4.4 second au 40 yard
 
- 
 **Pédigrée :** 
 
 On retrouve quelques anciens troisièmes et seconds tour de draft pour lesquels, si 1 ou 2 se développent selon leur potentiel, ça peut se révéler payant.
 
- 
-
 La direction des Dolphins a clairement un « type » de joueur bien précis. Elle parie qu'en entourant son noyau dur d'athlètes de haut niveau, son équipe d'entraîneurs pourra **transformer ce talent physique brut en résultats concrets sur le terrain.**
-
- 
 
 # De la compétition (presque partout)
 
  Il nous a prévenu, Sully veut de la compétition **à tous les postes**. On pensait que c’était une façon de parler, surtout après qu’il soit allé chercher Malik Willis avec le plus long et plus gros contrat donné jusqu’à maintenant. On n’est pas déçu, une ribambelle de DB, des TE, des EDGE. Il n’y a pas d’exception pour les spécialistes puisque nous avons 2 Kickers, 2 Punters et même 2 Long Snapeurs. 
 
-Quoi de mieux qu’une bande de gars qui ont faim avec un an pour prouver qu’ils méritent de rester à South Beach ?
-
-  
+Quoi de mieux qu’une bande de gars qui ont faim avec un an pour **prouver qu’ils méritent de rester** à South Beach ?
 
 # Pas de règle sans exceptions
-
- 
 
 **Malik Willis QB (3 ans pour 67.5M$ dont 45M$ garantis) :**
 
 Pour un joueur qui était remplaçant à Green Bay il y a à peine quelques mois, c'est un engagement considérable. Les Dolphins se sont de fait lié à Willis pour au moins deux saisons complètes, lui assurant la sécurité financière d'un pilier de l'équipe malgré son statut encore incertain de titulaire indiscutable. 
 
-La réputation de Willis a été en grande partie sauvée par ses deux saisons à Green Bay. Sous la direction de Matt LaFleur, il est passé d'un quarterback désordonné et imprévisible à un distributeur d'une efficacité redoutable. Lors de ses apparitions en remplacement de Jordan Love, il a affiché un impressionnant passeur rating de 134,6, complétant près de 79 % de ses passes. Il a prouvé qu'il pouvait maîtriser un système complexe de la NFL sans commettre d'interception (aucune interception en deux ans avec les Packers). Ce sang-froid est désormais son principal atout. Son éthique de travail pour corriger sa technique est respectée, et son athlétisme exceptionnel est redouté. 
+La réputation de Willis a été en grande partie sauvée par ses deux saisons à Green Bay. Sous la direction de Matt LaFleur, il est passé d'un quarterback désordonné et imprévisible à un distributeur d'une efficacité redoutable. Lors de ses apparitions en remplacement de Jordan Love, il a affiché un impressionnant passeur rating de 134,6, complétant près de 79 % de ses passes. Il a prouvé qu'il pouvait **maîtriser un système complexe** de la NFL sans commettre d'interception (aucune interception en deux ans avec les Packers). Ce sang-froid est désormais son principal atout. Son **éthique de travail** pour corriger sa technique est respectée, et son **athlétisme exceptionnel** est redouté. 
 
 Le contrat avantageux qu’il a obtenu à Miami témoigne de la conviction générale dans la ligue qu’il est prêt à assumer un rôle de titulaire à part entière. Jeff Hafley sait peut-être quelque chose que nous ne savons pas a propos de Malik, après tout, Coach Haf a pu l’étudier tous les jours pendant ces 2 dernières années.
-
- 
 
 **Greg Dulcich TE (1 an pour 3.25M$ (dont 2.91M$ garantis) :**
 
 Le seul joueur qui a été gardé de l’ère « Grier » et qui a décroché un contrat plutôt sympa, court certes (1 an seulement pour changer) mais pour 3.25M$ (dont 2.91M$ garantis). Jeff Hafley mise sur lui après une saison 2025 a 26 réceptions pour 335 yards et 1 TD en seulement 10 matchs. L'équipe le considère comme une « couverture de sécurité » essentielle pour Willis, ce qui les a conduits à sur-garantir son contrat pour l'éloigner d'autres équipes en manque de TE dans l'AFC Est comme les Patriots qui ont par ailleurs signé Julian Hill, un autre ancien TE des Dolphins pour la modique somme de 15M$ sur 3 ans. Durham Smythe a aussi signé un contrat de 1 an pour 3M$ chez les Ravens. 
-Entre Durham Smythe à 3M$ et Julian Hill à 5M$? bien vu Sully !
-
-
+Entre Durham Smythe à 3M$ et Julian Hill à 5M$? Bien vu Sully !
 
 #  Construire par la draft
-
-                               
 
 Ça aussi Sully nous l’avais dit ! Et pour être précis il nous a dit cela : « Une équipe de mercenaires, c'est dangereux, car chacun a ses propres motivations. Quand on recrute, forme et encadre ses propres talents, ils adhèrent au projet. Ils comprennent les exigences. »
 
@@ -127,13 +108,3 @@ Donc si une autre offre encore plus alléchante se présente, il est possible qu
 Actuellement, les Dolphins ont 11 sélections à la draft 2026 !  Durant son temps chez les Packers, Sullivan a vu l'équipe exceller lorsqu'elle disposait de plus de 10 choix (comme lors des drafts 2023 et 2024). Avec 11 choix, il s'assure que même si la moitié des rookies ne confirment pas leur potentiel, les Dolphins pourront tout de même intégrer 5 à 6 joueurs immédiatement performants à leur effectif, un des plus jeune de la ligue.
 
 Comme le dit si bien Sully, la draft est une question de volume, et actuellement, il possède un volume de choix supérieur à celui de presque tous les autres recruteurs de la ligue.
-
- 
-
- 
-
- 
-
- 
-
-Erwan
