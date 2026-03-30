@@ -94,17 +94,17 @@ Entre Durham Smythe à 3M$ et Julian Hill à 5M$? Bien vu Sully !
 
 #  Construire par la draft
 
-Ça aussi Sully nous l’avais dit ! Et pour être précis il nous a dit cela : « Une équipe de mercenaires, c'est dangereux, car chacun a ses propres motivations. Quand on recrute, forme et encadre ses propres talents, ils adhèrent au projet. Ils comprennent les exigences. »
+Ça aussi Sully nous l’avais dit ! Et pour être précis il nous a dit cela : « Une équipe de mercenaires, c'est dangereux, car chacun a ses propres motivations. Quand on **recrute, forme et encadre ses propres talents**, ils adhèrent au projet. Ils comprennent les exigences. »
 
 Lors de sa conférence de presse inaugurale en janvier 2026 et des séances médiatiques précédant la draft, il a utilisé à plusieurs reprises des termes comme « Sustainable Youth (Jeunesse durable), ou encore « Draft-and-Retain (Selectionner et retenir) » pour décrire sa philosophie.
 
-Ce qui nous amène aussi aux joueurs qu’il a expressément nommé de lui-même lors de son premier entretien avec Travis Wingfield. Les joueurs qu’il a cité sont dans le désordre : Davon Achane RB, Patrick Paul T, Aaron
-Brewer C et Jordyn Brooks.
+Ce qui nous amène aussi aux joueurs qu’il a expressément nommé de lui-même lors de son premier entretien avec Travis Wingfield. Les joueurs qu’il a cité sont dans le désordre : **Davon Achane RB, Patrick Paul T, Aaron
+Brewer C et Jordyn Brooks LB**.
 
-Et de manière spontanée, il n’a pas mentionné le nom de Jaylen Waddle qu’il a échangé avec Denver quelques semaines plus tard contre le 1er et le 3ie tour de draft 2026 (et un échange de 4iem tour). On a tous eu un petit pincement de cœur pour notre pingouin préféré, mais si une offre intéressante est faite, c’est le boulot du GM de  décrocher le téléphone.
+Et de manière spontanée, il n’a pas mentionné le nom de **Jaylen Waddle** qu’il a échangé avec Denver quelques semaines plus tard contre le 1er et le 3ie tour de draft 2026 (et un échange de 4iem tour). On a tous eu un petit **pincement de cœur pour notre pingouin préféré**, mais si une offre intéressante est faite, c’est le boulot du GM de  décrocher le téléphone.
 
 Donc si une autre offre encore plus alléchante se présente, il est possible qu’il nous obtienne encore plus de sélections pour la draft 2026 ou 2027.
 
-Actuellement, les Dolphins ont 11 sélections à la draft 2026 !  Durant son temps chez les Packers, Sullivan a vu l'équipe exceller lorsqu'elle disposait de plus de 10 choix (comme lors des drafts 2023 et 2024). Avec 11 choix, il s'assure que même si la moitié des rookies ne confirment pas leur potentiel, les Dolphins pourront tout de même intégrer 5 à 6 joueurs immédiatement performants à leur effectif, un des plus jeune de la ligue.
+Actuellement, les Dolphins ont **11 sélections à la draft 2026** !  Durant son temps chez les Packers, Sullivan a vu l'équipe exceller lorsqu'elle disposait de plus de 10 choix (comme lors des drafts 2023 et 2024). Avec 11 choix, il s'assure que même si la moitié des rookies ne confirment pas leur potentiel, les Dolphins pourront tout de même intégrer 5 à 6 joueurs immédiatement performants à leur effectif, un des plus jeune de la ligue.
 
-Comme le dit si bien Sully, la draft est une question de volume, et actuellement, il possède un volume de choix supérieur à celui de presque tous les autres recruteurs de la ligue.
+Comme le dit si bien Sully, **la draft est une question de volume**, et actuellement, il possède un volume de choix supérieur à celui de presque tous les autres recruteurs de la ligue.
