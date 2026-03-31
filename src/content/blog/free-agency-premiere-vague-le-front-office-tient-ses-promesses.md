@@ -49,8 +49,7 @@ On peut noter quelques tendances tout de même, et cela nous donne du baume au 
       
 ### Jeunesse, la première évidence
 
-Avant le début officiel de la Off Season 2026, les Dolphins avait l’effectif le plus jeune de la ligue avec une moyenne d'age de 25.6 ans. Et Sully compte bien garder ce marqueur le plus bas possible. En effet **aucun joueur signé n’a plus de 30 ans** (hors spécialistes K, P ou LS). 
-      
+Avant le début officiel de la Off Season 2026, les Dolphins avait l’effectif le plus jeune de la ligue avec une moyenne d'age de 25.6 ans. Et Sully compte bien garder ce marqueur le plus bas possible. En effet **aucun joueur signé n’a plus de 30 ans** (hors spécialistes K, P ou LS).
 Ensuite on voit des qualités athlétiques dans les profils sélectionnés :
 
 ***Vitesse, taille ou explosivité :***
