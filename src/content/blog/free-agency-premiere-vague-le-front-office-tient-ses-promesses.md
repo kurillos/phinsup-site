@@ -5,7 +5,7 @@ description: Notre nouveau GM nous a prévenu, il va remettre la franchise sur
   attendait une Free Agency plutot tranquille, les notifications sont tombées en
   pagaille et en quelque semaine, la franchise floridienne est méconnaissable
   mais nous donne de l'espoire pour les années à venir.
-pubDate: 2026-04-01T23:59:00.000+02:00
+pubDate: 2026-03-31T09:03:00.000+02:00
 heroImage: /images/jon-eric-sullivan.jpg
 category: Analyse
 tags:
