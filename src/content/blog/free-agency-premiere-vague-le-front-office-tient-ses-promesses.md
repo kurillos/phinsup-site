@@ -13,7 +13,7 @@ tags:
 draft: false
 author: Erwan
 ---
-***RÉTABLIR UNE SITUATION FINANCIÈRE STABLE***
+###RÉTABLIR UNE SITUATION FINANCIÈRE STABLE###
 
 La franchise floridienne est méconnaissable mais nous donne de l'espoir pour les années à venir. C'est un vrai chantier et comme tous les chantiers il faut faire de la place et évacuer les encombrants. Bien sûr, nous parlons **des contrats** et non des joueurs eux-mêmes. Même si on aurait aimé que certains restent, leurs contrats de l’ère « Grier » leur fait prendre la porte pour **libérer un maximum de cap** 
 
