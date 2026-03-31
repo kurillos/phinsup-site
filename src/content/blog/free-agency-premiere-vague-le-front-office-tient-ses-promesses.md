@@ -1,10 +1,9 @@
 ---
 title: "FREE AGENCY PREMIERE VAGUE : LE FRONT OFFICE TIENT SES PROMESSES"
-description: Notre nouveau GM nous a prévenu, il va remettre la franchise sur
-  pieds sur le plan financier et il va reconstruir par la draft. Alors qu'on
-  attendait une Free Agency plutot tranquille, les notifications sont tombées en
-  pagaille et en quelque semaine, la franchise floridienne est méconnaissable
-  mais nous donne de l'espoire pour les années à venir.
+description: "Notre nouveau GM nous a prévenu, il va remettre la franchise sur
+  pieds sur le plan financier et il va reconstruire par la draft. Alors qu'on
+  attendait une Free Agency plutot tranquille, ça été rapide, intense et
+  efficace. "
 pubDate: 2026-03-31T09:03:00.000+02:00
 heroImage: /images/jon-eric-sullivan.jpg
 category: Analyse
@@ -16,7 +15,7 @@ author: Erwan
 ---
 # **RÉTABLIR UNE SITUATION FINANCIÈRE STABLE**
 
- C'est un vrai chantier et comme tous les chantiers il faut faire de la place et évacuer les encombrants. Bien sûr, nous parlons **des contrats** et non des joueurs eux-mêmes. Même si on aurait aimé que certains restent, leurs contrats de l’ère « Grier » leur fait prendre la porte pour **libérer un maximum de cap** 
+La franchise floridienne est méconnaissable mais nous donne de l'espoir pour les années à venir. C'est un vrai chantier et comme tous les chantiers il faut faire de la place et évacuer les encombrants. Bien sûr, nous parlons **des contrats** et non des joueurs eux-mêmes. Même si on aurait aimé que certains restent, leurs contrats de l’ère « Grier » leur fait prendre la porte pour **libérer un maximum de cap** 
 
 Les départs notables directement lié à la situation financière :
 
