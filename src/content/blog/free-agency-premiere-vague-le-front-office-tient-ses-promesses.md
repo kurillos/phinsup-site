@@ -47,7 +47,7 @@ Statistiquement pour gagner, il faut jouer. Sully à la recherche de tickets gag
 
 On peut noter quelques tendances tout de même, et cela nous donne du baume au cœur pour l’avenir de la franchise. 
       
-###Jeunesse, la première évidence.
+### Jeunesse, la première évidence.
 
 Avant le début officiel de la Off Season 2026, les Dolphins avait l’effectif le plus jeune de la ligue avec une moyenne d'age de 25.6 ans. Et Sully compte bien garder ce marqueur le plus bas possible. En effet **aucun joueur signé n’a plus de 30 ans** (hors spécialistes K, P ou LS). 
       
