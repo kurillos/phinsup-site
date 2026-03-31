@@ -4,8 +4,8 @@ description: "Notre nouveau GM nous a prévenu, il va remettre la franchise sur
   pieds sur le plan financier et il va reconstruire par la draft. Alors qu'on
   attendait une Free Agency plutot tranquille, ça été rapide, intense et
   efficace. "
-pubDate: 2026-03-31T09:03:00.000+02:00
-heroImage: /images/jon-eric-sullivan.jpg
+pubDate: 2026-03-31T11:23:00.000+02:00
+heroImage: /images/jes-vision.png
 category: Analyse
 tags:
   - Miami Dolphins
