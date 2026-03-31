@@ -28,7 +28,7 @@ Les départs notables directement lié à la situation financière :
 * **Alec Ingold FB** a signé avec les LA Chargers ou il rejoint Mike McDaniel (OC)
 * **Minkah Fitzpatrick S** échangé avec les New York J.e.t.s(sss) pour un 7ème tour 2026
 
-# LES RESCAPÉS : 1 AN POUR TOUS
+# **LES RESCAPÉS : 1 AN POUR TOUS**
 
 Sully fait le ménage et ne resigne que peu de joueurs de l’éffectif 2025. Ils sont **en tout et pour tout 7**. Ici nous parlons de joueurs arrivés en fin de contrat à la fin de la saison. Les heureux élus sont : 
 
@@ -42,7 +42,7 @@ Sully fait le ménage et ne resigne que peu de joueurs de l’éffectif 2025. Il
 
 Les quelques pièces de l'ancien régime qui ont survécus, ont **tous un contrat de 1 an pour le salaire minimum**, à la seule exception de Greg Dulcich (dont nous parlerons plus bas). 
 
-# A LA RECHERCHE DU TICKET GAGNANT
+# **A LA RECHERCHE DU TICKET GAGNANT**
 
 Statistiquement pour gagner, il faut jouer. Sully à la recherche de tickets gagnants mise sur un volume élevé de petits contrats. Les conditions restent les mêmes que pour les joueurs resignés dans le sens où il s’agit pour beaucoup d’un contrat d’un an pour le salaire minimum. Les Dolphins ont **43 joueurs au minimum salarial**, l’équipe en ayant le plus après eux en a 31.
 
@@ -71,13 +71,13 @@ On retrouve quelques anciens seconds et  troisièmes tours de draft pour lesquel
 
 La direction des Dolphins a clairement un « type » de joueur bien précis. Elle parie qu'en entourant son noyau dur d'athlètes de haut niveau, son équipe d'entraîneurs pourra **transformer ce talent physique brut en résultats concrets sur le terrain.**
 
-# DE LA COMPÉTITION (PRESQUE PARTOUT)
+# **DE LA COMPÉTITION (PRESQUE PARTOUT)**
 
  Il nous a prévenu, Sully veut de la compétition **à tous les postes**. On pensait que c’était une façon de parler, surtout après qu’il soit allé chercher Malik Willis avec le plus long et plus gros contrat donné jusqu’à maintenant. On n’est pas déçu, une ribambelle de DB, des TE, des EDGE. Il n’y a pas d’exception pour les spécialistes puisque nous avons 2 Kickers, 2 Punters et même 2 Long Snapeurs. 
 
 Quoi de mieux qu’une bande de gars qui ont faim avec un an pour **prouver qu’ils méritent de rester** à South Beach ?
 
-# PAS DE RÈGLE SANS EXCEPTIONS
+# **PAS DE RÈGLE SANS EXCEPTIONS**
 
 **Malik Willis QB (3 ans pour 67.5M$ dont 45M$ garantis) :**
 
@@ -92,7 +92,7 @@ Le contrat avantageux qu’il a obtenu à Miami témoigne de la conviction gén�
 Le seul joueur qui a été gardé de l’ère « Grier » et qui a décroché un contrat plutôt sympa, court certes (1 an seulement pour changer) mais pour 3.25M$ (dont 2.91M$ garantis). Jeff Hafley mise sur lui après une saison 2025 a 26 réceptions pour 335 yards et 1 TD en seulement 10 matchs. L'équipe le considère comme une « couverture de sécurité » essentielle pour Willis, ce qui les a conduits à sur-garantir son contrat pour l'éloigner d'autres équipes en manque de TE dans l'AFC Est comme les Patriots qui ont par ailleurs signé Julian Hill, un autre ancien TE des Dolphins pour la modique somme de 15M$ sur 3 ans. Durham Smythe a aussi signé un contrat de 1 an pour 3M$ chez les Ravens. 
 Entre Durham Smythe à 3M$ et Julian Hill à 5M$? Bien vu Sully !
 
-# CONSTRUIRE PAR LA DRAFT
+# **CONSTRUIRE PAR LA DRAFT**
 
 Ça aussi Sully nous l’avais dit ! Et pour être précis il nous a dit cela : « Une équipe de mercenaires, c'est dangereux, car chacun a ses propres motivations. Quand on **recrute, forme et encadre ses propres talents**, ils adhèrent au projet. Ils comprennent les exigences. »
 
