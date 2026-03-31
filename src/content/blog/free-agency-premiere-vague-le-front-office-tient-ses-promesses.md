@@ -15,7 +15,7 @@ author: Erwan
 ---
 ### RÉTABLIR UNE SITUATION FINANCIÈRE STABLE
 
-La franchise floridienne est méconnaissable mais nous donne de l'espoir pour les années à venir. C'est un vrai chantier et comme tous les chantiers il faut faire de la place et évacuer les encombrants. Bien sûr, nous parlons **des contrats** et non des joueurs eux-mêmes. Même si on aurait aimé que certains restent, leurs contrats de l’ère « Grier » leur fait prendre la porte pour **libérer un maximum de cap** 
+La franchise floridienne est méconnaissable mais nous donne de l'espoir pour les années à venir. C'est un vrai chantier et comme tous les chantiers il faut faire de la place et évacuer les encombrants. Bien sûr, nous parlons **des contrats** et non des joueurs eux-mêmes. Même si on aurait aimé que certains restent, leurs contrats de l’ère « Grier » leur fait prendre la porte pour **libérer un maximum de cap**. 
 
 Les départs notables directement lié à la situation financière :
 
@@ -47,7 +47,7 @@ Statistiquement pour gagner, il faut jouer. Sully à la recherche de tickets gag
 
 On peut noter quelques tendances tout de même, et cela nous donne du baume au cœur pour l’avenir de la franchise. 
       
-### Jeunesse, la première évidence.
+### Jeunesse, la première évidence
 
 Avant le début officiel de la Off Season 2026, les Dolphins avait l’effectif le plus jeune de la ligue avec une moyenne d'age de 25.6 ans. Et Sully compte bien garder ce marqueur le plus bas possible. En effet **aucun joueur signé n’a plus de 30 ans** (hors spécialistes K, P ou LS). 
       
