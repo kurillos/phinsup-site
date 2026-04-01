@@ -3,12 +3,31 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import '@/styles/global.css';
 
-// On récupère les props envoyées par le slug
+// 1. Récupération des Props
 const { title, description, image } = Astro.props;
 
-// image par défaut
+// 2. Définition des variables
 const defaultImage = "https://thefrenchfins.netlify.app/images/hard-rock-stadium.png";
+const currentPath = Astro.url.pathname;
+const goatDomain = "thefrenchfins"; // Vérifie que c'est bien le nom choisi sur GoatCounter
+
+let views = 0;
+
+// 3. Récupération des vues via l'API publique de GoatCounter
+try {
+  // On appelle l'API de compteur pour le chemin actuel
+  const response = await fetch(`https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(currentPath)}.json`);
+  if (response.ok) {
+    const data = await response.json();
+    // On nettoie le chiffre (GoatCounter peut renvoyer "1,234" sous forme de string)
+    views = parseInt(data.count.replace(/,/g, '')) || 0;
+  }
+} catch (e) {
+  // Au premier build, il est normal d'avoir 0 si personne n'a encore visité la page
+  console.log("⏳ En attente des premières données GoatCounter pour cette page...");
+}
 ---
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -35,10 +54,25 @@ const defaultImage = "https://thefrenchfins.netlify.app/images/hard-rock-stadium
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image || defaultImage} />
 
+    <script data-goatcounter={`https://${goatDomain}.goatcounter.com/count`}
+        async src="//gc.zgo.at/count.js">
+    </script>
+
   </head>
   <body class="bg-gray-50 text-gray-900">
     <Navbar /> 
     <main class="max-w-360 mx-auto py-10 px-4"> 
+      
+      {/* Affichage du compteur dès qu'il y a au moins une vue */}
+      {views > 0 && (
+        <div class="flex items-center gap-2 text-[#008E97] font-bold mb-6 border-b border-gray-200 pb-4">
+          <span class="text-xl">🐬</span>
+          <span class="uppercase tracking-wide text-sm">
+            {views} {views > 1 ? 'fans ont lu cet article' : 'fan a lu cet article'}
+          </span>
+        </div>
+      )}
+
       <slot />
     </main>
     <Footer />
@@ -46,9 +80,7 @@ const defaultImage = "https://thefrenchfins.netlify.app/images/hard-rock-stadium
     <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <script is:inline>
-      // @ts-ignore
       const identity = window.netlifyIdentity;
-
       if (identity) {
         identity.on("init", user => {
           if (!user) {
