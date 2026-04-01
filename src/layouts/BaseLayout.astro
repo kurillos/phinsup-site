@@ -9,7 +9,7 @@ const { title, description, image } = Astro.props;
 // 2. Définition des variables
 const defaultImage = "https://thefrenchfins.netlify.app/images/hard-rock-stadium.png";
 const currentPath = Astro.url.pathname;
-const goatDomain = "thefrenchfins"; // Vérifie que c'est bien le nom choisi sur GoatCounter
+const goatDomain = "thefrenchfins"; 
 
 let views = 0;
 
@@ -54,7 +54,7 @@ try {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image || defaultImage} />
 
-    <script data-goatcounter={`https://${goatDomain}.goatcounter.com/count`}
+    <script data-goatcounter="https://thefrenchfins.goatcounter.com/count"
         async src="//gc.zgo.at/count.js">
     </script>
 
