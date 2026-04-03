@@ -10,6 +10,7 @@ const goatDomain = "thefrenchfins";
 
 let views = 0;
 
+// Récupération des vues au moment du build (pour l'affichage initial)
 try {
   const response = await fetch(`https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(currentPath)}.json`);
   if (response.ok) {
@@ -41,6 +42,9 @@ try {
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image || defaultImage} />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <script data-goatcounter="https://thefrenchfins.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
   </head>
 
   <body class="bg-gray-50 text-gray-900">
@@ -67,7 +71,7 @@ try {
             On utilise des cookies pour analyser notre attaque. Promis, pas de cookies de chez les Patriots ici !
           </p>
           <div class="flex flex-wrap gap-3">
-            <button id="accept-cookies" class="bg-[#008E97] text-white px-5 py-2 rounded-lg text-xs font-black uppercase tracking-widest hover:bg-[#005f66] transition-colors">C'est validé !</button>
+            <button id="accept-cookies" class="bg-[#008E97] text-white px-5 py-2 rounded-lg text-xs font-black uppercase tracking-widest hover:bg-[#005f66] transition-colors shadow-lg shadow-miami-aqua/20">C'est validé !</button>
             <button id="refuse-cookies" class="text-gray-400 text-xs font-bold hover:text-miami-orange transition-colors">Non merci</button>
           </div>
         </div>
@@ -75,19 +79,9 @@ try {
     </div>
 
     <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script is:inline>
-      const identity = window.netlifyIdentity;
-      if (identity) {
-        identity.on("init", user => {
-          if (!user) {
-            identity.on("login", () => { document.location.href = "/admin/"; });
-          }
-        });
-      }
-    </script>
 
     <script is:inline>
-      // Traduction Cusdis (doit être définie avant le chargement du script Cusdis dans l'article)
+      // 1. Traduction Cusdis
       window.CUSDIS_LOCALE = {
         powered_by: 'Propulsé par Cusdis',
         post: 'Publier',
@@ -101,7 +95,17 @@ try {
         error: 'Une erreur est survenue'
       };
 
-      // On attend que le DOM soit prêt
+      // 2. Netlify Identity
+      const identity = window.netlifyIdentity;
+      if (identity) {
+        identity.on("init", user => {
+          if (!user) {
+            identity.on("login", () => { document.location.href = "/admin/"; });
+          }
+        });
+      }
+
+      // 3. Logique Consentement & GA4 (attente du DOM)
       window.addEventListener('DOMContentLoaded', () => {
         const storageKey = 'the-french-fins-consent';
         const consent = localStorage.getItem(storageKey);
@@ -111,7 +115,7 @@ try {
         const acceptBtn = document.getElementById('accept-cookies');
         const refuseBtn = document.getElementById('refuse-cookies');
 
-        // Gestion de l'affichage du bandeau
+        // Affichage du bandeau si pas de consentement
         if (banner && !consent) {
           banner.classList.remove('hidden'); 
           setTimeout(() => {
@@ -119,7 +123,7 @@ try {
           }, 100);
         }
 
-        // Action boutons avec vérification de présence
+        // Événements boutons
         if (acceptBtn && banner) {
           acceptBtn.addEventListener('click', () => {
             localStorage.setItem(storageKey, 'accepted');
@@ -135,7 +139,7 @@ try {
           });
         }
 
-        // Chargement GA4 si le consentement est OK
+        // Chargement GA4
         if (consent === 'accepted') {
           const script = document.createElement('script');
           script.async = true;
@@ -147,7 +151,7 @@ try {
           gtag('js', new Date());
           gtag('config', GA_ID);
 
-          // Tracking des clics sur les articles
+          // Tracking clics articles
           document.addEventListener('click', (e) => {
             const link = e.target.closest('a');
             if (link && link.href.includes('/blog/')) {
