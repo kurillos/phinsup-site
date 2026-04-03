@@ -95,25 +95,24 @@ const currentPath = Astro.url.pathname;
       } catch (e) {}
     }
 
-    // 2. Élimination du Scroll Iframe (Le fix magique)
+    // 2. ÉLIMINATION DU SCROLL (Resize automatique)
     window.addEventListener('message', (e) => {
       try {
         const data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
         if (data.target === 'cusdis' && data.type === 'resize') {
           const iframe = document.querySelector('#cusdis_thread iframe');
           if (iframe) {
-            // On ajoute 20px de marge pour être sûr qu'aucune scrollbar n'apparaisse
-            iframe.style.height = (data.data + 20) + 'px';
+            // On ajuste la hauteur de l'iframe à celle de son contenu + une marge de sécurité
+            iframe.style.height = (data.data + 30) + 'px';
           }
         }
       } catch (err) {}
     });
 
-    // 3. Scroll au clic sur "Réagir"
+    // 3. Scroll au bouton
     document.getElementById('go-to-comment')?.addEventListener('click', () => {
-        // On cible le formulaire à l'intérieur de l'iframe si possible, sinon le thread
-        const thread = document.getElementById('cusdis_thread');
-        thread?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const thread = document.getElementById('cusdis_thread');
+      thread?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
     updateViews();
@@ -126,16 +125,16 @@ const currentPath = Astro.url.pathname;
   .article-body p { margin-bottom: 1.5rem !important; line-height: 1.8 !important; font-size: 1.05rem !important; color: #374151 !important; }
   .article-body strong { color: #f58220 !important; font-weight: 800 !important; }
   
-  /* RESET IFRAME SCROLL */
+  /* RESET IFRAME SCROLL - Empêche le scroll interne */
   #cusdis_thread {
     width: 100%;
-    overflow: hidden; /* Interdit le scroll sur le conteneur */
+    overflow: hidden;
   }
 
   #cusdis_thread iframe {
     width: 100% !important;
     border: none !important;
-    overflow: hidden !important; /* Interdit le scroll à l'intérieur de l'iframe */
-    display: block;
+    overflow: hidden !important; /* Désactive la barre de défilement de l'iframe */
+    min-height: 350px; /* Hauteur minimum pour éviter un flash au chargement */
   }
 </style>
