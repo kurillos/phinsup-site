@@ -50,34 +50,25 @@ const currentPath = Astro.url.pathname;
       <Content />
     </div>
 
-    <section class="mt-16 pt-10 border-t-4 border-[#008E97] bg-gray-50 p-6 rounded-xl shadow-inner overflow-hidden">
+    <section id="vestiaire" class="mt-16 pt-10 border-t-4 border-[#008E97] bg-gray-50 p-6 rounded-xl shadow-inner">
       
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
         <h2 class="text-3xl font-bold font-[Oswald] italic uppercase text-gray-900 tracking-tighter">
           Le vestiaire <span class="text-[#F58220]">(Commentaires)</span>
         </h2>
         
-        <button id="btn-open-comment" class="bg-[#008E97] text-white px-6 py-2 rounded-full font-bold uppercase italic text-sm hover:bg-[#F58220] transition-all shadow-lg active:scale-95 flex items-center gap-2">
-          <span id="btn-icon">💬</span> <span id="btn-text">Commenter</span>
+        <button id="go-to-comment" class="bg-[#008E97] text-white px-6 py-2 rounded-full font-bold uppercase italic text-sm hover:bg-[#F58220] transition-all shadow-lg active:scale-95 flex items-center gap-2">
+          💬 Réagir à l'article
         </button>
       </div>
 
-      <div id="write-zone" class="hidden opacity-0 translate-y-4 transition-all duration-300 mb-10 p-6 bg-white rounded-xl border-2 border-miami-aqua shadow-xl">
-          <div class="flex justify-between items-center mb-4">
-              <p class="font-bold text-[#008E97] uppercase text-sm italic">Nouvelle réaction :</p>
-              <button id="btn-close-write" class="text-gray-400 hover:text-miami-orange text-xl font-bold">×</button>
-          </div>
-          <div id="cusdis_thread" 
-               data-host="https://cusdis.com" 
-               data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff" 
-               data-page-id={entry.slug} 
-               data-page-url={Astro.url.href} 
-               data-page-title={entry.data.title}>
-          </div>
+      <div id="cusdis_thread" 
+           data-host="https://cusdis.com" 
+           data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff" 
+           data-page-id={entry.slug} 
+           data-page-url={Astro.url.href} 
+           data-page-title={entry.data.title}>
       </div>
-
-      <div id="display-zone" class="w-full">
-          </div>
 
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </section>
@@ -106,28 +97,13 @@ const currentPath = Astro.url.pathname;
       } catch (e) { counterText.innerText = "Fins Up!"; }
     }
 
-    // 2. Gestion de la zone de rédaction "Modale"
-    function setupCommentUI() {
-        const btnOpen = document.getElementById('btn-open-comment');
-        const btnClose = document.getElementById('btn-close-write');
-        const writeZone = document.getElementById('write-zone');
-
-        btnOpen?.addEventListener('click', () => {
-            writeZone.classList.remove('hidden');
-            setTimeout(() => {
-                writeZone.classList.add('opacity-100', 'translate-y-0');
-            }, 10);
-            btnOpen.classList.add('hidden');
-        });
-
-        btnClose?.addEventListener('click', () => {
-            writeZone.classList.remove('opacity-100', 'translate-y-0');
-            setTimeout(() => {
-                writeZone.classList.add('hidden');
-                btnOpen.classList.remove('hidden');
-            }, 300);
-        });
-    }
+    // 2. Bouton de scroll vers les commentaires
+    document.getElementById('go-to-comment')?.addEventListener('click', () => {
+      const thread = document.getElementById('cusdis_thread');
+      if (thread) {
+        thread.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
 
     // 3. Auto-resize de l'iframe
     window.addEventListener('message', (e) => {
@@ -143,7 +119,6 @@ const currentPath = Astro.url.pathname;
     });
 
     updateViews();
-    setupCommentUI();
   </script>
 </BaseLayout>
 
@@ -152,15 +127,14 @@ const currentPath = Astro.url.pathname;
   .article-body p { margin-bottom: 1.5rem !important; line-height: 1.8 !important; font-size: 1.05rem !important; color: #374151 !important; }
   .article-body strong { color: #f58220 !important; font-weight: 800 !important; }
   
-  /* Masquer le formulaire par défaut de Cusdis pour ne garder que la liste */
-  /* On ne garde le formulaire que lorsqu'il est dans la "write-zone" */
-  #display-zone #cusdis_thread form {
-      display: none !important;
+  /* Fix Iframe */
+  #cusdis_thread {
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
   }
-
   #cusdis_thread iframe {
     width: 100% !important;
     border: none !important;
-    overflow: hidden !important;
   }
 </style>
