@@ -41,7 +41,7 @@ const currentPath = Astro.url.pathname;
         
         <div id="view-counter" class="flex items-center gap-2 text-[#008E97] font-bold bg-miami-aqua/5 px-3 py-1 rounded-full w-fit border border-miami-aqua/10">
           <span>🐬</span>
-          <span id="view-count-text" class="text-xs uppercase tracking-wider italic">Analyse en cours...</span>
+          <span id="view-count-text" class="text-xs uppercase tracking-wider italic">Analyse...</span>
         </div>
       </div>
     </header>
@@ -50,18 +50,34 @@ const currentPath = Astro.url.pathname;
       <Content />
     </div>
 
-    <section class="mt-16 pt-10 border-t-4 border-[#008E97] bg-gray-50 p-6 rounded-xl shadow-inner">
-      <h2 class="text-3xl font-bold mb-8 font-[Oswald] italic uppercase text-gray-900 tracking-tighter">
-        Le vestiaire <span class="text-[#F58220]">(Commentaires)</span>
-      </h2>
+    <section class="mt-16 pt-10 border-t-4 border-[#008E97] bg-gray-50 p-6 rounded-xl shadow-inner overflow-hidden">
       
-      <div id="cusdis_thread" 
-           data-host="https://cusdis.com" 
-           data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff" 
-           data-page-id={entry.slug} 
-           data-page-url={Astro.url.href} 
-           data-page-title={entry.data.title}>
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <h2 class="text-3xl font-bold font-[Oswald] italic uppercase text-gray-900 tracking-tighter">
+          Le vestiaire <span class="text-[#F58220]">(Commentaires)</span>
+        </h2>
+        
+        <button id="btn-open-comment" class="bg-[#008E97] text-white px-6 py-2 rounded-full font-bold uppercase italic text-sm hover:bg-[#F58220] transition-all shadow-lg active:scale-95 flex items-center gap-2">
+          <span id="btn-icon">💬</span> <span id="btn-text">Commenter</span>
+        </button>
       </div>
+
+      <div id="write-zone" class="hidden opacity-0 translate-y-4 transition-all duration-300 mb-10 p-6 bg-white rounded-xl border-2 border-miami-aqua shadow-xl">
+          <div class="flex justify-between items-center mb-4">
+              <p class="font-bold text-[#008E97] uppercase text-sm italic">Nouvelle réaction :</p>
+              <button id="btn-close-write" class="text-gray-400 hover:text-miami-orange text-xl font-bold">×</button>
+          </div>
+          <div id="cusdis_thread" 
+               data-host="https://cusdis.com" 
+               data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff" 
+               data-page-id={entry.slug} 
+               data-page-url={Astro.url.href} 
+               data-page-title={entry.data.title}>
+          </div>
+      </div>
+
+      <div id="display-zone" class="w-full">
+          </div>
 
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </section>
@@ -72,7 +88,7 @@ const currentPath = Astro.url.pathname;
   </article>
 
   <script is:inline define:vars={{ goatDomain, currentPath }}>
-    // 1. Mise à jour des vues GoatCounter
+    // 1. Compteur de vues
     async function updateViews() {
       const counterText = document.getElementById('view-count-text');
       if (!counterText) return;
@@ -87,12 +103,33 @@ const currentPath = Astro.url.pathname;
         } else {
           counterText.innerText = "Fins Up!";
         }
-      } catch (e) { 
-        counterText.innerText = "Fins Up!"; 
-      }
+      } catch (e) { counterText.innerText = "Fins Up!"; }
     }
 
-    // 2. Écouteur pour redimensionner l'iframe Cusdis (Supprime le scroll interne)
+    // 2. Gestion de la zone de rédaction "Modale"
+    function setupCommentUI() {
+        const btnOpen = document.getElementById('btn-open-comment');
+        const btnClose = document.getElementById('btn-close-write');
+        const writeZone = document.getElementById('write-zone');
+
+        btnOpen?.addEventListener('click', () => {
+            writeZone.classList.remove('hidden');
+            setTimeout(() => {
+                writeZone.classList.add('opacity-100', 'translate-y-0');
+            }, 10);
+            btnOpen.classList.add('hidden');
+        });
+
+        btnClose?.addEventListener('click', () => {
+            writeZone.classList.remove('opacity-100', 'translate-y-0');
+            setTimeout(() => {
+                writeZone.classList.add('hidden');
+                btnOpen.classList.remove('hidden');
+            }, 300);
+        });
+    }
+
+    // 3. Auto-resize de l'iframe
     window.addEventListener('message', (e) => {
       try {
         const data = JSON.parse(e.data);
@@ -102,34 +139,28 @@ const currentPath = Astro.url.pathname;
             iframe.style.height = data.data + 'px';
           }
         }
-      } catch (err) {
-        // On ignore les messages qui ne viennent pas de Cusdis
-      }
+      } catch (err) {}
     });
 
-    // Lancement
     updateViews();
+    setupCommentUI();
   </script>
 </BaseLayout>
 
 <style is:global>
-  /* Formatage du corps de l'article */
   .article-body h3 { margin-top: 3.5rem !important; margin-bottom: 1.5rem !important; font-family: 'Oswald', sans-serif !important; font-weight: 700 !important; font-style: italic !important; text-transform: uppercase !important; color: #008e97 !important; font-size: 1.75rem !important; }
   .article-body p { margin-bottom: 1.5rem !important; line-height: 1.8 !important; font-size: 1.05rem !important; color: #374151 !important; }
   .article-body strong { color: #f58220 !important; font-weight: 800 !important; }
-  .article-body ul { margin-bottom: 2rem !important; padding-left: 1.5rem !important; list-style-type: disc !important; }
-  .article-body li { margin-bottom: 0.5rem !important; }
-
-  /* FIX SCROLLBAR CUSDIS */
-  #cusdis_thread {
-    width: 100%;
-    min-height: 400px;
-    overflow: hidden; /* Empêche le double scroll */
+  
+  /* Masquer le formulaire par défaut de Cusdis pour ne garder que la liste */
+  /* On ne garde le formulaire que lorsqu'il est dans la "write-zone" */
+  #display-zone #cusdis_thread form {
+      display: none !important;
   }
 
   #cusdis_thread iframe {
     width: 100% !important;
     border: none !important;
-    overflow: hidden !important; /* Force la suppression de la barre de défilement interne */
+    overflow: hidden !important;
   }
 </style>
