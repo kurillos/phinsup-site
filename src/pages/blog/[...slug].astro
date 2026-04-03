@@ -17,10 +17,10 @@ const ogImage = entry.data.heroImage
   ? (entry.data.heroImage.startsWith('http') ? entry.data.heroImage : siteUrl + entry.data.heroImage)
   : siteUrl + "/images/hard-rock-stadium.png";
 
-// Variables pour le script client du compteur
+// On prépare les variables pour le script client
 const goatDomain = "thefrenchfins";
-const cleanPath = Astro.url.pathname.replace(/\/$/, "");
-const finalPath = cleanPath === "" ? "/" : cleanPath;
+// On récupère le chemin actuel
+const currentPath = Astro.url.pathname;
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description} image={ogImage}>
@@ -41,9 +41,9 @@ const finalPath = cleanPath === "" ? "/" : cleanPath;
       <div class="flex flex-col md:flex-row md:items-center justify-between mt-6 border-l-4 border-miami-aqua pl-4 gap-4">
         <p class="text-gray-400 italic">Publié le {entry.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
         
-        <div id="view-counter" class="hidden items-center gap-2 text-[#008E97] font-bold bg-miami-aqua/5 px-3 py-1 rounded-full w-fit border border-miami-aqua/10">
+        <div id="view-counter" class="flex items-center gap-2 text-[#008E97] font-bold bg-miami-aqua/5 px-3 py-1 rounded-full w-fit border border-miami-aqua/10">
           <span>🐬</span>
-          <span id="view-count-text" class="text-xs uppercase tracking-wider italic">Chargement...</span>
+          <span id="view-count-text" class="text-xs uppercase tracking-wider italic">Analyse du roster...</span>
         </div>
       </div>
     </header>
@@ -54,7 +54,13 @@ const finalPath = cleanPath === "" ? "/" : cleanPath;
 
     <section class="mt-16 pt-10 border-t-4 border-miami-aqua bg-gray-50 p-6 rounded-xl shadow-inner">
       <h2 class="text-3xl font-bold mb-8 font-[Oswald] italic uppercase text-gray-900 tracking-tighter">Le vestiaire <span class="text-miami-orange">(Commentaires)</span></h2>
-      <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff" data-page-id={entry.slug} data-page-url={Astro.url.href} data-page-title={entry.data.title}></div>
+      <div id="cusdis_thread" 
+           data-host="https://cusdis.com" 
+           data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff" 
+           data-page-id={entry.slug} 
+           data-page-url={Astro.url.href} 
+           data-page-title={entry.data.title}>
+      </div>
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </section>
 
@@ -63,33 +69,46 @@ const finalPath = cleanPath === "" ? "/" : cleanPath;
     </footer>
   </article>
 
-  <script is:inline define:vars={{ goatDomain, finalPath }}>
+  <script is:inline define:vars={{ goatDomain, currentPath }}>
     async function updateViews() {
+      const counterText = document.getElementById('view-count-text');
+      if (!counterText) return;
+
       try {
-        const statsUrl = `https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(finalPath)}.json?t=${Date.now()}`;
+        // On teste le path sans le slash final pour coller à GoatCounter
+        const cleanPath = currentPath.replace(/\/$/, "") || "/";
+        const statsUrl = `https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(cleanPath)}.json?t=${Date.now()}`;
+        
         const response = await fetch(statsUrl);
         const data = await response.json();
+        
         if (data && data.count) {
+          // On nettoie les virgules (ex: "1,234")
           const views = parseInt(data.count.replace(/,/g, '')) || 0;
-          const counterContainer = document.getElementById('view-counter');
-          const counterText = document.getElementById('view-count-text');
-          if (views > 0 && counterContainer && counterText) {
-            counterText.innerText = `${views} ${views > 1 ? 'lecteurs' : 'lecteur'}`;
-            counterContainer.classList.remove('hidden');
-            counterContainer.classList.add('flex');
-          }
+          counterText.innerText = `${views} ${views > 1 ? 'lecteurs' : 'lecteur'}`;
+        } else {
+          counterText.innerText = "0 lecteur";
         }
-      } catch (e) { console.log("Erreur compteur:", e); }
+      } catch (e) { 
+        console.log("Erreur compteur:", e);
+        counterText.innerText = "Fins Up!"; 
+      }
     }
+
+    // Exécution
     updateViews();
 
-    // Tracking clics internes
+    // Tracking clics internes (GA4)
     const body = document.querySelector('.article-body');
     if (body) {
       body.addEventListener('click', (e) => {
         const link = e.target.closest('a');
         if (link && typeof gtag === 'function') {
-          gtag('event', 'click_internal_link', { 'link_text': link.innerText, 'link_url': link.href });
+          gtag('event', 'click_internal_link', { 
+            'link_text': link.innerText, 
+            'link_url': link.href,
+            'page_location': window.location.pathname 
+          });
         }
       });
     }
@@ -101,5 +120,6 @@ const finalPath = cleanPath === "" ? "/" : cleanPath;
   .article-body p { margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.05rem; color: #374151; }
   .article-body strong { color: #f58220; font-weight: 800; }
   .article-body ul { margin-bottom: 2rem; padding-left: 1.5rem; list-style-type: disc; }
+  .article-body li { margin-bottom: 0.5rem; }
   #cusdis_thread iframe { width: 100% !important; min-height: 200px !important; }
 </style>
