@@ -14,11 +14,24 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-// 3. Préparation des métadonnées de partage (SEO/Réseaux Sociaux)
+// 3. Préparation des métadonnées SEO
 const siteUrl = "https://thefrenchfins.netlify.app";
 const ogImage = entry.data.heroImage 
   ? (entry.data.heroImage.startsWith('http') ? entry.data.heroImage : siteUrl + entry.data.heroImage)
   : siteUrl + "/images/hard-rock-stadium.png";
+
+// 4. Logique du Compteur de vues (GoatCounter)
+const goatDomain = "thefrenchfins";
+const statsUrl = `https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(Astro.url.pathname)}.json`;
+
+let views = 0;
+try {
+  const response = await fetch(statsUrl);
+  const data = await response.json();
+  views = parseInt(data.count.replace(/,/g, '')) || 0;
+} catch (e) {
+  views = 0; // Fallback si pas encore de vues
+}
 ---
 
 <BaseLayout 
@@ -27,6 +40,7 @@ const ogImage = entry.data.heroImage
   image={ogImage}
 >
   <article class="max-w-4xl mx-auto py-10 px-4"> 
+    
     {entry.data.heroImage && (
       <img 
         src={entry.data.heroImage} 
@@ -40,7 +54,7 @@ const ogImage = entry.data.heroImage
         <span class="bg-miami-orange text-white px-3 py-1 rounded text-xs font-bold uppercase italic">
           {entry.data.category}
         </span>
-          {entry.data.tags && Array.isArray(entry.data.tags) && entry.data.tags.map(tag => (
+        {entry.data.tags && entry.data.tags.map(tag => (
           <span class="text-gray-400 text-xs italic">#{tag}</span>
         ))}
       </div>
@@ -48,60 +62,103 @@ const ogImage = entry.data.heroImage
       <h1 class="text-4xl md:text-6xl font-extrabold text-miami-aqua mt-2 font-[Oswald] italic uppercase leading-tight">
         {entry.data.title}
       </h1>
-      
-      <p class="text-gray-400 mt-6 border-l-4 border-miami-aqua pl-4 italic">
-        Publié le {entry.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
-      </p>
+
+      <div class="flex flex-col md:flex-row md:items-center justify-between mt-6 border-l-4 border-miami-aqua pl-4 gap-4">
+        <p class="text-gray-400 italic">
+          Publié le {entry.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </p>
+        
+        <div class="flex items-center gap-2 text-[#008E97] font-bold bg-miami-aqua/5 px-3 py-1 rounded-full w-fit">
+          <span>🐬</span>
+          <span class="text-xs uppercase tracking-wider">{views} {views > 1 ? 'lecteurs' : 'lecteur'}</span>
+        </div>
+      </div>
     </header>
 
     <div class="article-body max-w-none">
       <Content />
     </div>
 
-    <style is:global>
-      /* Espacement des titres */
-      .article-body h3 {
-        margin-top: 3.5rem !important;
-        margin-bottom: 1.5rem !important;
-        font-family: 'Oswald', sans-serif !important;
-        font-weight: 700 !important;
-        font-style: italic !important;
-        text-transform: uppercase !important;
-        color: #008e97 !important;
-        font-size: 1.75rem !important;
-        line-height: 1.2 !important;
-      }
+    <section class="mt-16 pt-10 border-t-4 border-miami-aqua bg-gray-50 p-6 rounded-xl shadow-inner">
+      <div class="flex items-center gap-3 mb-8">
+        <h2 class="text-3xl font-bold font-[Oswald] italic uppercase text-gray-900 tracking-tighter">
+          Le vestiaire <span class="text-miami-orange">(Commentaires)</span>
+        </h2>
+      </div>
+      
+      <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff"
+        data-page-id={entry.slug}
+        data-page-url={Astro.url.href}
+        data-page-title={entry.data.title}
+      ></div>
+      
+      <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+    </section>
 
-      /* Espacement des paragraphes */
-      .article-body p {
-        margin-bottom: 1.5rem !important;
-        line-height: 1.8 !important;
-        font-size: 1.05rem !important;
-        color: #374151 !important;
-      }
-
-      /* Mise en avant des mots en gras */
-      .article-body strong {
-        color: #f58220 !important;
-        font-weight: 800 !important;
-      }
-
-      /* Espacement des listes */
-      .article-body ul {
-        margin-bottom: 2rem !important;
-        padding-left: 1.5rem !important;
-        list-style-type: disc !important;
-      }
-
-      .article-body li {
-        margin-bottom: 0.5rem !important;
-      }
-    </style>
-
-    <footer class="mt-12 pt-8 border-t border-gray-200">
+    <footer class="mt-12 pt-8 border-t border-gray-200 flex justify-between items-center">
       <a href="/" class="inline-flex items-center gap-2 text-miami-aqua hover:text-miami-orange font-bold transition-all hover:-translate-x-1">
         ← Retour aux articles
       </a>
     </footer>
   </article>
+
+  <script is:inline>
+    // On traque si les gens cliquent sur des liens à l'intérieur de l'article
+    document.querySelector('.article-body').addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if (link) {
+        gtag('event', 'click_internal_link', {
+          'link_text': link.innerText,
+          'link_url': link.href,
+          'article_origin': window.location.pathname
+        });
+      }
+    });
+  </script>
+
 </BaseLayout>
+
+<style is:global>
+  /* Styles pour le corps de l'article */
+  .article-body h3 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 700 !important;
+    font-style: italic !important;
+    text-transform: uppercase !important;
+    color: #008e97 !important;
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .article-body p {
+    margin-bottom: 1.5rem !important;
+    line-height: 1.8 !important;
+    font-size: 1.05rem !important;
+    color: #374151 !important;
+  }
+
+  .article-body strong {
+    color: #f58220 !important;
+    font-weight: 800 !important;
+  }
+
+  .article-body ul {
+    margin-bottom: 2rem !important;
+    padding-left: 1.5rem !important;
+    list-style-type: disc !important;
+  }
+
+  .article-body li {
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Ajustement Cusdis pour le mode clair */
+  #cusdis_thread iframe {
+    width: 100% !important;
+    min-height: 200px !important;
+  }
+</style>
