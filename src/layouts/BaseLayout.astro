@@ -35,17 +35,12 @@ try {
     <title>{title} | The French Fins</title>
     <meta name="description" content={description || "L'actualité des Miami Dolphins en français."} />
 
-    {/* Métadonnées OG/Twitter partagées */}
     <meta property="og:type" content="article" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image || defaultImage} />
     <meta name="twitter:card" content="summary_large_image" />
-
-    {/* NOTE : On ne met PLUS le script Google Analytics ici en dur. 
-        Il est géré par le script de consentement en bas de page.
-    */}
   </head>
 
   <body class="bg-gray-50 text-gray-900">
@@ -63,72 +58,6 @@ try {
     </main>
     <Footer />
 
-    {/* Script Netlify Identity */}
-    <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script is:inline>
-      const identity = window.netlifyIdentity;
-      if (identity) {
-        identity.on("init", user => {
-          if (!user) {
-            identity.on("login", () => { document.location.href = "/admin/"; });
-          }
-        });
-      }
-    </script>
-
-    {/* LOGIQUE ANALYTICS & CONSENTEMENT */}
-    <script is:inline>
-      const storageKey = 'the-french-fins-consent';
-      const consent = localStorage.getItem(storageKey);
-      const GA_ID = 'G-4Z0N5P5QLD';
-
-      // 1. Si consenti, on charge Google Analytics
-      if (consent === 'accepted') {
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-        document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', GA_ID);
-
-        // Tracking des clics sur les articles (seulement si accepté)
-        document.addEventListener('click', (e) => {
-          const link = e.target.closest('a');
-          if (link && link.href.includes('/blog/')) {
-            gtag('event', 'select_content', {
-              content_type: 'article',
-              item_id: link.href,
-              item_name: link.innerText.trim()
-            });
-          }
-        });
-      }
-
-      // 2. Gestion du bandeau de cookies
-      const banner = document.getElementById('cookie-banner');
-      if (!consent) {
-        setTimeout(() => {
-          banner.classList.remove('hidden');
-          banner.classList.remove('translate-y-10');
-        }, 1000);
-      }
-
-      document.getElementById('accept-cookies').addEventListener('click', () => {
-        localStorage.setItem(storageKey, 'accepted');
-        banner.classList.add('hidden');
-        window.location.reload(); // Recharge pour activer GA
-      });
-
-      document.getElementById('refuse-cookies').addEventListener('click', () => {
-        localStorage.setItem(storageKey, 'refused');
-        banner.classList.add('hidden');
-      });
-    </script>
-
-    {/* BANDEAU HTML */}
     <div id="cookie-banner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md bg-white p-6 shadow-2xl rounded-2xl border-t-4 border-[#F58220] hidden z-[100] transform transition-all duration-500 translate-y-10">
       <div class="flex items-start gap-4">
         <div class="text-3xl">🐬</div>
@@ -144,5 +73,93 @@ try {
         </div>
       </div>
     </div>
+
+    <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script is:inline>
+      const identity = window.netlifyIdentity;
+      if (identity) {
+        identity.on("init", user => {
+          if (!user) {
+            identity.on("login", () => { document.location.href = "/admin/"; });
+          }
+        });
+      }
+    </script>
+
+    <script is:inline>
+      // Traduction Cusdis (doit être définie avant le chargement du script Cusdis dans l'article)
+      window.CUSDIS_LOCALE = {
+        powered_by: 'Propulsé par Cusdis',
+        post: 'Publier',
+        loading: 'Chargement...',
+        placeholder: 'Écrire un commentaire...',
+        nickname: 'Pseudo',
+        mail: 'E-mail (optionnel)',
+        parent_post: 'Répondre au commentaire',
+        reply: 'Répondre',
+        email_required: 'E-mail requis',
+        error: 'Une erreur est survenue'
+      };
+
+      // On attend que le DOM soit prêt
+      window.addEventListener('DOMContentLoaded', () => {
+        const storageKey = 'the-french-fins-consent';
+        const consent = localStorage.getItem(storageKey);
+        const GA_ID = 'G-4Z0N5P5QLD';
+
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('accept-cookies');
+        const refuseBtn = document.getElementById('refuse-cookies');
+
+        // Gestion de l'affichage du bandeau
+        if (banner && !consent) {
+          banner.classList.remove('hidden'); 
+          setTimeout(() => {
+            banner.classList.remove('translate-y-10');
+          }, 100);
+        }
+
+        // Action boutons avec vérification de présence
+        if (acceptBtn && banner) {
+          acceptBtn.addEventListener('click', () => {
+            localStorage.setItem(storageKey, 'accepted');
+            banner.classList.add('hidden');
+            window.location.reload();
+          });
+        }
+
+        if (refuseBtn && banner) {
+          refuseBtn.addEventListener('click', () => {
+            localStorage.setItem(storageKey, 'refused');
+            banner.classList.add('hidden');
+          });
+        }
+
+        // Chargement GA4 si le consentement est OK
+        if (consent === 'accepted') {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', GA_ID);
+
+          // Tracking des clics sur les articles
+          document.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && link.href.includes('/blog/')) {
+              gtag('event', 'select_content', {
+                content_type: 'article',
+                item_id: link.href,
+                item_name: link.innerText.trim()
+              });
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
