@@ -41,7 +41,7 @@ const currentPath = Astro.url.pathname;
         
         <div id="view-counter" class="flex items-center gap-2 text-[#008E97] font-bold bg-miami-aqua/5 px-3 py-1 rounded-full w-fit border border-miami-aqua/10">
           <span>🐬</span>
-          <span id="view-count-text" class="text-xs uppercase tracking-wider italic">Analyse du roster...</span>
+          <span id="view-count-text" class="text-xs uppercase tracking-wider italic">Analyse...</span>
         </div>
       </div>
     </header>
@@ -50,27 +50,19 @@ const currentPath = Astro.url.pathname;
       <Content />
     </div>
 
-    <section class="mt-16 pt-10 border-t-4 border-miami-aqua bg-gray-50 p-6 rounded-xl shadow-inner">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-        <h2 class="text-3xl font-bold font-[Oswald] italic uppercase text-gray-900 tracking-tighter">
-          Le vestiaire <span class="text-miami-orange">(Commentaires)</span>
-        </h2>
-        
-        <button id="toggle-comment-form" class="bg-[#008E97] text-white px-6 py-2 rounded-full font-bold uppercase italic text-sm hover:bg-[#f58220] transition-all shadow-lg active:scale-95">
-          + Ajouter une réaction
-        </button>
+    <section class="mt-16 pt-10 border-t-4 border-[#008E97] bg-gray-50 p-6 rounded-xl shadow-inner">
+      <h2 class="text-3xl font-bold mb-8 font-[Oswald] italic uppercase text-gray-900 tracking-tighter">
+        Le vestiaire <span class="text-[#F58220]">(Commentaires)</span>
+      </h2>
+      
+      <div id="cusdis_thread" 
+           data-host="https://cusdis.com" 
+           data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff" 
+           data-page-id={entry.slug} 
+           data-page-url={Astro.url.href} 
+           data-page-title={entry.data.title}>
       </div>
 
-      <div id="comment-form-container" class="hidden mb-10 p-6 bg-white rounded-xl border-2 border-dashed border-miami-aqua/30">
-        <div id="cusdis_thread" 
-             data-host="https://cusdis.com" 
-             data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff" 
-             data-page-id={entry.slug} 
-             data-page-url={Astro.url.href} 
-             data-page-title={entry.data.title}>
-        </div>
-      </div>
-      
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </section>
 
@@ -80,71 +72,23 @@ const currentPath = Astro.url.pathname;
   </article>
 
   <script is:inline define:vars={{ goatDomain, currentPath }}>
-    // 1. Logique du compteur de vues
     async function updateViews() {
       const counterText = document.getElementById('view-count-text');
       if (!counterText) return;
-
       try {
         const cleanPath = currentPath.replace(/\/$/, "") || "/";
         const statsUrl = `https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(cleanPath)}.json?t=${Date.now()}`;
-        
         const response = await fetch(statsUrl);
         const data = await response.json();
-        
         if (data && data.count) {
           const views = parseInt(data.count.replace(/,/g, '')) || 0;
           counterText.innerText = `${views} ${views > 1 ? 'lecteurs' : 'lecteur'}`;
         } else {
           counterText.innerText = "Fins Up!";
         }
-      } catch (e) { 
-        counterText.innerText = "Fins Up!"; 
-      }
+      } catch (e) { counterText.innerText = "Fins Up!"; }
     }
-
-    // 2. Logique du bouton de commentaires
-    function setupCommentToggle() {
-      const btn = document.getElementById('toggle-comment-form');
-      const container = document.getElementById('comment-form-container');
-
-      if (btn && container) {
-        btn.addEventListener('click', () => {
-          const isHidden = container.classList.contains('hidden');
-          if (isHidden) {
-            container.classList.remove('hidden');
-            btn.innerText = "× Fermer le formulaire";
-            btn.style.backgroundColor = "#6B7280"; // Gris neutre
-          } else {
-            container.classList.add('hidden');
-            btn.innerText = "+ Ajouter une réaction";
-            btn.style.backgroundColor = "#008E97"; // Retour au Aqua
-          }
-        });
-      }
-    }
-
-    // 3. Tracking GA4 (si dispo)
-    function setupGA4Tracking() {
-      const body = document.querySelector('.article-body');
-      if (body) {
-        body.addEventListener('click', (e) => {
-          const link = e.target.closest('a');
-          if (link && typeof gtag === 'function') {
-            gtag('event', 'click_internal_link', { 
-              'link_text': link.innerText, 
-              'link_url': link.href,
-              'page_location': window.location.pathname 
-            });
-          }
-        });
-      }
-    }
-
-    // Exécution au chargement
     updateViews();
-    setupCommentToggle();
-    setupGA4Tracking();
   </script>
 </BaseLayout>
 
@@ -154,12 +98,5 @@ const currentPath = Astro.url.pathname;
   .article-body strong { color: #f58220 !important; font-weight: 800 !important; }
   .article-body ul { margin-bottom: 2rem !important; padding-left: 1.5rem !important; list-style-type: disc !important; }
   .article-body li { margin-bottom: 0.5rem !important; }
-  
-  /* Ajustement Cusdis */
-  #cusdis_thread iframe { width: 100% !important; min-height: 200px !important; border: none !important; }
-  
-  /* Style spécifique pour les commentaires déjà postés par Cusdis */
-  #cusdis_thread {
-    margin-top: 1rem;
-  }
+  #cusdis_thread iframe { width: 100% !important; min-height: 350px !important; border: none !important; }
 </style>
