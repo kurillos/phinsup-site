@@ -58,7 +58,7 @@ const currentPath = Astro.url.pathname;
         </h2>
         
         <button id="go-to-comment" class="bg-[#008E97] text-white px-6 py-2 rounded-full font-bold uppercase italic text-sm hover:bg-[#F58220] transition-all shadow-lg active:scale-95 flex items-center gap-2">
-          💬 Réagir à l'article
+          💬 Réagir
         </button>
       </div>
 
@@ -79,7 +79,7 @@ const currentPath = Astro.url.pathname;
   </article>
 
   <script is:inline define:vars={{ goatDomain, currentPath }}>
-    // 1. Compteur de vues
+    // 1. Vues
     async function updateViews() {
       const counterText = document.getElementById('view-count-text');
       if (!counterText) return;
@@ -91,31 +91,29 @@ const currentPath = Astro.url.pathname;
         if (data && data.count) {
           const views = parseInt(data.count.replace(/,/g, '')) || 0;
           counterText.innerText = `${views} ${views > 1 ? 'lecteurs' : 'lecteur'}`;
-        } else {
-          counterText.innerText = "Fins Up!";
         }
-      } catch (e) { counterText.innerText = "Fins Up!"; }
+      } catch (e) {}
     }
 
-    // 2. Bouton de scroll vers les commentaires
-    document.getElementById('go-to-comment')?.addEventListener('click', () => {
-      const thread = document.getElementById('cusdis_thread');
-      if (thread) {
-        thread.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-
-    // 3. Auto-resize de l'iframe
+    // 2. Élimination du Scroll Iframe (Le fix magique)
     window.addEventListener('message', (e) => {
       try {
-        const data = JSON.parse(e.data);
+        const data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
         if (data.target === 'cusdis' && data.type === 'resize') {
           const iframe = document.querySelector('#cusdis_thread iframe');
           if (iframe) {
-            iframe.style.height = data.data + 'px';
+            // On ajoute 20px de marge pour être sûr qu'aucune scrollbar n'apparaisse
+            iframe.style.height = (data.data + 20) + 'px';
           }
         }
       } catch (err) {}
+    });
+
+    // 3. Scroll au clic sur "Réagir"
+    document.getElementById('go-to-comment')?.addEventListener('click', () => {
+        // On cible le formulaire à l'intérieur de l'iframe si possible, sinon le thread
+        const thread = document.getElementById('cusdis_thread');
+        thread?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
     updateViews();
@@ -123,18 +121,21 @@ const currentPath = Astro.url.pathname;
 </BaseLayout>
 
 <style is:global>
+  /* Styles Article */
   .article-body h3 { margin-top: 3.5rem !important; margin-bottom: 1.5rem !important; font-family: 'Oswald', sans-serif !important; font-weight: 700 !important; font-style: italic !important; text-transform: uppercase !important; color: #008e97 !important; font-size: 1.75rem !important; }
   .article-body p { margin-bottom: 1.5rem !important; line-height: 1.8 !important; font-size: 1.05rem !important; color: #374151 !important; }
   .article-body strong { color: #f58220 !important; font-weight: 800 !important; }
   
-  /* Fix Iframe */
+  /* RESET IFRAME SCROLL */
   #cusdis_thread {
     width: 100%;
-    min-height: 400px;
-    overflow: hidden;
+    overflow: hidden; /* Interdit le scroll sur le conteneur */
   }
+
   #cusdis_thread iframe {
     width: 100% !important;
     border: none !important;
+    overflow: hidden !important; /* Interdit le scroll à l'intérieur de l'iframe */
+    display: block;
   }
 </style>
