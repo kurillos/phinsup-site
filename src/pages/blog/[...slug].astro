@@ -21,16 +21,26 @@ const ogImage = entry.data.heroImage
   : siteUrl + "/images/hard-rock-stadium.png";
 
 // 4. Logique du Compteur de vues (GoatCounter)
+// 4. Logique du Compteur de vues (GoatCounter)
 const goatDomain = "thefrenchfins";
-const statsUrl = `https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(Astro.url.pathname)}.json`;
+
+// On nettoie le chemin pour enlever le slash de fin s'il existe (pour coller au dashboard)
+const cleanPath = Astro.url.pathname.replace(/\/$/, "");
+// Si on est sur la home, on remet au moins un "/"
+const finalPath = cleanPath === "" ? "/" : cleanPath;
+
+const statsUrl = `https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(finalPath)}.json`;
 
 let views = 0;
 try {
-  const response = await fetch(statsUrl);
+  // On ajoute un cache-buster (?t=...) pour être sûr d'avoir la donnée fraîche
+  const response = await fetch(`${statsUrl}?t=${Date.now()}`);
   const data = await response.json();
-  views = parseInt(data.count.replace(/,/g, '')) || 0;
+  if (data && data.count) {
+    views = parseInt(data.count.replace(/,/g, '')) || 0;
+  }
 } catch (e) {
-  views = 0; // Fallback si pas encore de vues
+  views = 0;
 }
 ---
 
