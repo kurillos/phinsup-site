@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
-// 1. Génération des URLs
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
   return blogEntries.map(entry => ({
@@ -10,77 +9,41 @@ export async function getStaticPaths() {
   }));
 }
 
-// 2. Récupération des données
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-// 3. Préparation des métadonnées SEO
 const siteUrl = "https://thefrenchfins.netlify.app";
 const ogImage = entry.data.heroImage 
   ? (entry.data.heroImage.startsWith('http') ? entry.data.heroImage : siteUrl + entry.data.heroImage)
   : siteUrl + "/images/hard-rock-stadium.png";
 
-// 4. Logique du Compteur de vues (GoatCounter)
-// 4. Logique du Compteur de vues (GoatCounter)
+// Variables pour le script client du compteur
 const goatDomain = "thefrenchfins";
-
-// On nettoie le chemin pour enlever le slash de fin s'il existe (pour coller au dashboard)
 const cleanPath = Astro.url.pathname.replace(/\/$/, "");
-// Si on est sur la home, on remet au moins un "/"
 const finalPath = cleanPath === "" ? "/" : cleanPath;
-
-const statsUrl = `https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(finalPath)}.json`;
-
-let views = 0;
-try {
-  // On ajoute un cache-buster (?t=...) pour être sûr d'avoir la donnée fraîche
-  const response = await fetch(`${statsUrl}?t=${Date.now()}`);
-  const data = await response.json();
-  if (data && data.count) {
-    views = parseInt(data.count.replace(/,/g, '')) || 0;
-  }
-} catch (e) {
-  views = 0;
-}
 ---
 
-<BaseLayout 
-  title={entry.data.title} 
-  description={entry.data.description} 
-  image={ogImage}
->
+<BaseLayout title={entry.data.title} description={entry.data.description} image={ogImage}>
   <article class="max-w-4xl mx-auto py-10 px-4"> 
     
     {entry.data.heroImage && (
-      <img 
-        src={entry.data.heroImage} 
-        alt={entry.data.title}
-        class="w-full h-auto max-h-125 object-contain bg-gray-50 rounded-xl mb-8 shadow-lg border-b-8 border-miami-orange"
-      />
+      <img src={entry.data.heroImage} alt={entry.data.title} class="w-full h-auto max-h-125 object-contain bg-gray-50 rounded-xl mb-8 shadow-lg border-b-8 border-miami-orange" />
     )}
 
     <header class="mb-8">
       <div class="flex flex-wrap items-center gap-3 mb-2">
-        <span class="bg-miami-orange text-white px-3 py-1 rounded text-xs font-bold uppercase italic">
-          {entry.data.category}
-        </span>
-        {entry.data.tags && entry.data.tags.map(tag => (
-          <span class="text-gray-400 text-xs italic">#{tag}</span>
-        ))}
+        <span class="bg-miami-orange text-white px-3 py-1 rounded text-xs font-bold uppercase italic">{entry.data.category}</span>
+        {entry.data.tags && entry.data.tags.map(tag => <span class="text-gray-400 text-xs italic">#{tag}</span>)}
       </div>
       
-      <h1 class="text-4xl md:text-6xl font-extrabold text-miami-aqua mt-2 font-[Oswald] italic uppercase leading-tight">
-        {entry.data.title}
-      </h1>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-miami-aqua mt-2 font-[Oswald] italic uppercase leading-tight">{entry.data.title}</h1>
 
       <div class="flex flex-col md:flex-row md:items-center justify-between mt-6 border-l-4 border-miami-aqua pl-4 gap-4">
-        <p class="text-gray-400 italic">
-          Publié le {entry.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
-        </p>
+        <p class="text-gray-400 italic">Publié le {entry.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
         
-        <div class="flex items-center gap-2 text-[#008E97] font-bold bg-miami-aqua/5 px-3 py-1 rounded-full w-fit">
+        <div id="view-counter" class="hidden items-center gap-2 text-[#008E97] font-bold bg-miami-aqua/5 px-3 py-1 rounded-full w-fit border border-miami-aqua/10">
           <span>🐬</span>
-          <span class="text-xs uppercase tracking-wider">{views} {views > 1 ? 'lecteurs' : 'lecteur'}</span>
+          <span id="view-count-text" class="text-xs uppercase tracking-wider italic">Chargement...</span>
         </div>
       </div>
     </header>
@@ -90,85 +53,53 @@ try {
     </div>
 
     <section class="mt-16 pt-10 border-t-4 border-miami-aqua bg-gray-50 p-6 rounded-xl shadow-inner">
-      <div class="flex items-center gap-3 mb-8">
-        <h2 class="text-3xl font-bold font-[Oswald] italic uppercase text-gray-900 tracking-tighter">
-          Le vestiaire <span class="text-miami-orange">(Commentaires)</span>
-        </h2>
-      </div>
-      
-      <div id="cusdis_thread"
-        data-host="https://cusdis.com"
-        data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff"
-        data-page-id={entry.slug}
-        data-page-url={Astro.url.href}
-        data-page-title={entry.data.title}
-      ></div>
-      
+      <h2 class="text-3xl font-bold mb-8 font-[Oswald] italic uppercase text-gray-900 tracking-tighter">Le vestiaire <span class="text-miami-orange">(Commentaires)</span></h2>
+      <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="b8f71c42-b009-4069-83ac-1c696a10f3ff" data-page-id={entry.slug} data-page-url={Astro.url.href} data-page-title={entry.data.title}></div>
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </section>
 
-    <footer class="mt-12 pt-8 border-t border-gray-200 flex justify-between items-center">
-      <a href="/" class="inline-flex items-center gap-2 text-miami-aqua hover:text-miami-orange font-bold transition-all hover:-translate-x-1">
-        ← Retour aux articles
-      </a>
+    <footer class="mt-12 pt-8 border-t border-gray-200">
+      <a href="/" class="inline-flex items-center gap-2 text-miami-aqua hover:text-miami-orange font-bold transition-all hover:-translate-x-1">← Retour aux articles</a>
     </footer>
   </article>
 
-  <script is:inline>
-    // On traque si les gens cliquent sur des liens à l'intérieur de l'article
-    document.querySelector('.article-body').addEventListener('click', (e) => {
-      const link = e.target.closest('a');
-      if (link) {
-        gtag('event', 'click_internal_link', {
-          'link_text': link.innerText,
-          'link_url': link.href,
-          'article_origin': window.location.pathname
-        });
-      }
-    });
-  </script>
+  <script is:inline define:vars={{ goatDomain, finalPath }}>
+    async function updateViews() {
+      try {
+        const statsUrl = `https://${goatDomain}.goatcounter.com/counter/${encodeURIComponent(finalPath)}.json?t=${Date.now()}`;
+        const response = await fetch(statsUrl);
+        const data = await response.json();
+        if (data && data.count) {
+          const views = parseInt(data.count.replace(/,/g, '')) || 0;
+          const counterContainer = document.getElementById('view-counter');
+          const counterText = document.getElementById('view-count-text');
+          if (views > 0 && counterContainer && counterText) {
+            counterText.innerText = `${views} ${views > 1 ? 'lecteurs' : 'lecteur'}`;
+            counterContainer.classList.remove('hidden');
+            counterContainer.classList.add('flex');
+          }
+        }
+      } catch (e) { console.log("Erreur compteur:", e); }
+    }
+    updateViews();
 
+    // Tracking clics internes
+    const body = document.querySelector('.article-body');
+    if (body) {
+      body.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && typeof gtag === 'function') {
+          gtag('event', 'click_internal_link', { 'link_text': link.innerText, 'link_url': link.href });
+        }
+      });
+    }
+  </script>
 </BaseLayout>
 
 <style is:global>
-  /* Styles pour le corps de l'article */
-  .article-body h3 {
-    margin-top: 3.5rem;
-    margin-bottom: 1.5rem;
-    font-family: 'Oswald', sans-serif !important;
-    font-weight: 700 !important;
-    font-style: italic !important;
-    text-transform: uppercase !important;
-    color: #008e97 !important;
-    font-size: 1.75rem !important;
-    line-height: 1.2 !important;
-  }
-
-  .article-body p {
-    margin-bottom: 1.5rem !important;
-    line-height: 1.8 !important;
-    font-size: 1.05rem !important;
-    color: #374151 !important;
-  }
-
-  .article-body strong {
-    color: #f58220 !important;
-    font-weight: 800 !important;
-  }
-
-  .article-body ul {
-    margin-bottom: 2rem !important;
-    padding-left: 1.5rem !important;
-    list-style-type: disc !important;
-  }
-
-  .article-body li {
-    margin-bottom: 0.5rem !important;
-  }
-
-  /* Ajustement Cusdis pour le mode clair */
-  #cusdis_thread iframe {
-    width: 100% !important;
-    min-height: 200px !important;
-  }
+  .article-body h3 { margin-top: 3.5rem; margin-bottom: 1.5rem; font-family: 'Oswald', sans-serif !important; font-weight: 700; font-style: italic; text-transform: uppercase; color: #008e97; font-size: 1.75rem; }
+  .article-body p { margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.05rem; color: #374151; }
+  .article-body strong { color: #f58220; font-weight: 800; }
+  .article-body ul { margin-bottom: 2rem; padding-left: 1.5rem; list-style-type: disc; }
+  #cusdis_thread iframe { width: 100% !important; min-height: 200px !important; }
 </style>
