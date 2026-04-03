@@ -41,7 +41,7 @@ const currentPath = Astro.url.pathname;
         
         <div id="view-counter" class="flex items-center gap-2 text-[#008E97] font-bold bg-miami-aqua/5 px-3 py-1 rounded-full w-fit border border-miami-aqua/10">
           <span>🐬</span>
-          <span id="view-count-text" class="text-xs uppercase tracking-wider italic">Analyse...</span>
+          <span id="view-count-text" class="text-xs uppercase tracking-wider italic">Analyse en cours...</span>
         </div>
       </div>
     </header>
@@ -72,6 +72,7 @@ const currentPath = Astro.url.pathname;
   </article>
 
   <script is:inline define:vars={{ goatDomain, currentPath }}>
+    // 1. Mise à jour des vues GoatCounter
     async function updateViews() {
       const counterText = document.getElementById('view-count-text');
       if (!counterText) return;
@@ -86,17 +87,49 @@ const currentPath = Astro.url.pathname;
         } else {
           counterText.innerText = "Fins Up!";
         }
-      } catch (e) { counterText.innerText = "Fins Up!"; }
+      } catch (e) { 
+        counterText.innerText = "Fins Up!"; 
+      }
     }
+
+    // 2. Écouteur pour redimensionner l'iframe Cusdis (Supprime le scroll interne)
+    window.addEventListener('message', (e) => {
+      try {
+        const data = JSON.parse(e.data);
+        if (data.target === 'cusdis' && data.type === 'resize') {
+          const iframe = document.querySelector('#cusdis_thread iframe');
+          if (iframe) {
+            iframe.style.height = data.data + 'px';
+          }
+        }
+      } catch (err) {
+        // On ignore les messages qui ne viennent pas de Cusdis
+      }
+    });
+
+    // Lancement
     updateViews();
   </script>
 </BaseLayout>
 
 <style is:global>
+  /* Formatage du corps de l'article */
   .article-body h3 { margin-top: 3.5rem !important; margin-bottom: 1.5rem !important; font-family: 'Oswald', sans-serif !important; font-weight: 700 !important; font-style: italic !important; text-transform: uppercase !important; color: #008e97 !important; font-size: 1.75rem !important; }
   .article-body p { margin-bottom: 1.5rem !important; line-height: 1.8 !important; font-size: 1.05rem !important; color: #374151 !important; }
   .article-body strong { color: #f58220 !important; font-weight: 800 !important; }
   .article-body ul { margin-bottom: 2rem !important; padding-left: 1.5rem !important; list-style-type: disc !important; }
   .article-body li { margin-bottom: 0.5rem !important; }
-  #cusdis_thread iframe { width: 100% !important; min-height: 350px !important; border: none !important; }
+
+  /* FIX SCROLLBAR CUSDIS */
+  #cusdis_thread {
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden; /* Empêche le double scroll */
+  }
+
+  #cusdis_thread iframe {
+    width: 100% !important;
+    border: none !important;
+    overflow: hidden !important; /* Force la suppression de la barre de défilement interne */
+  }
 </style>
