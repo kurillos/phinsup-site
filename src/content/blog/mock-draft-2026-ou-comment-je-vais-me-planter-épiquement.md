@@ -34,7 +34,6 @@ On garde le talent à la maison. Mauigoa est un colosse qui a dominé l'ACC. Ave
 **Pick 30 : Carnell Tate (WR, Ohio State)**
 
 Le successeur idéal de Jaylen Waddle. Tate est un technicien hors pair avec des mains d'acier (0 drop en 2025). Contrairement aux purs sprinteurs, il apporte une dimension de "contested catches" et une précision dans les tracés qui aideront immédiatement ton QB à stabiliser le jeu aérien.
-## Round 2
 
 **Pick 43 : Davison Igbinosun (CB, Ohio State)**  
 
