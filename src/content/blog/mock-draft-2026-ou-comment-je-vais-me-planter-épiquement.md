@@ -59,7 +59,7 @@ Indispensable pour le front Wide-9. Farmer possède l'explosivité nécessaire p
  
 Un excellent "value pick" pour la profondeur. Casey est un technicien fiable qui peut couvrir les deux postes de Tackle, offrant une assurance vie immédiate en cas de blessure sur la ligne.
 
-** ROUND 5 - Pick 149 : Jyaire Brown (CB, LSU)**  
+**ROUND 5 - Pick 149 : Jyaire Brown (CB, LSU)**  
 
 Hafley ne drafte jamais trop de CB. Brown apporte de la profondeur et une expérience de haut niveau (Ohio State puis LSU). Il est un projet de développement idéal pour devenir un solide Cornerback de rotation.
 
