@@ -27,8 +27,6 @@ Juste **ma version de ce que Miami pourrait faire** (et qui sera sûrement compl
 
 ### Mes picks:
 
-## Round 1
-
 **Pick 11 (via DEN) : Francis Mauigoa (OT, Miami Hurricanes)**
 
 On garde le talent à la maison. Mauigoa est un colosse qui a dominé l'ACC. Avec son jeu de jambes fluide et sa puissance brute en "run blocking", il est le remplaçant immédiat de Terron Armstead. C'est le garde du corps dont Willis a besoin pour exploiter les jeux profonds.
@@ -41,8 +39,6 @@ Le successeur idéal de Jaylen Waddle. Tate est un technicien hors pair avec des
 **Pick 43 : Davison Igbinosun (CB, Ohio State)**  
 
 Hafley obtient enfin son "Cornerback n°1". Igbinosun est grand (1m88) et joue avec une agressivité rare en Press-Man. C'est le profil exact pour verrouiller les meilleurs receveurs de la division en un-contre-un.
-
-## Round 3
 
 **Pick 75 : Jalon Kilgore (S, South Carolina)** 
 
@@ -60,21 +56,19 @@ Le complément de puissance pour De'Von Achane. Allen est un "buffle" nord-sud q
 
 Indispensable pour le front Wide-9. Farmer possède l'explosivité nécessaire pour attaquer les brèches intérieures et forcer le QB à sortir de sa poche, là où les Edges l'attendent.
 
-## Rounds 4 à 7
-
-**Round 4 (Pick 111) : Kage Casey (OT, Boise State)** 
+**Pick 111 : Kage Casey (OT, Boise State)** 
  
 Un excellent "value pick" pour la profondeur. Casey est un technicien fiable qui peut couvrir les deux postes de Tackle, offrant une assurance vie immédiate en cas de blessure sur la ligne.
 
-**Round 5 (Pick 149) : Jyaire Brown (CB, LSU)**  
+**Pick 149 : Jyaire Brown (CB, LSU)**  
 
 Hafley ne drafte jamais trop de CB. Brown apporte de la profondeur et une expérience de haut niveau (Ohio State puis LSU). Il est un projet de développement idéal pour devenir un solide Cornerback de rotation.
 
-**Round 7 (Pick 227) : Beaux Collins (WR, Notre Dame)** 
+**Pick 227 : Beaux Collins (WR, Notre Dame)** 
  
 À ce stade, on cherche des profils spécifiques. Collins (1m90) offre cette cible de grande taille qui manque au roster pour les situations de Red Zone et les ballons contestés.
 
-**Round 7 (Pick 238) : Aidan Keanaaina (DT, Cal)**  
+**Pick 238 : Aidan Keanaaina (DT, Cal)**  
 
 Le spécialiste du "sale boulot". Avec ses 145kg, il est là pour manger les doubles blocs au centre de la ligne et libérer les linebackers. Un ajout de poids pur pour les situations de course.
 
