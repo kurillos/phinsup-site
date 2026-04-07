@@ -43,7 +43,7 @@ Hafley obtient enfin son "Cornerback n°1". Igbinosun est grand (1m88) et joue a
 
 Le nouveau chef d'orchestre du backfield. Kilgore est un safety hybride capable de couvrir une zone immense en Single-High ou de descendre dans la boîte pour stopper la course. Sa polyvalence est la clé du schéma de Hafley.
 
-** ROUND 3 - Pick 87 : Oscar Delp (TE, Georgia)**  
+**ROUND 3 - Pick 87 : Oscar Delp (TE, Georgia)**  
 
 Une menace verticale massive. Dans une attaque qui a besoin de cibles fiables au milieu du terrain, Delp devient la soupape de sécurité idéale. Sa taille en fait un cauchemar de mismatch pour les safeties adverses.
 
