@@ -13,16 +13,16 @@ tags:
 draft: false
 author: Lucas
 ---
-Je vais être honnête : **je suis nul en mock drafts.**  
+Je vais être honnête : **je suis nul en mock drafts.**\
 Mais vraiment nul.  
 
 Et pourtant… j’en refais une.
 
-Parce que même si je me plante chaque année, j’aime bien partager ma vision.  
-Avec la nouvelle direction de l’équipe, on peut quand même garder un peu d’espoir.  
+Parce que même si je me plante chaque année, j’aime bien partager ma vision.\
+Avec la nouvelle direction de l’équipe, on peut quand même garder un peu d’espoir.\
 Peut‑être que les Dolphins feront les bons choix, qui sait ?  
 
-Donc voilà : aucune prédiction ici.  
+Donc voilà : aucune prédiction ici.\
 Juste **ma version de ce que Miami pourrait faire** (et qui sera sûrement complètement à côté de la plaque).
 
 ### Mes picks:
@@ -55,16 +55,16 @@ Le complément de puissance pour De'Von Achane. Allen est un "buffle" nord-sud q
 
 Indispensable pour le front Wide-9. Farmer possède l'explosivité nécessaire pour attaquer les brèches intérieures et forcer le QB à sortir de sa poche, là où les Edges l'attendent.
 
-**ROUND 4 - Pick 111 : Kage Casey (OT, Boise State)** 
- 
+**ROUND 4 - Pick 130 : Kage Casey (OT, Boise State)** 
+
 Un excellent "value pick" pour la profondeur. Casey est un technicien fiable qui peut couvrir les deux postes de Tackle, offrant une assurance vie immédiate en cas de blessure sur la ligne.
 
-**ROUND 5 - Pick 149 : Jyaire Brown (CB, LSU)**  
+**ROUND 5 - Pick 151 : Jyaire Brown (CB, LSU)**  
 
 Hafley ne drafte jamais trop de CB. Brown apporte de la profondeur et une expérience de haut niveau (Ohio State puis LSU). Il est un projet de développement idéal pour devenir un solide Cornerback de rotation.
 
 **ROUND 7 - Pick 227 : Beaux Collins (WR, Notre Dame)** 
- 
+
 À ce stade, on cherche des profils spécifiques. Collins (1m90) offre cette cible de grande taille qui manque au roster pour les situations de Red Zone et les ballons contestés.
 
 **ROUND 7 - Pick 238 : Aidan Keanaaina (DT, Cal)**  
