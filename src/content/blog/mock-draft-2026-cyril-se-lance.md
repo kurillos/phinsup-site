@@ -26,7 +26,7 @@ tags:
 draft: false
 author: Cyril
 ---
-##Mes picks:
+### Mes picks:
 
 **ROUND 1 - Pick 11 (via DEN) : Fernando Mendoza (QB, Indiana)**
 
@@ -95,4 +95,4 @@ Le complément de puissance pour De’Von Achane. Allen est un “buffle” nord
 
 Alors qu’en pensez-vous ?
 
-##Fins **Up !**
+### Fins **Up !**
