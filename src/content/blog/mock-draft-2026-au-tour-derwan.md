@@ -1,10 +1,7 @@
 ---
 title: MOCK DRAFT 2026 AU TOUR D'ERWAN
-description: "Ça arrive, la Draft 2026 est bientôt là ! Pour les plus courageux,
-  il aura le classique « Vontae Mack no matter what » en ouverture avec Kevin
-  Costner en GM malicieux (Draft Day 2014), en attendant que le Prime time
-  commence à Pittsburgh le 23 avril prochain. Du coup, c’est la folie des Mock
-  Draft et TFF ne peux pas passer à côté. "
+description: Un mock draft complet de 7 tours sans trade pour mon premier mock
+  diffuse pour la communauté
 pubDate: 2026-04-12T22:11:00.000+02:00
 heroImage: /images/draft-low-stock.png
 category: Analyse
@@ -14,6 +11,8 @@ tags:
 draft: false
 author: Rédaction Phin Side
 ---
+Ça arrive, la Draft 2026 est bientôt là ! Pour les plus courageux, il aura le classique « Vontae Mack no matter what » en ouverture avec Kevin Costner en GM malicieux (Draft Day 2014), en attendant que le Prime time commence à Pittsburgh le 23 avril prochain. Du coup, c’est la folie des Mock Draft et **TFF ne peux pas passer à côté**. 
+
 Lucas s’y est collé et comme il l’a si bien dit : « Aucune prédiction ici ». D’ailleurs je vous recommande de lire son mock. Et si vous n’y croyez pas, allez lire **la lettre au père Noel de Cyril**.
 
 En effet nous nous basons sur ce que nous lisons ou écoutons mais aucun d’entre nous n’est un scout professionnel. 
