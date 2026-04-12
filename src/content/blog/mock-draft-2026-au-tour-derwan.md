@@ -21,7 +21,7 @@ Notre nouveau duo Sully & Hafley (GM et HC) préparent leur première draft et *
 
 Voici ma version complète de 7 tours sans trade. La philosophie est simple, il y des besoins partout ou presque donc **Best Player Available** (meilleur joueur disponible) surtout dans les 1ers tours afin d’acquérir le maximum de talents et des potentiels titulaires, ensuite on va plus aller en fonction des besoins et vers la fin ça devient un peu plus aléatoire.
 
-# ROUND 1 – Pick 11 : Caleb Downs (S, Ohio State)
+# **ROUND 1 – Pick 11 : Caleb Downs (S, Ohio State)**
 
 Meilleur joueur disponible et sur ma liste « a drafter absolument si disponible ». Caleb Downs est un Safety élite de 1,83 m, 93 kg (77 cm d'envergure). Il est considéré comme le joueur le plus sûr de sa promotion : un titulaire
 immédiatement opérationnel qui apportera un leadership capable de transformer la culture de l'équipe dès son arrivée. Sa vision du jeu et sa rapidité de réaction exceptionnelles lui permettent de neutraliser les ouvertures de passe et de piéger les quarterbacks. Véritable pièce maîtresse du jeu, il excelle à tous les niveaux, offrant un soutien de premier ordre contre la course depuis la profondeur et une explosivité dévastatrice sur les courtes distances. Si son gabarit et son athlétisme brut peuvent paraître atypiques, son sens spatial hors pair et sa capacité à manipuler les intentions offensives font de lui un joueur rare et prometteur. Le petit plus : il peut aussi retourner les punts.
@@ -30,7 +30,7 @@ Comparaison : **Xavier McKinney**, Green Bay Packers
 
 
 
-## **ROUND 1 – Pick 30 (via DEN, Jaylen Waddle trade) : T.J. Parker (EDGE, Clemson)**
+# **ROUND 1 – Pick 30 (via DEN, Jaylen Waddle trade) : T.J. Parker (EDGE, Clemson)**
 
 Mesurant 1,90 m pour 119 kg, il possède un physique idéal et des mains puissantes. Il allie une force exceptionnelle à une énergie inépuisable. Doté d'une force physique digne de la NFL, d'une intelligence de jeu remarquable et d'une grande polyvalence lui permettant d'évoluer aussi bien en 3-4 qu'en 4-3. Reconnu pour son jeu propre, il excelle dans la protection des extérieurs en défense contre la course. Il utilise un maniement des mains avancé et une technique de bras longs et précis pour déstabiliser les bloqueurs. Parker est considéré comme l'un des choix les plus sûrs au poste de DE dans cette cuvée, c'est un joueur physique qui impose
 son rythme et qui ne se laissera pas dominer dans le jeu au sol.
