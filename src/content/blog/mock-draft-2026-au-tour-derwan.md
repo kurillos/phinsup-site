@@ -1,9 +1,9 @@
 ---
-title: MOCK DRAFT 2026 AU TOUR D'ERWAN
+title: "MOCK DRAFT 2026 : AU TOUR D'ERWAN."
 description: Un mock draft complet de 7 tours sans trade pour mon premier mock
-  pour la communauté
+  pour la communauté.
 pubDate: 2026-04-12T22:11:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/mock-draft-erwan.png
 category: Analyse
 tags:
   - Miami Dolphins
