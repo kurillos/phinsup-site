@@ -30,7 +30,7 @@ Comparaison : **Xavier McKinney**, Green Bay Packers
 
 
 
-# ROUND 1 – Pick 30 (via DEN, Jaylen Waddle trade) : T.J. Parker (EDGE, Clemson)
+## ROUND 1 – Pick 30 (via DEN, Jaylen Waddle trade) : T.J. Parker (EDGE, Clemson)
 
 Mesurant 1,90 m pour 119 kg, il possède un physique idéal et des mains puissantes. Il allie une force exceptionnelle à une énergie inépuisable. Doté d'une force physique digne de la NFL, d'une intelligence de jeu remarquable et d'une grande polyvalence lui permettant d'évoluer aussi bien en 3-4 qu'en 4-3. Reconnu pour son jeu propre, il excelle dans la protection des extérieurs en défense contre la course. Il utilise un maniement des mains avancé et une technique de bras longs et précis pour déstabiliser les bloqueurs. Parker est considéré comme l'un des choix les plus sûrs au poste de DE dans cette cuvée, c'est un joueur physique qui impose
 son rythme et qui ne se laissera pas dominer dans le jeu au sol.
