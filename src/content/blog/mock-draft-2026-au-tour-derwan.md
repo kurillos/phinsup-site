@@ -19,7 +19,7 @@ En effet nous nous basons sur ce que nous lisons ou écoutons mais aucun d’ent
 
 Notre nouveau duo Sully & Hafley (GM et HC) préparent leur première draft et **ont jusqu’ici tenu leurs promesses** (voir mon article « FREE AGENCY PREMIERE VAGUE : LE FRONT OFFICE TIENT SES PROMESSES »). En effet, selon Jon Eric Sullivan, **la draft est une question de volume**, et cette année on est gâté puisque nous disposons de 11 choix dont 7 dans le top 100 : 2 au 1er tour, 1 au 2nd tour et 4 au troisième tour (vous lisez bien 4 au 3ième).
 
-Voici ma version complète de 7 tours sans trade. La philosophie est simple, il y des besoins partout ou presque donc **Best Player Available** (meilleur joueur disponible) surtout dans les 1ers tours afin d’acquérir le maximum de talents et des potentiels titulaires, ensuite on plus aller en fonction des besoins et vers la fin ça devient un peu plus aléatoires.
+Voici ma version complète de 7 tours sans trade. La philosophie est simple, il y des besoins partout ou presque donc **Best Player Available** (meilleur joueur disponible) surtout dans les 1ers tours afin d’acquérir le maximum de talents et des potentiels titulaires, ensuite on va plus aller en fonction des besoins et vers la fin ça devient un peu plus aléatoire.
 
 # ROUND 1 – Pick 11 : Caleb Downs (S, Ohio State)
 
