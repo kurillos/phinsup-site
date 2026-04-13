@@ -63,8 +63,8 @@ Comparaison : **Matt Slauson**, retraité dernière saison à Indianapolis en 2
 
 **PS :** Ce trade avec Houston est probablement la dernière chose intelligente faite par Chris Grier qui souhaitait monter dans la draft 2026. Miami a envoyé son 4ème tour (pick 116) et  7ème tour 2025 contre le 6ème tour (pick 179) 2025 et le 3ème 2026 de Houston qui est finalement le 90.
 
-# ROUND 3 – Pick 94 
-(via DEN, Jaylen Waddle trade) : Bryce Lance (WR, North Dakota State)
+# **ROUND 3 – Pick 94 
+(via DEN, Jaylen Waddle trade) : Bryce Lance (WR, North Dakota State)**
 
 Mesurant 1,90 m pour 93 kg, avec une silhouette longiligne et une envergure impressionnante (81,5 cm), il s'est distingué lors du Combine de 2026, réalisant un temps fulgurant de 4,34 secondes au sprint de 40 yards et un saut vertical de 105,4 cm, confirmant ainsi son statut d'athlète exceptionnel parmi les receveurs. Lance est un prospect dont le potentiel est indéniable. Bien que sa palette de tracés nécessite encore d'être perfectionnée et qu'il doive s'adapter au jeu physique de la NFL, sa capacité à déstabiliser les défenses et à dominer dans les airs fait de lui une cible de choix au troisième tour.
 
