@@ -23,7 +23,9 @@ Voici ma version complète de 7 tours sans trade. La philosophie est simple, il 
 
 # **ROUND 1 – Pick 11 : Caleb Downs (S, Ohio State)**
 
-Meilleur joueur disponible et sur ma liste « a drafter absolument si disponible ». Caleb Downs est un Safety élite de 1,83 m, 93 kg (77 cm d'envergure). Il est considéré comme le joueur le plus sûr de sa promotion : un titulaire
+Meilleur joueur disponible et sur ma liste « **à drafter absolument si disponible** ». 
+
+Caleb Downs est un Safety élite de 1,83 m, 93 kg (77 cm d'envergure). Il est considéré comme le joueur le plus sûr de sa promotion : un titulaire
 immédiatement opérationnel qui apportera un leadership capable de transformer la culture de l'équipe dès son arrivée. Sa vision du jeu et sa rapidité de réaction exceptionnelles lui permettent de neutraliser les ouvertures de passe et de piéger les quarterbacks. Véritable pièce maîtresse du jeu, il excelle à tous les niveaux, offrant un soutien de premier ordre contre la course depuis la profondeur et une explosivité dévastatrice sur les courtes distances. Si son gabarit et son athlétisme brut peuvent paraître atypiques, son sens spatial hors pair et sa capacité à manipuler les intentions offensives font de lui un joueur rare et prometteur. Le petit plus : il peut aussi retourner les punts.
 
 Comparaison : **Xavier McKinney**, Green Bay Packers
