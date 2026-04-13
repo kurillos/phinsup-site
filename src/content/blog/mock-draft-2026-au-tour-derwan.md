@@ -28,16 +28,12 @@ immédiatement opérationnel qui apportera un leadership capable de transformer 
 
 Comparaison : **Xavier McKinney**, Green Bay Packers
 
-
-
 # **ROUND 1 – Pick 30 (via DEN, Jaylen Waddle trade) : T.J. Parker (EDGE, Clemson)**
 
 Mesurant 1,90 m pour 119 kg, il possède un physique idéal et des mains puissantes. Il allie une force exceptionnelle à une énergie inépuisable. Doté d'une force physique digne de la NFL, d'une intelligence de jeu remarquable et d'une grande polyvalence lui permettant d'évoluer aussi bien en 3-4 qu'en 4-3. Reconnu pour son jeu propre, il excelle dans la protection des extérieurs en défense contre la course. Il utilise un maniement des mains avancé et une technique de bras longs et précis pour déstabiliser les bloqueurs. Parker est considéré comme l'un des choix les plus sûrs au poste de DE dans cette cuvée, c'est un joueur physique qui impose
 son rythme et qui ne se laissera pas dominer dans le jeu au sol.
 
 Comparaison : **Bradley Chubb**, Ex Dolphins et désormais à Buffalo) ou **Rashan Gary**, Green Bay Packers (encore eux)
-
-
 
 # **ROUND 2 – Pick 43 : Chase Bisontis (IOL, Texas A&M)**
 
@@ -46,23 +42,17 @@ sein de leur ligne offensive.
 
 Comparaison : **Cooper Beebe** (Kansas City Chiefs)
 
-
-
 # **ROUND 3 – Pick 75 : Ted Hurst (WR, Georgia State)**
 
 Mesurant 1,93 m et pesant 93 kg, avec des bras de 83 cm et de grandes mains de 25 cm, il possède un gabarit de receveur en « X » typique, avec une envergure exceptionnelle et une zone de réception impressionnante. Un espoir prometteur, grand et rapide comme l'éclair, issu d'un programme moins important, capable d'évoluer aux postes de receveur X et Z. Bien qu'il doive diversifier sa palette de tracés et gagner en masse musculaire. Il représente le pari le plus sûr sur ses qualités intrinsèques dans cette cuvée. Une menace verticale qui suit naturellement la trajectoire du ballon. Il est exceptionnellement combatif, intelligent pour se positionner dans les zones de couverture et dangereux après la réception grâce à son accélération fulgurante.
 
 Comparaison: **Christian Watson**, Green Bay Packers (tiens, tiens…comme par hasard)
 
-
-
 # **ROUND 3 – Pick 87 (via PHI, Jaelen Philipps trade): Will Lee III (CB, Texas A&M)**
 
 Mesurant 1,85 m pour 86 kg et doté d'une envergure impressionnante de 83 cm, il exploite efficacement son gabarit pour bloquer les receveurs et perturber les trajectoires de passe. C'est un spécialiste du marquage individuel serré qui excelle dans le jeu en bord de touche. Reconnu pour sa patience et son tempérament fougueux, Lee est un joueur qui s'épanouit dans un système défensif axé sur le marquage individuel serré. S'il peut éprouver des difficultés face aux receveurs les plus rapides de la NFL, sa compétitivité et sa capacité à gagner les duels aériens font de lui un défenseur de rotation précieux, avec un potentiel de titulaire.
 
 Comparaison : **Benjamin St-Juste**, Washington Redskins (j’aime pas les Go Commando)
-
-
 
 # **ROUND 3 – Pick 90 (via HOU): Keylan Rutledge (IOL, Georgia Tech)**
 
@@ -73,15 +63,12 @@ Comparaison : **Matt Slauson**, retraité dernière saison à Indianapolis en 2
 
 **PS :** Ce trade avec Houston est probablement la dernière chose intelligente faite par Chris Grier qui souhaitait monter dans la draft 2026. Miami a envoyé son 4ème tour (pick 116) et  7ème tour 2025 contre le 6ème tour (pick 179) 2025 et le 3ème 2026 de Houston qui est finalement le 90.
 
-
-
-# **ROUND 3 – Pick 94 (via DEN) : Bryce Lance (WR, North Dakota State)**
+# ROUND 3 – Pick 94 
+(via DEN, Jaylen Waddle trade) : Bryce Lance (WR, North Dakota State)
 
 Mesurant 1,90 m pour 93 kg, avec une silhouette longiligne et une envergure impressionnante (81,5 cm), il s'est distingué lors du Combine de 2026, réalisant un temps fulgurant de 4,34 secondes au sprint de 40 yards et un saut vertical de 105,4 cm, confirmant ainsi son statut d'athlète exceptionnel parmi les receveurs. Lance est un prospect dont le potentiel est indéniable. Bien que sa palette de tracés nécessite encore d'être perfectionnée et qu'il doive s'adapter au jeu physique de la NFL, sa capacité à déstabiliser les défenses et à dominer dans les airs fait de lui une cible de choix au troisième tour.
 
 Comparaison : **Christian Watson**, Green Bay Packers (son predecesseur à North Dakota State University) comme un deja vu
-
-
 
 # **ROUND 4 – Pick 130 (via DEN) : Keyshaun Elliott (LB, Arizona State)**
 
@@ -90,15 +77,11 @@ reconnu pour sa puissance physique au contact et son audace face aux bloqueurs. 
 
 Comparaison : **Elandon Roberts**, Ex Dolphins maintenant chez les Las Vegas Raiders
 
-
-
 # **ROUND 5 – Pick 151 : V.J. Payne (S, Kansas State)**
 
 Du haut de ses 1,90 m et de ses 94 kg, avec une envergure de 86 cm (98e percentile), Payne possède une portée exceptionnelle qui lui permet de neutraliser efficacement les passes et de bloquer les tight ends dès la ligne d'engagement. Payne est le joueur « effaceur » de cette cuvée. Si Caleb Downs excelle dans l'analyse du jeu, Payne est le spécimen physique par excellence. Les équipes en quête d'un atout offensif capable de contrer les tight ends « Big Slot » d'élite de la NFL le placeront en tête de leur liste.
 
 Comparaison : **Kyle Hamilton**, Baltimore Ravens
-
-
 
 # **ROUND 7 – Pick 227 : Jalon Daniels (QB, Kansas)**
 
@@ -115,7 +98,5 @@ Mesurant 1,96 m et pesant 117 kg, il possède un physique déjà adapté au nive
 éthique de travail. Bien qu'il ait un potentiel limité, son gabarit et sa robustesse lui permettent de s'imposer dans un effectif comme bloqueur de course en rotation et comme contributeur important aux équipes spéciales. 
 
 Comparaison : **Maxx Crosby**, Baltimore Ravens, ah non…Las Vegas Raiders
-
-
 
 ### **Alors, vous en pensez quoi ? N'hesitez pas a commenter ! lire vos retours nous fait super plaisir et nous donne la force de continuer.**
