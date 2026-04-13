@@ -100,4 +100,4 @@ Mesurant 1,96 m et pesant 117 kg, il possède un physique déjà adapté au nive
 
 Comparaison : **Maxx Crosby**, Baltimore Ravens, ah non…Las Vegas Raiders
 
-### **Alors, vous en pensez quoi ? N'hesitez pas a commenter ! lire vos retours nous fait super plaisir et nous donne la force de continuer.**
+**Alors, vous en pensez quoi ? N'hesitez pas a commenter ! lire vos retours nous fait super plaisir et nous donne la force de continuer.**
