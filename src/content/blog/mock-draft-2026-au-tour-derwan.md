@@ -9,7 +9,7 @@ tags:
   - Miami Dolphins
   - NFL France
 draft: false
-author: Rédaction Phin Side
+author: Erwan
 ---
 Ça arrive, la Draft 2026 est bientôt là ! Pour les plus courageux, il aura le classique « Vontae Mack no matter what » en ouverture avec Kevin Costner en GM malicieux (Draft Day 2014), en attendant que le Prime time commence à Pittsburgh le 23 avril prochain. Du coup, c’est la folie des Mock Draft et **TFF ne peux pas passer à côté**. 
 
