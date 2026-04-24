@@ -1,11 +1,11 @@
 ---
-title: "DRAFT 2026 : RÉACTIONS SUR LA PREMIÈRE JOURNÉE"
+title: "DRAFT 2026 : RÉACTIONS SUR LA PREMIÈRE JOURNÉE."
 description: >+
   Nos premières réactions sur les 2 choix de draft de Sully lors de ce 1er tour.
   D'abord à chaud puis après un peu de sommeil.
 
 pubDate: 2026-04-24T20:47:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/img_9144.png
 category: Analyse
 tags:
   - Miami Dolphins
@@ -15,7 +15,7 @@ author: Erwan
 ---
 Voila, les festivités ont commencées et ca va durer jusqu'à samedi. 
 
-## REACTION A CHAUD
+### RÉACTION À CHAUD !
 
 Pour ceux qui ont regardé la draft en direct, on a eu **quelques emotions**. Tout a commencé comme prévu avec Mendoza et les top prospects. Jusqu'à ce que la course aux Offensive Tackle commence en pick 9. On voit Fano partir, puis Mauigoa...
 
@@ -43,7 +43,7 @@ De toute facon je suis KO, et demain je bosse, enfin aujourd'hui dans quelques h
 
 
 
-## ANALYSE DES PICKS
+### ANALYSE DES PICKS
 
 **\#12 Kadyn Proctor OT, Alabama**
 
@@ -63,7 +63,7 @@ Il ne se contente pas de tenter des interceptions au hasard, Il fait preuve d'un
 
 
 
-## CONCLUSION
+### CONCLUSION
 
 Quelques heures de sommeeil plus tard et surtout apres avoir vu les séances media de Sully. ils nous avait deja donné des indices.
 
