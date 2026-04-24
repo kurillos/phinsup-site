@@ -15,7 +15,7 @@ author: Erwan
 ---
 Voila, les festivités ont commencées et ca va durer jusqu'à samedi. 
 
-## REACTION A CHAUD
+> ## REACTION A CHAUD
 
 **\#12 Kadyn Proctor OT, Alabama**
 
@@ -31,8 +31,6 @@ Et la Ty Simpson sort du chapeau des Rams et le show continue. C'est le choc du 
 
 Allez on se calme et on attend le pick #30, **enfin pas tout a fait...**
 
-
-
 **\#27 Chris Johnson CB, San Diego State**
 
 A peine le temps de découvrir qui est Proctor que l'annonce est faite : Les Dolphins **trade up** de la 30e position à la 27e. Dans l'histoire on envoie le pick 90 à San Francisco et on prend leur choix 138 (4e tour).
@@ -47,8 +45,6 @@ De toute facon je suis KO, et demain je bosse, enfin aujourd'hui dans quelques h
 
 ## ANALYSE DES PICKS
 
-
-
 **\#12 Kadyn Proctor OT, Alabama**
 
 Le choix de Kadyn Proctor en 12e position témoigne d'un engagement envers une stratégie **axée sur les tranchés**. La vision est ici clairement axée sur la pérennité. En s'assurant les services d'un tackle de 159 kg ayant disputé 40 matchs comme titulaire à Alabama, l'équipe privilégie la fiabilité. Proctor a remporté le « Jacobs Blocking Trophy » (meilleur lineman offensif de la SEC), ce qui indique que la direction **privilégie l'expérience confirmée** aux joueurs bruts et encore en développement.
@@ -56,8 +52,6 @@ Le choix de Kadyn Proctor en 12e position témoigne d'un engagement envers une s
 Proctor n'est pas cantonné au poste de tackle gauche. La direction a spécifiquement mentionné ses qualités athlétiques exceptionnelles et sa capacité à jouer à quatre positions différentes sur la ligne offensive.
 
 Dans une longue saison NFL où les blessures sont inévitables, disposer d'un choix de premier tour **capable de jouer guard ou tackle droit** en cas de besoin représente un avantage stratégique considérable.
-
-
 
 **\#27 Chris Johnson CB, San Diego State**
 
