@@ -22,11 +22,11 @@ Avec ce choix, les Dolphins adressent un besoin clair : renforcer leur secondary
 
 Son passage à San Diego State a montré :
 
-• **une vraie agressivité** sur les tracés  
+• **Une vraie agressivité** sur les tracés  
 
-• une capacité à **anticiper et jouer le ballon** pour créer des turnovers
+• Une capacité à **anticiper et jouer le ballon** pour créer des turnovers
 
-• de **la polyvalence** dans différents schémas défensifs.  
+• De **la polyvalence** dans différents schémas défensifs.  
 
 Dans une NFL de plus en plus tournée vers la passe, ce type de profil est devenu essentiel.
 
