@@ -13,31 +13,32 @@ tags:
 draft: false
 author: Erwan
 ---
-Voila, les festivités ont commencées et ca va durer jusqu'à samedi. 
+Voila, les festivités ont commencé et ça va durer jusqu'à samedi. 
 
 ### RÉACTION À CHAUD !
 
-Pour ceux qui ont regardé la draft en direct, on a eu **quelques emotions**. Tout a commencé comme prévu avec Mendoza et les top prospects. Jusqu'à ce que la course aux Offensive Tackle commence en pick 9. On voit Fano partir, puis Mauigoa...
+Pour ceux qui ont regardé la draft en direct, on a eu **quelques émotions**. Tout a commencé comme prévu avec Mendoza et les top prospects. Jusqu'à ce que la course aux Offensive Tackle commence en pick 9. On voit Fano partir, puis Mauigoa...
 
 **\#12 Kadyn Proctor OT, Alabama**
 
-Et la, l'annonce tombe, T**rade down avec les Cowboys**. Petite sueur froide mais on échange leur 1er premier tour (12) et non leur 2e (20), ouf... Bon pas de panique, on descend seulement de la 11e à la 12 place et il reste au moins 2 top prospects que sont Downs (S) et Bain (EDGE) et on récupère les choix 177 et 180 (2x 5e tour).
+Et la, l'annonce tombe, **Trade down avec les Cowboys**. Petite sueur froide mais on échange leur 1er premier tour (12) et non leur 2e (20), ouf... Bon pas de panique, on descend seulement de la 11e à la 12 place et il reste au moins 2 top prospects que sont Downs (S) et Bain (EDGE) et on récupère les choix 177 et 180 (2x 5e tour).
 
-Comme on pouvait s'y attendre, Dallas prend Caleb Downs. La je me dit **BAIN rest a South Beach**, et je l'ai littéralement écrit sur le groupe Whatsapp, convaincu que c'était notre homme.
+Comme on pouvait s'y attendre, Dallas prend Caleb Downs. Là, je me dit **BAIN reste à South Beach**, et je l'ai littéralement écrit sur le groupe Whatsapp, convaincu que c'était notre homme.
 
-La douche froide, l'annonce est faite, **Kadyn Proctor (OT)** est notre 1ier choix du 1er tour. Mais qu'est-ce que c'est qu'ce binz ? C'est qui ce gars? Il sort d'ou? Il etait pas sur mon radar... On regarde vite fait, et merde il est Tackle gauche en plus...
+La douche froide, l'annonce est faite, **Kadyn Proctor (OT)** est notre 1er choix du 1er tour. Mais qu'est-ce que c'est qu'ce binz ? C'est qui ce gars ? Il sort d'où ? Il n’était pas sur mon radar... On regarde vite fait, et merde il est tackle gauche en plus...
 
-Et la Ty Simpson sort du chapeau des Rams et le show continue. C'est le choc du 1er tour et le show continue. C'est long mais c'est tellement bien foutu, que ca va trop vite quand même.
+Et là Ty Simpson sort du chapeau des Rams et le show continue. C'est le choc du 1er tour et le show continue. C'est long mais c'est tellement bien foutu, que ca va trop vite quand même.
 
 Allez on se calme et on attend le pick #30, **enfin pas tout a fait...**
 
 **\#27 Chris Johnson CB, San Diego State**
 
-A peine le temps de découvrir qui est Proctor que l'annonce est faite : Les Dolphins **trade up** de la 30e position à la 27e. Dans l'histoire on envoie le pick 90 à San Francisco et on prend leur choix 138 (4e tour).
+À peine le temps de découvrir qui est Proctor que l'annonce est faite : Les Dolphins **trade up** de la 30e position à la 27e. Dans l'histoire on envoie le pick 90 à San Francisco et on prend leur choix 138 (4e tour).
 
 Chic, chic, chic... je me frotte les mains en rêvant de Cooper (WR, Indiana) ou Faulk (EDGE, Auburn) comme Obélix qui pense à ses sangliers. 
 
-Mais on recois Chris Johnson (CB, San Diego State). Encore ??? Mais c'est qui ce gars, on nous a promis des premières mains, ok Delane (CB, LSU) est parti plus tot que prevu mais quand même !
+Mais on reçoit Chris Johnson (CB, San Diego State). Encore ? 
+Mais c'est qui ce gars, on nous a promis des premières mains, ok Delane (CB, LSU) est parti plus tôt que prévu mais quand même !
 
 De toute facon je suis KO, et demain je bosse, enfin aujourd'hui dans quelques heures seulement.
 
@@ -59,20 +60,20 @@ Le choix de Chris Johnson a peut-être été **le plus surprenant**, mais il ill
 
 En remontant dans le 1er tour, ils ont montré qu'ils valorisent le joueur **capable de perturber le jeu adverse**. Johnson n'est pas seulement un spécialiste de la couverture ; il est physique et peut jouer nickel ou extérieur, ce qui correspond au profil d'une **défense moderne et polyvalente**.
 
-Il ne se contente pas de tenter des interceptions au hasard, Il fait preuve d'une agressivité calculée; il utilise une anticipation hors pair et une vitesse fulgurante pour intercepter les passes qu'il a déjà repérées sur les vidéos. Il rend la défense secondaire **plus rapide, plus physique et nettement plus dangereuse à affronter**.
+Il ne se contente pas de tenter des interceptions au hasard, Il fait preuve d'une agressivité calculée; il utilise une anticipation hors pair et une vitesse fulgurante pour intercepter les passes qu'il a déjà repéré sur les vidéos. Il rend la défense secondaire **plus rapide, plus physique et nettement plus dangereuse à affronter**.
 
 
 
 ### CONCLUSION
 
-Quelques heures de sommeeil plus tard et surtout apres avoir vu les séances media de Sully. ils nous avait deja donné des indices.
+Quelques heures de sommeil plus tard et surtout après avoir vu les séances média de Sully. il nous avait déjà donné des indices.
 
 Jon-Eric Sullivan a insufflé aux Dolphins **l'ADN de Green Bay**, immédiatement perceptible dès sa première draft. Sa vision repose sur trois piliers : **le recrutement et le développement, les qualités physiques et une culture d'équipe durable.**
 
-Il recherche des joueurs dont **le potentiel est évident** sur les films, mais qui doivent répondre à **des critères physiques stricts**. Le choix de Kadyn Proctor : c'était le choix « parfait » selon Sullivan. Proctor n'est pas seulement un bon bloqueur, c'est **un joueur hors norme** de 2,01 m et 163 kg. Sullivan estime que "ce sport est pratiqué par des hommes possédant certaines qualités", et on ne peut pas enseigner le gabarit impressionnant et l'envergure de Proctor. L'acquisition de Chris Johnson a démontré que lorsqu'un joueur possède à la fois les **qualités requises** (4,40 secondes au 40 yards) et **le potentiel** (6 interceptions), Sullivan est prêt à se **montrer agressif** pour l'obtenir. La vision de Sullivan pour 2026 marque un tournant : **construire une base solide**. Sullivan renforce la solidité de l'équipe ce qui donne une chance a l'équipe de gagner grâce à sa domination physique et son agressivité. 
+Il recherche des joueurs dont **le potentiel est évident** sur les films, mais qui doivent répondre à **des critères physiques stricts**. Le choix de Kadyn Proctor : c'était le choix « parfait » selon Sullivan. Proctor n'est pas seulement un bon bloqueur, c'est **un joueur hors norme** de 2,01 m et 163 kg. Sullivan estime que "ce sport est pratiqué par des hommes possédant certaines qualités", et on ne peut pas enseigner le gabarit impressionnant et l'envergure de Proctor. L'acquisition de Chris Johnson a démontré que lorsqu'un joueur possède à la fois les **qualités requises** (4,40 secondes au 40 yards) et **le potentiel** (6 interceptions), Sullivan est prêt à se **montrer agressif** pour l'obtenir. La vision de Sullivan pour 2026 marque un tournant : **construire une base solide**. Sullivan renforce la solidité de l'équipe ce qui donne une chance à l'équipe de gagner grâce à sa domination physique et son agressivité. 
 
 "C'est une approche pragmatique et directe, conçue pour faire des Dolphins une équipe compétitive et régulière sur le long terme" **John Eric Sullivan**
 
-##### **Au final, je suis assez content de ces choix et ca me donne vraiment envie de faire confiance à nos 2 compères Hafley et Sully.**
+##### **Au final, je suis assez content de ces choix et ça me donne vraiment envie de faire confiance à nos 2 compères Hafley et Sully.**
 
-**Bon, on remet ca cette nuit ?**
+**Bon, on remet ça cette nuit ?**
