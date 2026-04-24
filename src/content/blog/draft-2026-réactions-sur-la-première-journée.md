@@ -73,6 +73,6 @@ Il recherche des joueurs dont **le potentiel est évident** sur les films, mais 
 
 "C'est une approche pragmatique et directe, conçue pour faire des Dolphins une équipe compétitive et régulière sur le long terme" **John Eric Sullivan**
 
-##### **Au final, je suis assez content de ces choix et ca me donne vraiment envie de faire confiance a nos 2 comperes Hafley et Sully.**
+##### **Au final, je suis assez content de ces choix et ca me donne vraiment envie de faire confiance à nos 2 compères Hafley et Sully.**
 
 **Bon, on remet ca cette nuit ?**
