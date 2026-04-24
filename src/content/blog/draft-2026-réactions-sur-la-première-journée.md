@@ -15,11 +15,11 @@ author: Erwan
 ---
 Voila, les festivités ont commencées et ca va durer jusqu'à samedi. 
 
-> ## REACTION A CHAUD
-
-**\#12 Kadyn Proctor OT, Alabama**
+## REACTION A CHAUD
 
 Pour ceux qui ont regardé la draft en direct, on a eu **quelques emotions**. Tout a commencé comme prévu avec Mendoza et les top prospects. Jusqu'à ce que la course aux Offensive Tackle commence en pick 9. On voit Fano partir, puis Mauigoa...
+
+**\#12 Kadyn Proctor OT, Alabama**
 
 Et la, l'annonce tombe, T**rade down avec les Cowboys**. Petite sueur froide mais on échange leur 1er premier tour (12) et non leur 2e (20), ouf... Bon pas de panique, on descend seulement de la 11e à la 12 place et il reste au moins 2 top prospects que sont Downs (S) et Bain (EDGE) et on récupère les choix 177 et 180 (2x 5e tour).
 
