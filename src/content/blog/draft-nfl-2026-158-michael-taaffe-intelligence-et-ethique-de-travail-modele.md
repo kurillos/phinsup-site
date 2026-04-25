@@ -1,10 +1,10 @@
 ---
 title: "DRAFT NFL 2026 [#158] : MICHAEL TAAFFE. INTELLIGENCE ET ETHIQUE DE
   TRAVAIL MODELE"
-description: Michael Taaffe est un atout précieux, un véritable « entraîneur sur
-  le terrain »
+description: Michael Taaffe, un véritable « entraîneur sur le terrain ». Il va
+  aider a implémenter une nouvelle mentalité
 pubDate: 2026-04-25T21:30:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/michael-taaffe.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
