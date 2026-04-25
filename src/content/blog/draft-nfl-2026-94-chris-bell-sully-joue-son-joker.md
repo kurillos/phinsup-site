@@ -3,7 +3,7 @@ title: "DRAFT NFL 2026 [#94] : CHRIS BELL. SULLY JOUE SON JOKER"
 description: Coup de poker sur ce choix. Si Bell récupère bien de sa blessure,
   il peut être le braquage de la draft
 pubDate: 2026-04-25T18:31:00.000+02:00
-heroImage: /images/will-kacmarek.jpeg
+heroImage: /images/chris-bell.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
