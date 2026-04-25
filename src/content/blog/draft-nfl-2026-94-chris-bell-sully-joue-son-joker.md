@@ -13,7 +13,7 @@ author: Erwan
 ---
 Double portion de receveurs pour cette cuvée 2026
 
-### Le A.J. Comparaison avec Brown
+### La comparaison avec A.J. Brown
 Avec son gabarit (1,88 m pour 101 kg), Bell possède le physique d'un running back. C'est un receveur extérieur puissant, capable de gagner des yards après réception (YAC).
 
 ### L'impact de la blessure
