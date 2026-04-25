@@ -1,5 +1,5 @@
 ---
-title: "DRAFT NFL 2026 [#87] : WILL KACMAREK, TE Ohio State"
+title: "DRAFT NFL 2026 [#87] : WILL KACMAREK, LE SIXIEME HOMME DE LIGNE"
 description: Le TE bloqueur qu'il nous manque pour courir sur nos adversaires.
 pubDate: 2026-04-25T17:51:00.000+02:00
 heroImage: /images/draft-low-stock.png
@@ -10,7 +10,7 @@ tags:
 draft: false
 author: Erwan
 ---
-Vous vous souvenez de Mike Gesicki ? Et bien c'est pas lui du tout ! Avec 1m98 et 118kg, il est plutôt le prototype du TE bloqueur.
+Vous vous souvenez de Mike Gesicki ? Et bien c'est pas lui du tout ! Will Kacmarek (TE, Ohio State) avec 1m98 et 118kg, il est plutôt le **prototype du TE bloqueur**.
 
 ### L'expert du "Dirty Work"
 
