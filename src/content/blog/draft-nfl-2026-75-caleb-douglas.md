@@ -3,7 +3,7 @@ title: "DRAFT NFL 2026 [#75] : CALEB DOUGLAS. CHOIX SURPRENANT EN TOUT CAS SI TÃ
 description: On reste Ã  Texas Tech avec un autre Red Raider. Le choix est-il
   surprenant ? Pas forcement, mais en choix 75, ca se discute
 pubDate: 2026-04-25T17:23:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/img_9151.png
 category: Breaking News
 tags:
   - Miami Dolphins
