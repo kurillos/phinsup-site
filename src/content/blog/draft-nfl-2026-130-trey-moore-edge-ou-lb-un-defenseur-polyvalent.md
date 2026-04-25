@@ -3,7 +3,7 @@ title: "DRAFT NFL 2026 [#130] : TREY MOORE. EDGE OU LB, UN DEFENSEUR POLYVALENT"
 description: EDGE/LB polyvalent capable de jouer sur 3 downs et même sur les
   équipes spéciales
 pubDate: 2026-04-25T20:25:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/trey-moore.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
