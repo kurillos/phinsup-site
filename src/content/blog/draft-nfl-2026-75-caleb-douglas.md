@@ -1,5 +1,5 @@
 ---
-title: "DRAFT NFL 2026 [#75] : CALEB DOUGLAS "
+title: "DRAFT NFL 2026 [#75] : CALEB DOUGLAS WR, Texas Tech"
 description: On reste à Texas Tech avec un autre Red Raider. Le choix est-il
   surprenant ? Pas forcement, mais en choix 75, ca se discute
 pubDate: 2026-04-25T17:23:00.000+02:00
