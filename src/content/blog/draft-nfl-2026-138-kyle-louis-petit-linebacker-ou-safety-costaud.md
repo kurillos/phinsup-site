@@ -3,7 +3,7 @@ title: "DRAFT NFL 2026 [#138] : KYLE LOUIS. PETIT LINEBACKER OU SAFETY COSTAUD ?
 description: Kyle Louis, ancien safety reconvertis en linebacker, devenant ainsi
   le prototype du football « sans position » pratiqué aujourd'hui en NFL.
 pubDate: 2026-04-25T21:05:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/kyle-louis.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
