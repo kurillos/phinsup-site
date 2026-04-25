@@ -2,7 +2,7 @@
 title: "DRAFT NFL 2026 [#87] : WILL KACMAREK, LE SIXIEME HOMME DE LIGNE"
 description: Le TE bloqueur qu'il nous manque pour courir sur nos adversaires.
 pubDate: 2026-04-25T17:51:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/will-kacmarek.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
