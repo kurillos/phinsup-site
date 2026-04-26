@@ -14,7 +14,7 @@ La Draft 2026 est terminée. Les 300 000 visiteurs quittent Pittsburgh, et les j
 
 Les front offices poursuivent leur travail pour identifier les profils capables de combler les derniers besoins des effectifs. Les Dolphins n’y échappent pas : même s’ils ont recruté 13 joueurs lors de cette draft 2026 (contre 7 habituellement), ils ont également ciblé plusieurs joueurs supplémentaires pour compléter leur groupe. Certains n’auront qu’un rôle de partenaires d’entraînement, d’autres auront peut-être une vraie opportunité de se montrer. Les « perles rares » existent, mais elles restent statistiquement peu fréquentes.
 
-## Voici la liste :
+### Voici la liste :
 
 ### Mark Gronowski, QB, Iowa
 Quarterback transféré depuis la FCS, reconnu pour son efficacité, son leadership et une carrière universitaire solide à Iowa.
@@ -45,7 +45,5 @@ Pass rusher en développement, doté d’un gabarit et d’un potentiel athléti
 
 ### Romello Brinson, WR, SMU
 Ancien prospect des Miami Hurricanes, transféré à SMU, receveur fluide avec un bon sens des tracés et un attachement local marqué.
-
----
 
 Si d’autres signatures interviennent, elles seront ajoutées ici.
