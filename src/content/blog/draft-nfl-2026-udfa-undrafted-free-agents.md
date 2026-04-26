@@ -12,9 +12,9 @@ tags:
 draft: false
 author: Erwan
 ---
-Voilà, la Draft 2026 est terminée, les 300 000 visiteurs quittent Pittsburgh et les joueurs signés sont déjà en route pour rejoindre leurs équipes. Il reste toutefois beaucoup de joueurs qui n'ont pas entendu leur nom annoncé sur scène mais qui continue de rêver à une carrière dans la NFL. Les Front Office continuent de travailler pour sélectionner les meilleurs profils qui leur permettront de boucher les trous de leur effectifs. 
+Voilà, la Draft 2026 est terminée, les 300 000 visiteurs quittent Pittsburgh et les joueurs signés sont déjà en route pour rejoindre leurs équipes. Il reste toutefois **beaucoup de joueurs** qui n'ont pas entendu leur nom annoncé sur scène mais qui **continuent de rêver à une carrière dans la NFL**. Les Front Office continuent de travailler pour sélectionner les meilleurs profils qui leur permettront de boucher les trous de leur effectifs. 
 
-Pas d'exception pour le Dolphins qui même si ils ont recrutes 13 joueurs (contre 7normalement) lors de cette draft 2026, ont identifiés les joueurs suivants qui rejoindront les Dolphins. Pour certains, il s'agit plus de partenaires d'entrainement, d'autres auront peut-être une vraie chance de montrer leurs qualités. On espère toujours trouver des perles rares, mais statistiquement ça n'arrive pas souvent.
+Pas d'exception pour le Dolphins qui même si **ils ont recrutés 13 joueurs** (contre 7normalement) lors de cette draft 2026, ont identifiés les joueurs suivants qui rejoindront les Dolphins. Pour certains, il s'agit plus de partenaires d'entrainement, d'autres auront peut-être une vraie chance de montrer leurs qualités. On espère toujours trouver **des perles rares**, mais statistiquement ça n'arrive pas souvent.
 
 Voici la liste:
 
