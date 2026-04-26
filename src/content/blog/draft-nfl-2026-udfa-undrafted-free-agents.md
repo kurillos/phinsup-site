@@ -4,7 +4,7 @@ description: >
   Retrouvez la liste des agent libres non draftés recrutés par les Dolphins
   maintenant que la draft est terminée
 pubDate: 2026-04-26T12:36:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/udfa.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
