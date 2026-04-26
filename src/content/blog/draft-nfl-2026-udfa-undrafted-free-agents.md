@@ -1,8 +1,6 @@
 ---
-title: "DRAFT NFL 2026 [UDFA] : UNDRAFTED FREE AGENTS"
-description: >
-  Retrouvez la liste des agent libres non draftés recrutés par les Dolphins
-  maintenant que la draft est terminée
+title: "DRAFT NFL 2026 [UDFA] : UNDRAFTED FREE AGENTS."
+description: Retrouvez la liste des agent libres non draftés recrutés par les Dolphins.
 pubDate: 2026-04-26T12:36:00.000+02:00
 heroImage: /images/udfa.jpeg
 category: Breaking News
@@ -12,30 +10,42 @@ tags:
 draft: false
 author: Erwan
 ---
-Voilà, la Draft 2026 est terminée, les 300 000 visiteurs quittent Pittsburgh et les joueurs signés sont déjà en route pour rejoindre leurs équipes. Il reste toutefois **beaucoup de joueurs** qui n'ont pas entendu leur nom annoncé sur scène mais qui **continuent de rêver à une carrière dans la NFL**. Les Front Office continuent de travailler pour sélectionner les meilleurs profils qui leur permettront de boucher les trous de leur effectifs. 
+La Draft 2026 est terminée. Les 300 000 visiteurs quittent Pittsburgh, et les joueurs sélectionnés rejoignent déjà leurs franchises. Pourtant, de nombreux prospects n’ont pas entendu leur nom être appelé sur scène, tout en continuant de rêver à une carrière NFL.
 
-Pas d'exception pour le Dolphins qui même si **ils ont recrutés 13 joueurs** (contre 7normalement) lors de cette draft 2026, ont identifiés les joueurs suivants qui rejoindront les Dolphins. Pour certains, il s'agit plus de partenaires d'entrainement, d'autres auront peut-être une vraie chance de montrer leurs qualités. On espère toujours trouver **des perles rares**, mais statistiquement ça n'arrive pas souvent.
+Les front offices poursuivent leur travail pour identifier les profils capables de combler les derniers besoins des effectifs. Les Dolphins n’y échappent pas : même s’ils ont recruté 13 joueurs lors de cette draft 2026 (contre 7 habituellement), ils ont également ciblé plusieurs joueurs supplémentaires pour compléter leur groupe. Certains n’auront qu’un rôle de partenaires d’entraînement, d’autres auront peut-être une vraie opportunité de se montrer. Les « perles rares » existent, mais elles restent statistiquement peu fréquentes.
 
-### Voici la liste:
+## Voici la liste :
 
-**Mark Gronowski, QB, Iowa :** Un joueur transféré de FCS, décoré pour son talent, qui a terminé sa carrière à Iowa ; reconnu pour son efficacité et son leadership.
+### Mark Gronowski, QB, Iowa
+Quarterback transféré depuis la FCS, reconnu pour son efficacité, son leadership et une carrière universitaire solide à Iowa.
 
-**Mason Reiger, LB, Wisconsin :** MVP défensif du Shrine Bowl ; un linebacker très actif avec un excellent instinct contre la course.
+### Mason Reiger, LB, Wisconsin
+MVP défensif du Shrine Bowl, linebacker très actif avec un excellent instinct contre la course.
 
-**Le'Veon Moss, RB, Texas A&M :** Un coureur puissant et percutant qui apporte de la profondeur au jeu au sol et possède une expérience au sein d'une attaque de haut niveau de la SEC.
+### Le'Veon Moss, RB, Texas A&M
+Coureur puissant et percutant, apportant de la profondeur au jeu au sol, avec une expérience dans une attaque de haut niveau SEC.
 
-**Donaven McCulley, WR, Michigan :** Une cible imposante (1,96 m) qui a été reconverti de QB à WR ; offre une grande zone de réception dans les situations de zone rouge.
+### Donaven McCulley, WR, Michigan
+Cible imposante (1,96 m), ancien quarterback reconverti receveur, offrant une large zone de réception et une vraie menace en red zone.
 
-**Anthony Hankerson, RB, Oregon State :** Un coureur compact et agile qui a excellé dans la Pac-12/Mountain West ; apporte de la polyvalence à l'unité des équipes spéciales.
+### Anthony Hankerson, RB, Oregon State
+Running back compact et agile, performant sur différents niveaux de compétition, avec un profil intéressant pour les équipes spéciales.
 
-**Louis Moore, S, Indiana :** Un safety All-American reconnu pour ses qualités d'intercepteur et son envergure en couverture. 
+### Louis Moore, S, Indiana
+Safety All-American, reconnu pour ses qualités d’interception et son envergure en couverture.
 
-**Rene Konga, DT, Louisville :** Un lineman intérieur percutant et rapide ; a signé un contrat avec un salaire garanti important (287 500 $).
+### Rene Konga, DT, Louisville
+Lineman intérieur explosif et puissant, déjà sous contrat avec un salaire garanti notable (287 500 $).
 
-**Jim Bonifas, C, Iowa State :** Mention honorable All-Big 12, il a été titulaire à 12 reprises au poste de centre en 2025 ; il apporte une profondeur précieuse à la ligne offensive intérieure.
+### Jim Bonifas, C, Iowa State
+Mention honorable All-Big 12, titulaire à 12 reprises en 2025 au poste de centre, apportant une profondeur fiable à la ligne offensive intérieure.
 
-**Rodney McGraw, EDGE, Western Michigan :** Un pass rusher en développement, doté du gabarit et de l'envergure idéaux pour la NFL.
+### Rodney McGraw, EDGE, Western Michigan
+Pass rusher en développement, doté d’un gabarit et d’un potentiel athlétique adaptés au niveau NFL.
 
-**Romello Brinson, WR, SMU :** Ancien espoir des Miami Hurricanes, il a terminé son cursus à SMU ; un coureur de tracés fluide, attaché à la région.
+### Romello Brinson, WR, SMU
+Ancien prospect des Miami Hurricanes, transféré à SMU, receveur fluide avec un bon sens des tracés et un attachement local marqué.
 
-Si on en signe d'autres, on les ajoutera ici
+---
+
+Si d’autres signatures interviennent, elles seront ajoutées ici.
