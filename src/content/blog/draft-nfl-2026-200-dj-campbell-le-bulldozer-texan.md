@@ -9,7 +9,7 @@ tags:
   - Miami Dolphins
   - NFL France
 draft: false
-author: Rédaction Phin Side
+author: Erwan
 ---
 DJ Campbell, un joueur imposant ayant été titulaire pendant trois ans chez les Longhorns, apporte une mentalité de bulldozer et une solide expérience de titulaire à l'intérieur de la ligne offensive de Miami.
 
