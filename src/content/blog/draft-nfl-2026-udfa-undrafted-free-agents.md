@@ -16,7 +16,7 @@ Voilà, la Draft 2026 est terminée, les 300 000 visiteurs quittent Pittsburgh e
 
 Pas d'exception pour le Dolphins qui même si **ils ont recrutés 13 joueurs** (contre 7normalement) lors de cette draft 2026, ont identifiés les joueurs suivants qui rejoindront les Dolphins. Pour certains, il s'agit plus de partenaires d'entrainement, d'autres auront peut-être une vraie chance de montrer leurs qualités. On espère toujours trouver **des perles rares**, mais statistiquement ça n'arrive pas souvent.
 
-Voici la liste:
+### Voici la liste:
 
 **Mark Gronowski, QB, Iowa :** Un joueur transféré de FCS, décoré pour son talent, qui a terminé sa carrière à Iowa ; reconnu pour son efficacité et son leadership.
 
