@@ -4,7 +4,7 @@ description: Premier joueur issu de l’Académie de la NFL à être sélectionn
   de la draft, et un talent exceptionnel du programme International Player
   Pathway (IPP).
 pubDate: 2026-04-25T23:13:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/seydou-traore.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
