@@ -10,7 +10,7 @@ tags:
   - Miami Dolphins
   - NFL France
 draft: false
-author: Rédaction Phin Side
+author: Erwan
 ---
 Seydou Traoré est un choix historique pour les Dolphins : il est le premier joueur issu de l’Académie de la NFL à être sélectionné lors de la draft, et un talent exceptionnel du programme International Player Pathway (IPP).
 
