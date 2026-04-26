@@ -2,7 +2,7 @@
 title: "DRAFT NFL 2026 [#177] : KEVIN COLEMAN JR. RECEVEUR RAPROCHE ET RETOURNEUR"
 description: Un joueur fiable et des plus explosifs au poste de slot corner de sa promotion.
 pubDate: 2026-04-25T22:51:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/kevin-coleman.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
