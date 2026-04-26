@@ -1,7 +1,8 @@
 ---
 title: "DRAFT NFL 2026 [#138] : KYLE LOUIS. PETIT LINEBACKER OU SAFETY COSTAUD ?"
-description: Kyle Louis, ancien safety reconvertis en linebacker, devenant ainsi
-  le prototype du football « sans position » pratiqué aujourd'hui en NFL.
+description: Kyle Louis, ancien safety reconverti en linebacker, incarne
+  parfaitement le prototype du football « sans position » qui s’impose
+  aujourd’hui en NFL.
 pubDate: 2026-04-25T21:05:00.000+02:00
 heroImage: /images/kyle-louis.jpeg
 category: Breaking News
@@ -11,15 +12,18 @@ tags:
 draft: false
 author: Erwan
 ---
-Il est l'un des rares joueurs de la draft capable de blitzer, de couvrir et de stopper la course au cours d'une même série offensive.          
+Il fait partie des rares joueurs de cette draft capables de blitzer, de couvrir et de stopper la course au cours d’une même série offensive.
 
-### L'athlète hybride
-Avec ses 1,80 m et ses 100 kg, Louis défie les prototypes traditionnels de linebacker grâce à un profil statistique presque inédit. Il a terminé sa carrière à Pitt parmi les rares joueurs à avoir enregistré plus de dix sacks et cinq interceptions. Sa vitesse de 4,53 secondes sur 40 yards et son explosivité au saut vertical (100 cm) lui permettent de suivre les running backs agiles et de neutraliser les tight ends athlétiques en espace ouvert.
+### L’athlète hybride
 
-### La vitesse prime sur la taille
-S'il ne possède peut-être pas le gabarit imposant pour se défaire des linemen offensifs de la NFL dans les duels rapprochés, il compense par une énergie débordante et un style de blitz agressif qui lui a permis de réaliser 10 sacks à l'université.  a souligné son obsession pour l'analyse vidéo, suggérant que son intelligence de jeu lui permettra de se positionner au-dessus des bloqueurs plus imposants avant même qu'ils ne puissent intervenir.
+Avec ses 1,80 m et 100 kg, Louis bouscule les standards traditionnels du poste de linebacker avec un profil statistique presque unique. Il a terminé sa carrière à Pitt parmi les rares joueurs à cumuler plus de dix sacks et cinq interceptions. Sa vitesse (4,53 secondes sur 40 yards) et son explosivité (100 cm en détente verticale) lui permettent de suivre des running backs agiles et de contenir des tight ends athlétiques en espace ouvert.
+
+### La vitesse avant la taille
+
+S’il ne possède pas le gabarit idéal pour encaisser les duels face aux linemen offensifs NFL, il compense par une énergie constante et un style de blitz très agressif, qui lui a permis d’atteindre les 10 sacks à l’université. Les recruteurs soulignent également son obsession du film, preuve d’une intelligence de jeu qui lui permet d’anticiper et de se placer avant même que les bloqueurs n’interviennent.
 
 ### Le profil tactique
-À Miami, Louis est pressenti pour devenir un atout majeur des équipes spéciales et un spécialiste du « dime backer », éliminant ainsi le besoin de changements défensifs constants. Sa présence permet aux Dolphins de conserver leur rapidité et leur polyvalence face aux attaques modernes en formation étalée, sans sacrifier la puissance physique qu'ils ont privilégiée tout au long de cette draft.
 
-Louis est un choix judicieux qui apporte l'agilité moderne nécessaire pour compléter la nouvelle identité défensive de Miami, axée sur la puissance.
+À Miami, Louis pourrait rapidement devenir un atout clé en équipes spéciales et un spécialiste du rôle de « dime linebacker », limitant ainsi les ajustements défensifs. Sa présence permet aux Dolphins de conserver vitesse et polyvalence face aux attaques modernes étalées, sans sacrifier la dimension physique recherchée sur cette draft.
+
+Louis représente un choix cohérent, apportant l’agilité moderne nécessaire pour compléter une défense de Miami désormais orientée vers plus de puissance.
