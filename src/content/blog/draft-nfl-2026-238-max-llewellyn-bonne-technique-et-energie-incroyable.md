@@ -9,7 +9,7 @@ tags:
   - Miami Dolphins
   - NFL France
 draft: false
-author: Rédaction Phin Side
+author: Erwan
 ---
 Max Llewellyn est un pur produit de l'université d'Iowa, un ailier défensif qui apporte une technique raffinée et une énergie inépuisable à la rotation des Dolphins pour mettre la pression sur le quarterback adverse.
 
