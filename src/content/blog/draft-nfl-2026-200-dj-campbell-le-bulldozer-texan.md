@@ -1,5 +1,5 @@
 ---
-title: "DRAFT NFL 2026 [#200] : DJ CAMPBELL. LE BULLDOZER TEXAN"
+title: "DRAFT NFL 2026 [#200] : DJ CAMPBELL. LE BULLDOZER TEXAN."
 description: Une mentalité de bulldozer et une solide expérience de titulaire à
   l'intérieur de la ligne offensive des Longhorns.
 pubDate: 2026-04-25T23:27:00.000+02:00
@@ -11,15 +11,21 @@ tags:
 draft: false
 author: Erwan
 ---
-DJ Campbell, un joueur imposant ayant été titulaire pendant trois ans chez les Longhorns, apporte une mentalité de bulldozer et une solide expérience de titulaire à l'intérieur de la ligne offensive de Miami.
+DJ Campbell, joueur massif et titulaire pendant trois saisons chez les Longhorns, apporte une véritable mentalité de bulldozer ainsi qu’une solide expérience à l’intérieur de la ligne offensive de Miami.
 
 ### PROFIL PUISSANT
-Mesurant 1,88 m et pesant 142 kg, Campbell est le garde par excellence du système de jeu en zone, conçu pour la puissance physique en profondeur et la domination sur les courtes distances. Bien qu'il ne possède pas une agilité latérale exceptionnelle, ses bras de 86 cm et son tronc puissant lui permettent de s'ancrer brusquement face aux défenseurs agressifs et de maintenir son avantage au point d'impact. Ses performances universitaires sont particulièrement impressionnantes, prouvant qu'il possède la force fonctionnelle nécessaire pour affronter les joueurs les plus percutants du football professionnel.
+
+Avec ses 1,88 m pour 142 kg, Campbell incarne le guard typique d’un système orienté zone et puissance, pensé pour dominer physiquement sur les phases de course courte et les contacts directs.  
+Même s’il ne brille pas par une grande agilité latérale, ses bras de 86 cm et sa base très solide lui permettent de s’ancrer rapidement face aux défenseurs et de contrôler le point d’impact. Son expérience universitaire confirme une force fonctionnelle déjà prête pour le niveau NFL.
 
 ### TECHNIQUE SOLIDE
-Bien que son jeu de jambes puisse être lourd en espace ouvert, Campbell compense par une excellente analyse du jeu et une vision perçante qui lui permettent d'anticiper les feintes et les blitz. Il a cumulé plus de 2 600 actions à l'Université du Texas, démontrant une endurance remarquable et une base technique solide qui lui permet de bloquer efficacement avec ses pieds et ses hanches plutôt que de s'appuyer uniquement sur la force brute. Le directeur général Jon-Eric Sullivan a noté que, même s'il devait corriger une tendance à se jeter en avant, son sang-froid de vétéran était indéniable. Cela fait de lui un pari bien plus sûr qu'un joueur en développement repêché en fin de draft.
 
-### DE LA CONCURENCE SUR LA LIGNE
-Pour Miami, ce choix envoie un message clair à la ligne offensive intérieure, car Campbell possède le potentiel nécessaire pour rivaliser avec les joueurs repêchés en début de saison dernière et prétendre à un poste de titulaire au poste de garde. Il est le cinquième joueur texan sélectionné par Sullivan ce week-end, ce qui souligne l'engagement de l'équipe envers des joueurs intelligents et aguerris issus de programmes universitaires de premier plan. Même s'il débute comme joueur de rotation, sa capacité à progresser sur le terrain et à déborder les défenseurs de deuxième rideau fait de lui un atout idéal pour les schémas de course.
+Si son jeu de pieds peut manquer de fluidité en espace ouvert, Campbell compense par une lecture du jeu fiable et une bonne anticipation des blitz et des mouvements défensifs. Avec plus de 2 600 snaps à Texas, il a développé une endurance importante et une base technique sérieuse, s’appuyant davantage sur ses hanches et son placement que sur la seule puissance brute.  
+Le GM Jon-Eric Sullivan a noté que, malgré une tendance occasionnelle à se pencher vers l’avant, son calme et sa maturité de joueur expérimenté sont évidents, ce qui en fait un profil plus sûr que de nombreux projets de fin de draft.
 
-Campbell est un choix sûr et fiable qui apporte la robustesse et la puissance nécessaires pour renforcer la ligne offensive de Miami.
+### DE LA CONCURRENCE SUR LA LIGNE
+
+Pour Miami, ce choix envoie un message clair concernant la compétition au sein de la ligne offensive intérieure. Campbell possède le potentiel pour concurrencer rapidement les joueurs déjà en place et viser une place de titulaire au poste de guard. Il est également le cinquième joueur texan sélectionné par Sullivan sur ce cycle de draft, soulignant une stratégie basée sur des profils expérimentés issus de programmes majeurs.  
+Même s’il débute comme joueur de rotation, sa capacité à ouvrir des couloirs et à progresser au second niveau en fait un atout précieux dans les schémas de course.
+
+Campbell représente un choix sûr et fiable, apportant la puissance et la stabilité nécessaires pour solidifier la ligne offensive des Dolphins.
