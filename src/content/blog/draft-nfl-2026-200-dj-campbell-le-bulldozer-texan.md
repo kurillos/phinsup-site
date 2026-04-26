@@ -3,7 +3,7 @@ title: "DRAFT NFL 2026 [#200] : DJ CAMPBELL. LE BULLDOZER TEXAN"
 description: Une mentalité de bulldozer et une solide expérience de titulaire à
   l'intérieur de la ligne offensive des Longhorns.
 pubDate: 2026-04-25T23:27:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/dj-campbell.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
