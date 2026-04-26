@@ -3,7 +3,7 @@ title: "DRAFT NFL 2026 [#238] : MAX LLEWELLYN. BONNE TECHNIQUE ET ENERGIE INCROY
 description: Un EDGE rusher technique qui entrera dans la rotation pour donner
   de la profondeur à l'effectif
 pubDate: 2026-04-26T00:30:00.000+02:00
-heroImage: /images/draft-low-stock.png
+heroImage: /images/max-llewelyn.jpeg
 category: Breaking News
 tags:
   - Miami Dolphins
