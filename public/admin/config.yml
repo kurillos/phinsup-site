@@ -32,3 +32,12 @@ collections:
           options: ["Cyril", "Lucas", "Erwan", "Hugo", "James", "Jessy", "Patrick", "Yohan", "Redaction Phin Side"],
           default: "Rédaction Phin Side"
       }
+  - name: "podcasts"
+    label: "Podcasts"
+    folder: "src/content/podcasts"
+    create: true
+    fields:
+      - { label: "Titre de l'épisode", name: "title", widget: "string" }
+      - { label: "Date de publication", name: "pubDate", widget: "datetime" }
+      - { label: "URL Spotify", name: "spotifyUrl", widget: "string", hint: "Ex: https://open.spotify.com/episode/XXXXXX" }
+      - { label: "Description", name: "description", widget: "text" }
