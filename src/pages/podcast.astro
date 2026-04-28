@@ -1,34 +1,62 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
-import episodes from '../data/podcasts.json';
+import { getCollection } from 'astro:content';
+
+const allPodcasts = await getCollection('podcasts');
+const episodes = allPodcasts.sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+
+// Convertit l'URL Spotify complète en URL embed
+function getSpotifyEmbedUrl(url: string): string {
+  try {
+    const u = new URL(url);
+    const cleanPath = u.pathname.replace(/^\//, '');
+    return `https://open.spotify.com/embed/${cleanPath}`;
+  } catch {
+    return '';
+  }
+}
 ---
 
-<Layout title="Podcast - The Phin Side">
+<Layout title="Podcast - The French Fins">
   <main class="max-w-5xl mx-auto py-12 px-6">
     <h1 class="text-4xl font-[Oswald] font-black italic uppercase text-miami-aqua mb-10">
       The French Fins <span class="text-gray-900">Podcast</span>
     </h1>
 
+    {episodes.length === 0 && (
+      <p class="text-gray-500 italic">Aucun épisode pour le moment. Revenez bientôt !</p>
+    )}
+
     <div class="grid gap-8">
       {episodes.map((ep) => (
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-l-8 border-miami-aqua flex flex-col md:flex-row">
           <div class="p-6 md:w-1/3 bg-gray-50 flex flex-col justify-center">
-            <span class="text-miami-orange font-bold text-xs uppercase">{ep.date}</span>
-            <h2 class="font-[Oswald] text-2xl uppercase italic mt-2 text-gray-900">{ep.title}</h2>
+            <span class="text-miami-orange font-bold text-xs uppercase">
+              {new Date(ep.data.pubDate).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </span>
+            {ep.data.episode && (
+              <span class="text-miami-aqua font-black text-xs uppercase mt-1">{ep.data.episode}</span>
+            )}
+            <h2 class="font-[Oswald] text-2xl uppercase italic mt-2 text-gray-900">{ep.data.title}</h2>
           </div>
 
           <div class="p-6 md:w-2/3">
-            <p class="text-sm text-gray-600 mb-4">{ep.description}</p>
+            {ep.data.description && (
+              <p class="text-sm text-gray-600 mb-4">{ep.data.description}</p>
+            )}
             
             <iframe 
               style="border-radius:12px" 
-              src={`https://open.spotify.com/embed/episode/${ep.spotifyId}?utm_source=generator&theme=0`} 
+              src={getSpotifyEmbedUrl(ep.data.spotifyUrl)}
               width="100%" 
               height="152" 
               frameborder="0" 
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-              loading="lazy">
-            </iframe>
+              loading="lazy"
+              title={ep.data.title}
+            ></iframe>
           </div>
         </div>
       ))}
