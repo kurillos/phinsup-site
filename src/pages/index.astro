@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import TwitterFeed from '@/components/TwitterFeed.astro';
-import episodesData from '../../src/data/podcasts.json';
 import results from '../../src/data/results2025.json';
 
 // 1. Récupération des articles
@@ -17,15 +16,29 @@ const posts = rawPosts
         return d2 - d1;
     });
 
-// 2. Récupération du dernier match (Patriots)
+// 2. Récupération du dernier match
 const lastGame = (Array.isArray(results) && results.length > 0) 
     ? results[results.length - 1] 
     : null;
 
-// 3. Récupération du dernier podcast (LA VARIABLE MANQUANTE)
-const latestPodcast = (Array.isArray(episodesData) && episodesData.length > 0) 
-    ? episodesData[0] 
-    : null;
+// 3. Récupération du dernier podcast depuis la collection Decap CMS
+const allPodcasts = await getCollection('podcasts');
+const latestPodcast = allPodcasts
+    .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())[0] ?? null;
+
+// Construit l'URL embed Spotify à partir de l'URL normale
+function getSpotifyEmbedUrl(url: string): string {
+    try {
+        const u = new URL(url);
+        // Retire les query params (?si=...) et insère /embed/
+        const cleanPath = u.pathname.replace(/^\//, '');
+        return `https://open.spotify.com/embed/${cleanPath}`;
+    } catch {
+        return '';
+    }
+}
+
+const embedUrl = latestPodcast ? getSpotifyEmbedUrl(latestPodcast.data.spotifyUrl) : '';
 ---
 
 <BaseLayout title="Accueil">
@@ -97,7 +110,6 @@ const latestPodcast = (Array.isArray(episodesData) && episodesData.length > 0)
                                         {post.data.description}
                                     </p>
                                     <div class="mt-auto pt-4 border-t border-gray-50 flex items-center text-miami-orange font-bold text-[10px] uppercase italic">
-                                        {/* CORRECTION : On utilise post.data.author */}
                                         <span>Par {post.data.author || "The French Fins Staff"}</span>
                                     </div>
                                 </div>
@@ -114,7 +126,7 @@ const latestPodcast = (Array.isArray(episodesData) && episodesData.length > 0)
                     <TwitterFeed />
                 </div>
 
-                {/* PODCAST CARD */}
+                {/* PODCAST CARD — lit depuis la collection Decap CMS */}
                 {latestPodcast && (
                 <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-xl border-t-4 border-miami-orange">
                     <div class="p-6">
@@ -126,28 +138,34 @@ const latestPodcast = (Array.isArray(episodesData) && episodesData.length > 0)
                             <h3 class="font-[Oswald] text-white uppercase italic text-xl tracking-wider">Dernier Podcast</h3>
                         </div>
 
-                        <div class="relative group cursor-pointer mb-4 overflow-hidden rounded-lg">
-                            <img 
-                                src={latestPodcast.thumbnail || "/images/podcast-placeholder.png"} 
-                                alt="Podcast Thumbnail" 
-                                class="w-full h-40 object-cover opacity-50 group-hover:opacity-80 transition duration-300 group-hover:scale-105" 
-                            />
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="bg-miami-aqua text-white p-4 rounded-full shadow-lg transform group-hover:scale-110 transition duration-300">
-                                    <svg class="w-8 h-8 pl-1" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M4.516 7.548c0-.923.651-1.356 1.455-.965l7.983 3.911c.804.391.804 1.025 0 1.416l-7.983 3.911c-.804.391-1.455-.042-1.455-.965V7.548z"></path>
-                                    </svg>
-                                </div>
+                        {/* Player Spotify embed */}
+                        {embedUrl && (
+                            <div class="mb-4 rounded-lg overflow-hidden">
+                                <iframe
+                                    src={embedUrl}
+                                    width="100%"
+                                    height="152"
+                                    frameborder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"
+                                    title={latestPodcast.data.title}
+                                    style="border-radius: 8px; display: block;"
+                                ></iframe>
                             </div>
-                        </div>
+                        )}
 
                         <div class="mb-5">
                             <h4 class="text-white font-bold text-lg leading-tight font-[Oswald] italic uppercase tracking-tight">
-                                {latestPodcast.title}
+                                {latestPodcast.data.title}
                             </h4>
                             <p class="text-miami-aqua text-[10px] font-black uppercase mt-1 tracking-widest italic">
-                                {latestPodcast.date}
+                                {new Date(latestPodcast.data.pubDate).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
                             </p>
+                            {latestPodcast.data.description && (
+                                <p class="text-slate-400 text-xs mt-2 line-clamp-2">
+                                    {latestPodcast.data.description}
+                                </p>
+                            )}
                         </div>
 
                         <a href="/podcast" class="block w-full text-center bg-transparent border border-miami-aqua text-miami-aqua hover:bg-miami-aqua hover:text-white font-black py-2.5 rounded-xl transition-all duration-300 text-xs uppercase italic tracking-widest">
