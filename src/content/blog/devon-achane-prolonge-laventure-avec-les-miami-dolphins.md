@@ -26,7 +26,8 @@ author: Cyril
 
 L'accord porte sur une prolongation de **quatre ans** pour un montant total de **68 millions de dollars**. Voici les chiffres clés :
 
-* **Valeur totale :** 68 000 000 $* **Montant garanti :** 32 000 000$
+* **Valeur totale :** 68 000 000 $ 
+* **Montant garanti :** 32 000 000$
 * **Durée :** 4 années supplémentaires
 
 Cette signature démontre la volonté de la franchise de construire autour de ses jeunes talents offensifs et de maintenir une menace constante au sol comme dans les airs.
