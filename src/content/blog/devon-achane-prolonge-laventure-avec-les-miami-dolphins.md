@@ -43,6 +43,7 @@ En seulement trois saisons, Achane a prouvé qu'il était bien plus qu'un simple
 | 🏈 **Yards à la réception** | 1 277 yards |
 | 🏈 **Touchdowns (TDs) au total** | 35 |
 
+
 ## Pourquoi c'est une excellente nouvelle
 
 Avec une capacité rare à transformer n'importe quelle petite brèche en un touchdown de 50 yards, Achane est le moteur de cette attaque "Track Team". Cette prolongation assure une stabilité au poste de Running Back et promet encore de nombreux highlights au Hard Rock Stadium.
