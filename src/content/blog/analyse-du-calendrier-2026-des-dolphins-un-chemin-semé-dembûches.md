@@ -4,7 +4,7 @@ description: Découvrez l'analyse complète du calendrier 2026 des Miami Dolphin
   Entre déplacements périlleux et chocs à domicile, la 61e saison s'annonce
   électrique.
 pubDate: 2026-05-18T10:14:00.000+02:00
-heroImage: /images/img_5107.jpg
+heroImage: /images/analyse-calendrier-2026.png
 category: Analyse
 tags:
   - Miami Dolphins
