@@ -6,7 +6,7 @@ description: "C'est la nouvelle que tous les fans des Fins attendaient :
   Schefter, sécurise l'avenir de l'un des joueurs les plus explosifs de la
   ligue."
 pubDate: 2026-05-14T17:00:00.000+02:00
-heroImage: /images/devon_achane
+heroImage: /images/contrat-devon-achane.png
 category: Breaking News
 tags:
   - Miami Dolphins
