@@ -1,6 +1,16 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import players from '../data/roster.json';
+
+// Generic silhouette shown when a player's official headshot fails to load
+// (common for recent UDFA signings / rookies without an ESPN photo yet).
+const FALLBACK_IMG = "data:image/svg+xml;utf8," + encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#e5e7eb"/>
+  <circle cx="100" cy="78" r="38" fill="#9ca3af"/>
+  <path d="M30 190 C30 140 60 118 100 118 C140 118 170 140 170 190 Z" fill="#9ca3af"/>
+</svg>
+`);
 ---
 
 <Layout title="Roster 2026 - The Phin Side">
@@ -57,7 +67,12 @@ import players from '../data/roster.json';
               
               <div class={`absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 ${themeColor} overflow-hidden`}>
                 <div class="relative h-3/4 bg-gray-100 flex items-center justify-center overflow-hidden">
-                  <img src={player.image} alt={player.name} class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                  <img
+                    src={player.image}
+                    alt={player.name}
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    onerror={`this.onerror=null; this.src='${FALLBACK_IMG}'; this.classList.add('fallback-img');`}
+                  />
                   <div class={`absolute top-4 left-4 ${themeBg} text-white font-[Oswald] font-bold text-3xl px-3 py-1 rounded shadow-lg italic`}>#{player.number}</div>
                 </div>
                 <div class="p-5">
@@ -130,6 +145,7 @@ import players from '../data/roster.json';
   .sub-filter-btn.active { border-color: #F26722; color: #F26722; }
   .hidden { display: none !important; }
   .hidden-filter { display: none !important; }
+  .fallback-img { object-fit: contain !important; padding: 1.5rem; opacity: 0.9; }
 </style>
 
 <script>
