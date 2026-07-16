@@ -8,7 +8,7 @@ description: C’est officiel, les Dolphins ouvrent une toute nouvelle page de
   d'ouverture, sous les ordres du Head Coach Jeff Hafley. Faisons le point sur
   les forces en présence dans la pocket.
 pubDate: 2026-07-16T08:00:00.000+02:00
-heroImage: /images/qb-preview.webp
+heroImage: /images/qbs.png
 category: Actu
 tags:
   - Miami Dolphins
