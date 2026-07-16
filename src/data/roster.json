@@ -9,11 +9,11 @@
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4242512.png",
     "stats": {
       "label": "Cmp %",
-      "val1": "58.4%",
-      "label2": "Yards",
-      "val2": "2 140",
-      "label3": "TDs",
-      "val3": "13"
+      "val1": "85.7%",
+      "label2": "Y/A",
+      "val2": "12.1",
+      "label3": "TD:INT",
+      "val3": "3:0"
     },
     "bio": "Le bras le plus vivant du vestiaire, enfin titulaire à temps plein après des années d'attente."
   },
@@ -28,10 +28,10 @@
     "stats": {
       "label": "Cmp %",
       "val1": "61.2%",
-      "label2": "Yards",
-      "val2": "980",
-      "label3": "TDs",
-      "val3": "6"
+      "label2": "Y/A",
+      "val2": "6.8",
+      "label3": "TD:INT",
+      "val3": "6:3"
     },
     "bio": "Le rookie qui pousse Willis chaque semaine à l'entraînement, la relève est déjà là."
   },
@@ -44,8 +44,8 @@
     "subUnit": "rushing",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4429160.png",
     "stats": {
-      "label": "Attaques",
-      "val1": "184",
+      "label": "Yards/Course",
+      "val1": "5.0",
       "label2": "Yards",
       "val2": "912",
       "label3": "TDs",
@@ -62,8 +62,8 @@
     "subUnit": "rushing",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4682745.png",
     "stats": {
-      "label": "Attaques",
-      "val1": "96",
+      "label": "Yards/Course",
+      "val1": "4.6",
       "label2": "Yards",
       "val2": "441",
       "label3": "TDs",
@@ -82,8 +82,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "71",
-      "label2": "Yards",
-      "val2": "742",
+      "label2": "Y/Réception",
+      "val2": "10.5",
       "label3": "TDs",
       "val3": "4"
     },
@@ -100,8 +100,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "22",
-      "label2": "Yards",
-      "val2": "298",
+      "label2": "Y/Réception",
+      "val2": "13.5",
       "label3": "TDs",
       "val3": "2"
     },
@@ -118,8 +118,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "48",
-      "label2": "Yards",
-      "val2": "612",
+      "label2": "Y/Réception",
+      "val2": "12.8",
       "label3": "TDs",
       "val3": "3"
     },
@@ -136,8 +136,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "19",
-      "label2": "Yards",
-      "val2": "231",
+      "label2": "Y/Réception",
+      "val2": "12.2",
       "label3": "TDs",
       "val3": "1"
     },
@@ -154,8 +154,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "38",
-      "label2": "Yards",
-      "val2": "487",
+      "label2": "Y/Réception",
+      "val2": "12.8",
       "label3": "TDs",
       "val3": "2"
     },
@@ -172,8 +172,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "14",
-      "label2": "Yards",
-      "val2": "165",
+      "label2": "Y/Réception",
+      "val2": "11.8",
       "label3": "TDs",
       "val3": "1"
     },
@@ -190,8 +190,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "39",
-      "label2": "Yards",
-      "val2": "421",
+      "label2": "Y/Réception",
+      "val2": "10.8",
       "label3": "TDs",
       "val3": "3"
     },
@@ -208,8 +208,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "9",
-      "label2": "Yards",
-      "val2": "94",
+      "label2": "Y/Réception",
+      "val2": "10.4",
       "label3": "TDs",
       "val3": "1"
     },
@@ -224,12 +224,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4567493.png",
     "stats": {
-      "label": "Matchs",
+      "label": "Titularisations",
       "val1": "17",
-      "label2": "Titularisations",
-      "val2": "17",
-      "label3": "Sacks encaissés",
-      "val3": "4"
+      "label2": "Sacks encaissés",
+      "val2": "4",
+      "label3": "Pénalités",
+      "val3": "5"
     },
     "bio": "Le protecteur du flanc gauche, un gabarit imposant qui monte en puissance saison après saison."
   },
@@ -242,12 +242,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4379412.png",
     "stats": {
-      "label": "Matchs",
-      "val1": "14",
-      "label2": "Titularisations",
-      "val2": "6",
-      "label3": "Sacks encaissés",
-      "val3": "2"
+      "label": "Titularisations",
+      "val1": "6",
+      "label2": "Sacks encaissés",
+      "val2": "2",
+      "label3": "Pénalités",
+      "val3": "1"
     },
     "bio": "Polyvalent, capable de dépanner à la garde comme au tacle gauche."
   },
@@ -260,12 +260,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4870976.png",
     "stats": {
-      "label": "Matchs",
+      "label": "Titularisations",
       "val1": "17",
-      "label2": "Titularisations",
-      "val2": "17",
-      "label3": "Sacks encaissés",
-      "val3": "3"
+      "label2": "Sacks encaissés",
+      "val2": "3",
+      "label3": "Pénalités",
+      "val3": "6"
     },
     "bio": "Rookie massif qui a explosé les standards du combine, désormais titulaire à la garde gauche."
   },
@@ -278,12 +278,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4040537.png",
     "stats": {
-      "label": "Matchs",
+      "label": "Titularisations",
       "val1": "17",
-      "label2": "Titularisations",
-      "val2": "17",
-      "label3": "Sacks encaissés",
-      "val3": "2"
+      "label2": "Sacks encaissés",
+      "val2": "2",
+      "label3": "Pénalités",
+      "val3": "6"
     },
     "bio": "Le cerveau de la ligne offensive, il fait les ajustements avant chaque snap."
   },
@@ -296,11 +296,11 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4362064.png",
     "stats": {
-      "label": "Matchs",
-      "val1": "12",
-      "label2": "Titularisations",
-      "val2": "2",
-      "label3": "Sacks encaissés",
+      "label": "Titularisations",
+      "val1": "2",
+      "label2": "Sacks encaissés",
+      "val2": "1",
+      "label3": "Pénalités",
       "val3": "1"
     },
     "bio": "Doublure fiable au centre, prêt à entrer en jeu à tout moment."
@@ -314,12 +314,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4819257.png",
     "stats": {
-      "label": "Matchs",
+      "label": "Titularisations",
       "val1": "17",
-      "label2": "Titularisations",
-      "val2": "17",
-      "label3": "Sacks encaissés",
-      "val3": "3"
+      "label2": "Sacks encaissés",
+      "val2": "3",
+      "label3": "Pénalités",
+      "val3": "6"
     },
     "bio": "Repositionné à droite cette saison, il continue de progresser à vue d'oeil."
   },
@@ -332,12 +332,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4432503.png",
     "stats": {
-      "label": "Matchs",
-      "val1": "10",
-      "label2": "Titularisations",
+      "label": "Titularisations",
+      "val1": "1",
+      "label2": "Sacks encaissés",
       "val2": "1",
-      "label3": "Sacks encaissés",
-      "val3": "1"
+      "label3": "Pénalités",
+      "val3": "0"
     },
     "bio": "Un remplaçant solide qui grappille du temps de jeu en fin de rencontre."
   },
@@ -350,12 +350,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4271632.png",
     "stats": {
-      "label": "Matchs",
+      "label": "Titularisations",
       "val1": "15",
-      "label2": "Titularisations",
-      "val2": "15",
-      "label3": "Sacks encaissés",
-      "val3": "5"
+      "label2": "Sacks encaissés",
+      "val2": "5",
+      "label3": "Pénalités",
+      "val3": "4"
     },
     "bio": "Le vétéran de la ligne, toujours aussi précieux quand la santé est au rendez-vous."
   },
@@ -368,12 +368,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/3895840.png",
     "stats": {
-      "label": "Matchs",
-      "val1": "16",
-      "label2": "Titularisations",
-      "val2": "3",
-      "label3": "Sacks encaissés",
-      "val3": "1"
+      "label": "Titularisations",
+      "val1": "3",
+      "label2": "Sacks encaissés",
+      "val2": "1",
+      "label3": "Pénalités",
+      "val3": "2"
     },
     "bio": "Le tacle de swing qui peut protéger les deux côtés en cas de pépin physique."
   },
@@ -532,10 +532,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "121",
-      "label2": "Sacks",
-      "val2": "2",
-      "label3": "TFL",
-      "val3": "8"
+      "label2": "TFL",
+      "val2": "8",
+      "label3": "Sacks",
+      "val3": "2"
     },
     "bio": "Le patron du milieu de terrain, un vrai chasseur de ballon sideline to sideline."
   },
@@ -550,10 +550,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "34",
-      "label2": "Sacks",
-      "val2": "1",
-      "label3": "TFL",
-      "val3": "3"
+      "label2": "TFL",
+      "val2": "3",
+      "label3": "Sacks",
+      "val3": "1"
     },
     "bio": "Rookie physique qui apprend vite les rouages du poste de linebacker fort."
   },
@@ -568,10 +568,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "98",
-      "label2": "Sacks",
-      "val2": "1.5",
-      "label3": "TFL",
-      "val3": "6"
+      "label2": "TFL",
+      "val2": "6",
+      "label3": "Sacks",
+      "val3": "1.5"
     },
     "bio": "Une vraie tête brûlée qui ne recule devant aucun contact."
   },
@@ -586,10 +586,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "29",
-      "label2": "Sacks",
-      "val2": "0.5",
-      "label3": "TFL",
-      "val3": "2"
+      "label2": "TFL",
+      "val2": "2",
+      "label3": "Sacks",
+      "val3": "0.5"
     },
     "bio": "Ancien safety reconverti, apporte une polyvalence rare en couverture."
   },
@@ -604,10 +604,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "67",
-      "label2": "Sacks",
-      "val2": "1",
-      "label3": "TFL",
-      "val3": "5"
+      "label2": "TFL",
+      "val2": "5",
+      "label3": "Sacks",
+      "val3": "1"
     },
     "bio": "Rapide et instinctif, un allié précieux contre les attaques de passe."
   },
@@ -622,10 +622,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "15",
-      "label2": "Sacks",
-      "val2": "2",
-      "label3": "TFL",
-      "val3": "3"
+      "label2": "TFL",
+      "val2": "3",
+      "label3": "Sacks",
+      "val3": "2"
     },
     "bio": "Jeune rusher hybride qui pourrait vite grimper dans la hiérarchie."
   },
@@ -640,10 +640,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "58",
-      "label2": "Interceptions",
-      "val2": "2",
-      "label3": "PD",
-      "val3": "11"
+      "label2": "PD",
+      "val2": "11",
+      "label3": "INT",
+      "val3": "2"
     },
     "bio": "Le nouveau visage du coin gauche, collant en couverture homme à homme."
   },
@@ -658,10 +658,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "22",
-      "label2": "Interceptions",
-      "val2": "0",
-      "label3": "PD",
-      "val3": "4"
+      "label2": "PD",
+      "val2": "4",
+      "label3": "INT",
+      "val3": "0"
     },
     "bio": "Doublure combative qui n'hésite pas à se jeter dans les duels physiques."
   },
@@ -676,7 +676,7 @@
     "stats": {
       "label": "Tacles",
       "val1": "74",
-      "label2": "Interceptions",
+      "label2": "INT",
       "val2": "1",
       "label3": "PD",
       "val3": "7"
@@ -694,7 +694,7 @@
     "stats": {
       "label": "Tacles",
       "val1": "16",
-      "label2": "Interceptions",
+      "label2": "INT",
       "val2": "0",
       "label3": "PD",
       "val3": "2"
@@ -712,7 +712,7 @@
     "stats": {
       "label": "Tacles",
       "val1": "61",
-      "label2": "Interceptions",
+      "label2": "INT",
       "val2": "3",
       "label3": "PD",
       "val3": "9"
@@ -730,7 +730,7 @@
     "stats": {
       "label": "Tacles",
       "val1": "18",
-      "label2": "Interceptions",
+      "label2": "INT",
       "val2": "1",
       "label3": "PD",
       "val3": "3"
@@ -748,10 +748,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "49",
-      "label2": "Interceptions",
-      "val2": "1",
-      "label3": "PD",
-      "val3": "10"
+      "label2": "PD",
+      "val2": "10",
+      "label3": "INT",
+      "val3": "1"
     },
     "bio": "Un profil physique impressionnant sur le coin droit, encore en pleine progression."
   },
@@ -766,10 +766,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "20",
-      "label2": "Interceptions",
-      "val2": "1",
-      "label3": "PD",
-      "val3": "5"
+      "label2": "PD",
+      "val2": "5",
+      "label3": "INT",
+      "val3": "1"
     },
     "bio": "De longs bras qui compliquent la vie des receveurs adverses en couverture."
   },
@@ -784,10 +784,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "52",
-      "label2": "Interceptions",
-      "val2": "2",
-      "label3": "PD",
-      "val3": "8"
+      "label2": "PD",
+      "val2": "8",
+      "label3": "INT",
+      "val3": "2"
     },
     "bio": "Le spécialiste du slot, agressif et opportuniste sur le ballon."
   },
@@ -802,10 +802,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "9",
-      "label2": "Interceptions",
-      "val2": "0",
-      "label3": "PD",
-      "val3": "2"
+      "label2": "PD",
+      "val2": "2",
+      "label3": "INT",
+      "val3": "0"
     },
     "bio": "Jeune joueur de nickel qui grappille des snaps en couverture rapprochée."
   },
@@ -892,10 +892,10 @@
     "stats": {
       "label": "Cmp %",
       "val1": "55.0%",
-      "label2": "Yards",
-      "val2": "310",
-      "label3": "TDs",
-      "val3": "2"
+      "label2": "Y/A",
+      "val2": "5.9",
+      "label3": "TD:INT",
+      "val3": "2:1"
     },
     "bio": "Le QB3 discret, apprécié en interne pour son leadership et sa préparation."
   },
@@ -910,10 +910,10 @@
     "stats": {
       "label": "Cmp %",
       "val1": "51.5%",
-      "label2": "Yards",
-      "val2": "0",
-      "label3": "TDs",
-      "val3": "0"
+      "label2": "Y/A",
+      "val2": "5.2",
+      "label3": "TD:INT",
+      "val3": "0:0"
     },
     "bio": "Signé après le draft, un projet à long terme dans le project quarterback room."
   },
@@ -926,8 +926,8 @@
     "subUnit": "rushing",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4711533.png",
     "stats": {
-      "label": "Attaques",
-      "val1": "38",
+      "label": "Yards/Course",
+      "val1": "4.3",
       "label2": "Yards",
       "val2": "162",
       "label3": "TDs",
@@ -944,8 +944,8 @@
     "subUnit": "rushing",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4431536.png",
     "stats": {
-      "label": "Attaques",
-      "val1": "14",
+      "label": "Yards/Course",
+      "val1": "3.6",
       "label2": "Yards",
       "val2": "51",
       "label3": "TDs",
@@ -964,8 +964,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "17",
-      "label2": "Yards",
-      "val2": "203",
+      "label2": "Y/Réception",
+      "val2": "11.9",
       "label3": "TDs",
       "val3": "1"
     },
@@ -982,8 +982,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "11",
-      "label2": "Yards",
-      "val2": "129",
+      "label2": "Y/Réception",
+      "val2": "11.7",
       "label3": "TDs",
       "val3": "1"
     },
@@ -1000,8 +1000,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "13",
-      "label2": "Yards",
-      "val2": "156",
+      "label2": "Y/Réception",
+      "val2": "12.0",
       "label3": "TDs",
       "val3": "0"
     },
@@ -1018,8 +1018,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "8",
-      "label2": "Yards",
-      "val2": "94",
+      "label2": "Y/Réception",
+      "val2": "11.8",
       "label3": "TDs",
       "val3": "0"
     },
@@ -1036,8 +1036,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "9",
-      "label2": "Yards",
-      "val2": "112",
+      "label2": "Y/Réception",
+      "val2": "12.4",
       "label3": "TDs",
       "val3": "1"
     },
@@ -1054,8 +1054,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "3",
-      "label2": "Yards",
-      "val2": "31",
+      "label2": "Y/Réception",
+      "val2": "10.3",
       "label3": "TDs",
       "val3": "0"
     },
@@ -1072,8 +1072,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "6",
-      "label2": "Yards",
-      "val2": "58",
+      "label2": "Y/Réception",
+      "val2": "9.7",
       "label3": "TDs",
       "val3": "0"
     },
@@ -1090,8 +1090,8 @@
     "stats": {
       "label": "Réceptions",
       "val1": "4",
-      "label2": "Yards",
-      "val2": "39",
+      "label2": "Y/Réception",
+      "val2": "9.8",
       "label3": "TDs",
       "val3": "1"
     },
@@ -1106,11 +1106,11 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4431025.png",
     "stats": {
-      "label": "Matchs",
-      "val1": "6",
-      "label2": "Titularisations",
+      "label": "Titularisations",
+      "val1": "0",
+      "label2": "Sacks encaissés",
       "val2": "0",
-      "label3": "Sacks encaissés",
+      "label3": "Pénalités",
       "val3": "0"
     },
     "bio": "Rookie robuste qui pourrait vite grimper si les blessures frappent la ligne."
@@ -1124,12 +1124,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4374089.png",
     "stats": {
-      "label": "Matchs",
-      "val1": "8",
-      "label2": "Titularisations",
+      "label": "Titularisations",
+      "val1": "1",
+      "label2": "Sacks encaissés",
       "val2": "1",
-      "label3": "Sacks encaissés",
-      "val3": "1"
+      "label3": "Pénalités",
+      "val3": "0"
     },
     "bio": "Doublure supplémentaire au tacle, apprécié pour sa polyvalence des deux côtés."
   },
@@ -1142,11 +1142,11 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/4613269.png",
     "stats": {
-      "label": "Matchs",
-      "val1": "3",
-      "label2": "Titularisations",
+      "label": "Titularisations",
+      "val1": "0",
+      "label2": "Sacks encaissés",
       "val2": "0",
-      "label3": "Sacks encaissés",
+      "label3": "Pénalités",
       "val3": "0"
     },
     "bio": "Signé en UDFA, il impressionne déjà par sa capacité à lire les fronts défensifs."
@@ -1160,11 +1160,11 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/5081977.png",
     "stats": {
-      "label": "Matchs",
-      "val1": "2",
-      "label2": "Titularisations",
+      "label": "Titularisations",
+      "val1": "0",
+      "label2": "Sacks encaissés",
       "val2": "0",
-      "label3": "Sacks encaissés",
+      "label3": "Pénalités",
       "val3": "0"
     },
     "bio": "Jeune garde encore en développement, quatrième option à droite."
@@ -1178,12 +1178,12 @@
     "subUnit": "line",
     "image": "https://a.espncdn.com/i/headshots/nfl/players/full/5145719.png",
     "stats": {
-      "label": "Matchs",
-      "val1": "5",
-      "label2": "Titularisations",
-      "val2": "0",
-      "label3": "Sacks encaissés",
-      "val3": "1"
+      "label": "Titularisations",
+      "val1": "0",
+      "label2": "Sacks encaissés",
+      "val2": "1",
+      "label3": "Pénalités",
+      "val3": "0"
     },
     "bio": "Un gabarit imposant qui patiente derrière Jackson et Heck au tacle droit."
   },
@@ -1360,10 +1360,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "22",
-      "label2": "Sacks",
-      "val2": "0",
-      "label3": "TFL",
-      "val3": "2"
+      "label2": "TFL",
+      "val2": "2",
+      "label3": "Sacks",
+      "val3": "0"
     },
     "bio": "Doublure au milieu qui excelle surtout sur les unités spéciales."
   },
@@ -1378,10 +1378,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "8",
-      "label2": "Sacks",
-      "val2": "0",
-      "label3": "TFL",
-      "val3": "1"
+      "label2": "TFL",
+      "val2": "1",
+      "label3": "Sacks",
+      "val3": "0"
     },
     "bio": "Encore un rôle limité, mais apprécié pour son sérieux à l'entraînement."
   },
@@ -1396,10 +1396,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "17",
-      "label2": "Sacks",
-      "val2": "0.5",
-      "label3": "TFL",
-      "val3": "2"
+      "label2": "TFL",
+      "val2": "2",
+      "label3": "Sacks",
+      "val3": "0.5"
     },
     "bio": "Rookie physique qui grimpe rapidement dans la hiérarchie au poste fort."
   },
@@ -1414,10 +1414,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "19",
-      "label2": "Interceptions",
-      "val2": "0",
-      "label3": "PD",
-      "val3": "3"
+      "label2": "PD",
+      "val2": "3",
+      "label3": "INT",
+      "val3": "0"
     },
     "bio": "Un corner athlétique qui cherche encore sa place dans la rotation."
   },
@@ -1432,10 +1432,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "6",
-      "label2": "Interceptions",
-      "val2": "0",
-      "label3": "PD",
-      "val3": "1"
+      "label2": "PD",
+      "val2": "1",
+      "label3": "INT",
+      "val3": "0"
     },
     "bio": "Doublure supplémentaire au coin, surtout utilisé en couverture de kickoff."
   },
@@ -1450,7 +1450,7 @@
     "stats": {
       "label": "Tacles",
       "val1": "13",
-      "label2": "Interceptions",
+      "label2": "INT",
       "val2": "0",
       "label3": "PD",
       "val3": "1"
@@ -1468,7 +1468,7 @@
     "stats": {
       "label": "Tacles",
       "val1": "11",
-      "label2": "Interceptions",
+      "label2": "INT",
       "val2": "1",
       "label3": "PD",
       "val3": "2"
@@ -1486,7 +1486,7 @@
     "stats": {
       "label": "Tacles",
       "val1": "5",
-      "label2": "Interceptions",
+      "label2": "INT",
       "val2": "0",
       "label3": "PD",
       "val3": "1"
@@ -1504,10 +1504,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "9",
-      "label2": "Interceptions",
-      "val2": "0",
-      "label3": "PD",
-      "val3": "2"
+      "label2": "PD",
+      "val2": "2",
+      "label3": "INT",
+      "val3": "0"
     },
     "bio": "Corner de profondeur qui se distingue surtout en couverture de kickoff."
   },
@@ -1522,10 +1522,10 @@
     "stats": {
       "label": "Tacles",
       "val1": "4",
-      "label2": "Interceptions",
-      "val2": "0",
-      "label3": "PD",
-      "val3": "1"
+      "label2": "PD",
+      "val2": "1",
+      "label3": "INT",
+      "val3": "0"
     },
     "bio": "Le nom le plus frais du groupe de corners, encore en phase de développement."
   }
