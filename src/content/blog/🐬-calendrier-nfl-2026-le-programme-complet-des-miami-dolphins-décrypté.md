@@ -9,7 +9,7 @@ description: >-
 
   Entre les chocs de division, les déplacements périlleux sur la côte Ouest et la réception des champions en titre, sortez vos agendas : voici l'analyse complète de ce qui nous attend !
 pubDate: 2026-05-15T16:14:00.000+02:00
-heroImage: /images/img_5059.jpeg
+heroImage: /images/calendrier-2026.png
 category: Actu
 tags:
   - Miami Dolphins
