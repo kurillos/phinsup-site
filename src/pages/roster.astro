@@ -48,6 +48,8 @@ import players from '../data/roster.json';
         const themeColor = isOffense ? 'border-miami-aqua' : (isDefense ? 'border-miami-orange' : 'border-gray-400');
         const themeBg = isOffense ? 'bg-miami-aqua' : (isDefense ? 'bg-miami-orange' : 'bg-gray-400');
         const themeText = isOffense ? 'text-miami-aqua' : (isDefense ? 'text-miami-orange' : 'text-gray-400');
+        const label2 = player.stats.label2 ?? 'Yards';
+        const label3 = player.stats.label3 ?? 'TDs';
 
         return (
           <div class="player-card h-120" data-unit={player.unit} data-subunit={player.subUnit}>
@@ -76,11 +78,11 @@ import players from '../data/roster.json';
                       <p class="text-xl font-black">{player.stats.val1}</p>
                     </div>
                     <div class="bg-white/10 p-2 rounded border-x border-white/10">
-                      <p class="text-[10px] uppercase opacity-70 font-bold">Yards</p>
+                      <p class="text-[10px] uppercase opacity-70 font-bold">{label2}</p>
                       <p class="text-xl font-black">{player.stats.val2}</p>
                     </div>
                     <div class="bg-white/10 p-2 rounded">
-                      <p class="text-[10px] uppercase opacity-70 font-bold">TDs</p>
+                      <p class="text-[10px] uppercase opacity-70 font-bold">{label3}</p>
                       <p class="text-xl font-black">{player.stats.val3}</p>
                     </div>
                   </div>
