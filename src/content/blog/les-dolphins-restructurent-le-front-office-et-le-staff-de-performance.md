@@ -13,7 +13,7 @@ description: >-
 
   Voici le récapitulatif complet de ces mouvements stratégiques.
 pubDate: 2026-06-02T08:12:00.000+02:00
-heroImage: /images/cc583566-3511-4245-ac51-0bf54a8d5def.jpg
+heroImage: /images/architecture-dolphins.png
 category: Actu
 tags:
   - Miami Dolphins
