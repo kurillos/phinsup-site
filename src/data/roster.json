@@ -15,7 +15,9 @@
       "label3": "TD:INT",
       "val3": "3:0"
     },
-    "bio": "Le bras le plus vivant du vestiaire, enfin titulaire à temps plein après des années d'attente."
+    "bio": "Le bras le plus vivant du vestiaire, enfin titulaire à temps plein après des années d'attente.",
+    "role": "QB",
+    "depth": 1
   },
   {
     "number": 14,
@@ -33,7 +35,9 @@
       "label3": "TD:INT",
       "val3": "6:3"
     },
-    "bio": "Le rookie qui pousse Willis chaque semaine à l'entraînement, la relève est déjà là."
+    "bio": "Le rookie qui pousse Willis chaque semaine à l'entraînement, la relève est déjà là.",
+    "role": "QB",
+    "depth": 2
   },
   {
     "number": 28,
@@ -51,7 +55,9 @@
       "label3": "TDs",
       "val3": "7"
     },
-    "bio": "Une pointe de vitesse rare, capable de transformer un jeu banal en highlight en une foulée."
+    "bio": "Une pointe de vitesse rare, capable de transformer un jeu banal en highlight en une foulée.",
+    "role": "RB",
+    "depth": 1
   },
   {
     "number": 5,
@@ -69,7 +75,9 @@
       "label3": "TDs",
       "val3": "3"
     },
-    "bio": "Le complément parfait d'Achane, dur au contact et fiable en protection."
+    "bio": "Le complément parfait d'Achane, dur au contact et fiable en protection.",
+    "role": "RB",
+    "depth": 2
   },
   {
     "number": 6,
@@ -87,7 +95,9 @@
       "label3": "TDs",
       "val3": "4"
     },
-    "bio": "Nouveau numéro 1 par défaut après le grand ménage à l'extérieur, il a saisi sa chance."
+    "bio": "Nouveau numéro 1 par défaut après le grand ménage à l'extérieur, il a saisi sa chance.",
+    "role": "WR1",
+    "depth": 1
   },
   {
     "number": 7,
@@ -105,7 +115,9 @@
       "label3": "TDs",
       "val3": "2"
     },
-    "bio": "Un gabarit de 1m93 qui promet de devenir un cauchemar dans les zones rouges."
+    "bio": "Un gabarit de 1m93 qui promet de devenir un cauchemar dans les zones rouges.",
+    "role": "WR1",
+    "depth": 2
   },
   {
     "number": 1,
@@ -123,7 +135,9 @@
       "label3": "TDs",
       "val3": "3"
     },
-    "bio": "Signé en agence libre pour apporter de l'expérience à un groupe de récepteurs rajeuni."
+    "bio": "Signé en agence libre pour apporter de l'expérience à un groupe de récepteurs rajeuni.",
+    "role": "WR2",
+    "depth": 1
   },
   {
     "number": 18,
@@ -141,7 +155,9 @@
       "label3": "TDs",
       "val3": "1"
     },
-    "bio": "Grand gabarit et bon athlète, encore en phase d'apprentissage du playbook."
+    "bio": "Grand gabarit et bon athlète, encore en phase d'apprentissage du playbook.",
+    "role": "WR2",
+    "depth": 2
   },
   {
     "number": 4,
@@ -159,7 +175,9 @@
       "label3": "TDs",
       "val3": "2"
     },
-    "bio": "Le petit gabarit le plus rapide de l'effectif, une menace immédiate en profondeur."
+    "bio": "Le petit gabarit le plus rapide de l'effectif, une menace immédiate en profondeur.",
+    "role": "WR3",
+    "depth": 1
   },
   {
     "number": 83,
@@ -177,7 +195,9 @@
       "label3": "TDs",
       "val3": "1"
     },
-    "bio": "Utilisé aussi comme retourneur, un couteau suisse polyvalent tout juste arrivé de la fac."
+    "bio": "Utilisé aussi comme retourneur, un couteau suisse polyvalent tout juste arrivé de la fac.",
+    "role": "WR3",
+    "depth": 2
   },
   {
     "number": 85,
@@ -195,7 +215,9 @@
       "label3": "TDs",
       "val3": "3"
     },
-    "bio": "De retour de blessure, il redevient l'option de confiance sur les tirs courts."
+    "bio": "De retour de blessure, il redevient l'option de confiance sur les tirs courts.",
+    "role": "TE",
+    "depth": 1
   },
   {
     "number": 82,
@@ -213,7 +235,9 @@
       "label3": "TDs",
       "val3": "1"
     },
-    "bio": "Un bloqueur solide qui apprend vite le rôle de deuxième tight end."
+    "bio": "Un bloqueur solide qui apprend vite le rôle de deuxième tight end.",
+    "role": "TE",
+    "depth": 2
   },
   {
     "number": 52,
@@ -231,7 +255,9 @@
       "label3": "Pénalités",
       "val3": "5"
     },
-    "bio": "Le protecteur du flanc gauche, un gabarit imposant qui monte en puissance saison après saison."
+    "bio": "Le protecteur du flanc gauche, un gabarit imposant qui monte en puissance saison après saison.",
+    "role": "LT",
+    "depth": 1
   },
   {
     "number": 69,
@@ -249,7 +275,9 @@
       "label3": "Pénalités",
       "val3": "1"
     },
-    "bio": "Polyvalent, capable de dépanner à la garde comme au tacle gauche."
+    "bio": "Polyvalent, capable de dépanner à la garde comme au tacle gauche.",
+    "role": "LT",
+    "depth": 2
   },
   {
     "number": 74,
@@ -267,7 +295,9 @@
       "label3": "Pénalités",
       "val3": "6"
     },
-    "bio": "Rookie massif qui a explosé les standards du combine, désormais titulaire à la garde gauche."
+    "bio": "Rookie massif qui a explosé les standards du combine, désormais titulaire à la garde gauche.",
+    "role": "LG",
+    "depth": 1
   },
   {
     "number": 55,
@@ -285,7 +315,9 @@
       "label3": "Pénalités",
       "val3": "6"
     },
-    "bio": "Le cerveau de la ligne offensive, il fait les ajustements avant chaque snap."
+    "bio": "Le cerveau de la ligne offensive, il fait les ajustements avant chaque snap.",
+    "role": "C",
+    "depth": 1
   },
   {
     "number": 60,
@@ -303,7 +335,9 @@
       "label3": "Pénalités",
       "val3": "1"
     },
-    "bio": "Doublure fiable au centre, prêt à entrer en jeu à tout moment."
+    "bio": "Doublure fiable au centre, prêt à entrer en jeu à tout moment.",
+    "role": "C",
+    "depth": 2
   },
   {
     "number": 72,
@@ -321,7 +355,9 @@
       "label3": "Pénalités",
       "val3": "6"
     },
-    "bio": "Repositionné à droite cette saison, il continue de progresser à vue d'oeil."
+    "bio": "Repositionné à droite cette saison, il continue de progresser à vue d'oeil.",
+    "role": "RG",
+    "depth": 1
   },
   {
     "number": 68,
@@ -339,7 +375,9 @@
       "label3": "Pénalités",
       "val3": "0"
     },
-    "bio": "Un remplaçant solide qui grappille du temps de jeu en fin de rencontre."
+    "bio": "Un remplaçant solide qui grappille du temps de jeu en fin de rencontre.",
+    "role": "RG",
+    "depth": 2
   },
   {
     "number": 73,
@@ -357,7 +395,9 @@
       "label3": "Pénalités",
       "val3": "4"
     },
-    "bio": "Le vétéran de la ligne, toujours aussi précieux quand la santé est au rendez-vous."
+    "bio": "Le vétéran de la ligne, toujours aussi précieux quand la santé est au rendez-vous.",
+    "role": "RT",
+    "depth": 1
   },
   {
     "number": 67,
@@ -375,7 +415,9 @@
       "label3": "Pénalités",
       "val3": "2"
     },
-    "bio": "Le tacle de swing qui peut protéger les deux côtés en cas de pépin physique."
+    "bio": "Le tacle de swing qui peut protéger les deux côtés en cas de pépin physique.",
+    "role": "RT",
+    "depth": 2
   },
   {
     "number": 0,
@@ -393,7 +435,9 @@
       "label3": "TFL",
       "val3": "12"
     },
-    "bio": "L'électron libre de la ligne défensive, désormais le rusher numéro un de Miami."
+    "bio": "L'électron libre de la ligne défensive, désormais le rusher numéro un de Miami.",
+    "role": "LDE",
+    "depth": 1
   },
   {
     "number": 51,
@@ -411,7 +455,9 @@
       "label3": "TFL",
       "val3": "5"
     },
-    "bio": "Rotation précieuse sur les bords, infatigable sur les rushs passeurs."
+    "bio": "Rotation précieuse sur les bords, infatigable sur les rushs passeurs.",
+    "role": "LDE",
+    "depth": 2
   },
   {
     "number": 90,
@@ -429,7 +475,9 @@
       "label3": "TFL",
       "val3": "7"
     },
-    "bio": "Une masse difficile à déplacer au milieu de la ligne, pilier du futur."
+    "bio": "Une masse difficile à déplacer au milieu de la ligne, pilier du futur.",
+    "role": "LDT",
+    "depth": 1
   },
   {
     "number": 94,
@@ -447,7 +495,9 @@
       "label3": "TFL",
       "val3": "3"
     },
-    "bio": "Le vétéran qui montre aux jeunes comment tenir sa gap."
+    "bio": "Le vétéran qui montre aux jeunes comment tenir sa gap.",
+    "role": "LDT",
+    "depth": 2
   },
   {
     "number": 92,
@@ -465,7 +515,9 @@
       "label3": "TFL",
       "val3": "9"
     },
-    "bio": "Le taulier de la ligne défensive, toujours aussi productif malgré le turnover autour de lui."
+    "bio": "Le taulier de la ligne défensive, toujours aussi productif malgré le turnover autour de lui.",
+    "role": "RDT",
+    "depth": 1
   },
   {
     "number": 91,
@@ -483,7 +535,9 @@
       "label3": "TFL",
       "val3": "3"
     },
-    "bio": "Une rotation fiable qui garde la ligne fraîche sur la durée du match."
+    "bio": "Une rotation fiable qui garde la ligne fraîche sur la durée du match.",
+    "role": "RDT",
+    "depth": 2
   },
   {
     "number": 9,
@@ -501,7 +555,9 @@
       "label3": "TFL",
       "val3": "8"
     },
-    "bio": "Signé pour retrouver la forme qui en faisait un rusher redouté à Foxborough."
+    "bio": "Signé pour retrouver la forme qui en faisait un rusher redouté à Foxborough.",
+    "role": "RDE",
+    "depth": 1
   },
   {
     "number": 50,
@@ -519,7 +575,9 @@
       "label3": "TFL",
       "val3": "6"
     },
-    "bio": "Explosif dès le premier pas, encore en train de dompter tout son potentiel physique."
+    "bio": "Explosif dès le premier pas, encore en train de dompter tout son potentiel physique.",
+    "role": "RDE",
+    "depth": 2
   },
   {
     "number": 20,
@@ -537,7 +595,9 @@
       "label3": "Sacks",
       "val3": "2"
     },
-    "bio": "Le patron du milieu de terrain, un vrai chasseur de ballon sideline to sideline."
+    "bio": "Le patron du milieu de terrain, un vrai chasseur de ballon sideline to sideline.",
+    "role": "WLB",
+    "depth": 1
   },
   {
     "number": 10,
@@ -555,7 +615,9 @@
       "label3": "Sacks",
       "val3": "1"
     },
-    "bio": "Rookie physique qui apprend vite les rouages du poste de linebacker fort."
+    "bio": "Rookie physique qui apprend vite les rouages du poste de linebacker fort.",
+    "role": "WLB",
+    "depth": 2
   },
   {
     "number": 25,
@@ -573,7 +635,9 @@
       "label3": "Sacks",
       "val3": "1.5"
     },
-    "bio": "Une vraie tête brûlée qui ne recule devant aucun contact."
+    "bio": "Une vraie tête brûlée qui ne recule devant aucun contact.",
+    "role": "MLB",
+    "depth": 1
   },
   {
     "number": 56,
@@ -591,7 +655,9 @@
       "label3": "Sacks",
       "val3": "0.5"
     },
-    "bio": "Ancien safety reconverti, apporte une polyvalence rare en couverture."
+    "bio": "Ancien safety reconverti, apporte une polyvalence rare en couverture.",
+    "role": "MLB",
+    "depth": 2
   },
   {
     "number": 40,
@@ -609,7 +675,9 @@
       "label3": "Sacks",
       "val3": "1"
     },
-    "bio": "Rapide et instinctif, un allié précieux contre les attaques de passe."
+    "bio": "Rapide et instinctif, un allié précieux contre les attaques de passe.",
+    "role": "SLB",
+    "depth": 1
   },
   {
     "number": 17,
@@ -627,7 +695,9 @@
       "label3": "Sacks",
       "val3": "2"
     },
-    "bio": "Jeune rusher hybride qui pourrait vite grimper dans la hiérarchie."
+    "bio": "Jeune rusher hybride qui pourrait vite grimper dans la hiérarchie.",
+    "role": "SLB",
+    "depth": 2
   },
   {
     "number": 3,
@@ -645,7 +715,9 @@
       "label3": "INT",
       "val3": "2"
     },
-    "bio": "Le nouveau visage du coin gauche, collant en couverture homme à homme."
+    "bio": "Le nouveau visage du coin gauche, collant en couverture homme à homme.",
+    "role": "LCB",
+    "depth": 1
   },
   {
     "number": 22,
@@ -663,7 +735,9 @@
       "label3": "INT",
       "val3": "0"
     },
-    "bio": "Doublure combative qui n'hésite pas à se jeter dans les duels physiques."
+    "bio": "Doublure combative qui n'hésite pas à se jeter dans les duels physiques.",
+    "role": "LCB",
+    "depth": 2
   },
   {
     "number": 11,
@@ -681,7 +755,9 @@
       "label3": "PD",
       "val3": "7"
     },
-    "bio": "Rookie qui a vite gagné sa place de titulaire grâce à son sens du jeu."
+    "bio": "Rookie qui a vite gagné sa place de titulaire grâce à son sens du jeu.",
+    "role": "SS",
+    "depth": 1
   },
   {
     "number": 41,
@@ -699,7 +775,9 @@
       "label3": "PD",
       "val3": "2"
     },
-    "bio": "Toujours prêt à combler une brèche, la doublure sûre de la sécurité forte."
+    "bio": "Toujours prêt à combler une brèche, la doublure sûre de la sécurité forte.",
+    "role": "SS",
+    "depth": 2
   },
   {
     "number": 32,
@@ -717,7 +795,9 @@
       "label3": "PD",
       "val3": "9"
     },
-    "bio": "Le dernier rempart, un vrai chasseur de ballon en profondeur."
+    "bio": "Le dernier rempart, un vrai chasseur de ballon en profondeur.",
+    "role": "FS",
+    "depth": 1
   },
   {
     "number": 23,
@@ -735,7 +815,9 @@
       "label3": "PD",
       "val3": "3"
     },
-    "bio": "Doublure intelligente qui limite les erreurs de communication derrière."
+    "bio": "Doublure intelligente qui limite les erreurs de communication derrière.",
+    "role": "FS",
+    "depth": 2
   },
   {
     "number": 36,
@@ -753,7 +835,9 @@
       "label3": "INT",
       "val3": "1"
     },
-    "bio": "Un profil physique impressionnant sur le coin droit, encore en pleine progression."
+    "bio": "Un profil physique impressionnant sur le coin droit, encore en pleine progression.",
+    "role": "RCB",
+    "depth": 1
   },
   {
     "number": 35,
@@ -771,7 +855,9 @@
       "label3": "INT",
       "val3": "1"
     },
-    "bio": "De longs bras qui compliquent la vie des receveurs adverses en couverture."
+    "bio": "De longs bras qui compliquent la vie des receveurs adverses en couverture.",
+    "role": "RCB",
+    "depth": 2
   },
   {
     "number": 21,
@@ -789,7 +875,9 @@
       "label3": "INT",
       "val3": "2"
     },
-    "bio": "Le spécialiste du slot, agressif et opportuniste sur le ballon."
+    "bio": "Le spécialiste du slot, agressif et opportuniste sur le ballon.",
+    "role": "NB",
+    "depth": 1
   },
   {
     "number": 38,
@@ -807,7 +895,9 @@
       "label3": "INT",
       "val3": "0"
     },
-    "bio": "Jeune joueur de nickel qui grappille des snaps en couverture rapprochée."
+    "bio": "Jeune joueur de nickel qui grappille des snaps en couverture rapprochée.",
+    "role": "NB",
+    "depth": 2
   },
   {
     "number": 47,
@@ -825,7 +915,9 @@
       "label3": "Points",
       "val3": "118"
     },
-    "bio": "Un pied fiable dans les moments chauds, la valeur sûre des unités spéciales."
+    "bio": "Un pied fiable dans les moments chauds, la valeur sûre des unités spéciales.",
+    "role": "PK",
+    "depth": 1
   },
   {
     "number": 45,
@@ -843,7 +935,9 @@
       "label3": "Points",
       "val3": "41"
     },
-    "bio": "Vétéran expérimenté qui pousse Patterson à rester au sommet de son art."
+    "bio": "Vétéran expérimenté qui pousse Patterson à rester au sommet de son art.",
+    "role": "PK",
+    "depth": 2
   },
   {
     "number": 48,
@@ -861,7 +955,9 @@
       "label3": "Dans les 20",
       "val3": "24"
     },
-    "bio": "Un boomer capable de renverser le terrain d'un seul coup de pied."
+    "bio": "Un boomer capable de renverser le terrain d'un seul coup de pied.",
+    "role": "P",
+    "depth": 1
   },
   {
     "number": 46,
@@ -879,7 +975,9 @@
       "label3": "Fautes",
       "val3": "0"
     },
-    "bio": "Le snappeur invisible et sans faute, indispensable à toute la brigade spéciale."
+    "bio": "Le snappeur invisible et sans faute, indispensable à toute la brigade spéciale.",
+    "role": "LS",
+    "depth": 1
   },
   {
     "number": 15,
@@ -897,7 +995,9 @@
       "label3": "TD:INT",
       "val3": "2:1"
     },
-    "bio": "Le QB3 discret, apprécié en interne pour son leadership et sa préparation."
+    "bio": "Le QB3 discret, apprécié en interne pour son leadership et sa préparation.",
+    "role": "QB",
+    "depth": 3
   },
   {
     "number": 16,
@@ -915,7 +1015,9 @@
       "label3": "TD:INT",
       "val3": "0:0"
     },
-    "bio": "Signé après le draft, un projet à long terme dans le project quarterback room."
+    "bio": "Signé après le draft, un projet à long terme dans le project quarterback room.",
+    "role": "QB",
+    "depth": 4
   },
   {
     "number": 31,
@@ -933,7 +1035,9 @@
       "label3": "TDs",
       "val3": "1"
     },
-    "bio": "Rookie costaud qui grappille des reps derrière Achane et Wright."
+    "bio": "Rookie costaud qui grappille des reps derrière Achane et Wright.",
+    "role": "RB",
+    "depth": 3
   },
   {
     "number": 48,
@@ -951,7 +1055,9 @@
       "label3": "TDs",
       "val3": "0"
     },
-    "bio": "Un profil polyvalent capable de sortir du champ arrière en réception."
+    "bio": "Un profil polyvalent capable de sortir du champ arrière en réception.",
+    "role": "RB",
+    "depth": 4
   },
   {
     "number": 81,
@@ -969,7 +1075,9 @@
       "label3": "TDs",
       "val3": "1"
     },
-    "bio": "Grand gabarit fiable dans les duels aériens, un plus dans le money-down."
+    "bio": "Grand gabarit fiable dans les duels aériens, un plus dans le money-down.",
+    "role": "WR1",
+    "depth": 3
   },
   {
     "number": 86,
@@ -987,7 +1095,9 @@
       "label3": "TDs",
       "val3": "1"
     },
-    "bio": "Un ancien second tour qui cherche encore la constance qu'on lui promettait à LSU."
+    "bio": "Un ancien second tour qui cherche encore la constance qu'on lui promettait à LSU.",
+    "role": "WR1",
+    "depth": 4
   },
   {
     "number": 84,
@@ -1005,7 +1115,9 @@
       "label3": "TDs",
       "val3": "0"
     },
-    "bio": "Petit gabarit vif, également en concurrence pour les retours de punt."
+    "bio": "Petit gabarit vif, également en concurrence pour les retours de punt.",
+    "role": "WR2",
+    "depth": 3
   },
   {
     "number": 88,
@@ -1023,7 +1135,9 @@
       "label3": "TDs",
       "val3": "0"
     },
-    "bio": "Un joueur d'équipes spéciales qui gratte du temps de jeu offensif au fil des semaines."
+    "bio": "Un joueur d'équipes spéciales qui gratte du temps de jeu offensif au fil des semaines.",
+    "role": "WR2",
+    "depth": 4
   },
   {
     "number": 18,
@@ -1041,7 +1155,9 @@
       "label3": "TDs",
       "val3": "1"
     },
-    "bio": "Ancien premier tour en quête de rebond après des débuts de carrière compliqués."
+    "bio": "Ancien premier tour en quête de rebond après des débuts de carrière compliqués.",
+    "role": "WR3",
+    "depth": 3
   },
   {
     "number": 29,
@@ -1059,7 +1175,9 @@
       "label3": "TDs",
       "val3": "0"
     },
-    "bio": "Signé après le draft, il se bat pour une place sur le banc final."
+    "bio": "Signé après le draft, il se bat pour une place sur le banc final.",
+    "role": "WR3",
+    "depth": 4
   },
   {
     "number": 49,
@@ -1077,7 +1195,9 @@
       "label3": "TDs",
       "val3": "0"
     },
-    "bio": "Un bloqueur robuste avant tout, encore en train de développer son jeu de mains."
+    "bio": "Un bloqueur robuste avant tout, encore en train de développer son jeu de mains.",
+    "role": "TE",
+    "depth": 3
   },
   {
     "number": 89,
@@ -1095,7 +1215,9 @@
       "label3": "TDs",
       "val3": "1"
     },
-    "bio": "Le quatrième tight end, surtout utile en unités spéciales pour l'instant."
+    "bio": "Le quatrième tight end, surtout utile en unités spéciales pour l'instant.",
+    "role": "TE",
+    "depth": 4
   },
   {
     "number": 79,
@@ -1113,7 +1235,9 @@
       "label3": "Pénalités",
       "val3": "0"
     },
-    "bio": "Rookie robuste qui pourrait vite grimper si les blessures frappent la ligne."
+    "bio": "Rookie robuste qui pourrait vite grimper si les blessures frappent la ligne.",
+    "role": "LT",
+    "depth": 3
   },
   {
     "number": 70,
@@ -1131,7 +1255,9 @@
       "label3": "Pénalités",
       "val3": "0"
     },
-    "bio": "Doublure supplémentaire au tacle, apprécié pour sa polyvalence des deux côtés."
+    "bio": "Doublure supplémentaire au tacle, apprécié pour sa polyvalence des deux côtés.",
+    "role": "LT",
+    "depth": 4
   },
   {
     "number": 62,
@@ -1149,7 +1275,9 @@
       "label3": "Pénalités",
       "val3": "0"
     },
-    "bio": "Signé en UDFA, il impressionne déjà par sa capacité à lire les fronts défensifs."
+    "bio": "Signé en UDFA, il impressionne déjà par sa capacité à lire les fronts défensifs.",
+    "role": "C",
+    "depth": 3
   },
   {
     "number": 63,
@@ -1167,7 +1295,9 @@
       "label3": "Pénalités",
       "val3": "0"
     },
-    "bio": "Jeune garde encore en développement, quatrième option à droite."
+    "bio": "Jeune garde encore en développement, quatrième option à droite.",
+    "role": "RG",
+    "depth": 3
   },
   {
     "number": 71,
@@ -1185,7 +1315,9 @@
       "label3": "Pénalités",
       "val3": "0"
     },
-    "bio": "Un gabarit imposant qui patiente derrière Jackson et Heck au tacle droit."
+    "bio": "Un gabarit imposant qui patiente derrière Jackson et Heck au tacle droit.",
+    "role": "RT",
+    "depth": 3
   },
   {
     "number": 77,
@@ -1203,7 +1335,9 @@
       "label3": "Statut",
       "val3": "IR"
     },
-    "bio": "En réserve blessés pour la saison, il devra relancer sa carrière l'an prochain."
+    "bio": "En réserve blessés pour la saison, il devra relancer sa carrière l'an prochain.",
+    "role": "RT",
+    "depth": 4
   },
   {
     "number": 57,
@@ -1221,7 +1355,9 @@
       "label3": "TFL",
       "val3": "2"
     },
-    "bio": "Un rusher d'équipes spéciales qui gagne progressivement la confiance du staff."
+    "bio": "Un rusher d'équipes spéciales qui gagne progressivement la confiance du staff.",
+    "role": "LDE",
+    "depth": 3
   },
   {
     "number": 59,
@@ -1239,7 +1375,9 @@
       "label3": "TFL",
       "val3": "1"
     },
-    "bio": "Le quatrième bord de la rotation, encore en phase d'adaptation au niveau NFL."
+    "bio": "Le quatrième bord de la rotation, encore en phase d'adaptation au niveau NFL.",
+    "role": "LDE",
+    "depth": 4
   },
   {
     "number": 93,
@@ -1257,7 +1395,9 @@
       "label3": "TFL",
       "val3": "2"
     },
-    "bio": "Rookie massif qui muscle une rotation intérieure déjà solide."
+    "bio": "Rookie massif qui muscle une rotation intérieure déjà solide.",
+    "role": "LDT",
+    "depth": 3
   },
   {
     "number": 97,
@@ -1275,7 +1415,9 @@
       "label3": "TFL",
       "val3": "1"
     },
-    "bio": "Encore en apprentissage, il complète le fond de rotation sur la ligne."
+    "bio": "Encore en apprentissage, il complète le fond de rotation sur la ligne.",
+    "role": "LDT",
+    "depth": 4
   },
   {
     "number": 96,
@@ -1293,7 +1435,9 @@
       "label3": "TFL",
       "val3": "1"
     },
-    "bio": "Doublure fiable qui tient sa gap sans faire de bruit."
+    "bio": "Doublure fiable qui tient sa gap sans faire de bruit.",
+    "role": "RDT",
+    "depth": 3
   },
   {
     "number": 98,
@@ -1311,7 +1455,9 @@
       "label3": "TFL",
       "val3": "0"
     },
-    "bio": "Le dernier nom de la rotation intérieure, surtout vu en pré-saison."
+    "bio": "Le dernier nom de la rotation intérieure, surtout vu en pré-saison.",
+    "role": "RDT",
+    "depth": 4
   },
   {
     "number": 53,
@@ -1329,7 +1475,9 @@
       "label3": "TFL",
       "val3": "3"
     },
-    "bio": "Vétéran discret qui apporte de la profondeur sur les rushs passeurs."
+    "bio": "Vétéran discret qui apporte de la profondeur sur les rushs passeurs.",
+    "role": "RDE",
+    "depth": 3
   },
   {
     "number": 58,
@@ -1347,7 +1495,9 @@
       "label3": "TFL",
       "val3": "1"
     },
-    "bio": "Jeune bord athlétique encore à l'affût d'un rôle plus large."
+    "bio": "Jeune bord athlétique encore à l'affût d'un rôle plus large.",
+    "role": "RDE",
+    "depth": 4
   },
   {
     "number": 42,
@@ -1365,7 +1515,9 @@
       "label3": "Sacks",
       "val3": "0"
     },
-    "bio": "Doublure au milieu qui excelle surtout sur les unités spéciales."
+    "bio": "Doublure au milieu qui excelle surtout sur les unités spéciales.",
+    "role": "MLB",
+    "depth": 3
   },
   {
     "number": 34,
@@ -1383,7 +1535,9 @@
       "label3": "Sacks",
       "val3": "0"
     },
-    "bio": "Encore un rôle limité, mais apprécié pour son sérieux à l'entraînement."
+    "bio": "Encore un rôle limité, mais apprécié pour son sérieux à l'entraînement.",
+    "role": "MLB",
+    "depth": 4
   },
   {
     "number": 19,
@@ -1401,7 +1555,9 @@
       "label3": "Sacks",
       "val3": "0.5"
     },
-    "bio": "Rookie physique qui grimpe rapidement dans la hiérarchie au poste fort."
+    "bio": "Rookie physique qui grimpe rapidement dans la hiérarchie au poste fort.",
+    "role": "SLB",
+    "depth": 3
   },
   {
     "number": 33,
@@ -1419,7 +1575,9 @@
       "label3": "INT",
       "val3": "0"
     },
-    "bio": "Un corner athlétique qui cherche encore sa place dans la rotation."
+    "bio": "Un corner athlétique qui cherche encore sa place dans la rotation.",
+    "role": "LCB",
+    "depth": 3
   },
   {
     "number": 27,
@@ -1437,7 +1595,9 @@
       "label3": "INT",
       "val3": "0"
     },
-    "bio": "Doublure supplémentaire au coin, surtout utilisé en couverture de kickoff."
+    "bio": "Doublure supplémentaire au coin, surtout utilisé en couverture de kickoff.",
+    "role": "LCB",
+    "depth": 4
   },
   {
     "number": 43,
@@ -1455,7 +1615,9 @@
       "label3": "PD",
       "val3": "1"
     },
-    "bio": "Ancien espoir de LSU qui cherche à confirmer en unités spéciales et en profondeur."
+    "bio": "Ancien espoir de LSU qui cherche à confirmer en unités spéciales et en profondeur.",
+    "role": "SS",
+    "depth": 3
   },
   {
     "number": 31,
@@ -1473,7 +1635,9 @@
       "label3": "PD",
       "val3": "2"
     },
-    "bio": "Un joueur instinctif qui a fait forte impression dès son premier camp."
+    "bio": "Un joueur instinctif qui a fait forte impression dès son premier camp.",
+    "role": "FS",
+    "depth": 3
   },
   {
     "number": 34,
@@ -1491,7 +1655,9 @@
       "label3": "PD",
       "val3": "1"
     },
-    "bio": "Le quatrième safety, encore en train de faire ses preuves."
+    "bio": "Le quatrième safety, encore en train de faire ses preuves.",
+    "role": "FS",
+    "depth": 4
   },
   {
     "number": 26,
@@ -1509,7 +1675,9 @@
       "label3": "INT",
       "val3": "0"
     },
-    "bio": "Corner de profondeur qui se distingue surtout en couverture de kickoff."
+    "bio": "Corner de profondeur qui se distingue surtout en couverture de kickoff.",
+    "role": "RCB",
+    "depth": 3
   },
   {
     "number": 24,
@@ -1527,6 +1695,8 @@
       "label3": "INT",
       "val3": "0"
     },
-    "bio": "Le nom le plus frais du groupe de corners, encore en phase de développement."
+    "bio": "Le nom le plus frais du groupe de corners, encore en phase de développement.",
+    "role": "RCB",
+    "depth": 4
   }
 ]
