@@ -8,7 +8,7 @@ description: "Le Front Office des Miami Dolphins reste actif, même au cœur de
   qui espère bien faire son trou dans le roster du nouveau Head Coach, Jeff
   Hafley."
 pubDate: 2026-06-19T08:04:00.000+02:00
-heroImage: /images/gottlieb_ayedze.webp
+heroImage: /images/gottlieb-ayedze.png
 category: Actu
 tags:
   - Miami Dolphins
