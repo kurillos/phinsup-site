@@ -7,7 +7,7 @@ description: Le Front Office des Miami Dolphins vient de frapper un immense coup
   verrouillé son centre titulaire et capitaine de la ligne offensive, Aaron
   Brewer, avec une prolongation de contrat XXL.
 pubDate: 2026-06-19T08:17:00.000+02:00
-heroImage: /images/aaron_brewer.jpg
+heroImage: /images/aaron-brewer-extension.png
 category: Actu
 tags:
   - Miami Dolphins
