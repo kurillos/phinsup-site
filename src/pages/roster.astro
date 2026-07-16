@@ -11,104 +11,127 @@ const FALLBACK_IMG = "data:image/svg+xml;utf8," + encodeURIComponent(`
   <path d="M30 190 C30 140 60 118 100 118 C140 118 170 140 170 190 Z" fill="#9ca3af"/>
 </svg>
 `);
+
+const UNITS = [
+  {
+    key: 'offense',
+    label: 'Offense',
+    color: 'miami-aqua',
+    roles: ['QB', 'RB', 'WR1', 'WR2', 'WR3', 'TE', 'LT', 'LG', 'C', 'RG', 'RT'],
+  },
+  {
+    key: 'defense',
+    label: 'Défense',
+    color: 'miami-orange',
+    roles: ['LDE', 'LDT', 'RDT', 'RDE', 'WLB', 'MLB', 'SLB', 'LCB', 'SS', 'FS', 'RCB', 'NB'],
+  },
+  {
+    key: 'special',
+    label: 'Équipes Spéciales',
+    color: 'gray-400',
+    roles: ['PK', 'P', 'LS'],
+  },
+];
+
+function playersForRole(role: string) {
+  return players
+    .filter((p: any) => p.role === role)
+    .sort((a: any, b: any) => a.depth - b.depth);
+}
 ---
 
 <Layout title="Roster 2026 - The Phin Side">
   <main class="max-w-7xl mx-auto py-12 px-6">
-    
+
     <div class="mb-12">
       <h1 class="text-5xl font-[Oswald] font-black italic uppercase text-miami-aqua tracking-tighter">
         Effectif <span class="text-miami-orange">2026</span>
       </h1>
-      
-      <div class="flex flex-wrap gap-3 mt-8">
-        <button class="filter-btn active" data-filter="all">Tous</button>
-        <button class="filter-btn" data-filter="offense">Offensif</button>
-        <button class="filter-btn" data-filter="defense">Défensif</button>
-        <button class="filter-btn" data-filter="special">Spécial</button>
-      </div>
-
-      <div class="sub-filters-wrapper mt-6 min-h-12.5">
-        <div id="sub-offense" class="sub-group flex flex-wrap gap-2 border-l-2 border-miami-aqua pl-4 hidden">
-          <button class="sub-filter-btn" data-filter="passing">Passing</button>
-          <button class="sub-filter-btn" data-filter="rushing">Rushing</button>
-          <button class="sub-filter-btn" data-filter="receiving">Receiving</button>
-          <button class="sub-filter-btn" data-filter="line">Off. Line</button>
-        </div>
-
-        <div id="sub-defense" class="sub-group flex flex-wrap gap-2 border-l-2 border-miami-orange pl-4 hidden">
-          <button class="sub-filter-btn" data-filter="tackles">Tackles</button>
-          <button class="sub-filter-btn" data-filter="interceptions">Interceptions</button>
-          <button class="sub-filter-btn" data-filter="line">Def. Line</button>
-          <button class="sub-filter-btn" data-filter="secondary">Secondary</button>
-        </div>
-
-        <div id="sub-special" class="sub-group flex flex-wrap gap-2 border-l-2 border-gray-400 pl-4 hidden">
-          <button class="sub-filter-btn" data-filter="kicking">Kicking</button>
-          <button class="sub-filter-btn" data-filter="punting">Punting</button>
-          <button class="sub-filter-btn" data-filter="returns">Returns</button>
-        </div>
-      </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="roster-grid">
-      {players.map((player) => {
-        const isOffense = player.unit === 'offense';
-        const isDefense = player.unit === 'defense';
-        const themeColor = isOffense ? 'border-miami-aqua' : (isDefense ? 'border-miami-orange' : 'border-gray-400');
-        const themeBg = isOffense ? 'bg-miami-aqua' : (isDefense ? 'bg-miami-orange' : 'bg-gray-400');
-        const themeText = isOffense ? 'text-miami-aqua' : (isDefense ? 'text-miami-orange' : 'text-gray-400');
-        const label2 = player.stats.label2 ?? 'Yards';
-        const label3 = player.stats.label3 ?? 'TDs';
+    <div class="flex flex-col gap-6" id="roster-accordion">
+      {UNITS.map((unit) => (
+        <details class="unit-block rounded-2xl overflow-hidden border border-gray-200 shadow-sm" data-unit={unit.key}>
+          <summary class={`unit-summary bg-${unit.color}`}>
+            <span class="font-[Oswald] text-3xl font-black italic uppercase text-white tracking-tight">{unit.label}</span>
+            <span class="chevron text-white text-2xl">⌄</span>
+          </summary>
 
-        return (
-          <div class="player-card h-120" data-unit={player.unit} data-subunit={player.subUnit}>
-            <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer group">
-              
-              <div class={`absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 ${themeColor} overflow-hidden`}>
-                <div class="relative h-3/4 bg-gray-100 flex items-center justify-center overflow-hidden">
-                  <img
-                    src={player.image}
-                    alt={player.name}
-                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                    onerror={`this.onerror=null; this.src='${FALLBACK_IMG}'; this.classList.add('fallback-img');`}
-                  />
-                  <div class={`absolute top-4 left-4 ${themeBg} text-white font-[Oswald] font-bold text-3xl px-3 py-1 rounded shadow-lg italic`}>#{player.number}</div>
-                </div>
-                <div class="p-5">
-                  <h3 class="font-[Oswald] font-bold text-2xl uppercase italic text-gray-900 leading-tight">{player.name}</h3>
-                  <p class={`${themeText} font-black tracking-widest text-[10px] uppercase mt-1`}>{player.position} | {player.college}</p>
-                </div>
-              </div>
+          <div class="unit-content bg-gray-50 px-6 py-8">
+            {unit.roles.map((role) => {
+              const rolePlayers = playersForRole(role);
+              if (rolePlayers.length === 0) return null;
+              return (
+                <div class="role-block mb-10 last:mb-0">
+                  <h3 class={`role-title font-[Oswald] text-xl font-bold italic uppercase mb-4 pb-2 border-b-2 border-${unit.color} text-gray-800`}>
+                    {role}
+                  </h3>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    {rolePlayers.map((player: any) => {
+                      const isOffense = player.unit === 'offense';
+                      const isDefense = player.unit === 'defense';
+                      const themeColor = isOffense ? 'border-miami-aqua' : (isDefense ? 'border-miami-orange' : 'border-gray-400');
+                      const themeBg = isOffense ? 'bg-miami-aqua' : (isDefense ? 'bg-miami-orange' : 'bg-gray-400');
+                      const themeText = isOffense ? 'text-miami-aqua' : (isDefense ? 'text-miami-orange' : 'text-gray-400');
+                      const label2 = player.stats.label2 ?? 'Yards';
+                      const label3 = player.stats.label3 ?? 'TDs';
 
-              <div class={`absolute inset-0 backface-hidden rotate-y-180 rounded-2xl shadow-2xl ${themeBg} text-white p-6 flex flex-col justify-between border-4 border-white/10`}>
-                <div>
-                  <div class="flex justify-between items-start border-b border-white/20 pb-3 mb-4">
-                    <h3 class="font-[Oswald] text-3xl uppercase italic leading-none">{player.name}</h3>
-                    <span class="font-[Oswald] text-2xl opacity-50">#{player.number}</span>
+                      return (
+                        <div class="player-card h-120">
+                          <div class="flip-card-inner relative w-full h-full duration-700 preserve-3d cursor-pointer group">
+
+                            <div class={`absolute inset-0 backface-hidden rounded-2xl shadow-xl bg-white border-b-8 ${themeColor} overflow-hidden`}>
+                              <div class="relative h-3/4 bg-gray-100 flex items-center justify-center overflow-hidden">
+                                <img
+                                  src={player.image}
+                                  alt={player.name}
+                                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                  onerror={`this.onerror=null; this.src='${FALLBACK_IMG}'; this.classList.add('fallback-img');`}
+                                />
+                                <div class={`absolute top-4 left-4 ${themeBg} text-white font-[Oswald] font-bold text-3xl px-3 py-1 rounded shadow-lg italic`}>#{player.number}</div>
+                                <div class="absolute top-4 right-4 bg-black/60 text-white font-[Oswald] font-bold text-xs px-2 py-1 rounded uppercase italic">{player.role} {player.depth > 1 ? `#${player.depth}` : ''}</div>
+                              </div>
+                              <div class="p-5">
+                                <h3 class="font-[Oswald] font-bold text-2xl uppercase italic text-gray-900 leading-tight">{player.name}</h3>
+                                <p class={`${themeText} font-black tracking-widest text-[10px] uppercase mt-1`}>{player.position} | {player.college}</p>
+                              </div>
+                            </div>
+
+                            <div class={`absolute inset-0 backface-hidden rotate-y-180 rounded-2xl shadow-2xl ${themeBg} text-white p-6 flex flex-col justify-between border-4 border-white/10`}>
+                              <div>
+                                <div class="flex justify-between items-start border-b border-white/20 pb-3 mb-4">
+                                  <h3 class="font-[Oswald] text-3xl uppercase italic leading-none">{player.name}</h3>
+                                  <span class="font-[Oswald] text-2xl opacity-50">#{player.number}</span>
+                                </div>
+                                <div class="grid grid-cols-3 gap-2 text-center mb-6">
+                                  <div class="bg-white/10 p-2 rounded">
+                                    <p class="text-[10px] uppercase opacity-70 font-bold">{player.stats.label}</p>
+                                    <p class="text-xl font-black">{player.stats.val1}</p>
+                                  </div>
+                                  <div class="bg-white/10 p-2 rounded border-x border-white/10">
+                                    <p class="text-[10px] uppercase opacity-70 font-bold">{label2}</p>
+                                    <p class="text-xl font-black">{player.stats.val2}</p>
+                                  </div>
+                                  <div class="bg-white/10 p-2 rounded">
+                                    <p class="text-[10px] uppercase opacity-70 font-bold">{label3}</p>
+                                    <p class="text-xl font-black">{player.stats.val3}</p>
+                                  </div>
+                                </div>
+                                <p class="text-sm italic opacity-90">"{player.bio}"</p>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      )
+                    })}
                   </div>
-                  <div class="grid grid-cols-3 gap-2 text-center mb-6">
-                    <div class="bg-white/10 p-2 rounded">
-                      <p class="text-[10px] uppercase opacity-70 font-bold">{player.stats.label}</p>
-                      <p class="text-xl font-black">{player.stats.val1}</p>
-                    </div>
-                    <div class="bg-white/10 p-2 rounded border-x border-white/10">
-                      <p class="text-[10px] uppercase opacity-70 font-bold">{label2}</p>
-                      <p class="text-xl font-black">{player.stats.val2}</p>
-                    </div>
-                    <div class="bg-white/10 p-2 rounded">
-                      <p class="text-[10px] uppercase opacity-70 font-bold">{label3}</p>
-                      <p class="text-xl font-black">{player.stats.val3}</p>
-                    </div>
-                  </div>
-                  <p class="text-sm italic opacity-90">"{player.bio}"</p>
                 </div>
-              </div>
-
-            </div>
+              )
+            })}
           </div>
-        )
-      })}
+        </details>
+      ))}
     </div>
   </main>
 </Layout>
@@ -119,76 +142,39 @@ const FALLBACK_IMG = "data:image/svg+xml;utf8," + encodeURIComponent(`
   .backface-hidden { backface-visibility: hidden; }
   .rotate-y-180 { transform: rotateY(180deg); }
   .flip-card-inner.is-flipped { transform: rotateY(180deg); }
-  
-  .filter-btn {
-    padding: 0.5rem 1.5rem;
-    border-radius: 9999px;
-    border: 2px solid #008E97;
-    color: #008E97;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-style: italic;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  .filter-btn.active { background: #008E97; color: white; }
-  .sub-filter-btn {
-     font-family: 'Oswald', sans-serif;
-     font-size: 0.75rem;
-     padding: 0.25rem 0.75rem;
-     border: 1px solid #ddd;
-     border-radius: 4px;
-     cursor: pointer;
-     text-transform: uppercase;
-  }
-  .sub-filter-btn.active { border-color: #F26722; color: #F26722; }
-  .hidden { display: none !important; }
-  .hidden-filter { display: none !important; }
   .fallback-img { object-fit: contain !important; padding: 1.5rem; opacity: 0.9; }
+
+  .unit-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+  .unit-summary::-webkit-details-marker { display: none; }
+  .unit-summary::marker { content: ''; }
+
+  .chevron {
+    transition: transform 0.3s ease;
+    font-weight: 900;
+  }
+  details[open] > .unit-summary .chevron {
+    transform: rotate(180deg);
+  }
+
+  .unit-content {
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 </style>
 
 <script>
   const initRoster = () => {
-    const mainBtns = document.querySelectorAll('.filter-btn');
-    const subBtns = document.querySelectorAll('.sub-filter-btn');
-    const playerCards = document.querySelectorAll('.player-card');
-    const subGroups = document.querySelectorAll('.sub-group');
-
-    function filterPlayers(filterValue: string | null) {
-      if (!filterValue) return;
-      playerCards.forEach(card => {
-        const unit = card.getAttribute('data-unit');
-        const subUnit = card.getAttribute('data-subunit');
-        if (filterValue === 'all' || unit === filterValue || subUnit === filterValue) {
-          card.classList.remove('hidden-filter');
-        } else {
-          card.classList.add('hidden-filter');
-        }
-      });
-    }
-
-    mainBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
-        mainBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        subGroups.forEach(g => g.classList.add('hidden'));
-        if (filter && filter !== 'all') {
-          document.getElementById(`sub-${filter}`)?.classList.remove('hidden');
-        }
-        filterPlayers(filter);
-      });
-    });
-
-    subBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            subBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            filterPlayers(btn.getAttribute('data-filter'));
-        });
-    });
-
     document.querySelectorAll('.flip-card-inner').forEach(card => {
       card.addEventListener('click', () => card.classList.toggle('is-flipped'));
     });
