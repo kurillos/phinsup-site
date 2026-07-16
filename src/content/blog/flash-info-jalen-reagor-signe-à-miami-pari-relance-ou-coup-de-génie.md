@@ -6,7 +6,7 @@ description: L'escouade de receveurs des Miami Dolphins s'agrandit. La franchise
   profondeur et tenter de faire exploser son potentiel sous ses nouvelles
   couleurs.
 pubDate: 2026-06-03T12:15:00.000+02:00
-heroImage: /images/ymi2nwrim2qtmdi-630x420.webp
+heroImage: /images/jalen-raegor.png
 category: Breaking News
 tags:
   - Miami Dolphins
