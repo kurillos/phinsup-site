@@ -24,7 +24,7 @@ tags:
   - Camp
   - "2026"
 draft: false
-author: Rédaction Phin Side
+author: Cyril
 ---
 ### 👑 Le patron : Malik Willis aux commandes
 
