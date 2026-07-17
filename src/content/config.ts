@@ -12,12 +12,7 @@ const blog = defineCollection({
             "The French Fins Staff", 
             "Cyril", 
             "Lucas", 
-            "Patrick",
-			"Erwan",
-			"Hugo",
-			"James",
-			"Jessy",
-			"Yohan"
+			"Erwan"
         ]).catch('The French Fins Staff'),
 		tags: z.array(z.string()).optional().default(["Miami Dolphins"]),
 		isDraft: z.boolean().optional().default(false),
