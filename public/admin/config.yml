@@ -29,8 +29,8 @@ collections:
           label: "Auteur",
           name: "author",
           widget: "select",
-          options: ["Cyril", "Lucas", "Erwan", "Hugo", "James", "Jessy", "Patrick", "Yohan", "Redaction Phin Side"],
-          default: "Rédaction Phin Side"
+          options: ["Cyril", "Lucas", "Erwan", "Redaction Thze French Fins"],
+          default: "Rédaction The French Fins"
       }
   - name: "podcasts"
     label: "Podcasts"
