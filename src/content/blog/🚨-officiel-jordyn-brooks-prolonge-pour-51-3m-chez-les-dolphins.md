@@ -18,7 +18,7 @@ tags:
   - "2026"
   - NFL
 draft: false
-author: Rédaction The French Fins
+author: Cyril
 ---
 ## 💰 Les détails du nouveau contrat
 
