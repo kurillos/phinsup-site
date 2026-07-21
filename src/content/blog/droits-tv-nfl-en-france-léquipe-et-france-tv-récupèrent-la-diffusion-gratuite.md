@@ -19,7 +19,7 @@ tags:
   - "2026"
   - Paris
 draft: false
-author: Rédaction The French Fins
+author: Cyril
 ---
 ## 📺 Le retour de L'Équipe sur la saison et le Super Bowl
 
