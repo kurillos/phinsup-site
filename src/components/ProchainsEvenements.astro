@@ -5,76 +5,43 @@ const tousEvenements = await getCollection('evenements', ({ data }) => !data.isD
 const maintenant = new Date();
 
 const prochains = tousEvenements
-  .filter((e) => e.data.eventDate >= maintenant)
-  .sort((a, b) => a.data.eventDate.valueOf() - b.data.eventDate.valueOf())
+  .filter((e) => new Date(e.data.eventDate) >= maintenant)
+  .sort((a, b) => new Date(a.data.eventDate).getTime() - new Date(b.data.eventDate).getTime())
   .slice(0, 4);
 ---
 
-<div class="cadre-evenements">
-  <h3>Prochains événements</h3>
-  {prochains.length === 0 && <p class="vide">Aucun événement prévu pour le moment.</p>}
-  <ul>
-    {prochains.map((e) => (
-      <li>
-        <span class={`badge badge--${e.data.eventType.replace(/\s+/g, '-').toLowerCase()}`}>
-          {e.data.eventType}
-        </span>
-        <strong>{e.data.title}</strong>
-        <span class="date">
-          {e.data.eventDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })}
-        </span>
-        {e.data.location && <span class="lieu">📍 {e.data.location}</span>}
-        {e.data.link && <a href={e.data.link} target="_blank" rel="noopener">Détails →</a>}
-      </li>
-    ))}
-  </ul>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 border-t-4 border-miami-aqua">
+  <div class="flex items-center justify-between mb-4">
+    <h3 class="font-[Oswald] text-miami-blue uppercase italic text-xl tracking-wider font-bold">
+      Événements 🐬
+    </h3>
+  </div>
+
+  {prochains.length === 0 ? (
+    <p class="text-gray-400 text-xs italic">Aucun événement prévu pour le moment.</p>
+  ) : (
+    <ul class="divide-y divide-gray-100">
+      {prochains.map((e) => (
+        <li class="py-3 first:pt-0 last:pb-0 flex flex-col gap-1">
+          <span class="self-start text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-miami-aqua/10 text-miami-aqua italic">
+            {e.data.eventType}
+          </span>
+          <strong class="text-slate-800 text-sm font-bold font-[Oswald] uppercase leading-tight mt-1">
+            {e.data.title}
+          </strong>
+          <span class="text-xs text-gray-500 font-medium">
+            📅 {new Date(e.data.eventDate).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })}
+          </span>
+          {e.data.location && (
+            <span class="text-xs text-gray-500">📍 {e.data.location}</span>
+          )}
+          {e.data.link && (
+            <a href={e.data.link} target="_blank" rel="noopener" class="text-xs text-miami-orange font-bold hover:underline mt-1 inline-block">
+              Rejoindre →
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+  )}
 </div>
-
-<style>
-  .cadre-evenements {
-    background: #fff;
-    border-top: 3px solid #0f7a86; /* teal, comme le bloc X */
-    border-radius: 8px;
-    padding: 1.25rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  }
-  .cadre-evenements h3 {
-    color: #0f2d3d;
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-  }
-  .cadre-evenements ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .cadre-evenements li {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #eee;
-  }
-  .cadre-evenements li:last-child {
-    border-bottom: none;
-  }
-  .badge {
-    align-self: flex-start;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 0.15rem 0.5rem;
-    border-radius: 999px;
-    color: #fff;
-    margin-bottom: 0.2rem;
-  }
-  .badge--watch-party { background: #f4511e; } /* orange, cohérent avec l'accent podcast */
-  .badge--meetup { background: #0f7a86; }       /* teal */
-  .badge--événement-spécial { background: #6a1b9a; }
-  .badge--diffusion { background: #1565c0; }
-
-  .date, .lieu {
-    font-size: 0.85rem;
-    color: #555;
-  }
-</style>
