@@ -60,5 +60,6 @@ collections:
         }
       - { label: "Lieu", name: "location", widget: "string", required: false, default: "" }
       - { label: "Lien (Discord, event FB...)", name: "link", widget: "string", required: false, default: "" }
-      - { label: "Description", name: "description", widget: "text", required: false, default: "" }
+      - { label: "Description courte", name: "description", widget: "text", required: false, default: "" }
       - { label: "Cacher l'événement ?", name: "isDraft", widget: "boolean", default: false }
+      - { label: "Détails / Contenu", name: "body", widget: "markdown", required: false, default: "" }
