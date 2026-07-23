@@ -1,8 +1,10 @@
 backend:
   name: git-gateway
   branch: main
+
 media_folder: "public/images"
 public_folder: "/images"
+
 collections:
   - name: "blog"
     label: "Articles de Blog"
@@ -27,9 +29,10 @@ collections:
           label: "Auteur",
           name: "author",
           widget: "select",
-          options: ["Cyril", "Lucas", "Erwan", "Redaction Thze French Fins"],
+          options: ["Cyril", "Lucas", "Erwan", "Redaction The French Fins"],
           default: "Rédaction The French Fins"
-      }
+        }
+
   - name: "podcasts"
     label: "Podcasts"
     folder: "src/content/podcasts"
@@ -39,7 +42,8 @@ collections:
       - { label: "Date de publication", name: "pubDate", widget: "datetime" }
       - { label: "URL Spotify", name: "spotifyUrl", widget: "string", hint: "Ex: https://open.spotify.com/episode/XXXXXX" }
       - { label: "Description", name: "description", widget: "text" }
-   - name: "evenements"
+
+  - name: "evenements"
     label: "Événements du Fan Club"
     folder: "src/content/evenements"
     create: true
