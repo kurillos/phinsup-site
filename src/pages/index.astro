@@ -39,9 +39,6 @@ function getSpotifyEmbedUrl(url: string): string {
     }
 }
 
-{/* 🐬 WIDGET ÉVÉNEMENTS — AJOUTER ICI */}
-    <ProchainsEvenements />
-
 const embedUrl = latestPodcast ? getSpotifyEmbedUrl(latestPodcast.data.spotifyUrl) : '';
 ---
 
@@ -178,6 +175,9 @@ const embedUrl = latestPodcast ? getSpotifyEmbedUrl(latestPodcast.data.spotifyUr
                     </div>
                 </div>
                 )}
+
+                {/* WIDGET ÉVÉNEMENTS */}
+                <ProchainsEvenements />
             </div>
         </aside>
     </div>
