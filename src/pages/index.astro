@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import TwitterFeed from '@/components/TwitterFeed.astro';
+import ProchainsEvenements from '@/components/ProchainsEvenements.astro';
 import results from '../../src/data/results2025.json';
 
 // 1. Récupération des articles
@@ -37,6 +38,9 @@ function getSpotifyEmbedUrl(url: string): string {
         return '';
     }
 }
+
+{/* 🐬 WIDGET ÉVÉNEMENTS — AJOUTER ICI */}
+    <ProchainsEvenements />
 
 const embedUrl = latestPodcast ? getSpotifyEmbedUrl(latestPodcast.data.spotifyUrl) : '';
 ---
