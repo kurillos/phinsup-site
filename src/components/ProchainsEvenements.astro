@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+
+const tousEvenements = await getCollection('evenements', ({ data }) => !data.isDraft);
+const maintenant = new Date();
+
+const prochains = tousEvenements
+  .filter((e) => e.data.eventDate >= maintenant)
+  .sort((a, b) => a.data.eventDate.valueOf() - b.data.eventDate.valueOf())
+  .slice(0, 4);
+---
+
+<div class="cadre-evenements">
+  <h3>Prochains événements</h3>
+  {prochains.length === 0 && <p>Aucun événement prévu pour le moment.</p>}
+  <ul>
+    {prochains.map((e) => (
+      <li>
+        <strong>{e.data.title}</strong>
+        <span>{e.data.eventDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })}</span>
+        {e.data.location && <span> — {e.data.location}</span>}
+        {e.data.link && <a href={e.data.link} target="_blank" rel="noopener">Détails</a>}
+      </li>
+    ))}
+  </ul>
+</div>
