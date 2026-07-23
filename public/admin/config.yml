@@ -43,7 +43,7 @@ collections:
       - { label: "URL Spotify", name: "spotifyUrl", widget: "string", hint: "Ex: https://open.spotify.com/episode/XXXXXX" }
       - { label: "Description", name: "description", widget: "text" }
 
- - name: "evenements"
+  - name: "evenements"
     label: "Événements du Fan Club"
     folder: "src/content/evenements"
     create: true
@@ -60,8 +60,8 @@ collections:
           options: ["Watch Party", "Meetup", "Événement Spécial", "Diffusion"],
           default: "Watch Party"
         }
-      - { label: "Lieu", name: "location", widget: "string", required: false, default: "" }
-      - { label: "Lien (Discord, event FB...)", name: "link", widget: "string", required: false, default: "" }
-      - { label: "Description", name: "description", widget: "text", required: false, default: "" }
+      - { label: "Lieu", name: "location", widget: "string", required: false }
+      - { label: "Lien (Discord, event FB...)", name: "link", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Cacher l'événement ?", name: "isDraft", widget: "boolean", default: false }
-      - { label: "Détails / Contenu", name: "body", widget: "markdown", required: false, default: "" }
+      - { label: "Détails / Contenu", name: "body", widget: "markdown", required: false }
