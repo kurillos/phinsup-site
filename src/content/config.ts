@@ -36,6 +36,7 @@ const evenements = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		eventDate: z.coerce.date(),
+		eventType: z.enum(["Watch Party", "Meetup", "Événement Spécial", "Diffusion"]).catch('Événement Spécial'),
 		location: z.string().optional(),
 		link: z.string().url().optional(),
 		description: z.string().optional(),
