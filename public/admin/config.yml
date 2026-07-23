@@ -49,7 +49,7 @@ collections:
     create: true
     slug: "{{slug}}"
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date de l'événement", name: "eventDate", widget: "datetime" }
