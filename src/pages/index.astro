@@ -127,14 +127,54 @@ const embedUrl = latestPodcast ? getSpotifyEmbedUrl(latestPodcast.data.spotifyUr
         <TwitterFeed />
     </div>
 
-    <!-- 2. Le Podcast (défile normalement) -->
-    {latestPodcast && (
-    <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-xl border-t-4 border-miami-orange">
-        <div class="p-6">
-            <!-- Contenu du podcast... -->
+    {/* PODCAST CARD */}
+{latestPodcast && (
+<div class="bg-slate-900 rounded-2xl overflow-hidden shadow-xl border-t-4 border-miami-orange p-6 flex flex-col justify-between min-h-[220px]">
+    <div>
+        <div class="flex items-center gap-2 mb-4">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-miami-orange opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-miami-orange"></span>
+            </span>
+            <h3 class="font-[Oswald] text-white uppercase italic text-xl tracking-wider">Dernier Podcast</h3>
+        </div>
+
+        {/* Player Spotify Embed - affiché SEULEMENT si embedUrl existe */}
+        {embedUrl ? (
+            <div class="mb-4 rounded-lg overflow-hidden min-h-[152px] bg-slate-800">
+                <iframe
+                    src={embedUrl}
+                    width="100%"
+                    height="152"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    title={latestPodcast.data.title}
+                    style="border-radius: 8px; display: block;"
+                ></iframe>
+            </div>
+        ) : null}
+
+        <div class="mb-5">
+            <h4 class="text-white font-bold text-lg leading-tight font-[Oswald] italic uppercase tracking-tight">
+                {latestPodcast.data.title}
+            </h4>
+            <p class="text-miami-aqua text-[10px] font-black uppercase mt-1 tracking-widest italic">
+                {new Date(latestPodcast.data.pubDate).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </p>
+            {latestPodcast.data.description && (
+                <p class="text-slate-400 text-xs mt-2 line-clamp-2">
+                    {latestPodcast.data.description}
+                </p>
+            )}
         </div>
     </div>
-    )}
+
+    <a href="/podcast" class="block w-full text-center bg-transparent border border-miami-aqua text-miami-aqua hover:bg-miami-aqua hover:text-white font-black py-2.5 rounded-xl transition-all duration-300 text-xs uppercase italic tracking-widest mt-2">
+        Écouter le podcast
+    </a>
+</div>
+)}
 
     <!-- 3. Les Événements (colle en haut de l'écran tout seul quand on a tout défilé) -->
     <div class="sticky top-24">
