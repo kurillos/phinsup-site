@@ -43,11 +43,13 @@ collections:
       - { label: "URL Spotify", name: "spotifyUrl", widget: "string", hint: "Ex: https://open.spotify.com/episode/XXXXXX" }
       - { label: "Description", name: "description", widget: "text" }
 
-  - name: "evenements"
+ - name: "evenements"
     label: "Événements du Fan Club"
     folder: "src/content/evenements"
     create: true
     slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date de l'événement", name: "eventDate", widget: "datetime" }
@@ -60,6 +62,6 @@ collections:
         }
       - { label: "Lieu", name: "location", widget: "string", required: false, default: "" }
       - { label: "Lien (Discord, event FB...)", name: "link", widget: "string", required: false, default: "" }
-      - { label: "Description courte", name: "description", widget: "text", required: false, default: "" }
+      - { label: "Description", name: "description", widget: "text", required: false, default: "" }
       - { label: "Cacher l'événement ?", name: "isDraft", widget: "boolean", default: false }
       - { label: "Détails / Contenu", name: "body", widget: "markdown", required: false, default: "" }
