@@ -47,6 +47,7 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date de l'événement", name: "eventDate", widget: "datetime" }
+      - {
           label: "Type d'événement", 
           name: "eventType", 
           widget: "select", 
