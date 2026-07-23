@@ -39,7 +39,7 @@ collections:
       - { label: "Date de publication", name: "pubDate", widget: "datetime" }
       - { label: "URL Spotify", name: "spotifyUrl", widget: "string", hint: "Ex: https://open.spotify.com/episode/XXXXXX" }
       - { label: "Description", name: "description", widget: "text" }
- - name: "evenements"
+   - name: "evenements"
     label: "Événements du Fan Club"
     folder: "src/content/evenements"
     create: true
