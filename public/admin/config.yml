@@ -41,15 +41,49 @@ collections:
       - { label: "Date de publication", name: "pubDate", widget: "datetime" }
       - { label: "URL Spotify", name: "spotifyUrl", widget: "string", hint: "Ex: https://open.spotify.com/episode/XXXXXX" }
       - { label: "Description", name: "description", widget: "text" }
-   - name: "evenements"
-    label: "Événements du Fan Club"
-    folder: "src/content/evenements"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date de l'événement", name: "eventDate", widget: "datetime" }
-      - { label: "Lieu", name: "location", widget: "string", required: false }
-      - { label: "Lien (Discord, event FB...)", name: "link", widget: "string", required: false }
-      - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Cacher l'événement ?", name: "draft", widget: "boolean", default: false }
+  import { defineCollection, z } from 'astro:content';
+
+const blog = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		pubDate: z.coerce.date(),
+		updatedDate: z.coerce.date().optional(),
+		heroImage: z.string().optional(),
+		category: z.string().catch('Actu'), 
+		author: z.enum([
+            "The French Fins Staff", 
+            "Cyril", 
+            "Lucas", 
+			"Erwan"
+        ]).catch('The French Fins Staff'),
+		tags: z.array(z.string()).optional().default(["Miami Dolphins"]),
+		isDraft: z.boolean().optional().default(false),
+	}),
+});
+
+const podcasts = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		pubDate: z.coerce.date(),
+		description: z.string().optional(),
+		spotifyUrl: z.string().url(),
+		cover: z.string().optional(),
+		episode: z.string().optional(),
+	}),
+});
+
+const evenements = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		eventDate: z.coerce.date(),
+		location: z.string().optional(),
+		link: z.string().url().optional(),
+		description: z.string().optional(),
+		isDraft: z.boolean().optional().default(false),
+	}),
+});
+
+export const collections = { blog, podcasts, evenements };
