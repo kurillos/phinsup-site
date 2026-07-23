@@ -46,7 +46,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date de l'événement", name: "eventDate", widget: "datetime" }
+      - { label: "Date de l'événement", name: "eventDate", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "DD/MM/YYYY", time_format: "HH:mm" }
       - { 
           label: "Type d'événement", 
           name: "eventType", 
