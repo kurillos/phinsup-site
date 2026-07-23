@@ -43,6 +43,26 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
   import { defineCollection, z } from 'astro:content';
 
+  - name: "evenements"
+    label: "Événements du Fan Club"
+    folder: "src/content/evenements"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de l'événement", name: "eventDate", widget: "datetime" }
+      - { 
+          label: "Type d'événement", 
+          name: "eventType", 
+          widget: "select", 
+          options: ["Watch Party", "Meetup", "Événement Spécial", "Diffusion"],
+          default: "Watch Party"
+        }
+      - { label: "Lieu", name: "location", widget: "string", required: false }
+      - { label: "Lien (Discord, event FB...)", name: "link", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Cacher l'événement ?", name: "isDraft", widget: "boolean", default: false }
+
 const blog = defineCollection({
 	schema: z.object({
 		title: z.string(),
