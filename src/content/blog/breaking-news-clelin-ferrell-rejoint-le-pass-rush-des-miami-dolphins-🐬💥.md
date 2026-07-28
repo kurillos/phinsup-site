@@ -4,7 +4,7 @@ description: Les Miami Dolphins renforcent leur ligne défensive avec la
   signature de l'edge rusher Clelin Ferrell. Pour lui faire une place, le DL
   Kahlil Saunders est libéré.
 pubDate: 2026-07-28T09:06:00.000+02:00
-heroImage: /images/clelin-ferrell.webp
+heroImage: /images/clelin-ferrell.png
 category: Breaking News
 tags:
   - Miami Dolphins
