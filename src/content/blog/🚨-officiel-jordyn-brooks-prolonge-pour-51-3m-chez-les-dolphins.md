@@ -5,7 +5,7 @@ description: La direction de Miami continue de sécuriser ses cadres clés avant
   et De'Von Achane, les Dolphins ont trouvé un accord majeur avec leur
   linebacker vedette Jordyn Brooks.
 pubDate: 2026-07-21T21:14:00.000+02:00
-heroImage: /images/img_5914.jpg
+heroImage: /images/clelin-ferrell.png
 category: Breaking News
 tags:
   - Miami Dolphins
