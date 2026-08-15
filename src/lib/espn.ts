@@ -1,4 +1,3 @@
-const TEAM_ID = '15'; // Miami Dolphins
 const BASE = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl';
 
 export interface DolphinsGame {
@@ -11,7 +10,7 @@ export interface DolphinsGame {
   scorePhins: number;
   scoreOpp: number;
   result: 'W' | 'L' | 'T';
-  date: string;      // format "DD/MM" pour coller à l'existant
+  date: string;      // format "DD/MM"
   isoDate: string;
   completed: boolean;
 }
@@ -35,7 +34,6 @@ function mapEvent(event: any): DolphinsGame | null {
 
   const isoDate = event.date;
   const dateFr = new Date(isoDate).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' });
-
   const seasonSlug = event.season?.slug;
 
   return {
@@ -56,13 +54,35 @@ function mapEvent(event: any): DolphinsGame | null {
   };
 }
 
+async function fetchWeek(season: number, seasontype: number, week: number): Promise<any[]> {
+  try {
+    const url = `${BASE}/scoreboard?dates=${season}&seasontype=${seasontype}&week=${week}`;
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return data.events ?? [];
+  } catch {
+    return [];
+  }
+}
+
 export async function getDolphinsSchedule(season: number): Promise<DolphinsGame[]> {
   try {
-    const res = await fetch(`${BASE}/teams/${TEAM_ID}/schedule?season=${season}`);
-    if (!res.ok) throw new Error(`ESPN API ${res.status}`);
-    const data = await res.json();
-    const events = data.events ?? [];
-    return events
+    // seasontype 1 = pré-saison (semaines 1 à 4), 2 = saison régulière (semaines 1 à 18)
+    const weekPlans: Array<[number, number]> = [
+      ...[1, 2, 3, 4].map((w): [number, number] => [1, w]),
+      ...Array.from({ length: 18 }, (_, i): [number, number] => [2, i + 1]),
+    ];
+
+    const allEvents = (
+      await Promise.all(weekPlans.map(([seasontype, week]) => fetchWeek(season, seasontype, week)))
+    ).flat();
+
+    const mia = allEvents.filter((event: any) =>
+      event.competitions?.[0]?.competitors?.some((c: any) => c.team?.abbreviation === 'MIA')
+    );
+
+    return mia
       .map(mapEvent)
       .filter((g: DolphinsGame | null): g is DolphinsGame => g !== null)
       .sort((a, b) => new Date(a.isoDate).getTime() - new Date(b.isoDate).getTime());
@@ -78,9 +98,8 @@ export async function getLastDolphinsGame(season: number): Promise<DolphinsGame 
   return played.length ? played[played.length - 1] : null;
 }
 
-// Utile pour ne pas coder l'année en dur : la saison NFL commence en août
 export function getCurrentNflSeason(): number {
   const now = new Date();
-  const month = now.getMonth() + 1; // 1-12
+  const month = now.getMonth() + 1;
   return month >= 3 ? now.getFullYear() : now.getFullYear() - 1;
 }
