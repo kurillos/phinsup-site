@@ -3,7 +3,8 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import TwitterFeed from '@/components/TwitterFeed.astro';
 import ProchainsEvenements from '@/components/ProchainsEvenements.astro';
-import results from '../../src/data/results2025.json';
+import { getLastDolphinsGame, getCurrentNflSeason } from '@/lib/espn';
+import staticResults from '../../src/data/results2025.json';
 
 // 1. Récupération des articles
 const rawPosts = await getCollection('blog') || [];
@@ -18,9 +19,10 @@ const posts = rawPosts
     });
 
 // 2. Récupération du dernier match
-const lastGame = (Array.isArray(results) && results.length > 0) 
-    ? results[results.length - 1] 
-    : null;
+const season = getCurrentNflSeason();
+const liveLastGame = await getLastDolphinsGame(season);
+const lastGame = liveLastGame
+  ?? ((Array.isArray(staticResults) && staticResults.length > 0) ? staticResults[staticResults.length - 1] : null);
 
 // 3. Récupération du dernier podcast depuis la collection Decap CMS
 const allPodcasts = await getCollection('podcasts');
