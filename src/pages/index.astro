@@ -1,47 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import TwitterFeed from '@/components/TwitterFeed.astro';
-import ProchainsEvenements from '@/components/ProchainsEvenements.astro';
-import { getLastDolphinsGame, getCurrentNflSeason } from '@/lib/espn';
-import staticResults from '../../src/data/results2025.json';
+import Layout from '../layouts/BaseLayout.astro';
+import { getDolphinsSchedule, getCurrentNflSeason } from '@/lib/espn';
 
-// 1. Récupération des articles
-const rawPosts = await getCollection('blog') || [];
-
-const posts = rawPosts
-    .filter(p => p && typeof p === 'object' && 'data' in p)
-    .filter(p => p.data && p.data.isDraft !== true)
-    .sort((a, b) => {
-        const d1 = a.data.pubDate ? new Date(a.data.pubDate).getTime() : 0;
-        const d2 = b.data.pubDate ? new Date(b.data.pubDate).getTime() : 0;
-        return d2 - d1;
-    });
-
-// 2. Récupération du dernier match
+// 1. Récupération live du calendrier complet
 const season = getCurrentNflSeason();
-const liveLastGame = await getLastDolphinsGame(season);
-const lastGame = liveLastGame
-  ?? ((Array.isArray(staticResults) && staticResults.length > 0) ? staticResults[staticResults.length - 1] : null);
+const season2025 = await getDolphinsSchedule(season);
 
-// 3. Récupération du dernier podcast depuis la collection Decap CMS
-const allPodcasts = await getCollection('podcasts');
-const latestPodcast = allPodcasts
-    .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())[0] ?? null;
-
-// Construit l'URL embed Spotify à partir de l'URL normale
-function getSpotifyEmbedUrl(url: string): string {
-    try {
-        const u = new URL(url);
-        // Retire les query params (?si=...) et insère /embed/
-        const cleanPath = u.pathname.replace(/^\//, '');
-        return `https://open.spotify.com/embed/${cleanPath}`;
-    } catch {
-        return '';
-    }
-}
-
-const embedUrl = latestPodcast ? getSpotifyEmbedUrl(latestPodcast.data.spotifyUrl) : '';
+// 2. Calculs dynamiques pour le bilan (Saison régulière uniquement)
+const regSeason = season2025.filter(g => g.type === 'reg');
+const wins = regSeason.filter(g => g.result === 'W').length;
+const losses = regSeason.filter(g => g.result === 'L').length;
+const ties = regSeason.filter(g => g.result === 'T').length;
 ---
 
 <BaseLayout title="Accueil">
