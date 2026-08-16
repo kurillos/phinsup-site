@@ -4,8 +4,7 @@ import { getDolphinsSchedule, getCurrentNflSeason } from '@/lib/espn';
 import season2026 from '../data/results2026.json';
 
 // 1. Récupération live du calendrier 2025-2026 (saison terminée, source ESPN)
-const season = getCurrentNflSeason();
-const season2025 = await getDolphinsSchedule(season);
+const season2025 = await getDolphinsSchedule(2025);
 
 const regSeason2025 = season2025.filter(g => g.type === 'reg');
 const wins2025 = regSeason2025.filter(g => g.result === 'W').length;
