@@ -18,9 +18,9 @@
     "stadium": "Hard Rock Stadium",
     "location": "Miami Gardens, FL",
     "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NYG",
-    "scorePhins": 0,
-    "scoreOpp": 0,
-    "result": "W",
+    "scorePhins": 3,
+    "scoreOpp": 26,
+    "result": "L",
     "date": "22/08"
   },
   {
