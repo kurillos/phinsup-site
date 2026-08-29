@@ -236,30 +236,30 @@
   {
     "week": "Week 16",
     "type": "reg",
-    "opponent": "Cincinnati Bengals",
+    "opponent": "Los Angeles Chargers",
     "stadium": "Hard Rock Stadium",
     "location": "Miami Gardens, FL",
-    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/CIN",
-    "scorePhins": 21,
-    "scoreOpp": 45,
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/LAC",
+    "scorePhins": 0,
+    "scoreOpp": 0,
     "result": "L",
-    "date": "21/12",
-    "scorers": ["D. Achane (TD - 48 yds)", "R. Patterson (+1 XP)", "M. Washington (TD - 9 yds)", "R. Patterson (+1 XP)", "J. Wright (TD - 3 yds)", "R. Patterson (+1 XP)"],
-    "slug": "resume-reg-week-2025-16-bengals"
+    "date": "27/12",
+    "scorers": [""],
+    "slug": "resume-reg-week-2026-16-chargers"
   },
   {
     "week": "Week 17",
     "type": "reg",
-    "opponent": "Tampa Bay Buccaneers",
+    "opponent": "Buffalo Bills",
     "stadium": "Hard Rock Stadium",
     "location": "Miami Gardens, FL",
-    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/TB",
-    "scorePhins": 20,
-    "scoreOpp": 17,
+    "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/BUF",
+    "scorePhins": 0,
+    "scoreOpp": 0,
     "result": "W",
-    "date": "28/12",
-    "scorers": ["T. Wease (TD - 63 yds)", "R. Patterson (+1 XP)", "R. Patterson (FG - 29 yds)", "G. Dulcich (TD - 11 yds)", "R. Patterson (+1 XP)", "R. Patterson (FG - 31 yds)"],
-    "slug": "resume-reg-week-2025-17-buccaneers"
+    "date": "03/01",
+    "scorers": [""],
+    "slug": "resume-reg-week-2026-17-bills"
   },
   {
     "week": "Week 18",
@@ -271,8 +271,8 @@
     "scorePhins": 10,
     "scoreOpp": 38,
     "result": "L",
-    "date": "04/01",
-    "scorers": ["M. Washington (TD - 2 yds)", "R. Patterson (+1 XP)", "R. Patterson (FG - 52 yds)"],
-    "slug": "resume-reg-week-2025-18-patriots"
+    "date": "TBD",
+    "scorers": [""],
+    "slug": "resume-reg-week-2026-18-patriots"
   }
 ]
