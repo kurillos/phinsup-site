@@ -30,9 +30,9 @@
     "stadium": "Hard Rock Stadium",
     "location": "Miami Gardens, FL",
     "logo": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/ATL",
-    "scorePhins": 0,
-    "scoreOpp": 0,
-    "result": "W",
+    "scorePhins": 12,
+    "scoreOpp": 17,
+    "result": "L",
     "date": "29/08"
   },
 
